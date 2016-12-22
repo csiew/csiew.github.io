@@ -1,0 +1,89 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css" />
+    <title>Confess</title>
+    <script>
+        function load_list() {
+            for (i = localStorage.length-1; i >= 0; i--) {
+                add_node(i);
+            }
+        }
+        
+        function add_node(i, new_file_name="") {
+            var listnode = document.createElement("LI");
+            // Name of file
+            if (new_file_name == "") {
+                var itemName = document.createTextNode(" " + localStorage.key(i));
+            } 
+            else {
+                var itemName = document.createTextNode(" " + new_file_name);
+            }
+            // Create save button
+            var btn_load = document.createElement("BUTTON");
+            btn_load.onclick = retrieve_text(localStorage.key(i))
+            var btn_load_txt = document.createTextNode("Load");
+            btn_load.appendChild(btn_load_txt);
+            // Create delete button
+            var btn_del = document.createElement("BUTTON");
+            btn_del.onclick = (function() {
+                                    return function() {
+                                        delete_text(localStorage.key(i));
+                                    }
+                               })(localStorage.key(i));
+            var btn_del_txt = document.createTextNode("Delete");
+            btn_del.appendChild(btn_del_txt);
+            // Assemble within list node
+            listnode.appendChild(btn_load);
+            listnode.appendChild(btn_del);
+            listnode.appendChild(itemName)
+            document.getElementById("file_list").appendChild(listnode);
+        }
+        
+        function save_text(save_name) {
+            var text_to_save = document.getElementById("text_editor").value;
+            localStorage.setItem(save_name, text_to_save);
+            document.getElementById("text_name").value = save_name;
+            add_node(localStorage.length, save_name);
+        }
+        
+        function retrieve_text(load_name) {
+            document.getElementById("text_editor").innerHTML = localStorage.getItem(load_name);
+            document.getElementById("text_name").value = load_name;
+        }
+        
+        function delete_text(for_deletion) {
+            localStorage.removeItem(for_deletion);
+            load_list();
+            console.log("Deleted " + for_deletion);
+            location.reload();
+        }
+    </script>
+</head>
+<body onload="load_list()">
+    <div id="content">
+        <p>
+            <a href="index.html">Back to Clarence's main site</a>
+        </p>
+        <h1>
+            Cruditor
+        </h1>
+        <p>
+            Make a note, it saves it in local storage!
+        </p>
+        <div id="editor">
+            Filename:
+            <input id="text_name" type="text" value="untitled" width="60">
+            <button onclick="save_text(document.getElementById('text_name').value)">Save</button>
+            <button onclick="retrieve_text(document.getElementById('text_name').value)">Load</button>
+            <br />
+            <textarea id="text_editor" rows="20" cols="45%"></textarea>
+        </div>
+        <div id="chooser">
+            <h2>Previous notes</h2>
+            <ul id="file_list">
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

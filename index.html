@@ -1,0 +1,139 @@
+<HTML>
+<HEAD>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css" />
+    <script>
+        function see_playlists() {
+            if (document.getElementById("spotify_playlists").style.visibility == "hidden") {
+                document.body.style.overflow="hidden";
+                document.getElementById("spotify_playlists").style.visibility="visible";
+            } else {
+                document.body.style.overflow="scroll";
+                document.getElementById("spotify_playlists").style.visibility="hidden";
+            }
+        }
+        
+        function close_playlists() {
+            document.body.style.overflow="scroll";
+            document.getElementById("spotify_playlists").style.visibility="hidden";
+        }
+    </script>
+	<TITLE>Clarence Siew</TITLE>
+</HEAD>
+<BODY style="overflow: scroll;">
+    <div id="content">
+        <h1>
+            Clarence's place on the internet where he willingly shares stuff
+        </h1>
+        <p>
+            This page was not designed with aesthetics in mind.
+        </p>
+        <p>
+            Hi there, I'm Clarence. This is my website - or more like a place 
+            on the internet where I put links to everything I'm willing to publically 
+            share about myself.
+        </p>
+        <p>
+            Cynicism aside, I am a software engineering student at Monash University. 
+            I may be a software engineering student but I'm definitely still in need 
+            of more practice. I have experience in writing in Python, HTML, and JavaScript. 
+            I once gave a shot at C# but I have since moved on to trying to learn C++ and Java.
+        </p>
+        <h3>
+            Current projects
+        </h3>
+        <ul>
+            <li>This website</li>
+            <li><a href="http://clarencesiew.wordpress.com" target="_blank">WordPress blog</a></li>
+            <li><a href="javascript:see_playlists()">Monthly Spotify playlists</a></li>
+            <li><a href="cruditor.html">Cruditor</a> - JavaScript local storage text editor</li>
+            <li>Currently unnamed successor to illume OS</li>
+        </ul>
+        <h3>
+            Past projects
+        </h3>
+        <ul>
+            <li><a href="http://bit.do/illume-os" target="_blank">illume OS</a></li>
+            <li>Direct Software</li>
+        </ul>
+        <h3>
+            Contact me
+        </h3>
+        <ul>
+            <li><a href="mailto:clarence.siew@yahoo.com">Email</a></li>
+            <li><a href="http://instagram.com/clarence_siew" target="_blank">Instagram</a></li>
+            <li><a href="http://twitter.com/clarencesiew" target="_blank">Twitter</a></li>
+        </ul>
+        <p>
+            This site was influenced by 
+            <a href="http://brutalistwebsites.com/" target="_blank">Brutalist Websites</a>
+            and the examples provided there.
+        </p>
+        <p>
+            <img src="stamp.png" width="86vmax" />
+            <img src="quadrial.png" width="86vmax" />
+        </p>
+    </div>
+    
+    <div id="spotify_playlists" style="visibility: hidden;">
+        <div class="close">
+            <a href="javascript:close_playlists()">&#x2715;</a>
+        </div>
+        <h1>Clarence's monthly Spotify playlists</h1>
+        <dl>
+            <dt><h3>2016</h3></dt>
+                <dd>
+                    <a href="https://play.spotify.com/user/csiew/playlist/3fLjALlTwsLVpuPjCeOfEl" target="_blank">
+                        ZEITGEIST
+                    </a>
+                </dd>
+                <dd>
+                    <a href="https://play.spotify.com/user/csiew/playlist/1RU02mKZl3bNxXnndHN86H" target="_blank">
+                        November
+                    </a>
+                </dd>
+                <dd>
+                    <a href="https://play.spotify.com/user/csiew/playlist/0H43Jt4BQKSG8GAoJEV2RC" target="_blank">
+                        September
+                    </a>
+                </dd>
+                <dd>
+                    <a href="https://play.spotify.com/user/csiew/playlist/7E9URUKRpEuWj5n4gsvy2b" target="_blank">
+                        August
+                    </a>
+                </dd>
+                <dd>
+                    <a href="https://play.spotify.com/user/csiew/playlist/7nf0xxQuy28WjZdyehlX5D" target="_blank">
+                        July
+                    </a>
+                </dd>
+                <dd>
+                    <a href="https://play.spotify.com/user/csiew/playlist/3EQwJKCWfH7bB6lrrsuHmn" target="_blank">
+                        June
+                    </a>
+                </dd>
+                <dd>
+                    <a href="https://play.spotify.com/user/csiew/playlist/2AlW0R2rDMxe1mymi2dOjc" target="_blank">
+                        May
+                    </a>
+                </dd>
+                <dd>
+                    <a href="https://play.spotify.com/user/csiew/playlist/2sD5emTvgnxpIoQOuxbNtn" target="_blank">
+                        April
+                    </a>
+                </dd>
+                <dd>
+                    <a href="https://play.spotify.com/user/csiew/playlist/6fz9mQItRku8RRCKbg8uF2" target="_blank">
+                        March
+                    </a>
+                </dd>
+            <dt><h3>2015</h3></dt>
+                <dd>
+                    <a href="https://play.spotify.com/user/csiew/playlist/1164KNVST9j740CYnO4Sq5" target="_blank">
+                        ZEITGEIST
+                    </a>
+                </dd>
+        </dl>
+    </div>
+</BODY>
+</HTML>
