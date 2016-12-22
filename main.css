@@ -1,11 +1,11 @@
 :root {
-    --title_font: serif;
-    --body_font: serif;
+    --title_font: 'Muli', sans-serif;
+    --body_font: 'Muli', sans-serif;
 }
 
 body {
     font-family: var(--body_font);
-    /* font-size: 2.2vh; */
+    font-size: 3vh;
     line-height: 1.5;
     margin: 0;
     padding: 4vw;
@@ -31,6 +31,35 @@ a:active {
 
 h1,h2,h3,h4,h5,h6 {
     font-family: var(--title_font);
+    font-weight: 900;
+}
+
+#content {
+    margin: auto;
+    text-align: center;
+}
+
+.section {
+    width: auto;
+    max-width: 540px;
+    margin: auto;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+    color: white;
+    background-color: black;
+}
+
+.section a {
+    color: white;
+    background-color: none;
+    text-decoration: none;
+}
+.section a:hover {
+    color: yellow;
+    background-color: none;
+    text-decoration: none;
 }
 
 #spotify_playlists {
