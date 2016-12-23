@@ -2,7 +2,7 @@
 <HEAD>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css" />
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,900" rel="stylesheet">
     <script>
         function see_playlists() {
             if (document.getElementById("spotify_playlists").style.visibility == "hidden") {
@@ -23,48 +23,17 @@
 </HEAD>
 <BODY style="overflow: scroll;">
     <div id="content">
-        <p>
-            <img src="quadrial.png" width="86vmax" />
-        </p>
-        <h1>
-            Clarence Siew
-        </h1>
-        <p>
-            Software engineering student
-        </p>
         <br />
-        <div class="section">
-            <h3>
-                WRITING
-            </h3>
-            <ul style="list-style-type: none; padding: 0;">
-                <li><a href="http://clarencesiew.wordpress.com" target="_blank">Blog (on Wordpress)</a></li>
-                <li><strike>Maximi Momenti</strike></li>
-            </ul>
-        </div>
-        <div class="section">
-            <h3>
-                PROJECTS
-            </h3>
-            <ul style="list-style-type: none; padding: 0;">
-                <li><a href="cruditor.html">Cruditor</a></li>
-                <li><a href="http://bit.do/illume-os" target="_blank">illume OS</a></li>
-                <li><a href="https://direct-software.firebaseapp.com/" target="_blank">Direct Software</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h3>
-                MUSIC
-            </h3>
-            <ul style="list-style-type: none; padding: 0;">
-                <li><a href="javascript:see_playlists()">Monthly Spotify playlists</a></li>
-                <li><a href="https://soundcloud.com/csiew" target="_blank">SoundCloud</a></li>
-            </ul>
-        </div>
-        <div class="section">
-            <h3>
-                CONNECT
-            </h3>
+        <div id="header">
+            <p>
+                <img src="quadrial.png" width="86vmax" />
+            </p>
+            <h1>
+                Clarence Siew
+            </h1>
+            <p>
+                Software engineering student
+            </p>
             <ul style="list-style-type: none; padding: 0;">
                 <li><a href="mailto:clarence.siew@yahoo.com">Email</a></li>
                 <li><a href="http://instagram.com/clarence_siew" target="_blank">Instagram</a></li>
@@ -73,70 +42,105 @@
             </ul>
         </div>
         <br />
+        <hr />
+        <div class="section">
+            <h3>
+                WRITING
+            </h3>
+            <ul>
+                <li><a href="http://clarencesiew.wordpress.com" target="_blank">Blog (on Wordpress)</a></li>
+            </ul>
+        </div>
+        <hr />
+        <div class="section">
+            <h3>
+                PROJECTS
+            </h3>
+            <ul>
+                <li><a href="cruditor.html">Cruditor</a></li>
+                <li><a href="http://bit.do/illume-os" target="_blank">illume OS</a></li>
+                <li><a href="https://direct-software.firebaseapp.com/" target="_blank">Direct Software</a></li>
+            </ul>
+        </div>
+        <hr />
+        <div class="section">
+            <h3>
+                MUSIC
+            </h3>
+            <ul>
+                <li><a href="javascript:see_playlists()">Monthly Spotify playlists</a></li>
+                <li><a href="https://soundcloud.com/csiew" target="_blank">SoundCloud</a></li>
+            </ul>
+        </div>
+        <hr />
+        <br />
         <p>
             <img src="stamp.png" width="86vmax" />
         </p>
+        <br />
     </div>
     
     <div id="spotify_playlists" style="visibility: hidden;">
-        <div class="close">
-            <a href="javascript:close_playlists()">&#x2715;</a>
+        <div id="content" style="text-align: left;">
+            <div class="close">
+                <a href="javascript:close_playlists()">&#x2715;</a>
+            </div>
+            <h1>Monthly playlists</h1>
+            <dl>
+                <dt><h3>2016</h3></dt>
+                    <dd>
+                        <a href="https://play.spotify.com/user/csiew/playlist/3fLjALlTwsLVpuPjCeOfEl" target="_blank">
+                            ZEITGEIST
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="https://play.spotify.com/user/csiew/playlist/1RU02mKZl3bNxXnndHN86H" target="_blank">
+                            November
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="https://play.spotify.com/user/csiew/playlist/0H43Jt4BQKSG8GAoJEV2RC" target="_blank">
+                            September
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="https://play.spotify.com/user/csiew/playlist/7E9URUKRpEuWj5n4gsvy2b" target="_blank">
+                            August
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="https://play.spotify.com/user/csiew/playlist/7nf0xxQuy28WjZdyehlX5D" target="_blank">
+                            July
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="https://play.spotify.com/user/csiew/playlist/3EQwJKCWfH7bB6lrrsuHmn" target="_blank">
+                            June
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="https://play.spotify.com/user/csiew/playlist/2AlW0R2rDMxe1mymi2dOjc" target="_blank">
+                            May
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="https://play.spotify.com/user/csiew/playlist/2sD5emTvgnxpIoQOuxbNtn" target="_blank">
+                            April
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="https://play.spotify.com/user/csiew/playlist/6fz9mQItRku8RRCKbg8uF2" target="_blank">
+                            March
+                        </a>
+                    </dd>
+                <dt><h3>2015</h3></dt>
+                    <dd>
+                        <a href="https://play.spotify.com/user/csiew/playlist/1164KNVST9j740CYnO4Sq5" target="_blank">
+                            ZEITGEIST
+                        </a>
+                    </dd>
+            </dl>
         </div>
-        <h1>Clarence's monthly Spotify playlists</h1>
-        <dl>
-            <dt><h3>2016</h3></dt>
-                <dd>
-                    <a href="https://play.spotify.com/user/csiew/playlist/3fLjALlTwsLVpuPjCeOfEl" target="_blank">
-                        ZEITGEIST
-                    </a>
-                </dd>
-                <dd>
-                    <a href="https://play.spotify.com/user/csiew/playlist/1RU02mKZl3bNxXnndHN86H" target="_blank">
-                        November
-                    </a>
-                </dd>
-                <dd>
-                    <a href="https://play.spotify.com/user/csiew/playlist/0H43Jt4BQKSG8GAoJEV2RC" target="_blank">
-                        September
-                    </a>
-                </dd>
-                <dd>
-                    <a href="https://play.spotify.com/user/csiew/playlist/7E9URUKRpEuWj5n4gsvy2b" target="_blank">
-                        August
-                    </a>
-                </dd>
-                <dd>
-                    <a href="https://play.spotify.com/user/csiew/playlist/7nf0xxQuy28WjZdyehlX5D" target="_blank">
-                        July
-                    </a>
-                </dd>
-                <dd>
-                    <a href="https://play.spotify.com/user/csiew/playlist/3EQwJKCWfH7bB6lrrsuHmn" target="_blank">
-                        June
-                    </a>
-                </dd>
-                <dd>
-                    <a href="https://play.spotify.com/user/csiew/playlist/2AlW0R2rDMxe1mymi2dOjc" target="_blank">
-                        May
-                    </a>
-                </dd>
-                <dd>
-                    <a href="https://play.spotify.com/user/csiew/playlist/2sD5emTvgnxpIoQOuxbNtn" target="_blank">
-                        April
-                    </a>
-                </dd>
-                <dd>
-                    <a href="https://play.spotify.com/user/csiew/playlist/6fz9mQItRku8RRCKbg8uF2" target="_blank">
-                        March
-                    </a>
-                </dd>
-            <dt><h3>2015</h3></dt>
-                <dd>
-                    <a href="https://play.spotify.com/user/csiew/playlist/1164KNVST9j740CYnO4Sq5" target="_blank">
-                        ZEITGEIST
-                    </a>
-                </dd>
-        </dl>
     </div>
 </BODY>
 </HTML>

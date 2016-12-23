@@ -1,32 +1,17 @@
 :root {
-    --title_font: 'Muli', sans-serif;
-    --body_font: 'Muli', sans-serif;
+    --title_font: 'Nunito Sans', sans-serif;
+    --body_font: 'Nunito Sans', sans-serif;
 }
 
 body {
     font-family: var(--body_font);
-    font-size: 3vh;
-    line-height: 1.5;
+    font-size: 2.8vh;
+    font-weight: 300;
+    line-height: 2;
     margin: 0;
     padding: 4vw;
     color: black;
     background-color: white;
-}
-
-a {
-    color: blue;
-    background-color: none;
-    text-decoration: none;
-}
-a:hover {
-    color: blue;
-    background-color: none;
-    text-decoration: underline;
-}
-a:active {
-    color: blue;
-    background-color: none;
-    text-decoration: underline;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -34,32 +19,55 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: 900;
 }
 
+a {
+    color: forestgreen;
+    background-color: none;
+    text-decoration: none;
+}
+a:hover {
+    color: forestgreen;
+    background-color: none;
+    text-decoration: underline;
+}
+
 #content {
+    width: auto;
+    max-width: 540px;
     margin: auto;
     text-align: center;
 }
 
+hr {
+    border: none;
+    height: 1px;
+    color: gainsboro;
+    background-color: gainsboro;
+}
+
+#header ul {
+    list-style-type: none;
+    font-size: 2.2vh;
+}
+#header li {
+    display: inline;
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+
 .section {
-    width: auto;
-    max-width: 540px;
     margin: auto;
     margin-top: 3vh;
     margin-bottom: 3vh;
-    padding-top: 8vh;
-    padding-bottom: 8vh;
-    color: white;
-    background-color: black;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    color: black;
+    background-color: none;
+    border: 0px solid black;
 }
 
-.section a {
-    color: white;
-    background-color: none;
-    text-decoration: none;
-}
-.section a:hover {
-    color: yellow;
-    background-color: none;
-    text-decoration: none;
+.section ul {
+    list-style-type: none;
+    padding: 0;
 }
 
 #spotify_playlists {
@@ -76,27 +84,25 @@ h1,h2,h3,h4,h5,h6 {
     height: auto;
     position: fixed;
     color: black;
-    background-color: lightyellow;
+    background-color: whitesmoke;
+}
+
+#spotify_playlists ul {
+    list-style-type: none;
+    padding: 0;
 }
 
 .close a {
     font-size: 3.5vh;
     margin: 0;
-    color: blue;
+    color: black;
     background-color: none;
     text-decoration: none;
 }
 .close a:hover {
     font-size: 3.5vh;
     margin: 0;
-    color: dodgerblue;
-    background-color: none;
-    text-decoration: none;
-}
-.close a:active {
-    font-size: 3.5vh;
-    margin: 0;
-    color: red;
+    color: forestgreen;
     background-color: none;
     text-decoration: none;
 }
