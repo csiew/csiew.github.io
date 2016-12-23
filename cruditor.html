@@ -80,8 +80,8 @@
         <div id="editor">
             Filename:
             <input id="text_name" type="text" value="untitled" width="60">
-            <button onclick="save_text(document.getElementById('text_name').value)">Save</button>
-            <button onclick="retrieve_text(document.getElementById('text_name').value)">Load</button>
+            <div class="button"><a href="javascript:save_text(document.getElementById('text_name').value)">Save</a></div>
+            <div class="button"><a href="javascript:retrieve_text(document.getElementById('text_name').value)">Load</a></div>
             <br />
             <textarea id="text_editor" rows="20" style="width: 100%;"></textarea>
         </div>

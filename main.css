@@ -20,12 +20,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 a {
-    color: forestgreen;
+    color: blue;
     background-color: none;
     text-decoration: none;
 }
 a:hover {
-    color: forestgreen;
+    color: blue;
     background-color: none;
     text-decoration: underline;
 }
@@ -96,14 +96,36 @@ hr {
 .close a {
     font-size: 3.5vh;
     margin: 0;
-    color: black;
+    color: blue;
     background-color: none;
     text-decoration: none;
 }
 .close a:hover {
     font-size: 3.5vh;
     margin: 0;
-    color: forestgreen;
+    color: blue;
     background-color: none;
+    text-decoration: none;
+}
+
+.button {
+    display: inline-block;
+}
+.button a {
+    margin: 0;
+    padding: 0;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+}
+.button a:hover {
+    margin: 0;
+    padding: 0;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    color: white;
+    background-color: dimgray;
     text-decoration: none;
 }
