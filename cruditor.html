@@ -12,26 +12,31 @@
         }
         
         function add_node(i, new_file_name="") {
+            var key = localStorage.key(i);
             var listnode = document.createElement("LI");
             // Name of file
             if (new_file_name == "") {
-                var itemName = document.createTextNode(" " + localStorage.key(i));
+                var itemName = document.createTextNode(" " + key);
             } 
             else {
                 var itemName = document.createTextNode(" " + new_file_name);
             }
-            // Create save button
+            // Create load button
             var btn_load = document.createElement("BUTTON");
-            btn_load.onclick = retrieve_text(localStorage.key(i))
+            btn_load.onclick = (function() {
+                                    return function() {
+                                        retrieve_text(key);
+                                    }
+                               })(key);
             var btn_load_txt = document.createTextNode("Load");
             btn_load.appendChild(btn_load_txt);
             // Create delete button
             var btn_del = document.createElement("BUTTON");
             btn_del.onclick = (function() {
                                     return function() {
-                                        delete_text(localStorage.key(i));
+                                        delete_text(key);
                                     }
-                               })(localStorage.key(i));
+                               })(key);
             var btn_del_txt = document.createTextNode("Delete");
             btn_del.appendChild(btn_del_txt);
             // Assemble within list node
@@ -62,9 +67,9 @@
     </script>
 </head>
 <body onload="load_list()">
-    <div id="content">
+    <div id="content" style="text-align: left;">
         <p>
-            <a href="index.html">Back to Clarence's main site</a>
+            <a href="index.html"><img src="quadrial.png" width="86vmax" /></a>
         </p>
         <h1>
             Cruditor
@@ -78,11 +83,12 @@
             <button onclick="save_text(document.getElementById('text_name').value)">Save</button>
             <button onclick="retrieve_text(document.getElementById('text_name').value)">Load</button>
             <br />
-            <textarea id="text_editor" rows="20" cols="45%"></textarea>
+            <textarea id="text_editor" rows="20" style="width: 100%;"></textarea>
         </div>
+        <br />
         <div id="chooser">
             <h2>Previous notes</h2>
-            <ul id="file_list">
+            <ul id="file_list" style="list-style-type: none; padding: 0;">
             </ul>
         </div>
     </div>

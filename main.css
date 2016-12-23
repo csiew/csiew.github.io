@@ -32,7 +32,7 @@ a:hover {
 
 #content {
     width: auto;
-    max-width: 540px;
+    max-width: 600px;
     margin: auto;
     text-align: center;
 }
@@ -46,12 +46,13 @@ hr {
 
 #header ul {
     list-style-type: none;
-    font-size: 2.2vh;
+    padding: 0;
+    font-size: 1.8vh;
 }
 #header li {
     display: inline;
-    margin-left: 2vh;
-    margin-right: 2vh;
+    margin-left: 1vh;
+    margin-right: 1vh;
 }
 
 .section {
