@@ -1,6 +1,6 @@
 :root {
-    --title_font: 'Nunito Sans', sans-serif;
-    --body_font: 'Nunito Sans', sans-serif;
+    --title_font: sans-serif;
+    --body_font: sans-serif;
 }
 
 body {
