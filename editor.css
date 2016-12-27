@@ -1,0 +1,59 @@
+textarea:focus, input:focus {
+    outline: 0;
+}
+
+#text_name {
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid blue;
+    padding: 8px;
+}
+#text_name:focus {
+    box-shadow: 0px 0px 16px lightblue;
+}
+
+#text_editor {
+    resize: none;
+    width: 100%;
+    font-family: monospace;
+    font-size: inherit;
+    border: 1px solid blue;
+    padding: 8px;
+}
+#text_editor:focus {
+    box-shadow: 0px 0px 16px lightblue;
+}
+
+.button {
+    display: inline-block;
+}
+.button a {
+    margin: 0;
+    padding: 1.2vh;
+    color: black;
+    background-color: aliceblue;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid blue;
+}
+.button a:hover {
+    margin: 0;
+    padding: 1.2vh;
+    color: black;
+    background-color: azure;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid blue;
+}
+.button a:active {
+    margin: 0;
+    padding: 1.2vh;
+    color: black;
+    background-color: gray;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid blue;
+}

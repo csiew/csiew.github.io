@@ -2,7 +2,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css" />
-    <title>Confess</title>
+    <link rel="stylesheet" href="editor.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+    <title>Cruditor</title>
     <script>
         function load_list() {
             for (i = localStorage.length-1; i >= 0; i--) {
@@ -68,7 +70,7 @@
 <body onload="load_list()">
     <div id="content" style="text-align: left;">
         <p>
-            <a href="index.html"><img src="quadrial.png" width="86vmax" /></a>
+            <a href="index.html"><img src="blue.png" width="86vmax" /></a>
         </p>
         <h1>
             Cruditor
@@ -81,8 +83,8 @@
             <input id="text_name" type="text" value="untitled" width="60">
             <div class="button"><a href="javascript:save_text(document.getElementById('text_name').value)">Save</a></div>
             <div class="button"><a href="javascript:retrieve_text(document.getElementById('text_name').value)">Load</a></div>
-            <br />
-            <textarea id="text_editor" rows="20" style="width: 100%;"></textarea>
+            <br /><br />
+            <textarea id="text_editor" rows="16"></textarea>
         </div>
         <br />
         <div id="chooser">

@@ -1,6 +1,6 @@
 :root {
-    --title_font: sans-serif;
-    --body_font: sans-serif;
+    --title_font: 'Open Sans', sans-serif;
+    --body_font: 'Open Sans', sans-serif;
 }
 
 body {
@@ -105,27 +105,5 @@ hr {
     margin: 0;
     color: blue;
     background-color: none;
-    text-decoration: none;
-}
-
-.button {
-    display: inline-block;
-}
-.button a {
-    margin: 0;
-    padding: 0;
-    padding-left: 2vh;
-    padding-right: 2vh;
-    color: white;
-    background-color: black;
-    text-decoration: none;
-}
-.button a:hover {
-    margin: 0;
-    padding: 0;
-    padding-left: 2vh;
-    padding-right: 2vh;
-    color: white;
-    background-color: dimgray;
     text-decoration: none;
 }
