@@ -71,6 +71,23 @@ hr {
     padding: 0;
 }
 
+#msgAboutMultiPages {
+    overflow: scroll;
+    z-index: 1;
+    font-size: inherit;
+    margin: 0;
+    padding: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    position: fixed;
+    color: black;
+    background-color: whitesmoke;
+}
+
 #spotify_playlists {
     overflow: scroll;
     z-index: 1;
