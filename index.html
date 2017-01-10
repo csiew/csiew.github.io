@@ -19,25 +19,10 @@
             document.body.style.overflow="scroll";
             document.getElementById("spotify_playlists").style.visibility="hidden";
         }
-        
-        function see_msgAboutMultiPages() {
-            if (document.getElementById("msgAboutMultiPages").style.visibility == "hidden") {
-                document.body.style.overflow="hidden";
-                document.getElementById("msgAboutMultiPages").style.visibility="visible";
-            } else {
-                document.body.style.overflow="scroll";
-                document.getElementById("msgAboutMultiPages").style.visibility="hidden";
-            }
-        }
-        
-        function close_msgAboutMultiPages() {
-            document.body.style.overflow="scroll";
-            document.getElementById("msgAboutMultiPages").style.visibility="hidden";
-        }
     </script>
 	<TITLE>Clarence Siew</TITLE>
 </HEAD>
-<BODY style="overflow: scroll;" oncontextmenu="see_msgAboutMultiPages()">
+<BODY style="overflow: scroll;">
     <div id="content">
         <br />
         <div id="header">
@@ -74,8 +59,9 @@
                 Projects
             </h3>
             <ul>
+                <li><a href="http://bit.do/antorca" target="_blank">Antorca</a> <small>(2016-)</small></li>
                 <li><a href="cruditor.html">Cruditor</a> <small>(2016-)</small></li>
-                <li><a href="http://bit.do/illume-os" target="_blank">illume OS</a> <small>(2011-)</small></li>
+                <li><a href="http://bit.do/illume-os" target="_blank">illume OS</a> <small>(2011-2016)</small></li>
                 <li><a href="https://direct-software.firebaseapp.com/" target="_blank">Direct Software</a> <small>(2008-2011)</small></li>
             </ul>
         </div>
@@ -95,26 +81,6 @@
             <img src="stamp.png" width="86vmax" />
         </p>
         <br />
-    </div>
-    
-    <div id="msgAboutMultiPages" style="visibility: hidden;">
-        <div id="content" style="text-align: left;">
-            <div class="close">
-                <a href="javascript:close_msgAboutMultiPages()">&#x2715;</a>
-            </div>
-            <p style="font-family: monospace;">
-                &lt;rant&gt;
-            </p>
-            <p>
-                Everyone keeps telling me to make my website one of those sites with <b>multiple pages</b> with a common navigation bar. It's mainstream, plus, everything I do is pretty scattered. Each of my projects require their own space for their own 'brand experience'.
-            </p>
-            <p>
-                For heaven's sake, even one of my tutors in uni insisted that a good website needs multiple pages rather than a single page with a common fixed-position navigation bar. Oh, PLEASE!
-            </p>
-            <p style="font-family: monospace;">
-                &lt;/rant&gt;
-            </p>
-        </div>
     </div>
     
     <div id="spotify_playlists" style="visibility: hidden;">
