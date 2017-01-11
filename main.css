@@ -1,12 +1,12 @@
 :root {
-    --title_font: 'Roboto', sans-serif;
-    --body_font: 'Roboto', sans-serif;
+    --title_font: 'Merriweather', sans-serif;
+    --body_font: 'Merriweather', sans-serif;
 }
 
 body {
     font-family: var(--body_font);
     font-size: 2.8vh;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 2;
     margin: 0;
     padding: 4vw;
@@ -16,7 +16,7 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
     font-family: var(--title_font);
-    font-weight: 700;
+    font-weight: 900;
 }
 
 a {
