@@ -6,7 +6,7 @@ function grabHeadlines() {
     $.getJSON(newsSource, function(json) {
         rawHeadlines = json;
         document.getElementById("content").innerHTML = "<h2>" + rawHeadlines.source + "</h2><br />"
-        teleprompt = "Hello there! This is today's news, from " + rawHeadlines.source + " . ";
+        teleprompt = "This is today's news, from " + rawHeadlines.source + " . ";
         $.each(json.articles, function() {
             teleprompt += this.title + ". ";
         });
