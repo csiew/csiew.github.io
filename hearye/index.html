@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.2.min.js"></script>
+        <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+                text-align: center;
+                padding: 3vh;
+                margin: 0;
+            }
+            a {
+                color: firebrick;
+                text-decoration: none;
+            }
+            a:hover {
+                color: red;
+                text-decoration: underline;
+            }
+            
+            #container {
+                width: 100%;
+                margin: auto;
+            }
+            
+            #header {
+                width: 20%;
+                text-align: left;
+                margin: auto;
+                display: inline-block;
+                float: left;
+            }
+            
+            #mainArea {
+                width: 80%;
+                text-align: left;
+                margin: auto;
+                display: inline-block;
+                float: top;
+            }
+            
+            #content {
+                width: 100%;
+                font-size: 3vh;
+                text-align: center;
+                display: block;
+                align-content: center;
+                vertical-align: middle;
+                margin: auto;
+                margin-bottom: 14vh;
+            }
+            
+            #source_chooser {
+                text-align: left;
+                list-style-type: none;
+                padding: 0;
+            }
+            
+            #powered {
+                display: block;
+                padding: 3vh;
+                left: 0;
+                bottom: 0;
+                float: left;
+                text-align: left;
+                position: fixed;
+            }
+            
+            #footer {
+                display: block;
+                padding: 3vh;
+                right: 0;
+                bottom: 0;
+                float: right;
+                text-align: right;
+                position: fixed;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <h1>Hear Ye</h1>
+                <p>News headline reader</p>
+                <ul id="source_chooser">
+                    <li><a href="javascript:changeSource('bbc-news');">BBC</a></li>
+                    <li><a href="javascript:changeSource('abc-news-au');">ABC (Aus)</a></li>
+                    <li><a href="javascript:changeSource('cnn');">CNN</a></li>
+                    <li><a href="javascript:changeSource('ars-technica');">Ars Technica</a></li>
+                    <li><a href="javascript:changeSource('reddit-r-all');">Reddit r/all</a></li>
+                    <li><a href="javascript:changeSource('buzzfeed');">BuzzFeed</a></li>
+                    <li><a href="javascript:changeSource('hacker-news');">Hacker News</a></li>
+                    <li><a href="javascript:changeSource('engadget');">Engadget</a></li>
+                    <li><a href="javascript:changeSource('polygon');">Polygon</a></li>
+                    <li><a href="javascript:changeSource('recode');">Recode</a></li>
+                    <li><a href="javascript:changeSource('mashable');">Mashable</a></li>
+                    <li><a href="javascript:changeSource('techcrunch');">TechCrunch</a></li>
+                </ul>
+                </table>
+                <br />
+            </div>
+            <div id="mainArea">
+                <p>
+                    <a href="javascript:responsiveVoice.pause();">PAUSE</a> / <a href="javascript:responsiveVoice.resume();">RESUME</a>
+                </p><br />
+                <div id="content">
+                    <p>
+                        Choose a news source
+                    </p><br />
+                </div>
+            </div>
+        </div>
+        <div id="powered">
+            <p>
+                Powered by <a href='https://newsapi.org/' target='_blank'>News API</a> and <a href='http://responsivevoice.org/' target='_blank'>ResponsiveVoice.js</a>
+            </p>
+        </div>
+        <div id="footer">
+            <p>
+                &copy; 2017 <a href='https://csiew.github.io/' target='_blank'>Clarence Siew</a>
+            </p>
+        </div>
+    </body>
+</html>
