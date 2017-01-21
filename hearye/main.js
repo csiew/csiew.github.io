@@ -2,6 +2,8 @@ var rawHeadlines;
 var teleprompt;
 var newsSource;
 
+var apiurl = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=1606c88155db3961eabe6a2b653d8b41&per_page=10&content_type=6&format=json&nojsoncallback=1";
+
 function grabHeadlines() {
     $.getJSON(newsSource, function(json) {
         rawHeadlines = json;
