@@ -1,6 +1,6 @@
 :root {
-    --title_font: 'Merriweather', sans-serif;
-    --body_font: 'Merriweather', sans-serif;
+    --title_font: 'Lora', sans-serif;
+    --body_font: 'Lora', sans-serif;
 }
 
 body {
@@ -16,7 +16,7 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
     font-family: var(--title_font);
-    font-weight: 900;
+    font-weight: 700;
 }
 
 a {
