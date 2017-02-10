@@ -1,13 +1,13 @@
 :root {
-    --title_font: 'Helvetica Neue', 'Helvetica', 'Arial', 'Nimbus Sans L', 'FreeSans', sans-serif;
-    --body_font: 'Helvetica Neue', 'Helvetica', 'Arial', 'Nimbus Sans L', 'FreeSans', sans-serif;
+    --title_font: 'Georgia', serif;
+    --body_font: 'Georgia', serif;
 }
 
 body {
     font-family: var(--body_font);
     font-size: 1em;
     font-weight: 400;
-    line-height: 1.8;
+    line-height: 1.6;
     margin: 0;
     padding: 1em;
     color: #444;
