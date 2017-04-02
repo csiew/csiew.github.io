@@ -115,8 +115,8 @@ hr {
     width: auto;
     height: auto;
     position: fixed;
-    color: black;
-    background-color: whitesmoke;
+    color: white;
+    background-color: mediumseagreen;
 }
 
 #spotify_playlists ul {
@@ -124,17 +124,28 @@ hr {
     padding: 0;
 }
 
+#spotify_playlists a {
+    color: white;
+    text-decoration: none;
+    border-bottom: none;
+}
+#spotify_playlists a:hover {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px dotted white;
+}
+
 .close a {
     font-size: 3.5vh;
     margin: 0;
-    color: blue;
+    color: white;
     background-color: none;
     text-decoration: none;
 }
 .close a:hover {
     font-size: 3.5vh;
     margin: 0;
-    color: blue;
+    color: white;
     background-color: none;
     text-decoration: none;
 }
