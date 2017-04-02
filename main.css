@@ -1,6 +1,6 @@
 :root {
-    --title_font: 'Georgia', serif;
-    --body_font: 'Georgia', serif;
+    --title_font: serif;
+    --body_font: serif;
 }
 
 body {
@@ -11,7 +11,7 @@ body {
     margin: 0;
     padding: 1em;
     color: #444;
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -34,14 +34,14 @@ a:hover {
     width: auto;
     max-width: 480px;
     margin: auto;
-    text-align: left;
+    text-align: center;
 }
 
 hr {
     border: none;
     height: 1px;
-    color: gainsboro;
-    background-color: gainsboro;
+    color: black;
+    background-color: black;
 }
 
 #header ul {
