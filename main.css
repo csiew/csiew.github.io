@@ -1,11 +1,11 @@
 :root {
-    --title_font: sans-serif;
-    --body_font: sans-serif;
+    --title_font: 'PT Serif', serif;
+    --body_font: 'PT Serif', serif;
 }
 
 body {
     font-family: var(--body_font);
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 400;
     line-height: 1.6;
     margin: 0;
@@ -20,7 +20,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 a {
-    color: firebrick;
+    color: red;
     background-color: none;
     text-decoration: none;
 }
@@ -32,9 +32,9 @@ a:hover {
 
 #content {
     width: auto;
-    max-width: 480px;
+    max-width: 600px;
     margin: auto;
-    text-align: center;
+    text-align: left;
 }
 
 hr {
@@ -44,6 +44,11 @@ hr {
     background-color: black;
 }
 
+#header {
+    padding: 2vh;
+    text-align: center;
+    background: whitesmoke;
+}
 #header ul {
     list-style-type: none;
     padding: 0;
@@ -56,10 +61,7 @@ hr {
 
 .section {
     margin: auto;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    padding: 2vh;
     color: black;
     background-color: none;
     border: 0px solid black;
