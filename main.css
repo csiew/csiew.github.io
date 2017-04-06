@@ -1,6 +1,6 @@
 :root {
-    --title_font: serif;
-    --body_font: serif;
+    --title_font: sans-serif;
+    --body_font: sans-serif;
 }
 
 body {
