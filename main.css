@@ -20,14 +20,16 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 a {
-    color: red;
+    color: black;
     background-color: none;
     text-decoration: none;
+    border-bottom: 1px dotted black;
 }
 a:hover {
-    color: darkgoldenrod;
+    color: dimgray;
     background-color: none;
-    text-decoration: underline;
+    text-decoration: none;
+    border-bottom: 1px dotted black;
 }
 
 #content {
