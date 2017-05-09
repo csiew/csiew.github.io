@@ -1,6 +1,6 @@
 :root {
-    --title_font: sans-serif;
-    --body_font: sans-serif;
+    --title_font: -apple-system, BlinkMacSystemFont, Roboto, Open Sans, sans-serif;
+    --body_font: -apple-system, BlinkMacSystemFont, Roboto, Open Sans, sans-serif;
 }
 
 body {
@@ -10,8 +10,10 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 1em;
-    color: #444;
-    background-color: white;
+    color: #333;
+    background-color: #eee;
+    background: repeating-linear-gradient(to bottom right, #eee, #fff 0.25%, #eee 0.25%);
+    background-attachment: fixed;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -20,23 +22,21 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 a {
-    color: black;
+    color: mediumblue;
     background-color: none;
     text-decoration: none;
-    border-bottom: 1px dotted black;
 }
 a:hover {
-    color: dimgray;
+    color: dodgerblue;
     background-color: none;
     text-decoration: none;
-    border-bottom: 1px dotted black;
 }
 
 #content {
     width: auto;
     max-width: 600px;
     margin: auto;
-    text-align: left;
+    text-align: center;
 }
 
 hr {
@@ -49,23 +49,25 @@ hr {
 #header {
     padding: 2vh;
     text-align: center;
-    background: whitesmoke;
+    background: inherit;
 }
 #header ul {
+    text-align: center;
     list-style-type: none;
     padding: 0;
     font-size: 0.8em;
 }
 #header li {
     display: inline;
-    margin-right: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
 
 .section {
     margin: auto;
     padding: 2vh;
-    color: black;
-    background-color: none;
+    color: inherit;
+    background-color: inherit;
     border: 0px solid black;
 }
 
