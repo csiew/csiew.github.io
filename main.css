@@ -61,8 +61,8 @@ hr {
 #header {
     padding: 2em;
     text-align: center;
-    color: black;
-    background-color: gold;
+    color: gold;
+    background-color: black;
     height: 100%;
 }
 #header ul {
