@@ -1,18 +1,18 @@
 :root {
-    --title_font: -apple-system, BlinkMacSystemFont, Roboto, Open Sans, sans-serif;
-    --body_font: -apple-system, BlinkMacSystemFont, Roboto, Open Sans, sans-serif;
+    --title_font: -apple-system, BlinkMacSystemFont, 'Roboto', 'Open Sans', sans-serif;
+    --body_font: 'Lora', serif;
 }
 
 body {
     font-family: var(--body_font);
     font-size: 1.2em;
     font-weight: 400;
+    text-rendering: optimizeSpeed;
     line-height: 1.6;
     margin: 0;
-    padding: 1em;
+    padding: 0;
     color: #333;
-    background-color: #eee;
-    background-attachment: fixed;
+    background-color: white;
     
     /* FROM https://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load */
     
@@ -25,24 +25,29 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
     font-family: var(--title_font);
-    font-weight: 700;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 12vw;
 }
 
 a {
-    color: mediumblue;
+    color: darkgoldenrod;
     background-color: none;
     text-decoration: none;
 }
 a:hover {
-    color: dodgerblue;
-    background-color: none;
+    color: black;
+    background-color: gold;
     text-decoration: none;
 }
 
 #content {
     width: auto;
-    max-width: 600px;
+    max-width: 100%;
     margin: auto;
+    padding: 1em;
     text-align: center;
 }
 
@@ -54,12 +59,14 @@ hr {
 }
 
 #header {
-    padding: 2vh;
+    padding: 2em;
     text-align: center;
-    background: inherit;
+    color: black;
+    background-color: gold;
+    height: 100%;
 }
 #header ul {
-    text-align: center;
+    text-align: inherit;
     list-style-type: none;
     padding: 0;
     font-size: 0.8em;
