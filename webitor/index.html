@@ -1,0 +1,189 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="editor.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+                text-align: center;
+                padding: 3vh;
+                margin: 0;
+            }
+            a {
+                color: firebrick;
+                text-decoration: none;
+            }
+            a:hover {
+                color: red;
+                text-decoration: underline;
+            }
+            
+            #container {
+                width: 100%;
+                margin: auto;
+            }
+            
+            #header {
+                width: 20%;
+                text-align: left;
+                margin: auto;
+                display: inline-block;
+                float: left;
+            }
+            
+            #mainArea {
+                width: 80%;
+                text-align: left;
+                margin: auto;
+                display: inline-block;
+                float: top;
+            }
+            
+            #content {
+                width: 100%;
+                font-size: 3vh;
+                text-align: center;
+                display: block;
+                align-content: center;
+                vertical-align: middle;
+                margin: auto;
+                margin-bottom: 14vh;
+            }
+            
+            #source_chooser {
+                text-align: left;
+                list-style-type: none;
+                padding: 0;
+            }
+            
+            #powered {
+                display: block;
+                padding: 3vh;
+                left: 0;
+                bottom: 0;
+                float: left;
+                text-align: left;
+                position: fixed;
+                z-index: 2;
+            }
+            
+            #footer {
+                display: block;
+                padding: 3vh;
+                right: 0;
+                bottom: 0;
+                float: right;
+                text-align: right;
+                position: fixed;
+                z-index: 2;
+            }
+            
+            #bottom_fade {
+                display: block;
+                width: 100%;
+                height: 16vh;
+                background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(255,255,255,1));
+                bottom: 0;
+                margin: 0;
+                position: fixed;
+                z-index: 1;
+            }
+        </style>
+    <title>Webitor</title>
+    <script>
+        function load_list() {
+            for (i = localStorage.length-1; i >= 0; i--) {
+                add_node(i);
+            }
+        }
+        
+        function add_node(i, new_file_name="") {
+            var key = localStorage.key(i);
+            var listnode = document.createElement("LI");
+            // Name of file
+            if (new_file_name == "") {
+                var itemName = document.createTextNode(" " + key);
+            } 
+            else {
+                var itemName = document.createTextNode(" " + new_file_name);
+            }
+            // Create load button
+            var btn_load = document.createElement("BUTTON");
+            btn_load.onclick = (function() {
+                                    return function() {
+                                        retrieve_text(key);
+                                    }
+                               })(key);
+            var btn_load_txt = document.createTextNode("Load");
+            btn_load.appendChild(btn_load_txt);
+            // Create delete button
+            var btn_del = document.createElement("BUTTON");
+            btn_del.onclick = (function() {
+                                    return function() {
+                                        delete_text(key);
+                                    }
+                               })(key);
+            var btn_del_txt = document.createTextNode("Delete");
+            btn_del.appendChild(btn_del_txt);
+            // Assemble within list node
+            listnode.appendChild(btn_load);
+            listnode.appendChild(btn_del);
+            listnode.appendChild(itemName)
+            document.getElementById("file_list").appendChild(listnode);
+        }
+        
+        function save_text(save_name) {
+            var text_to_save = document.getElementById("text_editor").value;
+            localStorage.setItem(save_name, text_to_save);
+            document.getElementById("text_name").value = save_name;
+            add_node(localStorage.length, save_name);
+        }
+        
+        function retrieve_text(load_name) {
+            document.getElementById("text_editor").innerHTML = localStorage.getItem(load_name);
+            document.getElementById("text_name").value = load_name;
+            document.getElementById("file_name").innerHTML = load_name;
+        }
+        
+        function delete_text(for_deletion) {
+            localStorage.removeItem(for_deletion);
+            load_list();
+            console.log("Deleted " + for_deletion);
+            location.reload();
+        }
+    </script>
+</head>
+<body onload="load_list()">
+    <div id="container">
+        <div id="header">
+            <h1>Webitor</h1>
+            <p>A local storage JS text editor</p>
+            <ul id="file_list" style="list-style-type: none; padding: 0;">
+            </ul>
+            <br />
+        </div>
+        <div id="mainArea">
+            <p>
+                Make a note, it saves it in local storage!
+            </p>
+            <div id="editor">
+                Filename:
+                <input id="text_name" type="text" value="untitled" width="60">
+                <div class="button"><a href="javascript:save_text(document.getElementById('text_name').value)">Save</a></div>
+                <div class="button"><a href="javascript:retrieve_text(document.getElementById('text_name').value)">Load</a></div>
+                <br /><br />
+                <h3 id="file_name">untitled</h3>
+                <textarea id="text_editor" rows="16"></textarea>
+            </div>
+        </div>
+    </div>
+    <div id="bottom_fade"></div>
+    <div id="footer">
+            <p>
+                &copy; 2017 <a href='https://csiew.github.io/' target='_blank'>Clarence Siew</a>
+            </p>
+        </div>
+</body>
+</html>
