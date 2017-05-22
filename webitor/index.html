@@ -139,12 +139,20 @@
             localStorage.setItem(save_name, text_to_save);
             document.getElementById("text_name").value = save_name;
             add_node(localStorage.length, save_name);
+            document.getElementById("file_name").innerHTML = save_name;
         }
         
         function retrieve_text(load_name) {
             document.getElementById("text_editor").innerHTML = localStorage.getItem(load_name);
             document.getElementById("text_name").value = load_name;
             document.getElementById("file_name").innerHTML = load_name;
+        }
+        
+        function download(load_name) {
+            var txtFileName = load_name;
+            var txtContent = localStorage.getItem(load_name);
+            var txtFile = new Blob([txtContent], {type: "text/plain;charset=utf-8"});
+            saveAs(txtFile, txtFileName + ".txt");
         }
         
         function delete_text(for_deletion) {
@@ -159,20 +167,21 @@
     <div id="container">
         <div id="header">
             <h1>Webitor</h1>
-            <p>A local storage JS text editor</p>
+            <p>Previous notes:</p>
             <ul id="file_list" style="list-style-type: none; padding: 0;">
             </ul>
             <br />
         </div>
         <div id="mainArea">
             <p>
-                Make a note, it saves it in local storage!
+                A local storage JS text editor
             </p>
             <div id="editor">
                 Filename:
                 <input id="text_name" type="text" value="untitled" width="60">
                 <div class="button"><a href="javascript:save_text(document.getElementById('text_name').value)">Save</a></div>
                 <div class="button"><a href="javascript:retrieve_text(document.getElementById('text_name').value)">Load</a></div>
+                <div class="button"><a href="javascript:download(document.getElementById('text_name').value)">Download</a></div>
                 <br /><br />
                 <h3 id="file_name">untitled</h3>
                 <textarea id="text_editor" rows="16"></textarea>
