@@ -24,7 +24,6 @@ Hi, I'm **Clarence**. I'm a software engineering student at Monash University in
 - [Antorca](https://antorca.github.io/) (2016-Present)
 - [Webitor](webitor/index.html) (2016)
 - [illume OS](https://illume-os.firebaseapp.com/) (2011-2016, continued as Antorca)
-- [Direct Software](https://direct-software.firebaseapp.com/) (2008-2011)
 
 
 ## Meta
