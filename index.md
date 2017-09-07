@@ -27,8 +27,6 @@ Hi, I'm **Clarence**. I'm a software engineering student at Monash University in
 - [Direct Software](https://direct-software.firebaseapp.com/) (2008-2011)
 
 
-------
-
 ## Meta
 
 This iteration of my site was generated using [Typora](https://typora.io) (a markdown editor), and as of September 2017 my favourite way to write formatted text quickly and efficiently.

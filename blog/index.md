@@ -2,8 +2,6 @@
 
 This is my personal blog. You'll find that this sparse, empty site is purely about text… Might throw in an image or two later on. But otherwise, not gonna put in much effort with design.
 
-I'm using [Typora](https://typora.io/) to generate this site using markdown, which is in my opinion a superb and highly efficient way of formatting text.
-
 | Date       | Post title                               |
 | ---------- | ---------------------------------------- |
 | 2017/09/07 | [What? Another blog?](posts/20170907-0101-whatanotherblog.html) |
