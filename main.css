@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i');
 
 :root {
-    --title_font: 'PT Sans', sans-serif;
-    --body_font: 'PT Sans', sans-serif;
+    --title_font: 'Verdana', sans-serif;
+    --body_font: 'Verdana', sans-serif;
 }
 
 body {
@@ -16,7 +16,7 @@ body {
 	margin-right: auto;
     padding: 1em;
     color: black;
-    background-color: #E9F7EF;
+    background-color: lightyellow;
 	max-width: 600px;
 }
 
@@ -26,12 +26,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 a {
-    color: #117864;
+    color: darkolivegreen;
     background-color: none;
     text-decoration: none;
 }
 a:hover {
-    color: #117864;
+    color: olivedrab;
     background-color: none;
     text-decoration: underline;
 }
