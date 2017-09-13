@@ -1,6 +1,6 @@
 :root {
-    --title_font: Times, serif;
-    --body_font: Times, serif;
+    --title_font: Helvetica, Arial, serif;
+    --body_font: Helvetica, Arial, serif;
 }
 
 body {
@@ -14,7 +14,7 @@ body {
 	margin-right: auto;
     padding: 1em;
     color: black;
-    background-color: gainsboro;
+    background-color: white;
 	max-width: 600px;
 }
 
