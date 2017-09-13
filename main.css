@@ -1,22 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i');
-
 :root {
-    --title_font: 'Verdana', sans-serif;
-    --body_font: 'Verdana', sans-serif;
+    --title_font: Helvetica, Arial, sans-serif;
+    --body_font: Helvetica, Arial, sans-serif;
 }
 
 body {
     font-family: var(--body_font);
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 400;
-    line-height: 1.75;
+    line-height: 1.5;
     margin-top: 1em;
-	margin-bottom: 1em;
+	margin-bottom: 4em;
 	margin-left: auto;
 	margin-right: auto;
     padding: 1em;
     color: black;
-    background-color: lightyellow;
+    background-color: white;
 	max-width: 600px;
 }
 
@@ -26,17 +24,35 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 a {
-    color: darkolivegreen;
+    color: blue;
     background-color: none;
     text-decoration: none;
 }
 a:hover {
-    color: olivedrab;
-    background-color: none;
     text-decoration: underline;
+}
+
+header {
+    text-align: center;
+    padding: 0.5em;
+    margin-bottom: 3em;
+}
+
+.nav {
+    padding: 0;
+    margin-bottom: 2em;
+}
+.nav li {
+    display: inline-block;
+    list-style-type: none;
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
 
 .footer {
 	padding-top: 3em;
-	font-size: 0.8em;
+	font-size: inherit;
 }
