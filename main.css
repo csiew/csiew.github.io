@@ -1,6 +1,6 @@
 :root {
-    --title_font: Helvetica, Arial, serif;
-    --body_font: Helvetica, Arial, serif;
+    --title_font: Helvetica, Arial, sans-serif;
+    --body_font: Helvetica, Arial, sans-serif;
 }
 
 body {
