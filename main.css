@@ -15,21 +15,21 @@ body {
     padding: 1.5em;
     max-width: 640px;
     color: #333;
-    background-color: lightcyan;
+    background-color: white;
 }
 
 a {
-	color: teal;
+	color: royalblue;
 	text-decoration: none;
 	border: 0;
 	border-bottom: 2px solid rgba(0,0,0,0);
 	transition: 0.2s;
 }
 a:hover {
-	color: darkcyan;
+	color: cornflowerblue;
 	text-decoration: none;
 	border: 0;
-	border-bottom: 2px solid darkcyan;
+	border-bottom: 2px solid cornflowerblue;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -38,7 +38,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 header {
-    text-align: left;
+    text-align: center;
     padding: 0em;
     margin-bottom: 3em;
 }
@@ -79,15 +79,15 @@ header {
     padding: 1em;
     margin: 0.5em;
     font-size: 1.15em;
-    color: teal;
-    background-color: paleturquoise;
+    color: dimgray;
+    background-color: whitesmoke;
     border: 2px solid rgba(0,0,0,0);
     transition: 0.2s;
 }
 .ul-freeform li:hover {
-	color: darkcyan;
-	background-color: aliceblue;
-    border: 2px solid darkcyan;
+	color: black;
+	background-color: white;
+    border: 2px solid black;
 }
 
 .footer {
