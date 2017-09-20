@@ -43,24 +43,6 @@ p {
 	overflow: hidden;
 }
 
-img {
-	display: block;
-	height: 90px;
-	float: right;
-	opacity: 0;
-	border: 0 solid yellow;
-	margin: 0;
-	margin-left: 520px;
-	margin-right: 0;
-	position: absolute;
-	transition: 0.2s;
-}
-img:hover {
-	height: 120px;
-	border: 1em solid yellow;
-	opacity: 1.0;
-}
-
 .nav {
     padding: 0;
 }
