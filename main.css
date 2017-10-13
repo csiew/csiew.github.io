@@ -1,10 +1,18 @@
 body {
-	font-family: serif;
+	font-family: system-ui, sans-serif;
 	font-size: 1em;
-	line-height: 1.125;
+	line-height: 1.5;
 	text-align: left;
 	color: black;
-	background: white;
+	background: whitesmoke;
+}
+
+a {
+	color: dodgerblue;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
 }
 
 hr {
@@ -15,23 +23,62 @@ hr {
 
 header {
 	line-height: 0;
+	margin-top: 1em;
+	margin-bottom: 3em;
+	text-align: center;
+}
+footer {
+	margin-top: 3em;
+	margin-bottom: 1em;
+	text-align: center;
+	color: gray;
 }
 
 .container {
-	margin: 0;
+	max-width: 720px;
+	margin: 2em;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0.5em;
 	display: flex;
 	justify-content: center;
 	flex-flow: column;
+	box-sizing: border-box;
 }
 
 .section {
 	line-height: inherit;
 	display: block;
 	margin: 0;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	padding: 1em;
+	background: white;
+	box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+	box-sizing: border-box;
+}
+.section h1, .section h2, .section h3, .section h4 {
+	line-height: 0;
+	margin-bottom: 2em;
+}
+
+.nav {
+	list-style-type: none;
+}
+.nav ul, .nav li {
+	margin: 0;
+	margin-bottom: 0.5em;
 	padding: 0;
+	display: inline-block;
+}
+.nav a {
+	padding: 0.5em;
+	border: 1px solid dodgerblue;
+}
+.nav a:hover {
+	text-decoration: none;
+	background: dodgerblue;
+	color: white;
 }
 
 table {
@@ -39,15 +86,20 @@ table {
 	border-collapse: collapse;
 }
 td {
-	padding-right: 1.5em;
+	padding: 1.5em;
 }
 
-.projects {
-	max-width: 720px;
+.projects table {
+	width: 100%;
+	margin: auto;
+	margin-top: 2em;
+	margin-bottom: 1em;
 }
-.projects tr {
-	border-top: 1px solid gray;
-	border-bottom: 1px solid gray;
+.projects tr:nth-child(even) {
+	background: none;
+}
+.projects tr:nth-child(odd) {
+	background: rgba(192,192,192,0.125);
 }
 .projects td {
 	padding: 0.5em;
