@@ -6,7 +6,7 @@ body {
 	line-height: 1.5;
 	text-align: left;
 	color: black;
-	background: floralwhite;
+	background: whitesmoke;
 }
 
 a {
@@ -72,12 +72,12 @@ footer {
 	background: white;
 	box-sizing: border-box;
 	border: 0;
-	border-top: 4px solid sienna;
 }
 .section h1, .section h2, .section h3, .section h4 {
 	line-height: 0;
 	margin-bottom: 2em;
 	font-weight: 900;
+	border: 0;
 }
 
 .nav {
