@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900');
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,700,700i,900');
 
 body {
-	font-family: 'Lato', Helvetica, Arial, sans-serif;
+	font-family: 'Libre Franklin', Helvetica, Arial, sans-serif;
 	font-size: 1.125em;
 	line-height: 1.5;
 	text-align: left;
@@ -10,16 +10,18 @@ body {
 }
 
 a {
-	color: mediumseagreen;
+	font-weight: 700;
+	color: red;
 	text-decoration: none;
 	border: 0;
-	border-bottom: 2px solid mediumseagreen;
+	border-bottom: 2px solid red;
 	transition: 0.2s;
 }
 a:hover {
-	color: seagreen;
+	color: white;
+	background: black;
 	text-decoration: none;
-	border-bottom: 2px solid seagreen;
+	border-bottom: 2px solid black;
 	transition: 0.2s;
 }
 
@@ -71,11 +73,12 @@ footer {
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
 	padding: 1em;
-	background: white;
-	box-shadow: 0px 2px 2px rgba(0,0,0,0.125);
+	color: black;
+	background: none;
+	/* box-shadow: 0px 2px 2px rgba(0,0,0,0.125); */
 	box-sizing: border-box;
-	border: 1px solid lightgray;
-	border-radius: 3px;
+	border: none;
+	border-radius: 0px;
 }
 .section h1, .section h2, .section h3, .section h4 {
 	line-height: 0;
@@ -95,16 +98,17 @@ footer {
 }
 .nav a {
 	padding: 0.5em;
-	border: 1px solid mediumseagreen;
-	border-radius: 3px;
+	color: red;
+	border: 1px solid red;
+	border-radius: 0px;
 	transition: 0.2s;
 }
 .nav a:hover {
 	text-decoration: none;
-	background: mediumseagreen;
+	background: red;
 	color: white;
-	border: 1px solid mediumseagreen;
-	box-shadow: 0px 2px 2px rgba(0,0,0,0.125);
+	border: 1px solid red;
+	/* box-shadow: 0px 2px 2px rgba(0,0,0,0.125); */
 	transition: 0.2s;
 }
 
