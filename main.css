@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,700,700i,900');
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One');
 
 body {
-	font-family: 'Libre Franklin', Helvetica, Arial, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	/* font-family: 'Helvetica', 'Helvetica Neue', 'Nimus Sans L', 'Arial', sans-serif; */
 	font-size: 1.125em;
 	line-height: 1.5;
 	text-align: left;
@@ -9,8 +11,26 @@ body {
 	background-color: whitesmoke;
 }
 
+header {
+	line-height: 1;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	text-align: center;
+	overflow: visible;
+}
+header h1 {
+	font-weight: 900;
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+	word-wrap: wrap;
+}
+
+h1 { font-size: 4em; }
+h2 { font-size: 3.5em; }
+h3 { font-size: 2em; }
+h4 { font-size: 1.5em; }
+
 a {
-	font-weight: 700;
 	color: red;
 	text-decoration: none;
 	border: 0;
@@ -31,20 +51,25 @@ hr {
 	border-bottom: 1px solid gray;
 }
 
-header {
-	line-height: 0;
-	margin-top: 1em;
-	margin-bottom: 3em;
-	text-align: center;
-}
-header h1 {
-	font-weight: 900;
-}
-
 .img-portrait {
+	width: 148px;
+	height: 148px;
 	border: 0;
 	border-radius: 100%;
 	margin-bottom: 1em;
+	transition: 1s;
+	transform: rotate(-6deg);
+	opacity: 0.5;
+	-webkit-filter: grayscale(100%);
+	filter: blur(100%);
+}
+.img-portrait:hover {
+	border-radius: 0;
+	transition: 1s;
+	transform: rotate(0deg);
+	opacity: 1;
+	-webkit-filter: grayscale(0%);
+	filter: grayscale(0%);
 }
 
 footer {
@@ -55,7 +80,7 @@ footer {
 }
 
 .container {
-	max-width: 720px;
+	max-width: 860px;
 	margin: 2em;
 	margin-left: auto;
 	margin-right: auto;
@@ -70,12 +95,11 @@ footer {
 	line-height: inherit;
 	display: block;
 	margin: 0;
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-	padding: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 2em;
 	color: black;
-	background: none;
-	/* box-shadow: 0px 2px 2px rgba(0,0,0,0.125); */
+	background: white;
 	box-sizing: border-box;
 	border: none;
 	border-radius: 0px;
@@ -92,7 +116,7 @@ footer {
 }
 .nav ul, .nav li {
 	margin: 0;
-	margin-bottom: 0.5em;
+	margin-bottom: 1em;
 	padding: 0;
 	display: inline-block;
 }
@@ -125,13 +149,24 @@ td {
 	margin: auto;
 	margin-top: 2em;
 	margin-bottom: 1em;
+	overflow: visible;
+	min-width: 480px;
+	background: white;
 }
+.projects tr {
+	border-bottom: 1px solid black;
+}
+.projects tr:last-child {
+	border-bottom: none;
+}
+/*
 .projects tr:nth-child(even) {
 	background: none;
 }
 .projects tr:nth-child(odd) {
 	background: rgba(192,192,192,0.125);
 }
+*/
 .projects td {
 	padding: 0.5em;
 }
