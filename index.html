@@ -5,6 +5,16 @@
 	<meta name='viewport' content='width=device-width initial-scale=1'>
 	<link href="main.css" rel="stylesheet">
 	<title>Clarence Siew</title>
+	<script>
+		function themeChangeDefault() {
+			document.body.style.fontFamily = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif";
+			document.body.style.background = "whitesmoke";
+		}
+		function themeChangeSimple() {
+			document.body.style.fontFamily = "'Helvetica', 'Helvetica Neue', 'Arial', sans-serif";
+			document.body.style.background = "white";
+		}
+	</script>
 </head>
 <body>
 	<div class="container">
@@ -80,7 +90,13 @@
 			</ul>
 		</div>
 		<footer>
-			&copy; 2018 Clarence Siew
+			<div class="nav">
+				<ul>
+					<li><a onclick="javscript:themeChangeDefault()">Default</a></li>
+					<li><a onclick="javscript:themeChangeSimple()">Simple</a></li>
+				</ul>
+			</div>
+			&copy; 2018 Clarence Siew<br />
 		</footer>
 	</div>
 </body>

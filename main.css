@@ -25,10 +25,10 @@ header h1 {
 	word-wrap: wrap;
 }
 
-h1 { font-size: 4em; }
-h2 { font-size: 3.5em; }
-h3 { font-size: 2em; }
-h4 { font-size: 1.5em; }
+h1 { font-size: 3em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1em; }
 
 a {
 	color: red;
@@ -39,9 +39,9 @@ a {
 }
 a:hover {
 	color: white;
-	background: black;
+	background: red;
 	text-decoration: none;
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid red;
 	transition: 0.2s;
 }
 
