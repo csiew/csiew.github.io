@@ -5,10 +5,12 @@ body {
 	text-align: left;
 	color: black;
 	background-color: whitesmoke;
+	/*
 	background: linear-gradient(to bottom, #EAF2F8, #FEF9E7);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
+	*/
 }
 
 header {
@@ -77,7 +79,6 @@ hr {
 	opacity: 1;
 	-webkit-filter: grayscale(0%);
 	filter: grayscale(0%);
-	box-shadow: 0px 2px 8px rgba(0,0,0,0.25);
 }
 
 footer {
@@ -107,12 +108,13 @@ footer {
 	margin-bottom: 1em;
 	padding: 2em;
 	color: black;
-	background: white;
+	background: none;
 	box-sizing: border-box;
 	border: none;
+	/*
 	border-radius: 6px;
 	box-shadow: 0px 2px 8px rgba(0,0,0,0.25);
-	transition: 0.2s;
+	*/
 }
 .section h1, .section h2, .section h3, .section h4 {
 	line-height: 0;
@@ -162,7 +164,7 @@ td {
 	margin-bottom: 1em;
 	overflow: visible;
 	min-width: 480px;
-	background: white;
+	background: none;
 }
 .projects tr {
 	border-bottom: 1px solid black;
