@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,400i,700,700i');
+
 body {
-	font-family: 'Helvetica', 'Helvetica Neue', 'Nimus Sans L', 'Arial', sans-serif;
-	font-size: 1.25em;
+	font-family: 'Barlow', 'Helvetica', 'Helvetica Neue', 'Nimus Sans L', 'Arial', sans-serif;
+	font-size: 1.5em;
 	line-height: 1.5;
 	text-align: left;
 	color: black;
