@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Barlow:400,400i,700,700i');
-
 body {
-	font-family: 'Barlow', 'Helvetica', 'Helvetica Neue', 'Nimus Sans L', 'Arial', sans-serif;
-	font-size: 1.5em;
+	font-family: 'Helvetica', 'Helvetica Neue', 'Nimus Sans L', 'Arial', sans-serif;
+	font-size: 1.125em;
 	line-height: 1.5;
 	text-align: left;
 	color: black;
@@ -29,30 +27,40 @@ header h1 {
 	word-wrap: wrap;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
 	font-family: inherit;
-	text-transform: uppercase;
+	text-transform: none;
 }
-h1 { font-size: 3em; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.5em; }
-h4 { font-size: 1em; }
+h1 {
+	font-size: 3em;
+}
+h2 {
+	font-size: 2em;
+}
+h3 {
+	font-size: 1.5em;
+}
+h4 {
+	font-size: 1em;
+	font-weight: 400;
+	font-style: italic;
+	color: gray;
+	line-height: 0.5;
+	overflow-wrap: break-word;
+}
 
 a {
-	color: blue;
+	color: #333;
 	text-decoration: none;
-	border: 0;
-	border-bottom: 2px solid blue;
 	font-weight: bold;
-	padding: 2px;
-	padding-bottom: 0;
+	border: 0;
+	border-bottom: 1px solid #333;
+	padding: 0;
 	transition: 0.2s;
 }
 a:hover {
-	color: white;
-	background: blue;
-	text-decoration: none;
-	border-bottom: 2px solid blue;
+	color: blue;
+	border-bottom: 1px solid blue;
 	transition: 0.2s;
 }
 
@@ -75,7 +83,7 @@ hr {
 	filter: blur(100%);
 }
 .img-portrait:hover {
-	border-radius: 6px;
+	border-radius: 0;
 	transition: 1s;
 	/* transform: rotate(0deg); */
 	opacity: 1;
@@ -91,11 +99,11 @@ footer {
 }
 
 .container {
-	max-width: 860px;
+	max-width: 720px;
 	margin: 2em;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 0.5em;
+	padding: 0;
 	display: flex;
 	justify-content: center;
 	flex-flow: column;
@@ -108,7 +116,7 @@ footer {
 	margin: 0;
 	margin-top: 1em;
 	margin-bottom: 1em;
-	padding: 2em;
+	padding: 1em;
 	color: black;
 	background: none;
 	box-sizing: border-box;
@@ -137,10 +145,12 @@ footer {
 }
 .nav a {
 	padding: 0.5em;
-	color: blue;
-	border: 2px solid blue;
-	border-radius: 6px;
+	background: black;
+	color: white;
+	border: 2px solid black;
+	border-radius: 0;
 	transition: 0.2s;
+	font-weight: bold;
 }
 .nav a:hover {
 	text-decoration: none;
@@ -184,4 +194,12 @@ td {
 */
 .projects td {
 	padding: 0.5em;
+}
+.project-card {
+	max-width: 600px;
+	padding: 1em;
+	margin: auto;
+	margin-top: 2em;
+	box-sizing: border-box;
+	background: white;
 }
