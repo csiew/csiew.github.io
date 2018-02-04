@@ -127,7 +127,7 @@ footer {
 .section h1, .section h2, .section h3, .section h4 {
 	line-height: 0;
 	margin-bottom: 2em;
-	font-weight: 900;
+	font-weight: bold;
 	border: 0;
 }
 
@@ -183,7 +183,7 @@ footer {
 }
 
 .nav-complex a {
-	font-weight: normal;
+	font-weight: bold;
 }
 
 .nav a {
