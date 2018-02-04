@@ -163,10 +163,34 @@ footer {
 	padding: 0;
 	display: inline-block;
 }
+
+.nav-complex ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: stretch;
+}
+.nav-complex li {
+	margin: 0.75em;
+	padding: 0;
+	display: inline-block;
+	flex-basis: 30%;
+	flex-grow: 1;
+}
+
+.nav-complex a {
+	font-weight: normal;
+}
+
 .nav a {
 	padding: 0.5em;
 	background: black;
 	color: white;
+	box-sizing: border-box;
 	border: 2px solid black;
 	border-radius: 0;
 	font-weight: bold;
