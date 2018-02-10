@@ -1,6 +1,6 @@
 body {
 	font-family: 'Helvetica', 'Helvetica Neue', 'Nimus Sans L', 'Arial', sans-serif;
-	font-size: 1.125em;
+	font-size: 1.25em;
 	line-height: 1.5;
 	text-align: left;
 	color: black;
@@ -29,7 +29,7 @@ header h1 {
 
 h1, h2, h3, h4, h5 {
 	font-family: inherit;
-	text-transform: none;
+	text-transform: normal;
 }
 h1 {
 	font-size: 3em;
@@ -42,24 +42,20 @@ h3 {
 }
 h4 {
 	font-size: 1em;
-	font-weight: 400;
-	font-style: italic;
 	color: gray;
-	line-height: 0.5;
-	overflow-wrap: break-word;
 }
 
 a {
-	color: #333;
+	color: mediumvioletred;
 	text-decoration: none;
 	font-weight: bold;
 	border: 0;
-	border-bottom: 1px solid #333;
+	border-bottom: 1px solid mediumvioletred;
 	padding: 0;
 }
 a:hover {
-	color: blue;
-	border-bottom: 1px solid blue;
+	color: darkmagenta;
+	border-bottom: 1px solid darkmagenta;
 }
 
 hr {
