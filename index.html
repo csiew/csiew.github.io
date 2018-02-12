@@ -4,19 +4,64 @@
 	<meta charset='UTF-8'>
 	<meta name='viewport' content='width=device-width initial-scale=1'>
 	<link href="main.css" rel="stylesheet">
+	<script type="text/javascript">
+		function show_menu() {
+			if (document.getElementById("nav-menu").style.visibility == "hidden") {
+				// Show the menu
+				document.getElementById("nav-menu").style.visibility = "visible";
+				document.getElementById("nav-menu").style.display = "block";
+				document.getElementById("nav-menu-button").innerHTML = '<a href="#" onclick="show_menu()">CLOSE</a>';
+				document.body.style.overflow = "hidden";
+			} else {
+				// Hide the menu
+				document.getElementById("nav-menu").style.visibility = "hidden";
+				document.getElementById("nav-menu").style.display = "none";
+				document.getElementById("nav-menu-button").innerHTML = '<a href="#" onclick="show_menu()">MENU</a>';
+				document.body.style.overflow = "scroll";
+			}
+		}
+	</script>
 	<title>Clarence Siew</title>
 </head>
 <body>
+
+	<!--
+	<div id="nav-container">
+		<div id="nav-menu-bar">
+			<div id="nav-menu-button">
+				<a href="#" onclick="show_menu()">MENU</a>
+			</div>
+		</div>
+		<div id="nav-menu">
+			<ul>
+				<li><a href="#top">top</a></li>
+				<li><a href="#about">about</a></li>
+				<li><a href="#places">places</a></li>
+				<li><a href="#projects">projects</a></li>
+				<li><a href="#collections">collections</a></li>
+				<li><a href="#etc">etc</a></li>
+			</ul>
+		</div>
+	</div>
+	-->
+
 	<div class="container">
+
+		<a name="top"></a>
+
 		<header>
 			<img src="portrait.jpg" class="img-portrait">
 			<h1>Clarence Siew</h1>
 		</header>
+
+		<a name="about"></a>
 		<div class="section">
 			<h2>About</h2>
 			<p>
 				Software engineering student at Monash University. Aside from software, my other interests/passions are history, philosophy, music, and design.
 		</div>
+
+		<a name="places"></a>
 		<div class="section nav-complex">
 			<h2>Places</h2>
 			<ul>
@@ -25,9 +70,10 @@
 				<li><a href='https://twitter.com/clarencesiew' target='_blank'>Twitter &#8594;</a></li>
 				<li><a href='https://www.linkedin.com/in/clarencesiew' target='_blank'>LinkedIn &#8594;</a></li>
 				<li><a href='https://instagram.com/clarence_siew' target='_blank'>Instagram &#8594;</a></li>
-				<li><a href='spotify.html'>Playlists &#8594;</a></li>
 			</ul>
 		</div>
+
+		<a name="projects"></a>
 		<div class="section projects">
 			<h2>Projects</h2>
 			<p>
@@ -66,11 +112,29 @@
 				</div>
 			</div>
 		</div>
+
+		<a name="collections"></a>
+		<div class="section projects">
+			<h2>Collections</h2>
+			<div>
+				<div class="project-card">
+					<h3><a href='locations.html'>Locations</a></h3>
+					<p>
+						Places to visit and eat in the two places in the world I frequent the most - Penang and Melbourne.
+					</p>
+				</div>
+				<div class="project-card">
+					<h3><a href='playlists.html'>Playlists</a></h3>
+					<p>
+						My monthly Spotify playlists which are mostly made up of new songs I've discovered and some nostalgia.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<a name="etc"></a>
 		<div class="section">
 			<h2>Etc</h2>
-			<p>
-				My love of music goes far. <a href="spotify.html">Here's a page</a> of my collection of monthly playlists.
-			</p>
 			<p>
 				You can see past iterations of my website:
 			</p>
