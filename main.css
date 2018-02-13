@@ -14,7 +14,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin: 0;
-	padding: 0;
+	padding: 1em;
 	border: 0;
     
     /* FROM https://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load */
