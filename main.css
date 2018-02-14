@@ -1,30 +1,33 @@
-@import url('https://fonts.googleapis.com/css?family=Barlow:400,400i,700,700i');
-
 body {
-	font-family: Barlow, Helvetica, Arial, sans-serif !important;
+	font-family: Helvetica, Arial, sans-serif !important;
 	/* font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; */
-	font-size: 1.1875em;
+	font-size: 1em;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
-	color: whitesmoke;
-	background-color: #222;
+	color: black;
+	background-color: lightyellow;
+	/*
 	background: linear-gradient(to bottom, black, #111, #222, #333);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
+	*/
 	margin: 0;
 	padding: 1em;
 	border: 0;
-    
-    /* FROM https://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load */
-    
-    -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 1.5s; /* Firefox < 16 */
-        -ms-animation: fadein 1.5s; /* Internet Explorer */
-         -o-animation: fadein 1.5s; /* Opera < 12.1 */
-            animation: fadein 1.5s;
-    transition: 2s;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+	box-sizing: border-box;
 }
 
 header {
@@ -43,9 +46,10 @@ header h1 {
 
 h1, h2, h3, h4, h5 {
 	font-family: inherit;
+	font-weight: bold !important;
 	text-transform: none;
 	line-height: 1 !important;
-	color: gold;
+	color: inherit;
 }
 h1 {
 	font-size: 3em;
@@ -59,18 +63,20 @@ h3 {
 h4 {
 	font-size: 1em;
 	margin-top: -2em;
-	color: lightgray;
+	color: gray;
 }
 
 a {
-	color: gold;
-	text-decoration: underline;
+	color: black;
 	background: none;
-	transition: 0.2s;
+	text-decoration: none;
+	font-weight: inherit;
+	border: 0;
+	border-bottom: 1px solid black;
 }
 a:hover {
-	color: darkgoldenrod;
-	transition: 0.2s;
+	color: blue;
+	border-bottom: 1px solid blue;
 }
 
 hr {
@@ -149,7 +155,6 @@ ul {
 	opacity: 0.75;
 	-webkit-filter: grayscale(100%);
 	filter: blur(100%);
-	transition: 0.2s;
 }
 .img-portrait:hover {
 	/* border-radius: 0;
@@ -158,26 +163,13 @@ ul {
 	opacity: 1;
 	-webkit-filter: grayscale(0%);
 	filter: grayscale(0%);
-	transition: 0.2s;
 }
 
 footer {
 	margin-top: 3em;
 	margin-bottom: 1em;
 	text-align: center;
-	color: gray;
-}
-
-.container {
-	max-width: 860px;
-	margin: 2em;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	flex-flow: column;
-	box-sizing: border-box;
+	color: inherit;
 }
 
 .section {
@@ -216,14 +208,16 @@ footer {
 	list-style-type: none;
 }
 .section-spotify li {
-	margin: 0.25em;
+	margin: 0.5em;
 	padding: 0;
-	width: 30%;
+	width: 25%;
 	display: inline-block;
+	font-size: 1.125em;
 }
 
 .zeitgeist {
 	margin: 2em;
+	font-size: 1.125em;
 }
 
 .nav {
@@ -299,60 +293,4 @@ td {
 	margin: auto;
 	box-sizing: border-box;
 	background: transparent;
-}
-
-/* FROM https://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load */
-
-@keyframes fadein {
-    from {
-    	opacity: 0;
-    	background: black;
-    }
-    to {
-    	opacity: 1;
-    }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from {
-    	opacity: 0;
-    	background: black;
-    }
-    to {
-    	opacity: 1;
-    }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from {
-    	opacity: 0;
-    	background: black;
-    }
-    to {
-    	opacity: 1;
-    }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from {
-    	opacity: 0;
-    	background: black;
-    }
-    to {
-    	opacity: 1;
-    }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-    from {
-    	opacity: 0;
-    	background: black;
-    }
-    to {
-    	opacity: 1;
-    }
 }
