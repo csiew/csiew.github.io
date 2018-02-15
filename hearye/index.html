@@ -4,19 +4,29 @@
         <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
         <script type="text/javascript" src="main.js"></script>
         <style>
+            @import url('https://fonts.googleapis.com/css?family=Chivo:300,300i,400,400i,700,700i');
+
             body {
-                font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+                font-family: Chivo, Helvetica, Arial, sans-serif !important;
+                font-weight: 300;
                 text-align: center;
+                color: dimgray;
+                background: white;
+                line-height: 1.5;
                 padding: 3vh;
                 margin: 0;
             }
             a {
-                color: firebrick;
+                color: dimgray;
+                background: none;
                 text-decoration: none;
+                font-weight: inherit;
+                border: 0;
+                border-bottom: 1px dotted dimgray;
             }
             a:hover {
-                color: red;
-                text-decoration: underline;
+                color: dimgray;
+                border-bottom: 1px solid dimgray;
             }
             
             #container {
@@ -78,21 +88,69 @@
                 position: fixed;
                 z-index: 2;
             }
-            
-            #bottom_fade {
-                display: block;
+
+            #content ul {
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                align-items: flex-start;
+                align-content: flex-start;
+            }
+            #content li {
+                display: inline-block;
+                width: 40%;
+                height: 50%;
+                background: white;
+                border: 1px solid dimgray;
+                margin: 0.5em;
+                padding: 1em;
+                overflow: scroll;
+            }
+            #content li:hover {
+                background: whitesmoke;
+            }
+            #content img {
+                box-sizing: border-box;
                 width: 100%;
-                height: 16vh;
-                background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(255,255,255,1));
-                bottom: 0;
+            }
+
+            .audio-controls {
                 margin: 0;
-                position: fixed;
-                z-index: 1;
+                margin-top: 1em;
+                padding: 0;
+            }
+            .audio-controls ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: stretch;
+            }
+            .audio-controls li {
+                display: inline-block;
+                margin: 0;
+                margin-right: 0.5em;
+                padding: 1em;
+                background: white;
+                border: 1px solid dimgray;
+                max-width: 120px;
+            }
+            .audio-controls li:hover {
+                background: whitesmoke;
+            }
+            .audio-controls a, .audio-controls a:hover {
+                color: inherit;
+                border: 0;
             }
         </style>
         <title>Hear Ye</title>
     </head>
-    <body onload="responsiveVoice.speak('Hey there! Click on one of the links on the left to get the headlines!', 'Australian Female');">
+    <body onload="responsiveVoice.speak('Hey there! Click on one of the links on the left to get the headlines!', 'UK English Female');">
         <div id="container">
             <div id="header">
                 <h1>Hear Ye</h1>
@@ -114,17 +172,24 @@
                 <br />
             </div>
             <div id="mainArea">
-                <p>
-                    <a href="javascript:responsiveVoice.pause();">PAUSE</a> / <a href="javascript:responsiveVoice.resume();">RESUME</a>
-                </p><br />
+                <div class="audio-controls">
+                    <ul>
+                        <a href="javascript:responsiveVoice.pause();"><li>PAUSE</li></a>
+                        <a href="javascript:responsiveVoice.resume();"><li>RESUME</li></a>
+                        <a href="javascript:responsiveVoice.stop();"><li>STOP</li></a>
+                </div>
+                <br />
                 <div id="content">
                     <p>
                         Choose a news source
-                    </p><br />
+                    </p>
+                    <p>
+                        <i>Version 1.1</i>
+                    </p>
+                    <br />
                 </div>
             </div>
         </div>
-        <div id="bottom_fade"></div>
         <div id="powered">
             <p>
                 Powered by <a href='https://newsapi.org/' target='_blank'>News API</a> and <a href='https://responsivevoice.org/' target='_blank'>ResponsiveVoice.js</a>
@@ -132,7 +197,7 @@
         </div>
         <div id="footer">
             <p>
-                &copy; 2017 <a href='https://csiew.github.io/' target='_blank'>Clarence Siew</a>
+                &copy; 2017-2018 <a href='https://csiew.github.io/' target='_blank'>Clarence Siew</a>
             </p>
         </div>
     </body>

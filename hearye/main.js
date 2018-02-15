@@ -12,12 +12,14 @@ function grabHeadlines() {
         $.each(json.articles, function() {
             teleprompt += this.title + ". ";
         });
+        document.getElementById("content").innerHTML += "<ul>";
         for (var i = 0; i < rawHeadlines.articles.length; i++) {
             article = rawHeadlines.articles[i];
-            document.getElementById("content").innerHTML += "<hr /><p><a href='" + article.url + "' target='_blank'><img src='" + article.urlToImage + "' width=320px /><br /><br />" + article.title + "</a></p>";
+            document.getElementById("content").innerHTML += "<li><a href='" + article.url + "' target='_blank'><img src='" + article.urlToImage + "' width=320px /><br /><br />" + article.title + "</a></li>";
         }
-        teleprompt += "And that is all for the news. Check back later for more! Bye."
-        responsiveVoice.speak(teleprompt, "Australian Female", {pitch: 1}, {rate: 1});
+        document.getElementById("content").innerHTML += "</ul>";
+        teleprompt += "That's all from" + rawHeadlines.source + "."
+        responsiveVoice.speak(teleprompt, "UK English Female", {pitch: 1}, {rate: 1});
     });
 }
 
