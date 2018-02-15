@@ -5,23 +5,23 @@ textarea:focus, input:focus {
 #text_name {
     font-family: inherit;
     font-size: inherit;
-    border: 1px solid firebrick;
-    padding: 8px;
+    font-weight: inherit;
+    border: 1px solid dimgray;
+    padding: 0.5em;
 }
-#text_name:focus {
-    box-shadow: 0px 0px 8px firebrick;
+#text_name:focus, #text_editor:focus {
+    outline: none;
+    box-shadow: 2px 2px 2px whitesmoke inset;
 }
 
 #text_editor {
     resize: none;
     width: 100%;
-    font-family: monospace;
-    font-size: inherit;
-    border: 1px solid firebrick;
-    padding: 8px;
-}
-#text_editor:focus {
-    box-shadow: 0px 0px 8px firebrick;
+    font-family: inherit;
+    font-size: 1.3em;
+    font-weight: inherit;
+    border: 1px solid lightgray;
+    padding: 0.5em;
 }
 
 .button {
@@ -29,31 +29,14 @@ textarea:focus, input:focus {
 }
 .button a {
     margin: 0;
-    padding: 1.2vh;
-    color: black;
-    background-color: whitesmoke;
-    text-decoration: none;
-    font-family: inherit;
-    font-size: inherit;
-    border: 1px solid dimgray;
-}
-.button a:hover {
-    margin: 0;
-    padding: 1.2vh;
-    color: black;
+    padding: 0.5em;
+    color: dimgray;
     background-color: white;
     text-decoration: none;
     font-family: inherit;
     font-size: inherit;
     border: 1px solid dimgray;
 }
-.button a:active {
-    margin: 0;
-    padding: 1.2vh;
-    color: black;
-    background-color: gray;
-    text-decoration: none;
-    font-family: inherit;
-    font-size: inherit;
-    border: 1px solid dimgray;
+.button a:hover {
+    background-color: whitesmoke;
 }

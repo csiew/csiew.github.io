@@ -5,92 +5,96 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
     <style>
-            body {
-                font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-                text-align: center;
-                padding: 3vh;
-                margin: 0;
-            }
-            a {
-                color: firebrick;
-                text-decoration: none;
-            }
-            a:hover {
-                color: red;
-                text-decoration: underline;
-            }
-            
-            #container {
-                width: 100%;
-                margin: auto;
-            }
-            
-            #header {
-                width: 20%;
-                text-align: left;
-                margin: auto;
-                display: inline-block;
-                float: left;
-            }
-            
-            #mainArea {
-                width: 80%;
-                text-align: left;
-                margin: auto;
-                display: inline-block;
-                float: top;
-            }
-            
-            #content {
-                width: 100%;
-                font-size: 3vh;
-                text-align: center;
-                display: block;
-                align-content: center;
-                vertical-align: middle;
-                margin: auto;
-                margin-bottom: 14vh;
-            }
-            
-            #source_chooser {
-                text-align: left;
-                list-style-type: none;
-                padding: 0;
-            }
-            
-            #powered {
-                display: block;
-                padding: 3vh;
-                left: 0;
-                bottom: 0;
-                float: left;
-                text-align: left;
-                position: fixed;
-                z-index: 2;
-            }
-            
-            #footer {
-                display: block;
-                padding: 3vh;
-                right: 0;
-                bottom: 0;
-                float: right;
-                text-align: right;
-                position: fixed;
-                z-index: 2;
-            }
-            
-            #bottom_fade {
-                display: block;
-                width: 100%;
-                height: 16vh;
-                background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(255,255,255,1));
-                bottom: 0;
-                margin: 0;
-                position: fixed;
-                z-index: 1;
-            }
-        </style>
+        @import url('https://fonts.googleapis.com/css?family=Chivo:300,300i,400,400i,700,700i');
+
+        body {
+            font-family: Chivo, Helvetica, Arial, sans-serif !important;
+            font-weight: 300;
+            text-align: center;
+            color: dimgray;
+            background: white;
+            line-height: 1.5;
+            padding: 3vh;
+            margin: 0;
+        }
+
+        a {
+            color: dimgray;
+            background: none;
+            text-decoration: none;
+            font-weight: inherit;
+            border: 0;
+            border-bottom: 1px dotted dimgray;
+        }
+        a:hover {
+            color: dimgray;
+            border-bottom: 1px solid dimgray;
+        }
+
+        h4 {
+            margin-top: -1.5em;
+        }
+        
+        #container {
+            width: 100%;
+            margin: auto;
+        }
+        
+        #header {
+            width: 20%;
+            text-align: left;
+            margin: auto;
+            display: inline-block;
+            float: left;
+        }
+        
+        #mainArea {
+            width: 80%;
+            text-align: left;
+            margin: auto;
+            display: inline-block;
+            float: top;
+        }
+        
+        #content {
+            width: 100%;
+            font-size: 3vh;
+            text-align: center;
+            display: block;
+            align-content: center;
+            vertical-align: middle;
+            margin: auto;
+            margin-bottom: 14vh;
+        }
+        
+        #source_chooser {
+            text-align: left;
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        #powered {
+            display: block;
+            padding: 3vh;
+            left: 0;
+            bottom: 0;
+            float: left;
+            text-align: left;
+            position: fixed;
+            z-index: 2;
+        }
+        
+        #footer {
+            display: block;
+            padding: 3vh;
+            right: 0;
+            bottom: 0;
+            float: right;
+            text-align: right;
+            position: fixed;
+            z-index: 2;
+        }
+    </style>
     <title>Webitor</title>
     <script>
         function load_list() {
@@ -167,6 +171,7 @@
     <div id="container">
         <div id="header">
             <h1>Webitor</h1>
+            <h4>Version 1.1</h4>
             <p>Previous notes:</p>
             <ul id="file_list" style="list-style-type: none; padding: 0;">
             </ul>
@@ -188,10 +193,9 @@
             </div>
         </div>
     </div>
-    <div id="bottom_fade"></div>
     <div id="footer">
             <p>
-                &copy; 2017 <a href='https://csiew.github.io/' target='_blank'>Clarence Siew</a>
+                &copy; 2017-2018 <a href='https://csiew.github.io/' target='_blank'>Clarence Siew</a>
             </p>
         </div>
 </body>
