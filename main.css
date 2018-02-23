@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Chivo:300,300i,400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Bitter:400,400i,700|Lato:300,300i,400,400i,700,700i');
 
 body {
-	font-family: Chivo, Helvetica, Arial, sans-serif !important;
+	font-family: Lato, Helvetica, Arial, sans-serif !important;
 	/* font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; */
 	font-size: 1.2em;
-	font-weight: 300;
+	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
-	color: dimgray;
-	background-color: white;
+	color: black;
+	background-color: lightgoldenrodyellow;
 	/*
 	background: linear-gradient(to bottom, black, #111, #222, #333);
 	background-attachment: fixed;
@@ -47,7 +47,7 @@ header h1 {
 }
 
 h1, h2, h3, h4, h5 {
-	font-family: inherit;
+	font-family: Bitter, Helvetica, Arial, sans-serif !important;
 	font-weight: 300 !important;
 	text-transform: none;
 	line-height: 1 !important;
@@ -65,26 +65,26 @@ h3 {
 h4 {
 	font-size: 1em;
 	margin-top: -2em;
-	color: gray;
+	color: darkgoldenrod;
 }
 
 a {
-	color: dimgray;
+	color: forestgreen;
 	background: none;
 	text-decoration: none;
 	font-weight: inherit;
 	border: 0;
-	border-bottom: 1px dotted dimgray;
+	border-bottom: 1px dotted forestgreen;
 }
 a:hover {
-	color: dimgray;
-	border-bottom: 1px solid dimgray;
+	color: darkolivegreen;
+	border-bottom: 1px solid darkolivegreen;
 }
 
 hr {
 	width: 100%;
 	border: 0;
-	border-bottom: 1px solid lightgray;
+	border-bottom: 1px solid darkgoldenrod;
 }
 
 ul {
