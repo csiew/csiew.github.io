@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Playfair+Display:900,900i');
+
 body {
-	font-family: Helvetica, Arial, 'Nimbus Sans L', 'Liberation Sans', sans-serif !important;
+	font-family: Lora, 'Times New Roman', Times, serif !important;
 	/* font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; */
-	font-size: 1em;
+	font-size: 1.15em;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
-	color: whitesmoke;
-	background-color: #333;
+	color: #333;
+	background-color: whitesmoke;
 	/*
 	background: linear-gradient(to bottom, black, #111, #222, #333);
 	background-attachment: fixed;
@@ -45,8 +47,9 @@ header h1 {
 }
 
 h1, h2, h3, h4, h5 {
-	font-family: inherit;
-	font-weight: 700 !important;
+	font-family: 'Playfair Display', 'Times New Roman', Times, serif !important;;
+	font-weight: 900 !important;
+	font-style: italic;
 	text-transform: none;
 	line-height: 1 !important;
 	color: inherit;
@@ -63,20 +66,20 @@ h3 {
 h4 {
 	font-size: 1em;
 	margin-top: -2em;
-	color: lightgray;
+	color: gray;
 }
 
 a {
-	color: whitesmoke;
+	color: #333;
 	background: none;
 	text-decoration: none;
 	font-weight: inherit;
 	border: 0;
-	border-bottom: 1px dotted whitesmoke;
+	border-bottom: 1px dotted #333;
 }
 a:hover {
-	color: white;
-	border-bottom: 1px solid white;
+	color: lightseagreen;
+	border-bottom: 1px solid lightseagreen;
 }
 
 hr {
@@ -152,7 +155,7 @@ ul {
 	margin-bottom: 1em;
 	/* transition: 1s;
 	transform: rotate(-6deg); */
-	opacity: 1;
+	opacity: 0.75;
 	-webkit-filter: grayscale(100%);
 	filter: blur(100%);
 }
