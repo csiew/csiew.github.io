@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i');
 
 body {
-	font-family: 'linguistics_pro', Helvetica, Arial, sans-serif !important;
+	font-family: Helvetica, Arial, sans-serif !important;
 	/* font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important; */
-	font-size: 1.5em;
+	font-size: 1.25em;
 	font-weight: 400;
 	line-height: 1.75;
 	text-align: left;
@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-	max-width: 800px;
+	max-width: 600px;
 	margin: 2em;
 	margin-left: auto;
 	margin-right: auto;
