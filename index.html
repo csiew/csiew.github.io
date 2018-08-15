@@ -7,7 +7,9 @@
 	<link href="fonts/fonts.css" rel="stylesheet">
 	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 	<script type="text/javascript">
-		function show_menu() {
+		var sectionNames = ["greetings","connect","projects","misc","archive"];
+
+		function showMenu() {
 			if (document.getElementById("nav-menu").style.visibility == "hidden") {
 				// Show the menu
 				document.getElementById("nav-menu").style.visibility = "visible";
@@ -22,41 +24,64 @@
 				document.body.style.overflow = "scroll";
 			}
 		}
+
+		function revealSection(sectionId) {
+			for (i = 0; i < sectionNames.length; i++) {
+				var section = document.getElementById(sectionNames[i]);
+				var navlink = document.getElementById("navlink"+[i]);
+				if (sectionNames[i] === sectionId) {
+					section.style.display = "block";
+					navlink.style.backgroundColor = "white";
+					navlink.style.color = "black";
+				} else {
+					section.style.display = "none";
+					navlink.style.backgroundColor = "transparent";
+					navlink.style.color = "black";
+				}
+			}
+		}
 	</script>
 	<title>Clarence Siew</title>
 </head>
-<body>
+<body onload="revealSection('greetings')">
 
 	<header>
 		<h1>Clarence Siew</h1>
-		<p>
-			Software engineering student @ Monash University.
-		</p>
+		<div class="nav">
+			<ul>
+				<li id="navlink0" onclick="revealSection('greetings')">Hello</li>
+				<li id="navlink1" onclick="revealSection('connect')">Socials</li>
+				<li id="navlink2" onclick="revealSection('projects')">Projects</li>
+				<li id="navlink3" onclick="revealSection('misc')">Misc</li>
+				<li id="navlink4" onclick="revealSection('archive')">Archive</li>
+			</ul>
+		</div>
 	</header>
 
 	<div class="container">
 
-		<div class="section">
-			<h2>Greetings</h2>
+		<div id="greetings" class="section">
 			<p>
 				I'm Clarence. I'm a Software Engineering student at Monash University (Clayton campus). Building software that empowers people to achieve their goals is what I've wanted to do since I was 10. If I'm not manifesting these dreams at uni or in assignments, I'm always working on at least one side project.
 			</p>
 		</div>
 
-		<div class="section nav-complex">
-			<h2>Connect with Me</h2>
-			<ul>
-				<li><a href='https://clarencesiew.wordpress.com' target='_blank'>Blog</a> <i class="em em-writing_hand"></i></li>
-				<li><a href='https://github.com/csiew' target='_blank'>GitHub</a> <i class="em em-mage"></i></li>
-				<li><a href='https://www.linkedin.com/in/clarencesiew' target='_blank'>LinkedIn</a> <i class="em em-linked_paperclips"></i></li>
-				<!-- <li><a href='https://csiew.tumblr.com' target='_blank'>Tumblr</a> <i class="em em-hammer"></i></li> -->
-				<li><a href='https://twitter.com/clarencesiew' target='_blank'>Twitter</a> <i class="em em-left_speech_bubble"></i></li>
-				<li><a href='https://instagram.com/clarence_siew' target='_blank'>Instagram</a> <i class="em em-camera_with_flash"></i></li>
-			</ul>
+		<div id="connect" class="section">
+			<table border="0" cellspacing="0" cellpadding="1em"
+				style="width: 100%;">
+				<tr>
+					<td><i class="em em-writing_hand"></i> <a href='https://clarencesiew.wordpress.com' target='_blank'>Blog</a></td>
+					<td><i class="em em-mage"></i> <a href='https://github.com/csiew' target='_blank'>GitHub</a></td>
+					<td><i class="em em-linked_paperclips"></i> <a href='https://www.linkedin.com/in/clarencesiew' target='_blank'>LinkedIn</a></td>
+				</tr>
+				<tr>
+					<td><i class="em em-left_speech_bubble"></i> <a href='https://twitter.com/clarencesiew' target='_blank'>Twitter</a></td>
+					<td><i class="em em-camera_with_flash"></i> <a href='https://instagram.com/clarence_siew' target='_blank'>Instagram</a></td>
+				</tr>
+			</table>
 		</div>
 
-		<div class="section projects-list">
-			<h2>Things I've Built</h2>
+		<div id="projects" class="section projects-list">
 			<ul>
 				<li>
 					<h3>blog<sup>2</sup></h3>
@@ -91,8 +116,7 @@
 			</ul>
 		</div>
 
-		<div class="section projects-list">
-			<h2>Miscellaneous</h2>
+		<div id="misc" class="section projects-list">
 			<ul>
 				<li>
 					<h3><a href="homelab.html">The Lab</a></h3>
@@ -115,8 +139,7 @@
 			</ul>
 		</div>
 
-		<div class="section">
-			<h2>Archive</h2>
+		<div id="archive" class="section">
 			<p>
 				You can see past iterations of my website:
 			</p>
