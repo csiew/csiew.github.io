@@ -1,0 +1,84 @@
+body {
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important; */
+	font-size: 1em;
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: center;
+	color: #333;
+	background-color: white;
+	max-width: 380px;
+	margin: auto;
+	padding: 1em;
+	padding-top: 4em;
+	padding-bottom: 8em;
+	border: 0;
+}
+
+a { color: dodgerblue; }
+a:hover { color: slateblue; }
+
+header {
+	margin: auto;
+	margin-bottom: 3em;
+	padding: 1em;
+	text-align: center;
+	overflow: visible;
+	/* box-shadow: 0px 2px 8px rgba(0,0,0,0.125); */
+}
+header h1 {
+	color: inherit;
+	word-wrap: wrap;
+	font-size: 3em;
+	padding: 0;
+	margin: 0;
+}
+header ul {
+	margin: 0;
+	padding: 0;
+}
+header li {
+	list-style: none;
+	display: inline-block;
+	margin: 0;
+	padding: 0.5em;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	text-align: left;
+	border-collapse: collapse;
+}
+td {
+	padding: 0.75em;
+}
+
+footer {
+	margin-top: 3em;
+	padding-top: 3em;
+	padding-bottom: 3em;
+	text-align: center;
+	background: #222;
+	color: #aaa;
+}
+
+h1 { font-size: 3em; margin: 0; }
+h2 { font-size: 2em; margin: 0; }
+h3 { font-size: 1.5em; margin: 0; }
+h4 { font-size: 1.25em; margin: 0; }
+
+hr {
+	width: 100%;
+	border: 0;
+	border-bottom: 1px solid #aaa;
+    margin-bottom: 2.5em;
+}
