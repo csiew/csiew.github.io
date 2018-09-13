@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700,700i|Gothic+A1:400,700,900');
-
 body {
-	font-family: 'Gothic A1', sans-serif !important;
-	/* font-family: "Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important; */
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;
 	font-size: 1.25em;
 	font-weight: 400;
 	line-height: 1.75;
 	text-align: left;
-	color: #333;
-	background-color: white;
+	text-rendering: optimizeSpeed;
+	color: white;
+	background-color: black;
 	/*
-	background: linear-gradient(to bottom, black, #111, #222, #333);
+	background: linear-gradient(to bottom, black, black, black, #473620);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -20,10 +18,18 @@ body {
 	padding-top: 4em;
 	padding-bottom: 4em;
 	border: 0;
+
+	/* FROM https://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load */
+    
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
 }
 
 .container {
-	max-width: 600px;
+	max-width: 960px;
 	margin: 0;
 	margin-left: auto;
 	margin-right: auto;
@@ -59,7 +65,7 @@ footer {
 
 h1, h2, h3, h4, h5 {
 	font-family: inherit;
-	font-weight: 900 !important;
+	font-weight: 700 !important;
 	font-style: normal;
 	line-height: 1 !important;
 	color: inherit;
@@ -86,21 +92,27 @@ p {
 }
 
 a {
-	color: #5AA7B4;
+	color: orangered;
 	background: none;
-	text-decoration: underline;
+	text-decoration: none;
 	font-weight: inherit;
 	border: 0;
+	transition: 0.2s;
 }
 a:hover {
-	color: #666;
+	color: tomato;
+	text-shadow: 0px 0px 8px orangered;
+	transition: 0.2s;
 }
 
 hr {
 	width: 100%;
+	height: 1px;
 	border: 0;
-	border-bottom: 1px solid #aaa;
+	border-bottom: 0px solid linear-gradient(to right, orangered, #eee);
+	border-radius: 6em;
     margin-bottom: 2.5em;
+    background: linear-gradient(to right, transparent, orangered, transparent)
 }
 
 ul {
@@ -122,8 +134,6 @@ td {
 	margin-top: 1em;
 	margin-bottom: 2em;
     padding: 0;
-	padding-left: 0.5em;
-    padding-right: 0.5em;
 	box-sizing: border-box;
 	color: inherit;
 	/*
@@ -213,11 +223,76 @@ td {
 .projects-list li {
 	width: 100%;
 	display: inline-block;
-	padding: 1.25em;
+	padding: 1em;
 	margin: 0;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
 	box-sizing: border-box;
-	background: white;
+	background: none;
 	border: 0px solid whitesmoke;
+}
+
+.project-box {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	flex-basis: auto;
+	justify-content: space-between;
+	padding: 0;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	margin: 0;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.project-box-title {
+	max-width: 540px;
+	min-width: 240px;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+.project-box-body {
+	max-width: 540px;
+	min-width: 240px;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.project-box-title h3 {
+	margin-top: 0.25em;
+}
+.project-box-title h4 {
+	margin-top: -1em;
+}
+
+/* FROM https://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load */
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
