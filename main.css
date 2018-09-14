@@ -12,9 +12,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;*/
 	margin: 0;
-	padding: 1em;
-	padding-top: 4em;
-	padding-bottom: 4em;
+	padding: 0;
 	border: 0;
 
 	/* FROM https://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load */
@@ -31,18 +29,22 @@ body {
 	margin: 0;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 0;
+	padding: 1em;
+	padding-bottom: 8em;
 	display: flex;
 	justify-content: center;
 	flex-flow: column;
 	box-sizing: border-box;
+    overflow: visible;
+    pointer-events: all;
 }
 
 header {
 	max-width: 600px;
 	line-height: 1.5;
 	margin: auto;
-	margin-bottom: 1.5em;
+	padding: 0;
+	padding-top: 4em;
 	text-align: center;
 	overflow: visible;
 	/* box-shadow: 0px 2px 8px rgba(0,0,0,0.125); */
@@ -59,6 +61,18 @@ footer {
 	text-align: center;
 	background: #222;
 	color: #aaa;
+}
+
+.overlay-footer {
+	width: 100%;
+	height: 8em;
+	background: linear-gradient(to bottom, transparent, whitesmoke, whitesmoke);
+	z-index: 2;
+	margin: auto;
+	top: auto;
+	bottom: 0;
+	padding: 0;
+	position: fixed;
 }
 
 h1, h2, h3, h4, h5 {
