@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Gothic+A1:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700,700i');
 
 body {
-	font-family: 'Gothic A1', Helvetica, Arial, sans-serif !important;
+	font-family: 'EB Garamond', serif !important;
 	/*font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;*/
-	font-size: 1em;
+	font-size: 1.25em;
 	font-weight: 400;
 	line-height: 1.75;
 	text-align: left;
 	text-rendering: optimizeSpeed;
 	color: black;
-	background-color: white;
+	background-color: whitesmoke;
 	/*background: linear-gradient(to bottom right, black, #2D2215, dimgray);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -20,7 +20,7 @@ body {
 }
 
 .container {
-	max-width: 480px;
+	max-width: 960px;
 	margin: 0;
 	margin-left: auto;
 	margin-right: auto;
@@ -35,7 +35,7 @@ body {
 }
 
 header {
-	max-width: 480px;
+	max-width: 960px;
 	line-height: 1.5;
 	margin: auto;
 	padding: 0;
@@ -48,7 +48,10 @@ header h1 {
 	color: inherit;
 	word-wrap: wrap;
 	font-size: 4em;
-	font-weight: 900 !important;
+}
+header h4 {
+	margin-top: 1em;
+	font-style: italic;
 }
 
 footer {
@@ -73,7 +76,7 @@ footer {
 }
 
 h1, h2, h3, h4, h5 {
-	font-weight: 700 !important;
+	font-weight: 400 !important;
 	font-style: normal;
 	line-height: 1 !important;
 	color: inherit;
@@ -84,14 +87,12 @@ h1 {
 }
 h2 {
 	font-size: 2.5em;
-	font-weight: 900 !important;
 }
 h3 {
 	font-size: 2em;
 }
 h4 {
 	font-size: 1.25em;
-	font-weight: 400 !important;
 	color: gray;
 }
 
@@ -138,11 +139,12 @@ td {
 	line-height: inherit;
 	display: block;
 	margin: 0;
-	margin-top: 1em;
-	margin-bottom: 2em;
-    padding: 0;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+    padding: 1.5em;
 	box-sizing: border-box;
 	color: inherit;
+	background-color: white;
 }
 .section h1, .section h2, .section h3, .section h4 {
 	line-height: 1;
@@ -238,7 +240,7 @@ td {
 .project-box {
 	width: 100%;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	flex-wrap: wrap;
 	flex-basis: auto;
 	justify-content: space-between;
@@ -275,19 +277,29 @@ td {
 	flex-direction: row;
 	flex-wrap: wrap;
 	flex-basis: auto;
-	justify-content: space-around;
+	justify-content: center;
 	padding: 0;
 	margin: 0;
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
+.connect-box a {
+	color: black;
+	text-decoration: none;
+}
+.connect-box a:hover {
+	color: white;
+}
 .connect-box-item {
-	max-width: 540px;
 	min-width: 240px;
-	padding: 0.125em;
+	padding: 0.25em;
 	margin: 0.125em;
 	text-align: center;
+	color: black;
+	background-color: none;
+	border: 1px solid black;
 }
-.connect-box-item h3 {
-	font-size: 1.5em !important;
+.connect-box-item:hover {
+	color: white;
+	background-color: black;
 }
