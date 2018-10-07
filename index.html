@@ -1,183 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset='UTF-8'>
-	<meta name='viewport' content='width=device-width initial-scale=1'>
-	<link href="main.css" rel="stylesheet">
-	<link href="fonts/fonts.css" rel="stylesheet">
-	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-	<script type="text/javascript">
-		function show_menu() {
-			if (document.getElementById("nav-menu").style.visibility == "hidden") {
-				// Show the menu
-				document.getElementById("nav-menu").style.visibility = "visible";
-				document.getElementById("nav-menu").style.display = "block";
-				document.getElementById("nav-menu-button").innerHTML = '<a href="#" onclick="show_menu()">CLOSE</a>';
-				document.body.style.overflow = "hidden";
-			} else {
-				// Hide the menu
-				document.getElementById("nav-menu").style.visibility = "hidden";
-				document.getElementById("nav-menu").style.display = "none";
-				document.getElementById("nav-menu-button").innerHTML = '<a href="#" onclick="show_menu()">MENU</a>';
-				document.body.style.overflow = "scroll";
-			}
-		}
-	</script>
-	<title>Clarence Siew</title>
-</head>
-<body>
-
-	<header>
-		<h1>Clarence Siew</h1>
-                <h4>Software Engineering student</h4>
-	</header>
-
-	<div class="container">
-        
-        <hr />
-
-                <div class="section">
-
-                        <div class="connect-box">
-                                <a href='https://clarencesiew.wordpress.com' target='_blank'><div class="connect-box-item">
-                                        <i class="em em-writing_hand"></i> Blog
-                                </div></a>
-                                <a href='https://github.com/csiew' target='_blank'><div class="connect-box-item">
-                                        <i class="em em-mage"></i> GitHub
-                                </div></a>
-                                <a href='https://www.linkedin.com/in/clarencesiew' target='_blank'><div class="connect-box-item">
-                                        <i class="em em-linked_paperclips"></i> LinkedIn
-                                </div></a>
-                                <a href='https://twitter.com/clarencesiew' target='_blank'><div class="connect-box-item">
-                                        <i class="em em-left_speech_bubble"></i> Twitter
-                                </div></a>
-                                <a href='https://instagram.com/clarence_siew' target='_blank'><div class="connect-box-item">
-                                        <i class="em em-camera_with_flash"></i> Instagram
-                                </div></a>
+        <head>
+                <meta charset='UTF-8'>
+                <meta name='viewport' content='width=device-width initial-scale=1'>
+                <link href="main.css" rel="stylesheet">
+                <link href="fonts/fonts.css" rel="stylesheet">
+                <title>Clarence Siew</title>
+        </head>
+        <body>
+                <div class="shelf">
+                        <div class="shelf-item shelf-header">
+                                <h1>Clarence Siew</h1>
+                                <small>Veritas Virtutis</small>
+                        </div>
+                        <div class="shelf-item">
+                                Clarence is a software engineering student at Monash University. He created two Linux distributions (illume OS and Antorca) and has made a few simple web apps. He is currently interning at National Australia Bank as part of the Industry Based Learning program and is developing some side projects (both mobile and web apps) in his free time.
+                        </div>
+                        <div class="shelf-item">
+                                <h3>Connect</h3>
+                                <ul>
+                                        <li><a href='https://clarencesiew.wordpress.com'>Blog</a></li>
+                                        <li><a href='https://github.com/csiew'>GitHub</a></li>
+                                        <li><a href='https://www.linkedin.com/in/clarencesiew'>LinkedIn</a></li>
+                                        <li><a href='https://twitter.com/clarencesiew'>Twitter</a></li>
+                                        <li><a href='https://instagram.com/clarence_siew'>Instagram</a></li>
+                                </ul>
+                        </div>
+                        <div class="shelf-item">
+                                <h3>Projects</h3>
+                                <ul>
+                                        <li><a href='https://github.com/csiew/md2magic'>md2magic</a></li>
+                                        <li><a href='https://devpost.com/software/sound-face'>SoundFace</a></li>
+                                        <li><a href='hearye/index.html'>Hear Ye</a></li>
+                                        <li><a href='https://antorca.github.io/archive/index.html'>Antorca Linux</a></li>
+                                        <li><a href='webitor/index.html'>Webitor</a></li>
+                                        <li><a href='https://illume-os.firebaseapp.com/'>illume OS</a></li>
+                                </ul>
+                        </div>
+                        <div class="shelf-item">
+                                <h3>Etc</h3>
+                                <ul>
+                                        <li><a href="homelab.html">The Lab</a></li>
+                                        <li><a href='locations.html'>Locations</a></li>
+                                        <li><a href='playlists.html'>Playlists</a></li>
+                                </ul>
                         </div>
                 </div>
-        
-        <hr />
-
-        <div class="section">
-                <h2>Projects</h2>
-
-        	<div class="project-box">
-        		<div class="project-box-title">
-        			<h3><a href='https://github.com/csiew/md2magic'>md2magic</a></h3>
-					<h4>2018-Present</h4>
-        		</div>
-        		<div class="project-box-body">
-        			<p>A website generator that collates and converts markdown files to HTML files. You can see an example of this site being generated using md2magic <a href="md2magic/site/out/index.html">here</a>.</p>
-        		</div>
-        	</div>
-
-        	<div class="project-box">
-        		<div class="project-box-title">
-        			<h3><a href='https://devpost.com/software/sound-face'>SoundFace</a></h3>
-					<h4>2017</h4>
-        		</div>
-        		<div class="project-box-body">
-        			<p>An app that uses Microsoft Azure's facial recognition services and the Spotify APIs to generate a mood-based playlist based on your facial expression. Group project at UniHack 2017, a hackathon organised by Wired at Monash University.</p>
-        		</div>
-        	</div>
-
-        	<div class="project-box">
-        		<div class="project-box-title">
-        			<h3><a href='hearye/index.html'>Hear Ye</a></h3>
-					<h4>2017, 2018</h4>
-        		</div>
-        		<div class="project-box-body">
-        			<p>It grabs headlines from news sites and literally reads the headlines to you.</p>
-        		</div>
-        	</div>
-
-        	<div class="project-box">
-        		<div class="project-box-title">
-        			<h3><a href='https://antorca.github.io/archive/index.html'>Antorca Linux</a></h3>
-					<h4>2016-2017</h4>
-        		</div>
-        		<div class="project-box-body">
-        			<p>Successor to illume OS, but now 64-bit only and with more emphasis on security, access to third-party browsers, and simplicity.</p>
-        		</div>
-        	</div>
-
-        	<div class="project-box">
-        		<div class="project-box-title">
-        			<h3><a href='webitor/index.html'>Webitor</a></h3>
-					<h4>2016, 2018</h4>
-        		</div>
-        		<div class="project-box-body">
-        			<p>An experimental text editor built with JavaScript and browser local storage.</p>
-        		</div>
-        	</div>
-
-        	<div class="project-box">
-        		<div class="project-box-title">
-        			<h3><a href='https://illume-os.firebaseapp.com/'>illume OS</a></h3>
-					<h4>2011-2016</h4>
-        		</div>
-        		<div class="project-box-body">
-					<p>Debian-based Linux distribution with speed, hardware compatibility, and easy access to web services in mind. Continued as Antorca in mid/late 2016.</p>
-        		</div>
-        	</div>
-
-        </div>
-        
-        <hr />
-
-		<div class="section projects-list">
-			<h2>Etc</h2>
-
-        	<div class="project-box">
-        		<div class="project-box-title">
-        			<h3><a href="homelab.html">The Lab</a></h3>
-        		</div>
-        		<div class="project-box-body">
-        			<p>
-						This is where I share projects I've been working on for purely personal use. In most cases these revolve around scripts and my Raspberry Pi.
-					</p>
-        		</div>
-        	</div>
-
-        	<div class="project-box">
-        		<div class="project-box-title">
-        			<h3><a href='locations.html'>Locations</a></h3>
-        		</div>
-        		<div class="project-box-body">
-					<p>
-						Places to visit and eat in the two places in the world I frequent the most - Penang and Melbourne.
-					</p>
-        		</div>
-        	</div>
-
-        	<div class="project-box">
-        		<div class="project-box-title">
-					<h3><a href='playlists.html'>Playlists</a></h3>
-        		</div>
-        		<div class="project-box-body">
-					<p>
-						My monthly Spotify playlists which are mostly made up of new songs I've discovered and some nostalgia.
-					</p>
-        		</div>
-        	</div>
-
-		</div>
-        
-        <hr />
-
-		<div class="section">
-			<h2>Archive</h2>
-			<p>
-				You can see past iterations of my website:
-			</p>
-			<ul>
-				<li><a href='archive/v2/index.html'>Version 2</a> (2017)</li>
-				<li><a href='archive/v1/index.html'>Version 1</a> (2016-2017)</li>
-				<li><a href='http://csiew.neocities.org/'>Neocities site/blog</a> (2017)</li>
-			</ul>
-		</div>
-
-	</div>
-</body>
+        </body>
 </html>
