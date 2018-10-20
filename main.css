@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Nobile:400,400i,700,700i');
+
 @media only screen and (max-width: 420px) {
 	header {
 		flex-flow: column !important;
@@ -5,22 +7,25 @@
 	header h2 {
 		font-size: 1.5em !important;
 	}
+	.shelf {
+		margin-top: 0 !important;
+	}
 	.shelf-item {
 		padding: 1.5em !important;
 	}
 }
 
 body {
-	/*font-family: Molengo, Trebuchet MS, Helvetica, Arial, serif !important;*/
-	font-family: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important;
-	font-size: 1.25em;
+	font-family: Helvetica, Arial, serif !important;
+	/*font-family: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important;*/
+	font-size: 1.125em;
 	font-weight: 400;
 	line-height: 1.625;
 	text-align: left;
 	text-rendering: optimizeLegibility;
 	/*letter-spacing: -0.8px;*/
-	color: black;
-	background-color: whitesmoke;
+	color: #333;
+	background-color: white;
 	margin: auto;
 	padding: 0;
 	display: flex;
@@ -31,7 +36,8 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-	font-weight: 400;
+	font-family: Manrope, Helvetica, Arial, serif !important;
+	font-weight: 700;
 	font-style: normal;
 	line-height: 1.25 !important;
 	color: inherit;
@@ -65,10 +71,9 @@ a {
 	border: 0;
 }
 a:hover {
-	text-decoration: underline;
-}
-a:active {
-	color: red;
+	color: white;
+	background: brown;
+	text-decoration: none;
 }
 
 ul {
@@ -88,11 +93,12 @@ header {
 	margin-bottom: 1em;
 	padding: 1em;
 	top: 0;
-	position: fixed;
-	background-color: inherit;
-	color: black;
+	/*position: fixed;*/
+	background-color: #333;
+	color: white;
 	border: 0;
-	border-bottom: 1px solid lightgray;
+	/*border-bottom: 1px solid lightgray;*/
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.5);
 	box-sizing: border-box;
 	display: flex;
 	justify-content: space-between;
@@ -100,30 +106,32 @@ header {
 	flex-flow: row wrap;
 }
 header small {
+	font-family: Manrope, Helvetica, Arial, serif !important;
 	text-transform: uppercase;
 	font-size: 0.75em;
 	color: gray;
 	padding: 0.25em;
 }
 header h1 {
-	color: black;
+	color: white;
 }
 header h2 {
-	color: gray;
-}
-header h3 {
 	color: lightgray;
 }
-header a {
-	color: black !important;
-	text-decoration: none;
+header h3 {
+	color: gray;
+}
+header a, header a:hover {
+	background: none !important;
+	color: inherit !important;
+	text-decoration: none !important;
 }
 
 .shelf {
-	max-width: 1200px;
+	max-width: 1024px;
 	margin: auto;
-	margin-top: 7em;
-	margin-bottom: 5em;
+	margin-top: 2em;
+	margin-bottom: 2.5em;
 	padding: 0;
 	display: flex;
 	justify-content: flex-start;
