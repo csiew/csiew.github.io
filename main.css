@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta:400,700');
+
 @media only screen and (max-width: 420px) {
 	body {
 		font-size: 1.25em !important;
@@ -22,8 +24,9 @@
 }
 
 body {
-	font-family: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important;
-	font-size: 1.25em;
+	font-family: Helvetica,Arial,sans-serif;
+	/*font-family: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important;*/
+	font-size: 1em;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
@@ -75,7 +78,7 @@ a {
 	border: 0;
 }
 a:hover {
-	color: brown;
+	color: mediumseagreen;
 }
 
 ul {
@@ -90,14 +93,17 @@ td {
 	padding: 0.75em;
 }
 header {
-	margin-top: 1.5em;
+	width: 100%;
+	margin: 0;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 0em;
-	padding: 1em;
+	padding: 2.5em;
+	padding-left: 0;
+	padding-right: 0;
 	top: 0;
-	background-color: white;
-	color: black;
+	background-color: slateblue;
+	background: linear-gradient(to bottom right, slateblue, mediumseagreen, palegoldenrod);
+	color: white;
 	border: 0;
 	box-sizing: border-box;
 	display: flex;
@@ -106,16 +112,15 @@ header {
 	flex-flow: column !important;
 }
 header small {
-	text-transform: uppercase;
-	font-size: 0.75em;
-	color: gray;
+	font-size: 0.8em;
+	color: whitesmoke;
 	margin-top: 1em;
 }
 header h1 {
-	color: black;
+	color: white;
 }
 header h2 {
-	color: gray;
+	color: whitesmoke;
 }
 header a, header a:hover {
 	background: none !important;
@@ -124,7 +129,7 @@ header a, header a:hover {
 }
 
 .shelf {
-	max-width: 920px;
+	max-width: 800px;
 	margin: auto;
 	margin-top: 1em;
 	margin-bottom: 5em;
