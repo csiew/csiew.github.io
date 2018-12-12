@@ -1,5 +1,5 @@
 var rawData, apiurl, photoItem, photoURL;
-var searchText = "mountain";
+var searchText = "wallpaper";
 var searchTags = "";
 var perPage = 20;
 var contentType = 1; // 1 for photos only. 2 for screenshots only. 3 for 'other' only. 4 for photos and screenshots. 5 for screenshots and 'other'. 6 for photos and 'other'. 7 for photos, screenshots, and 'other' (all).
