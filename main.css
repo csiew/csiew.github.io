@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Mukta:400,700');
-
 @media only screen and (max-width: 420px) {
 	body {
 		font-size: 1.25em !important;
+	}
+	header {
+		padding: 0.25em !important;
 	}
 	.header-content {
 		padding: 1em !important;
@@ -11,10 +12,11 @@
 		font-size: 1.5em !important;
 	}
 	.shelf {
+		padding: 0.25em !important;
 		margin-top: 0 !important;
 	}
 	.shelf-item {
-		padding: 1.75em !important;
+		padding: 1.5em !important;
 	}
 	.shelf-letter {
 		padding: 1em !important;
@@ -27,16 +29,16 @@
 }
 
 body {
-	font-family: Helvetica,Arial,sans-serif;
-	/*font-family: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important;*/
-	font-size: 1em;
+	font-family: Fantasque,Helvetica,Arial,sans-serif;
+	/* font-family: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important; */
+	font-size: 1.25em;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
 	text-rendering: optimizeSpeed;
 	/*letter-spacing: -0.8px;*/
-	color: #333;
-	background-color: white;
+	color: #555;
+	background-color: #F7F5EE;
 	margin: auto;
 	padding: 0;
 	display: flex;
@@ -48,6 +50,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
+	font-family: Selawik,Helvetica,Arial,sans-serif !important;
 	font-weight: 700;
 	font-style: normal;
 	line-height: 1.125 !important;
@@ -75,14 +78,14 @@ p {
 }
 
 a {
-	color: gray;
+	color: #66594F;
 	background: none;
 	text-decoration: underline;
 	font-weight: inherit;
 	border: 0;
 }
 a:hover {
-	color: dodgerblue;
+	color: #8C796C;
 }
 
 ul {
@@ -99,17 +102,12 @@ td {
 header {
 	width: 100%;
 	margin: 0;
+	margin-top: 2em;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 1.5em;
-	padding-left: 0;
-	padding-right: 0;
+	padding: 1em;
 	top: 0;
-	background-color: slateblue;
-	background: linear-gradient(to bottom, lightslategray, darkslategray);
-	box-shadow: 0px 0px 8px rgba(0,0,0,0.5);
-	text-shadow: 0px 2px 0px rgba(0,0,0,0.5);
-	color: white;
+	color: black;
 	border: 0;
 	box-sizing: border-box;
 	display: inline-block;
@@ -122,21 +120,21 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	flex-flow: row wrap !important;
+	flex-flow: column !important;
 }
 header small {
 	font-size: 0.8em;
-	color: whitesmoke;
+	color: dimgray;
 	margin-top: 1em;
 	display: inline-block;
 }
 header h1 {
-	color: white;
+	color: black;
 	display: inline-block;
 }
 header h2 {
 	font-weight: normal !important;
-	color: whitesmoke;
+	color: dimgray;
 	display: inline-block;
 }
 header a, header a:hover {
@@ -148,9 +146,9 @@ header a, header a:hover {
 .shelf {
 	max-width: 800px;
 	margin: auto;
-	margin-top: 1em;
+	margin-top: 0;
 	margin-bottom: 5em;
-	padding: 0;
+	padding: 1em;
 	display: flex;
 	justify-content: flex-start;
 	flex-flow: row wrap;
@@ -160,8 +158,8 @@ header a, header a:hover {
 .shelf-item {
 	flex-grow: 1;
 	min-width: 180px;
-	margin: 0;
-	padding: 1.5em;
+	margin: 1em;
+	padding: 0.5em;
 	background-color: none;
 }
 .shelf-item p {
@@ -169,6 +167,36 @@ header a, header a:hover {
 	margin-top: 0.5em;
 	margin-bottom: 1em;
 	padding: 0;
+}
+.shelf-item ul, li {
+	list-style-type: circle !important;
+}
+
+.shelf-link-list {
+	text-align: center;
+}
+.shelf-link-list ul, li {
+	list-style-type: none !important;
+	margin: 0.5em;
+	padding: 0.5em;
+}
+.shelf-link-list ul {
+	margin-top: 1em !important;
+}
+.shelf-link-list li {
+	color: whitesmoke !important;
+	background-color: #66594F;
+	border-radius: 6px;
+	box-shadow: 0px 2px 4px rgba(0,0,0,0.25);
+}
+.shelf-link-list li:hover {
+	background: #8C796C;
+}
+.shelf-link-list li:active {
+	box-shadow: 0px 4px 8px rgba(0,0,0,0.25) inset;
+}
+.shelf-link-list a {
+	text-decoration: none !important;
 }
 
 .shelf-letter {
@@ -191,23 +219,15 @@ header a, header a:hover {
 	list-style-type: none;
 }
 .section-spotify li {
-	margin: 0.5em;
-	padding: 1em;
 	width: 25%;
 	display: inline-block;
-	font-size: 1.125em;
-	color: gray !important;
-	background-color: whitesmoke;
-	background: linear-gradient(to bottom, whitesmoke, lightgray);
-	border: 1px solid lightgray;
+	color: whitesmoke !important;
+	background-color: #66594F;
 	border-radius: 6px;
+	box-shadow: 0px 2px 4px rgba(0,0,0,0.25);
 }
 .section-spotify li:hover {
-	color: white !important;
-	text-shadow: 0px -2px 1px darkslategray;
-	background-color: darkslategray;
-	background: linear-gradient(to bottom, lightslategray, darkslategray);
-	border: 1px solid darkslategray;
+	background: #8C796C;
 }
 .section-spotify li:active {
 	box-shadow: 0px 4px 8px rgba(0,0,0,0.25) inset;
