@@ -72,3 +72,69 @@
     font-weight: normal;
     text-rendering: optimizeLegibility;
 }
+
+@font-face {
+    font-family: 'D-DIN';
+    src: url('din/d-din-bold-webfont.woff2') format('woff2'),
+         url('din/d-din-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'D-DIN';
+    src: url('din/d-din-italic-webfont.woff2') format('woff2'),
+         url('din/d-din-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'D-DIN';
+    src: url('din/d-din-webfont.woff2') format('woff2'),
+         url('din/d-din-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('spacegrotesk/spacegrotesk-bold-webfont.woff2') format('woff2'),
+         url('spacegrotesk/spacegrotesk-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('spacegrotesk/spacegrotesk-light-webfont.woff2') format('woff2'),
+         url('spacegrotesk/spacegrotesk-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('spacegrotesk/spacegrotesk-medium-webfont.woff2') format('woff2'),
+         url('spacegrotesk/spacegrotesk-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('spacegrotesk/spacegrotesk-regular-webfont.woff2') format('woff2'),
+         url('spacegrotesk/spacegrotesk-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('spacegrotesk/spacegrotesk-semibold-webfont.woff2') format('woff2'),
+         url('spacegrotesk/spacegrotesk-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
