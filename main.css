@@ -1,33 +1,38 @@
-/* @import url('https://fontlibrary.org/face/dejavu-sans'); */
-
 @media only screen and (max-width: 420px) {
 	body {
 		font-size: 1.25em !important;
+		background: white !important;
 	}
 	.navbar {
 		padding: 0.25em !important;
 		flex-flow: column !important;
 		justify-content: center !important;
 		align-items: center !important;
+		position: static !important;
 	}
-	.navbar-links li {
+	.navbar-links li a {
 		padding: 0.25em !important;
 		margin: 0 !important;
 	}
+	.navbar-links li a:hover {
+		background: none !important;
+		color: white !important;
+	}
 	.shelf {
 		padding: 0.25em !important;
-		margin-top: 5em !important;
+		margin-top: 1em !important;
 	}
 	.shelf-item {
 		padding: 0.25em !important;
 	}
 	.statement-container {
-		padding: 1.5em !important;
-		padding-top: 2.5em !important;
+		margin-top: 2em !important;
+		padding: 0.25em !important;
 		height: auto !important;
+		background: white !important;
 	}
 	.statement {
-		font-size: 1.25em !important;
+		font-size: 1.125em !important;
 	}
 	dd {
 		padding: 0.5em;
@@ -39,7 +44,7 @@
 
 body {
 	/* font-family: 'Times New Roman', Times, serif !important; */
-	font-family: Verdana, 'DejaVu Sans', Helvetica, Arial, sans-serif !important;
+	font-family: Helvetica, Arial, sans-serif !important;
 	/* font-family: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important; */
 	font-size: 1em;
 	font-weight: 400;
@@ -56,7 +61,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-	font-weight: bold !important;
+	font-weight: normal !important;
 	font-style: normal !important;
 	color: inherit;
 }
@@ -135,23 +140,19 @@ dd p {
 	
 	/* Appearance */
 	padding: 1em;
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
-	background: white;
-	color: inherit;
-	box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
+	background: black;
+	color: white;
 }
 .navbar a {
-	color: black !important;
+	color: white !important;
 	text-decoration: none !important;
-	border: 0 !important;
 }
 .navbar a:hover {
-	color: gray !important;
+	color: lightgray !important;
 }
 .navbar-brand {
 	font-size: 1.5em !important;
-	font-weight: 900;
+	font-weight: normal;
 }
 .navbar-links {
 	list-style: none;
@@ -164,7 +165,14 @@ dd p {
 	display: inline-block;
 	padding: 0;
 	margin: 0;
-	margin-left: 1em;
+}
+.navbar-links li a {
+	padding: 0.5em;
+	background: none;
+}
+.navbar-links li a:hover {
+	background: whitesmoke;
+	color: black !important;
 }
 
 .statement-container {
@@ -200,8 +208,8 @@ dd p {
 	max-width: 800px !important;
 	width: 100%;
 	margin: auto;
-	margin-top: 6em;
-	margin-bottom: 5em;
+	margin-top: 8em;
+	margin-bottom: 6em;
 	padding: 1em;
 	display: flex;
 	justify-content: flex-start;
