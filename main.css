@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700');
+
 @media only screen and (max-width: 420px) {
 	body {
 		font-size: 1.25em !important;
@@ -43,16 +45,16 @@
 }
 
 body {
-	/* font-family: 'Times New Roman', Times, serif !important; */
-	font-family: Helvetica, Arial, sans-serif !important;
+	font-family: 'Source Serif Pro', 'Times New Roman', Times, serif !important;
+	/* font-family: Helvetica, Arial, sans-serif !important; */
 	/* font-family: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important; */
-	font-size: 1em;
+	font-size: 1.25em;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
 	text-rendering: optimizeSpeed;
 	color: black;
-	background-color: whitesmoke;
+	background-color: white;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -61,7 +63,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-	font-weight: normal !important;
+	font-weight: bold !important;
 	font-style: normal !important;
 	color: inherit;
 }
@@ -88,12 +90,12 @@ p {
 }
 
 a {
-	color: darkcyan;
-	text-decoration: underline;
+	color: darkgoldenrod;
+	text-decoration: none;
 	font-weight: inherit;
 }
 a:hover {
-	color: darkgoldenrod;
+	text-decoration: underline;
 }
 
 table {
@@ -139,7 +141,9 @@ dd p {
 	z-index: 1;
 	
 	/* Appearance */
-	padding: 1em;
+	padding: 0.25em;
+	padding-left: 1em;
+	padding-right: 1em;
 	background: black;
 	color: white;
 }
@@ -147,13 +151,17 @@ dd p {
 	color: white !important;
 	text-decoration: none !important;
 }
-.navbar a:hover {
-	color: lightgray !important;
-}
 .navbar-brand {
 	font-size: 1.5em !important;
-	font-weight: normal;
+	font-weight: bold;
 }
+.navbar-brand a {
+	background: none !important;
+}
+.navbar-brand a:hover {
+	background: none !important;
+}
+
 .navbar-links {
 	list-style: none;
 }
@@ -167,11 +175,11 @@ dd p {
 	margin: 0;
 }
 .navbar-links li a {
-	padding: 0.5em;
+	padding: 0.25em;
 	background: none;
 }
 .navbar-links li a:hover {
-	background: whitesmoke;
+	background: white;
 	color: black !important;
 }
 
@@ -187,7 +195,6 @@ dd p {
 	position: absolute;
 	z-index: 0;
 	color: black;
-	background: linear-gradient(to bottom right, wheat, khaki, beige);
 }
 .statement {
 	display: inline-block;
@@ -205,17 +212,18 @@ dd p {
 
 .shelf {
 	z-index: 0;
-	max-width: 800px !important;
+	/* max-width: 1024px !important; */
 	width: 100%;
 	margin: auto;
-	margin-top: 8em;
-	margin-bottom: 6em;
+	margin-top: 3em;
+	margin-bottom: 4em;
 	padding: 1em;
+	padding-left: 2em;
+	padding-right: 2em;
 	display: flex;
 	justify-content: flex-start;
 	flex-flow: row wrap;
 	box-sizing: border-box;
-	background: white;
 }
 
 .shelf-item {
