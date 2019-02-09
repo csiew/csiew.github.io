@@ -1,9 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700');
-
 @media only screen and (max-width: 420px) {
 	body {
 		font-size: 1.25em !important;
-		background: white !important;
 	}
 	.navbar {
 		padding: 0.25em !important;
@@ -16,10 +13,6 @@
 		padding: 0.25em !important;
 		margin: 0 !important;
 	}
-	.navbar-links li a:hover {
-		background: none !important;
-		color: white !important;
-	}
 	.shelf {
 		padding: 0.25em !important;
 		margin-top: 1em !important;
@@ -31,7 +24,6 @@
 		margin-top: 2em !important;
 		padding: 0.25em !important;
 		height: auto !important;
-		background: white !important;
 	}
 	.statement {
 		font-size: 1.125em !important;
@@ -45,16 +37,16 @@
 }
 
 body {
-	font-family: 'Source Serif Pro', 'Times New Roman', Times, serif !important;
-	/* font-family: Helvetica, Arial, sans-serif !important; */
+	/* font-family: 'Source Serif Pro', 'Times New Roman', Times, serif !important; */
+	font-family: Helvetica, Arial, sans-serif !important;
 	/* font-family: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important; */
 	font-size: 1.25em;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
 	text-rendering: optimizeSpeed;
-	color: black;
-	background-color: white;
+	color: #333333;
+	background-color: #f9f9f9;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -90,12 +82,12 @@ p {
 }
 
 a {
-	color: darkgoldenrod;
+	color: steelblue;
 	text-decoration: none;
 	font-weight: inherit;
 }
 a:hover {
-	text-decoration: underline;
+	color: slateblue;
 }
 
 table {
@@ -144,11 +136,12 @@ dd p {
 	padding: 0.25em;
 	padding-left: 1em;
 	padding-right: 1em;
-	background: black;
-	color: white;
+	background: white;
+	color: #333333;
+	border-bottom: 1px solid lightgray;
 }
 .navbar a {
-	color: white !important;
+	color: #333333 !important;
 	text-decoration: none !important;
 }
 .navbar-brand {
@@ -178,10 +171,6 @@ dd p {
 	padding: 0.25em;
 	background: none;
 }
-.navbar-links li a:hover {
-	background: white;
-	color: black !important;
-}
 
 .statement-container {
 	display: flex;
@@ -194,7 +183,7 @@ dd p {
 	box-sizing: border-box;
 	position: absolute;
 	z-index: 0;
-	color: black;
+	color: inherit;
 }
 .statement {
 	display: inline-block;
@@ -202,7 +191,7 @@ dd p {
 	padding: 1.5em;
 	box-sizing: border-box;
 	font-size: 1.5em;
-	background: white
+	background: none;
 }
 
 .statement h1 {
@@ -295,12 +284,12 @@ dd p {
 	margin: 0.25em;
 	padding: 1em;
 	display: inline-block;
-	color: black !important;
-	background-color: whitesmoke;
+	color: whitesmoke !important;
+	background-color: steelblue;
 	border: 0 !important;
 }
 .section-spotify li:hover {
-	background: lightgray;
+	background: slateblue;
 }
 
 .btn a {
