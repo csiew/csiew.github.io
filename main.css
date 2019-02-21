@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Bitter:400,400i,700');
-
 :root {
-	--general-font-face: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important;
-	--header-font-face: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important;
-	--bg-color: whitesmoke !important;
-	--fg-color: slategray !important;
+	--general-font-face: sans-serif !important;
+	--header-font-face: sans-serif !important;
+	--bg-color: white !important;
+	--fg-color: black !important;
 	--max-width: 1024px !important;
 }
 
@@ -144,15 +142,15 @@ dd p {
 	padding: 0.25em;
 	padding-left: 1em;
 	padding-right: 1em;
-	color: var(--bg-color);
-	background-color: var(--fg-color);
+	color: var(--fg-color);
+	background-color: var(--bg-color);
 }
 .navbar a {
-	color: var(--bg-color);
+	color: var(--fg-color);
 	text-decoration: none !important;
 }
 .navbar-brand {
-	font-size: 1.5em !important;
+	font-size: 1.75em !important;
 	font-weight: bold;
 }
 .navbar-brand a {
