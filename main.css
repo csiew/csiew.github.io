@@ -194,7 +194,11 @@ dd p {
 	position: absolute;
 	z-index: 0;
 	color: inherit;
-	background: linear-gradient(to bottom right, limegreen, orange, gold);
+	/* background: linear-gradient(to bottom right, limegreen, orange, gold); */
+	background-image: url("wood.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .statement {
 	display: inline-block;
