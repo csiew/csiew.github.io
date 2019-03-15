@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i');
+
 :root {
-	--general-font-face: sans-serif !important;
-	--header-font-face: sans-serif !important;
+	--general-font-face: 'Source Sans Pro', sans-serif !important;
+	--header-font-face: 'Source Sans Pro', sans-serif !important;
 	--bg-color: white !important;
 	--fg-color: black !important;
 	--max-width: 1024px !important;
@@ -32,9 +34,11 @@
 		margin-top: 2em !important;
 		padding: 0.25em !important;
 		height: auto !important;
+		background: none !important;
 	}
 	.statement {
 		font-size: 1.125em !important;
+		box-shadow: none !important;
 	}
 	dd {
 		padding: 0.5em;
@@ -47,7 +51,7 @@
 body {
 	font-family: var(--general-font-face);
 	/* font-family: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important; */
-	font-size: 1.25em;
+	font-size: 1.125em;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
@@ -142,11 +146,12 @@ dd p {
 	padding: 0.25em;
 	padding-left: 1em;
 	padding-right: 1em;
-	color: var(--fg-color);
-	background-color: var(--bg-color);
+	color: var(--bg-color);
+	background-color: var(--fg-color);
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
 }
 .navbar a {
-	color: var(--fg-color);
+	color: var(--bg-color);
 	text-decoration: none !important;
 }
 .navbar-brand {
@@ -189,6 +194,7 @@ dd p {
 	position: absolute;
 	z-index: 0;
 	color: inherit;
+	background: linear-gradient(to bottom right, limegreen, orange, gold);
 }
 .statement {
 	display: inline-block;
@@ -196,7 +202,11 @@ dd p {
 	padding: 1.5em;
 	box-sizing: border-box;
 	font-size: 1.5em;
-	background: none;
+	background: var(--bg-color);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
 }
 .statement h1 {
 	margin: 0;
@@ -208,7 +218,7 @@ dd p {
 	max-width: var(--max-width);
 	width: 100%;
 	margin: auto;
-	margin-top: 3em;
+	margin-top: 4em;
 	margin-bottom: 4em;
 	padding: 1em;
 	padding-left: 2em;
