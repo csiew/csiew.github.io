@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,400i,700,700i');
 
 :root {
-	--general-font-face: 'Source Sans Pro', sans-serif !important;
-	--header-font-face: 'Source Sans Pro', sans-serif !important;
+	--general-font-face: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important;
+	--header-font-face: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important;
 	--bg-color: white !important;
+	--bg-comfort-color: #fbfbfb !important;
 	--fg-color: black !important;
 	--max-width: 1024px !important;
 }
@@ -57,7 +58,10 @@ body {
 	text-align: left;
 	text-rendering: optimizeSpeed;
 	color: var(--fg-color);
-	background-color: var(--bg-color);
+	background-color: var(--bg-comfort-color);
+	background-image: url("img/seigaiha.png");
+	background-attachment: fixed;
+	background-repeat: repeat;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -146,12 +150,12 @@ dd p {
 	padding: 0.25em;
 	padding-left: 1em;
 	padding-right: 1em;
-	color: var(--bg-color);
-	background-color: var(--fg-color);
-	box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
+	color: var(--fg-color);
+	background-color: var(--bg-color);
+	border-bottom: 4px solid gold;
 }
 .navbar a {
-	color: var(--bg-color);
+	color: var(--fg-color);
 	text-decoration: none !important;
 }
 .navbar-brand {
@@ -194,11 +198,11 @@ dd p {
 	position: absolute;
 	z-index: 0;
 	color: inherit;
-	/* background: linear-gradient(to bottom right, limegreen, orange, gold); */
-	background-image: url("wood.jpg");
+	background: linear-gradient(to bottom right, saddlebrown, orange, gold);
+	background-image: url("img/seigaiha.png");
 	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-repeat: repeat;
+	/* background-size: tile; */
 }
 .statement {
 	display: inline-block;
@@ -210,7 +214,7 @@ dd p {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
-	box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
+	border-bottom: 4px solid gold;
 }
 .statement h1 {
 	margin: 0;
@@ -236,9 +240,10 @@ dd p {
 .shelf-item {
 	width: 100%;
 	margin: 1em;
-	padding: 0.5em;
-	background-color: none;
+	padding: 1.5em;
+	background-color: var(--bg-color);
 	box-sizing: border-box;
+	border-bottom: 4px solid gold;
 }
 .shelf-item p {
 	margin: 0;
