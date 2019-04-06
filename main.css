@@ -6,7 +6,10 @@
 	--bg-color: white !important;
 	--bg-comfort-color: #fbfbfb !important;
 	--fg-color: black !important;
+	--link-color: darkgoldenrod !important;
+	--link-hover-color: goldenrod !important;
 	--max-width: 1024px !important;
+	--border-radius: 8px !important;
 }
 
 @media only screen and (max-width: 420px) {
@@ -98,9 +101,12 @@ p {
 }
 
 a {
-	color: var(--fg-color);
+	color: var(--link-color);
 	text-decoration: underline;
 	font-weight: inherit;
+}
+a:hover {
+	color: var(--link-hover-color);
 }
 
 table {
@@ -153,6 +159,7 @@ dd p {
 	color: var(--fg-color);
 	background-color: var(--bg-color);
 	border-bottom: 4px solid gold;
+	box-shadow: 0px 4px 8px rgba(0,0,0,0.0625);
 }
 .navbar a {
 	color: var(--fg-color);
@@ -161,6 +168,14 @@ dd p {
 .navbar-brand {
 	font-size: 1.75em !important;
 	font-weight: bold;
+}
+.navbar-brand img {
+	vertical-align: middle;
+	height: 1.25em;
+	margin-bottom: 0.125em;
+	margin-right: 0.125em;
+	border: 0;
+	border-radius: 100%;
 }
 .navbar-brand a {
 	background: none !important;
@@ -243,7 +258,9 @@ dd p {
 	padding: 1.5em;
 	background-color: var(--bg-color);
 	box-sizing: border-box;
-	border-bottom: 4px solid gold;
+	border-bottom: 4px solid lightgray;
+	border-radius: var(--border-radius);
+	box-shadow: 0px 4px 8px rgba(0,0,0,0.0625);
 }
 .shelf-item p {
 	margin: 0;
@@ -307,9 +324,14 @@ dd p {
 	margin: 0.25em;
 	padding: 1em;
 	display: inline-block;
-	color: var(--bg-color);
-	background-color: var(--fg-color);
+	color: var(--fg-color);
+	background-color: gold;
 	border: 0 !important;
+	border-radius: var(--border-radius);
+	box-shadow: 0px 4px 8px rgba(0,0,0,0.0625);
+}
+.section-spotify li:active {
+	box-shadow: 0px 4px 8px rgba(0,0,0,0.0625) inset;
 }
 
 .btn a {
