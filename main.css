@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow:400,400i,700,700i');
 
 :root {
-	--general-font-face: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important;
-	--header-font-face: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important;
+	--general-font-face: Verdana,'DejaVu Sans',Helvetica,Arial,sans-serif !important;
+	--header-font-face: Verdana,'DejaVu Sans',Helvetica,Arial,sans-serif !important;
 	--bg-color: white !important;
-	--bg-comfort-color: #fbfbfb !important;
+	--bg-comfort-color: whitesmoke !important;
 	--fg-color: black !important;
 	--link-color: darkgoldenrod !important;
 	--link-hover-color: goldenrod !important;
@@ -14,7 +14,7 @@
 
 @media only screen and (max-width: 420px) {
 	body {
-		font-size: 1.25em !important;
+		font-size: 1em !important;
 	}
 	.navbar {
 		padding: 0.25em !important;
@@ -32,17 +32,16 @@
 		margin-top: 1em !important;
 	}
 	.shelf-item {
-		padding: 0.25em !important;
+		padding: 1em !important;
 	}
 	.statement-container {
-		margin-top: 2em !important;
-		padding: 0.25em !important;
-		height: auto !important;
-		background: none !important;
+		display: inline-block !important;
+		font-size: 1.5em !important;
+		height: 100% !important;
+		box-sizing: border-box !important;
 	}
 	.statement {
 		font-size: 1.125em !important;
-		box-shadow: none !important;
 	}
 	dd {
 		padding: 0.5em;
@@ -55,16 +54,13 @@
 body {
 	font-family: var(--general-font-face);
 	/* font-family: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important; */
-	font-size: 1.125em;
+	font-size: 0.8em;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
 	text-rendering: optimizeSpeed;
 	color: var(--fg-color);
 	background-color: var(--bg-comfort-color);
-	background-image: url("img/seigaiha.png");
-	background-attachment: fixed;
-	background-repeat: repeat;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -156,13 +152,11 @@ dd p {
 	padding: 0.25em;
 	padding-left: 1em;
 	padding-right: 1em;
-	color: var(--fg-color);
-	background-color: var(--bg-color);
-	border-bottom: 4px solid gold;
-	box-shadow: 0px 4px 8px rgba(0,0,0,0.0625);
+	color: var(--bg-color);
+	background-color: var(--fg-color);
 }
 .navbar a {
-	color: var(--fg-color);
+	color: var(--bg-color);
 	text-decoration: none !important;
 }
 .navbar-brand {
@@ -175,7 +169,6 @@ dd p {
 	margin-bottom: 0.125em;
 	margin-right: 0.125em;
 	border: 0;
-	border-radius: 100%;
 }
 .navbar-brand a {
 	background: none !important;
@@ -213,11 +206,7 @@ dd p {
 	position: absolute;
 	z-index: 0;
 	color: inherit;
-	background: linear-gradient(to bottom right, saddlebrown, orange, gold);
-	background-image: url("img/seigaiha.png");
-	background-attachment: fixed;
-	background-repeat: repeat;
-	/* background-size: tile; */
+	background: var(--bg-color);
 }
 .statement {
 	display: inline-block;
@@ -225,13 +214,6 @@ dd p {
 	padding: 1.5em;
 	box-sizing: border-box;
 	font-size: 1.5em;
-	background: var(--bg-color);
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border-bottom: 4px solid gold;
-	border-radius: var(--border-radius);
-	box-shadow: 0px 4px 8px rgba(0,0,0,0.0625);
 }
 .statement h1 {
 	margin: 0;
@@ -260,9 +242,7 @@ dd p {
 	padding: 1.5em;
 	background-color: var(--bg-color);
 	box-sizing: border-box;
-	border-bottom: 4px solid lightgray;
-	border-radius: var(--border-radius);
-	box-shadow: 0px 4px 8px rgba(0,0,0,0.0625);
+	border-bottom: 2px solid var(--link-color);
 }
 .shelf-item p {
 	margin: 0;
@@ -326,14 +306,11 @@ dd p {
 	margin: 0.25em;
 	padding: 1em;
 	display: inline-block;
-	color: var(--fg-color);
-	background-color: gold;
-	border: 0 !important;
-	border-radius: var(--border-radius);
-	box-shadow: 0px 4px 8px rgba(0,0,0,0.0625);
+	color: var(--bg-color);
+	background-color: var(--link-color);
 }
-.section-spotify li:active {
-	box-shadow: 0px 4px 8px rgba(0,0,0,0.0625) inset;
+.section-spotify li:hover {
+	background-color: var(--link-hover-color);
 }
 
 .btn a {
