@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Barlow:400,400i,700,700i');
+/* @import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i'); */
 
 :root {
-	--general-font-face: Verdana,'DejaVu Sans',Helvetica,Arial,sans-serif !important;
-	--header-font-face: Verdana,'DejaVu Sans',Helvetica,Arial,sans-serif !important;
+	--general-font-face: Helvetica,Arial,sans-serif !important;
+	--header-font-face: Helvetica,Arial,sans-serif !important;
 	--bg-color: white !important;
 	--bg-comfort-color: whitesmoke !important;
 	--fg-color: black !important;
-	--link-color: darkgoldenrod !important;
-	--link-hover-color: goldenrod !important;
+	--link-color: darkslategray !important;
+	--link-hover-color: dimgray !important;
 	--max-width: 1024px !important;
 	--border-radius: 8px !important;
 }
@@ -54,13 +54,15 @@
 body {
 	font-family: var(--general-font-face);
 	/* font-family: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important; */
-	font-size: 0.8em;
+	font-size: 1.25em;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
 	text-rendering: optimizeSpeed;
 	color: var(--fg-color);
-	background-color: var(--bg-comfort-color);
+	background-color: var(--bg-color);
+	background: url("img/old_moon.png");
+	background-repeat: repeat;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -143,7 +145,7 @@ dd p {
 	/* margin-bottom: 2em; */
 	top: 0;
 	width: 100%;
-	position: fixed;
+	position: static;
 	box-sizing: border-box;
 	z-index: 1;
 	
@@ -152,14 +154,15 @@ dd p {
 	padding: 0.25em;
 	padding-left: 1em;
 	padding-right: 1em;
-	color: var(--bg-color);
-	background-color: var(--fg-color);
+	color: var(--fg-color);
+	background-color: var(--bg-color);
 }
 .navbar a {
-	color: var(--bg-color);
+	color: var(--fg-color);
 	text-decoration: none !important;
 }
 .navbar-brand {
+	padding: 0.25em;
 	font-size: 1.75em !important;
 	font-weight: bold;
 }
@@ -168,7 +171,7 @@ dd p {
 	height: 1.25em;
 	margin-bottom: 0.125em;
 	margin-right: 0.125em;
-	border: 0;
+	/* border: 1px solid black; */
 }
 .navbar-brand a {
 	background: none !important;
@@ -186,7 +189,7 @@ dd p {
 }
 .navbar-links li {
 	display: inline-block;
-	padding: 0;
+	padding: 0.25em;
 	margin: 0;
 }
 .navbar-links li a {
@@ -201,12 +204,11 @@ dd p {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	height: 100%;
+	height: 80%;
 	box-sizing: border-box;
-	position: absolute;
+	position: fixed;
 	z-index: 0;
 	color: inherit;
-	background: var(--bg-color);
 }
 .statement {
 	display: inline-block;
@@ -214,6 +216,7 @@ dd p {
 	padding: 1.5em;
 	box-sizing: border-box;
 	font-size: 1.5em;
+	background: var(--bg-color);
 }
 .statement h1 {
 	margin: 0;
@@ -225,7 +228,7 @@ dd p {
 	max-width: var(--max-width);
 	width: 100%;
 	margin: auto;
-	margin-top: 4em;
+	margin-top: 1.5em;
 	margin-bottom: 4em;
 	padding: 1em;
 	padding-left: 2em;
@@ -242,7 +245,6 @@ dd p {
 	padding: 1.5em;
 	background-color: var(--bg-color);
 	box-sizing: border-box;
-	border-bottom: 2px solid var(--link-color);
 }
 .shelf-item p {
 	margin: 0;
