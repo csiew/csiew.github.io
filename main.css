@@ -1,8 +1,9 @@
-/* @import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i'); */
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i'); */
+/* @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i'); */
 
 :root {
-	--general-font-face: Helvetica,Arial,sans-serif !important;
-	--header-font-face: Helvetica,Arial,sans-serif !important;
+	--general-font-face: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important;
+	--header-font-face: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important;
 	--bg-color: white !important;
 	--bg-comfort-color: whitesmoke !important;
 	--fg-color: black !important;
@@ -15,6 +16,8 @@
 @media only screen and (max-width: 420px) {
 	body {
 		font-size: 1em !important;
+		background: whitesmoke !important;
+		background-image: none !important;
 	}
 	.navbar {
 		padding: 0.25em !important;
@@ -32,16 +35,23 @@
 		margin-top: 1em !important;
 	}
 	.shelf-item {
+		margin: 0.5em !important;
 		padding: 1em !important;
 	}
 	.statement-container {
 		display: inline-block !important;
 		font-size: 1.5em !important;
 		height: 100% !important;
+		padding: 1em !important;
 		box-sizing: border-box !important;
+		background: whitesmoke !important;
 	}
 	.statement {
 		font-size: 1.125em !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		background: none !important;
+		box-shadow: none !important;
 	}
 	dd {
 		padding: 0.5em;
@@ -145,7 +155,7 @@ dd p {
 	/* margin-bottom: 2em; */
 	top: 0;
 	width: 100%;
-	position: static;
+	position: fixed;
 	box-sizing: border-box;
 	z-index: 1;
 	
@@ -156,6 +166,7 @@ dd p {
 	padding-right: 1em;
 	color: var(--fg-color);
 	background-color: var(--bg-color);
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
 }
 .navbar a {
 	color: var(--fg-color);
@@ -171,7 +182,7 @@ dd p {
 	height: 1.25em;
 	margin-bottom: 0.125em;
 	margin-right: 0.125em;
-	/* border: 1px solid black; */
+	border-radius: 100%;
 }
 .navbar-brand a {
 	background: none !important;
@@ -204,7 +215,7 @@ dd p {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	height: 80%;
+	height: 100%;
 	box-sizing: border-box;
 	position: fixed;
 	z-index: 0;
@@ -217,6 +228,8 @@ dd p {
 	box-sizing: border-box;
 	font-size: 1.5em;
 	background: var(--bg-color);
+	border-radius: var(--border-radius);
+	box-shadow: 0px 4px 8px rgba(0,0,0,0.125);
 }
 .statement h1 {
 	margin: 0;
@@ -228,7 +241,7 @@ dd p {
 	max-width: var(--max-width);
 	width: 100%;
 	margin: auto;
-	margin-top: 1.5em;
+	margin-top: 4.5em;
 	margin-bottom: 4em;
 	padding: 1em;
 	padding-left: 2em;
@@ -245,6 +258,8 @@ dd p {
 	padding: 1.5em;
 	background-color: var(--bg-color);
 	box-sizing: border-box;
+	box-shadow: 0px 4px 8px rgba(0,0,0,0.125);
+	border-radius: var(--border-radius);
 }
 .shelf-item p {
 	margin: 0;
@@ -310,6 +325,7 @@ dd p {
 	display: inline-block;
 	color: var(--bg-color);
 	background-color: var(--link-color);
+	border-radius: var(--border-radius);
 }
 .section-spotify li:hover {
 	background-color: var(--link-hover-color);
@@ -325,6 +341,7 @@ dd p {
 	background-color: whitesmoke;
 	text-decoration: none !important;
 	text-align: center;
+	border-radius: var(--border-radius);
 }
 .btn:hover {
 	background: lightgray;
