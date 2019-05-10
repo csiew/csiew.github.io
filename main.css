@@ -1,14 +1,11 @@
-/* @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i'); */
-/* @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i'); */
-
 :root {
 	--general-font-face: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important;
 	--header-font-face: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important;
 	--bg-color: white !important;
 	--bg-comfort-color: whitesmoke !important;
 	--fg-color: black !important;
-	--link-color: darkslategray !important;
-	--link-hover-color: dimgray !important;
+	--link-color: darkorange !important;
+	--link-hover-color: orangered !important;
 	--max-width: 1024px !important;
 	--border-radius: 8px !important;
 }
@@ -16,8 +13,8 @@
 @media only screen and (max-width: 420px) {
 	body {
 		font-size: 1em !important;
-		background: whitesmoke !important;
-		background-image: none !important;
+		/* background: whitesmoke !important; */
+		/* background-image: none !important; */
 	}
 	.navbar {
 		padding: 0.25em !important;
@@ -41,17 +38,20 @@
 	.statement-container {
 		display: inline-block !important;
 		font-size: 1.5em !important;
-		height: 100% !important;
+		margin-bottom: 4em !important;
 		padding: 1em !important;
 		box-sizing: border-box !important;
-		background: whitesmoke !important;
+		/* background: whitesmoke !important; */
+		overflow: scroll !important;
 	}
 	.statement {
-		font-size: 1.125em !important;
+		font-size: 0.8em !important;
 		margin: 0 !important;
-		padding: 0 !important;
-		background: none !important;
-		box-shadow: none !important;
+		margin-bottom: 4em !important;
+		padding: 1em !important;
+		/* background: none !important; */
+		/* box-shadow: none !important; */
+		overflow: scroll !important;
 	}
 	dd {
 		padding: 0.5em;
@@ -64,14 +64,14 @@
 body {
 	font-family: var(--general-font-face);
 	/* font-family: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important; */
-	font-size: 1.25em;
+	font-size: 1em;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
 	text-rendering: optimizeSpeed;
 	color: var(--fg-color);
 	background-color: var(--bg-color);
-	background: url("img/old_moon.png");
+	background: url("img/debut_light.png");
 	background-repeat: repeat;
 	margin: 0;
 	padding: 0;
@@ -110,7 +110,7 @@ p {
 
 a {
 	color: var(--link-color);
-	text-decoration: underline;
+	text-decoration: none;
 	font-weight: inherit;
 }
 a:hover {
@@ -223,7 +223,7 @@ dd p {
 }
 .statement {
 	display: inline-block;
-	max-width: var(--max-width);
+	max-width: 545px;
 	padding: 1.5em;
 	box-sizing: border-box;
 	font-size: 1.5em;
