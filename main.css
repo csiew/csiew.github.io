@@ -1,11 +1,11 @@
 :root {
-	--general-font-face: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important;
-	--header-font-face: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif !important;
+	--general-font-face: 'Acari Sans Neue',Helvetica,Arial,sans-serif !important;
+	--header-font-face: 'Acari Sans Neue',Helvetica,Arial,sans-serif !important;
 	--bg-color: white !important;
 	--bg-comfort-color: whitesmoke !important;
 	--fg-color: black !important;
-	--link-color: darkorange !important;
-	--link-hover-color: orangered !important;
+	--link-color: orangered !important;
+	--link-hover-color: orange !important;
 	--max-width: 1024px !important;
 	--border-radius: 8px !important;
 }
@@ -70,9 +70,9 @@ body {
 	text-align: left;
 	text-rendering: optimizeSpeed;
 	color: var(--fg-color);
-	background-color: var(--bg-color);
-	background: url("img/debut_light.png");
-	background-repeat: repeat;
+	background-color: var(--link-color);
+	/* background: url("img/debut_light.png");
+	background-repeat: repeat; */
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -84,6 +84,7 @@ h1, h2, h3, h4, h5 {
 	font-family: var(--header-font-face);
 	font-weight: bold !important;
 	font-style: normal !important;
+	text-transform: uppercase;
 	color: inherit;
 }
 h1 {
@@ -161,6 +162,7 @@ dd p {
 	
 	/* Appearance */
 	font-family: var(--header-font-face);
+	text-transform: uppercase;
 	padding: 0.25em;
 	padding-left: 1em;
 	padding-right: 1em;
@@ -178,6 +180,7 @@ dd p {
 	font-weight: bold;
 }
 .navbar-brand img {
+	filter: saturate(0);
 	vertical-align: middle;
 	height: 1.25em;
 	margin-bottom: 0.125em;
@@ -193,6 +196,7 @@ dd p {
 
 .navbar-links {
 	list-style: none;
+	font-size: 1em;
 }
 .navbar-links ul {
 	padding: 0;
@@ -216,6 +220,7 @@ dd p {
 	padding: 0;
 	width: 100%;
 	height: 100%;
+	background: var(--link-color);
 	box-sizing: border-box;
 	position: fixed;
 	z-index: 0;
@@ -223,13 +228,15 @@ dd p {
 }
 .statement {
 	display: inline-block;
-	max-width: 545px;
+	max-width: 820px;
 	padding: 1.5em;
 	box-sizing: border-box;
-	font-size: 1.5em;
-	background: var(--bg-color);
-	border-radius: var(--border-radius);
-	box-shadow: 0px 4px 8px rgba(0,0,0,0.125);
+	font-size: 2em;
+	color: white;
+	/* background: var(--bg-color); */
+	/* border-radius: var(--border-radius); */
+	/* box-shadow: 0px 4px 8px rgba(0,0,0,0.125); */
+	text-shadow: 0.125em 0.125em 0px rgba(0,0,0,0.25);
 }
 .statement h1 {
 	margin: 0;
