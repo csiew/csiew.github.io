@@ -87,3 +87,59 @@
     font-style: normal;
 
 }
+
+@font-face {
+    font-family: 'Brisa Sans';
+    src: url('brisa/brisasans-bold-webfont.woff2') format('woff2'),
+         url('brisa/brisasans-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Brisa Sans';
+    src: url('brisa/brisasans-bolditalic-webfont.woff2') format('woff2'),
+         url('brisa/brisasans-bolditalic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Brisa Sans';
+    src: url('brisa/brisasans-italic-webfont.woff2') format('woff2'),
+         url('brisa/brisasans-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Brisa Sans';
+    src: url('brisa/brisasans-regular-webfont.woff2') format('woff2'),
+         url('brisa/brisasans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Brisa Sans';
+    src: url('brisa/brisasans-light-webfont.woff2') format('woff2'),
+         url('brisa/brisasans-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+    font-family: 'Brisa Sans';
+    src: url('brisa/brisasans-lightitalic-webfont.woff2') format('woff2'),
+         url('brisa/brisasans-lightitalic-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+
+}
