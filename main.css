@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=DM+Sans:400,400i,700,700i&display=swap');
-
 :root {
-	--general-font-face: 'DM Sans',Helvetica,Arial,sans-serif !important;
-	--header-font-face: 'DM Sans',Helvetica,Arial,sans-serif !important;
+	--system-font-family: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif;
+	--classic-font-family: Georgia,'Times New Roman',Times, serif;
+	--general-font-face: var(--classic-font-family) !important;
+	--header-font-face: var(--classic-font-family) !important;
 	--bg-color: white !important;
-	--bg-secondary-color: whitesmoke !important;
+	--bg-secondary-color: wheat !important;
 	--fg-color: black !important;
+	--fg-header-color: maroon !important;
 	--fg-secondary-color: gray !important;
 	--line-color: lightgray !important;
-	--link-color: chocolate !important;
-	--link-hover-color: brown !important;
+	--link-color: saddlebrown !important;
+	--link-hover-color: sienna !important;
 	--max-width: 960px !important;
 	--border-radius: 8px !important;
 }
@@ -81,9 +82,9 @@ body {
 
 h1, h2, h3, h4, h5 {
 	font-family: var(--header-font-face);
-	font-weight: bold !important;
+	font-weight: 400 !important;
 	font-style: normal !important;
-	color: inherit;
+	color: var(--fg-header-color);
 }
 h1 {
 	font-size: 2.125em;
@@ -166,7 +167,7 @@ dd p {
 	color: var(--fg-color);
 	background-color: var(--bg-color);
 	border-bottom: 1px solid var(--line-color);
-	box-shadow: 0px 4px 4px rgba(0,0,0,0.125);
+	box-shadow: 0px 4px 16px rgba(0,0,0,0.125);
 }
 .navbar a {
 	color: var(--fg-color);
@@ -175,7 +176,6 @@ dd p {
 .navbar-brand {
 	padding: 0.25em;
 	font-size: 1.75em !important;
-	font-weight: bold;
 }
 .navbar-brand img {
 	/* filter: saturate(0); */
@@ -211,11 +211,11 @@ dd p {
 	padding-left: 0.5em;
 	padding-right: 0.5em;
 	background: none;
-	color: var(--link-color);
+	color: var(--fg-color);
 }
-.navbar-links li a:hover {
+/* .navbar-links li a:hover {
 	color: var(--link-hover-color);
-}
+} */
 
 .statement-container {
 	display: flex;
@@ -234,7 +234,7 @@ dd p {
 }
 .statement {
 	display: inline-block;
-	/* max-width: 720px; */
+	max-width: var(--max-width);
 	padding: 1.5em;
 	padding-left: 2.5em;
 	padding-right: 2.5em;
@@ -254,7 +254,7 @@ dd p {
 
 .shelf {
 	z-index: 0;
-	/* max-width: var(--max-width); */
+	max-width: var(--max-width);
 	width: 100%;
 	margin: auto;
 	margin-top: 4.5em;
@@ -270,11 +270,15 @@ dd p {
 
 .shelf-title {
 	width: 100%;
-	margin: 0.25em;
-	padding: 0.5em;
+	margin-top: 1em;
+	margin-bottom: 0.25em;
+	padding: 0.25em;
 	box-sizing: border-box;
 	font-size: 2em;
 	text-align: center;
+}
+.shelf-title h1 {
+	font-weight: 300 !important;
 }
 
 .shelf-item {
@@ -284,8 +288,8 @@ dd p {
 	box-sizing: border-box;
 	background-color: var(--bg-color);
 	box-shadow: 0px 4px 4px rgba(0,0,0,0.125);
-	border: 1px solid var(--line-color);
-	border-radius: var(--border-radius);
+	/* border: 1px solid var(--line-color); */
+	/* border-radius: var(--border-radius); */
 }
 .shelf-item p {
 	margin: 0;
@@ -352,7 +356,7 @@ dd p {
 	color: var(--bg-color);
 	background-color: var(--link-color);
 	/* border: 1px solid var(--line-color); */
-	border-radius: var(--border-radius);
+	/* border-radius: var(--border-radius); */
 	box-shadow: 0px 4px 4px rgba(0,0,0,0.125);
 }
 .section-spotify li:hover {
