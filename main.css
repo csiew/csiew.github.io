@@ -1,18 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=DM+Sans:400,400i,700,700i&display=swap');
+
 :root {
 	--system-font-family: -apple-system,BlinkMacSystemFont,Roboto,Ubuntu,Helvetica,Arial,sans-serif;
-	--general-font-face: serif !important;
-	--header-font-face: serif !important;
+	--general-font-face: 'DM Sans', var(--system-font-family) !important;
+	--header-font-face: 'DM Sans', var(--system-font-family) !important;
 	--bg-color: white !important;
-	--bg-secondary-color: lightgray !important;
+	--bg-secondary-color: whitesmoke !important;
 	--fg-color: black !important;
 	--fg-header-color: black !important;
 	--fg-secondary-color: gray !important;
 	--nav-bg-color: white !important;
 	--nav-fg-color: black !important;
-	--line-color: black !important;
-	--link-color: black !important;
-	--link-hover-color: gold !important;
-	--max-width: 1080px !important;
+	--nav-fg-color-hover: sienna !important;
+	--line-color: lightgray !important;
+	--link-color: sienna !important;
+	--link-hover-color: saddlebrown !important;
+	--max-width: 920px !important;
 	--border-radius: 8px !important;
 }
 
@@ -64,13 +67,14 @@
 
 body {
 	font-family: var(--general-font-face);
-	font-size: 1.25em;
+	font-size: 1.125em;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
 	text-rendering: optimizeLegibility;
 	color: var(--fg-color);
-	background-color: var(--bg-secondary-color);
+	background: var(--bg-secondary-color);
+	background-attachment: fixed;
 	/* background: url("img/debut_light.png");
 	background-repeat: repeat; */
 	margin: 0;
@@ -85,7 +89,6 @@ h1, h2, h3, h4, h5 {
 	font-weight: 700 !important;
 	font-style: normal !important;
 	color: var(--fg-header-color);
-	text-shadow: 1px 1px 0px rgba(0,0,0,0.25);
 }
 h1 {
 	font-size: 2.125em;
@@ -111,11 +114,13 @@ p {
 
 a {
 	color: var(--link-color);
-	text-decoration: underline;
+	text-decoration: none;
 	font-weight: inherit;
+	transition: 0.2s;
 }
 a:hover {
-	/* color: var(--link-hover-color); */
+	color: var(--link-hover-color);
+	transition: 0.2s;
 }
 
 table {
@@ -158,7 +163,7 @@ dd p {
 	width: 100%;
 	position: fixed;
 	box-sizing: border-box;
-	z-index: 1;
+	z-index: 2 !important;
 	
 	/* Appearance */
 	font-family: var(--header-font-face);
@@ -167,9 +172,9 @@ dd p {
 	padding-right: 0.5em;
 	color: var(--nav-fg-color);
 	background-color: var(--nav-bg-color);
-	box-shadow: 0px 4px 0px rgba(0,0,0,0.25);
 	border-bottom: 1px solid var(--line-color);
 }
+
 .navbar a {
 	color: var(--nav-fg-color);
 	text-decoration: none !important;
@@ -185,11 +190,12 @@ dd p {
 	height: 1.25em;
 	margin-bottom: 0.125em;
 	margin-right: 0.125em;
-	/* border-radius: 100%; */
+	border-radius: 100%;
+	transition: 0.2s;
 }
 .navbar-brand img:hover {
-	outline: 1px solid var(--line-color);
-	box-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+	filter: none;
+	transition: 0.2s;
 }
 .navbar-brand a {
 	background: none !important;
@@ -218,10 +224,13 @@ dd p {
 	padding-right: 0.5em;
 	background: none;
 	color: var(--nav-fg-color);
+	transition: 0.2s;
 }
 .navbar-links li a:hover {
-	text-shadow: 1px 1px 0px rgba(0,0,0,0.25);
+	color: var(--nav-fg-color-hover);
+	transition: 0.2s;
 }
+
 
 .statement-container {
 	display: flex;
@@ -231,30 +240,60 @@ dd p {
 	padding: 0;
 	width: 100%;
 	height: 100%;
-	/* background: var(--link-color); */
 	box-sizing: border-box;
-	position: fixed;
+	position: absolute;
 	z-index: 0;
-	/* color: var(--bg-color); */
-	/* text-shadow: 0px 1px 2px var(--link-hover-color); */
 }
 .statement {
 	display: inline-block;
 	max-width: var(--max-width);
+	margin: 0;
 	padding: 1.5em;
 	padding-left: 2.5em;
 	padding-right: 2.5em;
 	box-sizing: border-box;
-	font-size: 2em;
-	padding: 1.5em;
+	font-size: 1.5em;
 	box-sizing: border-box;
-	background: var(--bg-color);
+	/* background: var(--bg-color);
 	border: 1px solid var(--line-color);
-	box-shadow: 4px 4px 0px rgba(0,0,0,0.25);
+	border-radius: var(--border-radius);
+	box-shadow: 0px 4px 16px rgba(0,0,0,0.125); */
 }
 .statement h1 {
-	margin: 0;
-	padding: 0;
+	text-align: center;
+	font-weight: 900 !important;
+	font-style: italic !important;
+	text-transform: uppercase;
+	transform: rotate(-12deg);
+	animation: statementHeaderAnimation 0.75s forwards;
+}
+
+@keyframes statementHeaderAnimation {
+	from {
+		transform: rotate(12deg);
+		font-size: 0;
+		letter-spacing: 3em;
+	}
+	to {
+		transform: rotate(-12deg);
+		font-size: 3em;
+		letter-spacing: 1;
+	}
+}
+
+.statement-greeting {
+	display: inline;
+	font-style: italic;
+	font-weight: bold;
+	animation: greetingAnimation 0.75s forwards;
+}
+@keyframes greetingAnimation {
+	from {
+		color: inherit;
+	}
+	to {
+		color: var(--link-color);
+	}
 }
 
 .shelf {
@@ -282,18 +321,34 @@ dd p {
 	font-size: 2em;
 	text-align: center;
 }
-.shelf-title h1 {
-	font-weight: 300 !important;
+.shelf-title h2 {
+	font-size: 1.5em;
+	text-transform: uppercase;
+	animation: shelfHeaderAnimation 0.75s forwards;
+}
+
+@keyframes shelfHeaderAnimation {
+	from {
+		color: transparent;
+		transform: skew(0);
+		letter-spacing: 1em;
+	}
+	to {
+		color: inherit;
+		transform: skew(-6deg);
+		letter-spacing: 1;
+	}
 }
 
 .shelf-item {
 	width: 100%;
 	margin: 1em;
-	padding: 1.5em;
+	padding: 1.25em;
 	box-sizing: border-box;
 	background: var(--bg-color);
 	border: 1px solid var(--line-color);
-	box-shadow: 4px 4px 0px rgba(0,0,0,0.25);
+	border-radius: var(--border-radius);
+	/* box-shadow: 3px 3px 0px rgba(0,0,0,0.125); */
 }
 .shelf-item p {
 	margin: 0;
@@ -359,13 +414,13 @@ dd p {
 	display: inline-block;
 	color: var(--bg-color);
 	background-color: var(--link-color);
-	/* border: 1px solid var(--line-color); */
-	/* border-radius: var(--border-radius); */
+	border-radius: var(--border-radius);
+	transition: 0.2s;
 }
 .section-spotify li:hover {
-	/* color: var(--bg-color); */
-	/* background-color: var(--link-hover-color); */
-	box-shadow: 4px 4px 0px gray;
+	color: var(--bg-color);
+	background-color: var(--link-hover-color);
+	transition: 0.2s;
 }
 
 .btn a {
