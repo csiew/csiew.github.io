@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Libre+Caslon+Text:400,400i,700&display=swap');
-
 body {
-	font-family: 'Libre Caslon Text', serif;
+	font-family: sans-serif;
 	font-size: 1em;
 	font-weight: 400;
 	line-height: 1.5;
@@ -18,11 +16,12 @@ body {
 }
 
 a, h1, h2, h3, h4 {
-	color: sienna;
+	color: black;
+	font-weight: normal;
 }
 
 hr {
-	border: 1px solid gray;
+	border: 1px solid lightgray;
 }
 
 .navigation {
@@ -42,37 +41,34 @@ hr {
 }
 
 header, footer {
-	padding: 1em;
+	padding: 0;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
 	text-align: center;
 }
 header h1 {
 	margin: 0;
 }
-header small {
-	text-transform: uppercase;
+.header-subtitle {
+	font-size: 0.9em;
+	color: gray;
 }
 header a {
 	padding: 0.5em;
-	border-radius: 8px;
-	border: 1px solid sienna;
-	background: lightgoldenrodyellow;
-	text-decoration: none;
-}
-header a:hover {
-	background: palegoldenrod;
 	text-decoration: none;
 }
 
-.section-list dd, .playlistsPage ul {
+header a, .section-list dd, .playlistsPage li {
 	background: whitesmoke;
-	border: 1px solid gray;
-	border-radius: 8px;
-	box-sizing: border-box;
+	border: 1px solid lightgray;
 }
 
+.section-list {
+	margin-bottom: 32px;
+}
 .section-list dd {
 	margin: 0;
-	margin-bottom: 12px;
+	margin-bottom: 6px;
 	padding: 8px;
 	padding-left: 16px;
 	padding-right: 16px;
