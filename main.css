@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Red+Hat+Text:400,400i,700,700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Overpass:300,300i,400,400i,700,700i&display=swap');
 
 body {
-	font-family: 'Red Hat Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	font-size: 1.125em;
-	font-weight: 400;
+	font-family: 'Overpass', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 1em;
+	font-weight: 300;
 	line-height: 1.5;
 	text-align: left;
 	margin: 0;
@@ -18,6 +18,9 @@ body {
 
 a, h1, h2, h3, h4 {
 	color: darkcyan;
+}
+a {
+	text-decoration: none;
 }
 
 hr {
@@ -61,9 +64,10 @@ header a {
 
 .container {
 	width: 100%;
-	max-width: 920px;
+	max-width: 800px;
 	margin: auto;
 	padding: 2em;
+	box-sizing: border-box;
 }
 
 .btnLink a, .playlistsPage li {
@@ -82,16 +86,14 @@ header a {
 }
 
 .section-list {
-	display: flex;
-	flex-flow: row wrap;
-	align-items: flex-start;
-	justify-content: flex-start;
+	display: grid;
+	grid-auto-flow: row dense;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto;
+	grid-gap: 10px;
 	margin-bottom: 32px;
 }
 .section-list dd {
-	max-width: 360px;
-	width: 100%;
-	min-height: 136px;
 	margin: 6px;
 	padding: 8px;
 	padding-left: 16px;
