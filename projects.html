@@ -1,108 +1,67 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset='UTF-8'>
 	<meta name='viewport' content='width=device-width initial-scale=1'>
 	<link href="main.css" rel="stylesheet">
-	<link href="fonts/stylesheet.css" rel="stylesheet">
 	<link rel="shortcut icon" href="profile.jpg">
-	<title>Clarence Siew | Projects</title>
+	<title>Projects</title>
 </head>
 
 <body>
-	<div class="navbar">
-		<div class="navbar-brand">
-			<a href="index.html">
-				<img src="profile.jpg" /> Clarence Siew
-			</a>
-		</div>
-		<div class="navbar-links">
+	<header>
+		<h1>Clarence Siew</h1>
+		<div class="header-subtitle">Software Engineering student<br />Melbourne, Australia</div>
+		<div class="nav">
 			<ul>
-				<a href="about.html"><li class="navbar-link">About</li></a>
-				<a href="projects.html"><li class="navbar-link-active">Projects</li></a>
-				<a href="https://clarencesiew.wordpress.com"><li class="navbar-link">Blog</li></a>
-				<a href="contact.html"><li class="navbar-link">Contact</li></a>
+				<a href="index.html"><li>Home</li></a>
+				<a href="projects.html" class="nav-active"><li>Projects</li></a>
+				<a href="playlists.html"><li>Playlists</li></a>
+				<a href="places.html"><li>Places</li></a>
+				<a href="contact.html"><li>Contact</li></a>
 			</ul>
 		</div>
+	</header>
+
+	<div class="container">
+
+		<h2>Projects</h2>
+		<dl class="section-list">
+			<dd>
+				<h3><a href='https://github.com/csiew/md2magic'>md2magic</a> <small>2018</small></h3>
+				<p>Generate websites from markup files.</p>
+			</dd>
+			<dd>
+				<h3><a href='https://github.com/csiew/Hallway'>Hallway</a> <small>2018</small></h3>
+				<p>Open world text adventure game engine written in Kotlin.</p>
+			</dd>
+			<dd>
+				<h3><a href='https://devpost.com/software/sound-face'>SoundFace</a> <small>2017</small></h3>
+				<p>Use your facial expression to get a Spotify playlist that matches your mood. <i>(UniHack 2017)</i></p>
+			</dd>
+			<dd>
+				<h3><a href='webitor/index.html'>Webitor</a> <small>2016-2017</small></h3>
+				<p>Experimental JavaScript text editor that saves to browser's local storage.</p>
+			</dd>
+			<dd>
+				<h3><a href='hearye/index.html'>Hear Ye</a> <small>2016</small></h3>
+				<p>Hear the news.</p>
+			</dd>
+			<dd>
+				<h3><a href='https://antorca.github.io'>Antorca</a> <small>2016-2019</small></h3>
+				<p>Linux distribution for realists.</p>
+			</dd>
+			<dd>
+				<h3><a href='https://illume-os.firebaseapp.com/'>illume OS</a> <small>2011-2016</small></h3>
+				<p>Lightweight Linux distribution.</p>
+			</dd>
+		</dl>
+	
 	</div>
-	<div class="shelf">
-			<div class="shelf-title">
-					<h2>Projects</h2>
-			</div>
-		<div class="shelf-item">
-			<h2>Apps</h2>
-			<dl>
-				<dd>
-					<p>Coming soon.</p>
-				</dd>
-			</dl>
-		</div>
-		<div class="shelf-item">
-			<h2>Utilities</h2>
-			<dl>
-				<dd>
-					<h3><a href='https://github.com/csiew/md2magic'>md2magic</a></h3>
-					<p>2018</p>
-					<p>Generate websites from markup files.</p>
-				</dd>
-			</dl>
-		</div>
-		<div class="shelf-item">
-			<h2>Web Apps</h2>
-			<dl>
-				<dd>
-					<h3><a href='https://devpost.com/software/sound-face'>SoundFace</a></h3>
-					<p>2017</p>
-					<p>Use your facial expression to get a Spotify playlist that matches your mood. <i>(UniHack 2017)</i></p>
-				</dd>
-				<dd>
-					<h3><a href='webitor/index.html'>Webitor</a></h3>
-					<p>2016-2017</p>
-					<p>Experimental JavaScript text editor that saves to browser's local storage.</p>
-				</dd>
-				<dd>
-					<h3><a href='hearye/index.html'>Hear Ye</a></h3>
-					<p>2016</p>
-					<p>Hear the news.</p>
-				</dd>
-			</dl>
-		</div>
-		<div class="shelf-item">
-			<h2>Linux distributions</h2>
-			<dl>
-				<dd>
-					<h3><a href='https://antorca.github.io'>Antorca</a></h3>
-					<p>2016-Present</p>
-					<p>Linux distribution for realists.</p>
-				</dd>
-				<dd>
-					<h3><a href='https://illume-os.firebaseapp.com/'>illume OS</a></h3>
-					<p>2011-2016</p>
-					<p>Lightweight Linux distribution.</p>
-				</dd>
-			</dl>
-		</div>
-		<div class="shelf-item">
-			<h2>Games</h2>
-			<dl>
-				<dd>
-					<h3><a href='https://github.com/csiew/Hallway'>Hallway</a></h3>
-					<p>2018</p>
-					<p>Open world text adventure game engine written in Kotlin.</p>
-				</dd>
-			</dl>
-		</div>
-		<div class="shelf-item">
-			<h2>This website</h2>
-			<p>
-				I've been amending, fixing, rewriting, and redesigning this website over the last 3 to 4 years. It's been written from scratch since day 1 and has been hosted on GitHub and GitLab (as a back up) since.
-			</p>
-			<p>
-				It's gone back and forth between maximilist, minimalist, and brutalist designs throughout its life. You could say that it's currently at its minimalist phase after I experimented with brutalist design.
-			</p>
-		</div>
-	</div>
+
+	<footer>
+		&copy; 2019 Clarence Siew
+	</footer>
 </body>
 
 </html>
