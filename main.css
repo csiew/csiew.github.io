@@ -1,12 +1,58 @@
-@import url('https://fontlibrary.org/face/brisa-sans');
+@import url('https://fontlibrary.org/face/now-alt');
 
 :root {
 	--MAXWIDTH: 600px;
 }
 
+@media (prefers-color-scheme: dark) {
+	body {
+		background: #333;
+		color: whitesmoke;
+	}
+	a, h1, h2, h3, h4 {
+		color: mediumseagreen;
+	}
+}
+
+@media (max-width: 414px) {
+	body {
+		background: white !important;
+	}
+	.container {
+		box-shadow: none !important;
+		padding: 1em !important;
+	}
+	footer {
+		padding: 0.75em !important;
+	}
+	.nav {
+		padding: 1em !important;
+	}
+	.nav ul {
+		flex-flow: column !important;
+		padding: 0.5em !important;
+		border-radius: 6px;
+	}
+	.nav li {
+		display: block !important;
+		width: 100% !important;
+		padding: 0.5em !important;
+		border-radius: 6px;
+	}
+	.nav li:hover {
+		border: 1px solid #ccc !important;
+		box-shadow: 0px 2px 4px rgba(0,0,0,0.125);
+	}
+	.nav-active li {
+		box-shadow: 0px 2px 4px rgba(0,0,0,0.125);
+		padding: 0.5em !important;
+		border-radius: 6px;
+	}
+}
+
 body {
-	font-family: 'BrisaSansRegular', Helvetica, Arial, sans-serif;
-	font-size: 16px;
+	font-family: 'NowAltRegular', Helvetica, Arial, sans-serif;
+	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
@@ -102,19 +148,6 @@ footer {
 	border-bottom: none;
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
-}
-@media (max-width: 414px) {
-	.nav ul {
-		flex-flow: column !important;
-	}
-	.nav li {
-		display: block !important;
-		width: 100% !important;
-	}
-	.nav-active li {
-		box-shadow: 0px 2px 4px rgba(0,0,0,0.125);
-		border-radius: 6px;
-	}
 }
 
 .container {
