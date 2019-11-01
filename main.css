@@ -136,18 +136,24 @@ footer {
 	border-bottom: none;
 }
 .nav li:hover {
-	background: linear-gradient(to bottom, #eee, #ddd);
-	border: 1px solid #ccc;
+	background: linear-gradient(to bottom, #efefef, #bcbcbc);
+	border: 1px solid #bbb;
+	border-top: 1px solid white;
+	border-bottom: none;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+/*	box-shadow: 0px -4px 8px rgba(0,0,0,0.125);*/
+}
+.nav-active li, .nav-active li:hover {
+	background: linear-gradient(to bottom, #eee, white);
+	border: 1px solid #bbb;
+	border-top: 1px solid white;
 	border-bottom: none;
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
 }
-.nav-active li, .nav-active li:hover {
-	background: linear-gradient(to bottom, #eee, white);
-	border: 1px solid #ccc;
-	border-bottom: none;
-	border-top-left-radius: 6px;
-	border-top-right-radius: 6px;
+.nav-active li:hover {
+	box-shadow: none;
 }
 
 .container {
