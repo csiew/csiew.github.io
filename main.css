@@ -1,5 +1,4 @@
 @import url('https://fontlibrary.org/face/brisa-sans');
-@import url('https://fontlibrary.org/face/source-serif-pro');
 
 :root {
 	--MAXWIDTH: 600px;
@@ -27,6 +26,7 @@
 	footer {
 		padding: 0.75em !important;
 	}
+	
 	.nav {
 		padding: 1em !important;
 	}
@@ -53,10 +53,18 @@
 		padding: 0.5em !important;
 		border-radius: 6px;
 	}
+	
+	.playlist-page li {
+		min-width: 120px !important;
+		margin: 4px !important;
+		padding: 4px !important;
+		padding-left: 12px !important;
+		padding-right: 12px !important;
+	}
 }
 
 body {
-	font-family: 'SourceSerifProRegular', 'BrisaSansRegular', Helvetica, Arial, sans-serif;
+	font-family: 'BrisaSansRegular', Helvetica, Arial, sans-serif;
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.5;
@@ -74,8 +82,8 @@ body {
 a, h1, h2, h3, h4 {
 	color: darkcyan;
 }
-h1, h2, h3, h4, header, footer, .playlist-page li, .nav {
-	font-family: 'BrisaSansRegular', Helvetica, Arial, sans-serif;
+h1, h2, h3, h4 {
+	font-family: 'BrisaSansBold', Helvetica, Arial, sans-serif;
 }
 h2 {
 	text-align: center;
@@ -165,9 +173,6 @@ footer {
 	border-bottom: none;
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
-}
-.nav-active li:hover {
-	box-shadow: none;
 }
 
 .container {
