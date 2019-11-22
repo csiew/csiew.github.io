@@ -2,6 +2,12 @@
 
 :root {
 	--MAXWIDTH: 600px;
+	--PRIMARY-COLOR: orangered;
+	--NEUTRAL-BG-COLOR: papayawhip;
+	--HOVER-BG-COLOR: orangered;
+	--BORDER-COLOR: orangered;
+	--NEUTRAL-FG-COLOR: orangered;
+	--HOVER-FG-COLOR: white;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -80,7 +86,7 @@ body {
 }
 
 a, h1, h2, h3, h4 {
-	color: darkcyan;
+	color: var(--PRIMARY-COLOR);
 }
 h1, h2, h3, h4 {
 	font-family: 'BrisaSansBold', Helvetica, Arial, sans-serif;
@@ -167,7 +173,7 @@ footer {
 	background: linear-gradient(to bottom, #ddd, #eee, #eee, #ccc);
 }
 .nav-active li, .nav-active li:hover {
-	background: linear-gradient(to bottom, #ddd, white);
+	background: linear-gradient(to bottom, #efefef, white);
 	border: 1px solid #ccc;
 	border-top: 1px solid white;
 	border-bottom: none;
@@ -190,20 +196,40 @@ footer {
 	border-bottom-right-radius: 6px;
 }
 
-.btnLink a, .playlists-page li {
-	padding: 0.5em;
-	color: black !important;
-	text-decoration: none;
-}
-.btnLink a, .section-list dd, .playlist-page li {
-	background: lightcyan;
-	border: 1px solid darkcyan;
+.welcome-img {
+	margin: auto !important;
+	width: 100%;
+	height: 500px;
+	background-image: url("focus.jpg");
+	background-position: center;
+	background-size: auto;
 	border-radius: 6px;
+	box-shadow: 0px 4px 8px rgba(0,0,0,0.25) inset;
 }
 
-.btnLink a:hover, .playlist-page li:hover {
-	color: white !important;
-	background: lightseagreen;
+.profile-img {
+	margin: auto !important;
+	width: 128px;
+	height: 128px;
+	margin: 0;
+	margin-bottom: 3em !important;
+	background-image: url("profile.jpg");
+	background-size: contain;
+	border-radius: 100%;
+	box-shadow: 0px 4px 8px rgba(0,0,0,0.25) inset;
+}
+
+.playlist-page li {
+	padding: 0.5em;
+	background: var(--NEUTRAL-BG-COLOR);
+	color: var(--NEUTRAL-FG-COLOR);
+	text-decoration: none;
+	border: 1px solid var(--BORDER-COLOR);
+	border-radius: 6px;
+}
+.playlist-page li:hover {
+	background: var(--HOVER-BG-COLOR);
+	color: var(--HOVER-FG-COLOR);
 }
 
 .section-list {
@@ -217,6 +243,9 @@ footer {
 	padding: 8px;
 	padding-left: 16px;
 	padding-right: 16px;
+	background: var(--NEUTRAL-BG-COLOR);
+	border: 1px solid var(--BORDER-COLOR);
+	border-radius: 6px;
 }
 .section-list dd small {
 	color: #999;
