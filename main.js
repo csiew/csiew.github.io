@@ -1,6 +1,6 @@
 function initialise(pageName) {
 	this.setHeader(pageName);
-	// this.setFooter();
+	this.setFooter();
 }
 
 function setHeader(pageName) {
@@ -20,12 +20,10 @@ function setHeader(pageName) {
 				<a href="contact.html"` + this.isCorresponding("contact", pageName) + `><li>Contact</li></a>
 			</ul>
 		</div>
+		<hr />
 	`;
-	let copyright = `
-		<div class="nav-cr"><hr />&copy; 2019</div>
-	`
 	
-	document.querySelector('header').innerHTML = `<div class="header-container">` + title + `<hr />` + navBar + copyright + `</div>`;
+	document.querySelector('header').innerHTML = `<div class="header-container">` + title + navBar + `</div>`;
 }
 
 function isCorresponding(navName, pageName) {
