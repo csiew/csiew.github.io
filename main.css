@@ -3,7 +3,7 @@
 :root {
 	--MAX-WIDTH: 1200px;
 	--PRIMARY-COLOR: black;
-	--BORDER-COLOR: lightgray;
+	--BORDER-COLOR: #9b9784;
 }
 
 @media (max-width: 600px) {
@@ -60,7 +60,7 @@ h1, h2, h3, h4 {
 }
 
 a {
-	text-decoration-color: #9b9784;
+	text-decoration-color: var(--BORDER-COLOR);
 	text-decoration-style: wavy;
 	transition: 0.2s;
 }
@@ -70,7 +70,9 @@ a:hover {
 }
 
 hr {
-	border: 1px solid var(--BORDER-COLOR);
+	width: 100%;
+	border: 0;
+	border-bottom: 1px dashed var(--BORDER-COLOR);
 }
 
 header { 
@@ -125,8 +127,18 @@ footer {
 	transition: 0.2s;
 }
 
+.container {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+.container h2 {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .section-list dd {
-	border-bottom: 1px dashed black;
+	border-bottom: 1px dashed var(--BORDER-COLOR);
 }
 .section-list dd:last-child {
 	border-bottom: none !important;
@@ -152,4 +164,11 @@ footer {
 	box-sizing: border-box;
 	font-size: 3em;
 	transform: rotate(-32deg);
+}
+
+#profile-img {
+	margin: auto;
+	border-radius: 100%;
+	width: 128px;
+	height: 128px;
 }
