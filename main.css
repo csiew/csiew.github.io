@@ -1,132 +1,53 @@
-@import url('https://fontlibrary.org/face/brisa-sans');
+@import url('https://fontlibrary.org/face/manic-monday');
 
 :root {
-	--MAXWIDTH: 800px;
-	--PRIMARY-COLOR: teal;
+	--MAX-WIDTH: 1200px;
+	--PRIMARY-COLOR: black;
 	--BORDER-COLOR: lightgray;
-	--NEUTRAL-BG-COLOR: black;
-	--HOVER-BG-COLOR: lightseagreen;
-	--ACTIVE-BG-COLOR: teal;
-	--BORDER-RADIUS: 6px;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--DARK-COLOR: #232323 !important;
-		--BORDER-COLOR: gray !important;
-		--NEUTRAL-BG-COLOR: #555 !important;
-	}
+@media (max-width: 600px) {
 	body {
-		background: var(--DARK-COLOR) !important;
-		color: whitesmoke !important;
+		padding: 1.125em !important;
+		flex-flow: column !important;
+		font-size: 1.5em !important;
 	}
-	header h1 {
-		color: whitesmoke !important;
-	}
-	.header-subtitle, .playlist-page li {
-		color: lightgray !important;
-	}
-}
 
-@media (max-width: 540px) {
-	body {
-		padding: 1.5em !important;
-		flex-flow: column !important;
-	}
-	header {
-		width: 100% !important;
-		flex-flow: column !important;
-		margin: 0 !important;
-		margin-top: 1em !important;
-	}
-	.container {
-		margin: 0 !important;
+	#navigation-links {
 		padding: 0 !important;
 	}
-	.container h2 {
-		margin: 0 !important;
-		margin-bottom: 0.5em !important;
-	}
-	footer {
-		padding: 0.75em !important;
-	}
-	
-	.header-container {
-		position: relative !important;
-		margin-top: 1em !important;
-	}
-	.header-title {
-		margin: auto !important;
-		text-align: center !important;
-	}
-	.nav {
-		width: 100% !important;
-		margin: auto !important;
-		padding: 1em !important;
-		text-align: center !important;
-		box-sizing: border-box !important;
-	}
-	.nav ul {
-		margin: 0.25em !important;
-		background: none !important;
-		border: none !important;
-		flex-flow: row wrap !important;
-		justify-content: center !important;
-	}
-	.nav li {
-		display: block !important;
-		min-width: 128px !important;
-		margin: 0.25em !important;
-		padding: 0.5em !important;
-		background: var(--NEUTRAL-BG-COLOR) !important;
-		color: white !important;
-	}
-	.nav li:hover {
-		background: var(--HOVER-BG-COLOR) !important;
-		box-shadow: none !important;
-	}
-	.nav-active li {
-		padding: 0.5em !important;
-		background: var(--ACTIVE-BG-COLOR) !important;
-	}
-	.nav-cr {
-		visibility: hidden;
-		display: none;
-		height: 0;
+	#navigation-links li {
+		padding: 0 !important;
+		font-size: 2.5em !important;
 	}
 
-	.container {
-		padding-top: 1.5em !important;
+	.playlist-page ul {
+		padding-top: 0 !important;
+		transform: none !important;
 	}
-	
 	.playlist-page li {
-		min-width: 120px !important;
-		margin: 4px !important;
-		padding: 8px !important;
-		padding-left: 12px !important;
-		padding-right: 12px !important;
+		font-size: 2em !important;
 	}
 }
 
-html, body {
-	width: 100%;
-}
 body {
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 16px;
+	font-family: 'ManicMondayRegular', serif;
+	font-size: 2em;
 	font-weight: 400;
-	line-height: 1.5;
+	line-height: 1.25;
 	text-align: left;
+	width: 100%;
+	max-width: var(--MAX-WIDTH);
 	margin: auto;
 	padding: 1.5em;
 	box-sizing: border-box;
 	border: 0;
 	display: flex;
 	flex-flow: column;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: stretch;
 
-	background: white;
+	background: #eceae1;
 	color: black;
 }
 
@@ -134,166 +55,101 @@ a, h1, h2, h3, h4 {
 	color: var(--PRIMARY-COLOR);
 }
 h1, h2, h3, h4 {
+	font-family: 'ManicMondayBold', serif;
 	font-weight: 700;
+}
+
+a {
+	text-decoration-color: #9b9784;
+	text-decoration-style: wavy;
+	transition: 0.2s;
+}
+a:hover {
+	text-shadow: 2px 2px 0 burlywood;
+	transition: 0.2s;
 }
 
 hr {
 	border: 1px solid var(--BORDER-COLOR);
 }
-header {
-	max-width: var(--MAXWIDTH);
-	width: 100%;
-	display: flex;
-	flex-flow: column;
-	align-content: center;
-	justify-content: center;
+
+header { 
 	margin: auto;
-	padding: 0;
-	box-sizing: border-box;
-	text-align: center;
 }
-header a, header a:hover {
+
+#masthead {
+	line-height: 1;
+	margin-bottom: 1em;
+	box-sizing: border-box;
+}
+#masthead h1 {
+	margin: 0;
+}
+#masthead a {
 	text-decoration: none !important;
 }
-header h1 {
-	margin: 0;
-	font-size: 2.5em;
-	color: var(--NEUTRAL-BG-COLOR);
-}
-.header-container {
-	max-width: var(--MAXWIDTH);
-	width: 100%;
-	position: relative;
-	margin: 0;
-	margin-top: 3em;
-	padding: 0;
-	box-sizing: border-box;
-	border: 0;
-}
-.header-title {
-	display: flex;
-	flex-flow: column;
-	margin: 0;
-}
-.header-subtitle {
-	margin: 0;
-	margin-bottom: 0.5em;
-	font-size: 0.9em;
-	color: gray;
+#masthead a:hover {
+	text-shadow: none !important;
 }
 
 footer {
-	padding: 3em;
-	color: gray;
-	text-align: center;
-}
-
-.nav {
 	margin: auto;
-	padding: 0;
-}
-.nav ul {
-	display: flex;
-	flex-flow: row;
-	list-style-type: none;
-	justify-content: center;
-	margin: 1em;
-	padding: 0;
-}
-.nav li {
-	flex: 1;
-	display: block;
-	margin: 0.25em;
-	padding: 0.25em;
-	padding-left: 0.75em;
-	padding-right: 0.75em;
-	box-sizing: border-box;
-	background: var(--NEUTRAL-BG-COLOR);
-	color: white;
-	border-radius: var(--BORDER-RADIUS);
-}
-.nav li:hover {
-	background: var(--HOVER-BG-COLOR);
-}
-.nav li:active, .nav-active li, .nav-active li:hover {
-	background: var(--ACTIVE-BG-COLOR);
-}
-.nav-cr {
-	font-size: 75%;
-	color: gray;
+	font-size: 0.8em;
 }
 
-.container {
-	max-width: var(--MAXWIDTH);
-	width: 100%;
+#navigation-links {
 	margin: auto;
-	padding: 0;
-	box-sizing: border-box;
+	padding: 1em;
 }
-.container h2 {
-	text-align: center;
-	font-size: 2.25em;
-}
-
-#welcome-img {
-	width: 100%;
-}
-
-.profile-img {
-	margin: auto !important;
-	width: 128px;
-	height: 128px;
-	margin: 0;
-	margin-bottom: 3em !important;
-	background-image: url("profile.jpg");
-	background-size: contain;
-	border-radius: 100%;
-}
-
-.playlist-page ul {
+#navigation-links ul {
 	list-style-type: none;
-	max-width: var(--MAXWIDTH) !important;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 	margin: auto;
-	margin-bottom: 12px;
-	padding: 0;
+	transform: skew(8deg);
+}
+#navigation-links li {
+	display: block;
+	margin: 0.5em;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0.25em;
+	font-size: 3em;
+	transform: skew(-8deg) rotate(-12deg);
+	transition: 0.2s;
+}
+#navigation-links li:hover {
+	text-shadow: 4px 4px 0 burlywood;
+	transform: skew(-12deg) rotate(-12deg);
+	transition: 0.2s;
+}
+
+.section-list dd {
+	border-bottom: 1px dashed black;
+}
+.section-list dd:last-child {
+	border-bottom: none !important;
+}
+
+.playlist-page h3 {
+	margin: 0;
+	font-size: 4em;
+	text-shadow: 8px 8px 0px rgba(0,0,0,0.25);
+}
+.playlist-page ul {
+	list-style-type: none;
+	display: flex;
+	flex-flow: row wrap;
+	padding-top: 3em;
+	box-sizing: border-box;
+	transform: rotate(12deg);
 }
 .playlist-page li {
-	display: inline-block;
-	min-width: 160px;
-	margin: 8px;
-	padding: 8px;
-	box-sizing: border-box;
-	background: var(--NEUTRAL-BG-COLOR);
-	color: white;
-	text-align: center;
-	text-decoration: none;
-	border-radius: var(--BORDER-RADIUS);
-}
-.playlist-page li:hover {
-	background: var(--HOVER-BG-COLOR);
-}
-.playlist-page li:active {
-	background: var(--ACTIVE-BG-COLOR);
-}
-
-.section-list {
-	max-width: var(--MAXWIDTH) !important;
-	display: flex;
-	flex-flow: column;
-	margin: auto;
-	box-sizing: border-box;
-}
-.section-list dd {
-	display: block;
-	margin: 0;
-	margin-bottom: 1em;
+	margin: 0.125em;
+	margin-right: 1em;
 	padding: 0;
 	box-sizing: border-box;
+	font-size: 3em;
+	transform: rotate(-32deg);
 }
-.section-list dd small {
-	color: #777;
-}
-
