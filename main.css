@@ -1,8 +1,10 @@
-@import url('https://fontlibrary.org/face/manic-monday');
-
 :root {
 	--MAX-WIDTH: 1200px;
+	--LINK-COLOR: blue;
+	--HOVER-COLOR: orangered;
+	--BACKGROUND-COLOR: white;
 	--PRIMARY-COLOR: black;
+	--SECONDARY-COLOR: #eceae1;
 	--BORDER-COLOR: #9b9784;
 }
 
@@ -18,7 +20,6 @@
 	}
 	#navigation-links li {
 		padding: 0 !important;
-		font-size: 2.5em !important;
 	}
 
 	.playlist-page ul {
@@ -31,8 +32,8 @@
 }
 
 body {
-	font-family: 'ManicMondayRegular', serif;
-	font-size: 2em;
+	font-family: serif;
+	font-size: 1.5em;
 	font-weight: 400;
 	line-height: 1.25;
 	text-align: left;
@@ -47,25 +48,25 @@ body {
 	justify-content: center;
 	align-items: stretch;
 
-	background: #eceae1;
-	color: black;
+	background: var(--BACKGROUND-COLOR);
+	color: var(--PRIMARY-COLOR);
 }
 
 a, h1, h2, h3, h4, h5 {
 	color: var(--PRIMARY-COLOR);
 }
 h1, h2, h3, h4, h5 {
-	font-family: 'ManicMondayBold', serif;
+	/* font-family: 'Simple Medium', serif; */
 	font-weight: 700;
 }
 
 a {
-	text-decoration-color: var(--BORDER-COLOR);
-	text-decoration-style: wavy;
+	color: var(--LINK-COLOR);
+	text-decoration-style: solid;
 	transition: 0.2s;
 }
 a:hover {
-	text-decoration-color: orangered;
+	color: var(--HOVER-COLOR);
 	transition: 0.2s;
 }
 
@@ -90,6 +91,7 @@ header {
 }
 #masthead a {
 	text-decoration: none !important;
+	color: var(--PRIMARY-COLOR) !important;
 }
 
 footer {
@@ -104,7 +106,7 @@ footer {
 #navigation-links ul {
 	list-style-type: none;
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: column;
 	justify-content: center;
 	margin: auto;
 	transform: skew(8deg);
@@ -115,12 +117,8 @@ footer {
 	margin-top: 0;
 	margin-bottom: 0;
 	padding: 0.25em;
-	font-size: 3em;
+	font-size: 2.5em;
 	transform: skew(-8deg) rotate(-12deg);
-	transition: 0.2s;
-}
-#navigation-links li:hover {
-	transform: skew(-12deg) rotate(-12deg);
 	transition: 0.2s;
 }
 
@@ -135,10 +133,15 @@ footer {
 }
 
 .section-list dd {
+	margin: 0;
+	padding: 0;
 	border-bottom: 1px dashed var(--BORDER-COLOR);
 }
 .section-list dd:last-child {
 	border-bottom: none !important;
+}
+.section-list small {
+	font-style: italic;
 }
 
 .places-list h3, .places-list h4, .places-list h5 {
@@ -160,14 +163,27 @@ footer {
 
 .playlist-page h3 {
 	margin: 0;
+	padding: 0.5em;
+	padding-bottom: 0;
+	text-align: center;
+	font-family: sans-serif;
 	font-size: 4em;
-	text-shadow: 8px 8px 0px rgba(0,0,0,0.25);
+	letter-spacing: 0.5em;
+}
+.playlist-page h3:nth-of-type(odd) {
+	color: limegreen;
+	text-shadow: 8px 8px 0px darkgreen;
+}
+.playlist-page h3:nth-of-type(even) {
+	color: red;
+	text-shadow: 8px 8px 0px darkred;
 }
 .playlist-page ul {
 	list-style-type: none;
 	display: flex;
 	flex-flow: row wrap;
 	padding-top: 3em;
+	text-align: center;
 	box-sizing: border-box;
 	transform: rotate(12deg);
 }

@@ -8,7 +8,7 @@ function setHeader(pageName) {
 		<div id="masthead">
 			<a href="index.html">
 				<h1>Clarence Siew</h1>
-				<sub>Software Engineering student &bull; Melbourne</sub>
+				<sub>Software Engineering student, Melbourne</sub>
 			</a>
 		</div>
 	`;
