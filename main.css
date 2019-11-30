@@ -8,6 +8,17 @@
 	--BORDER-COLOR: #9b9784;
 }
 
+@media (prefers-color-scheme: dark) {
+	:root {
+		--LINK-COLOR: cyan;
+		--HOVER-COLOR: orange;
+		--BACKGROUND-COLOR: #333;
+		--PRIMARY-COLOR: white;
+		--SECONDARY-COLOR: #eceae1;
+		--BORDER-COLOR: #9b9784;
+	}
+}
+
 @media (max-width: 600px) {
 	body {
 		padding: 1.125em !important;
@@ -20,6 +31,7 @@
 	}
 	#navigation-links li {
 		padding: 0 !important;
+		transform: skew(-8deg) rotate(-12deg);
 	}
 
 	.playlist-page ul {
@@ -28,6 +40,7 @@
 	}
 	.playlist-page li {
 		font-size: 2em !important;
+		transform: none !important;
 	}
 }
 
@@ -68,6 +81,10 @@ a {
 a:hover {
 	color: var(--HOVER-COLOR);
 	transition: 0.2s;
+}
+
+ul {
+	list-style-position: inside;
 }
 
 hr {
@@ -167,21 +184,21 @@ footer {
 	padding-bottom: 0;
 	text-align: center;
 	font-family: sans-serif;
-	font-size: 4em;
-	letter-spacing: 0.5em;
+	font-size: 3em;
 }
 .playlist-page h3:nth-of-type(odd) {
 	color: limegreen;
-	text-shadow: 8px 8px 0px darkgreen;
+	text-shadow: 4px 4px 0px darkgreen;
 }
 .playlist-page h3:nth-of-type(even) {
 	color: red;
-	text-shadow: 8px 8px 0px darkred;
+	text-shadow: 4px 4px 0px darkred;
 }
 .playlist-page ul {
 	list-style-type: none;
 	display: flex;
 	flex-flow: row wrap;
+	justify-content: center;
 	padding-top: 3em;
 	text-align: center;
 	box-sizing: border-box;
@@ -193,7 +210,7 @@ footer {
 	padding: 0;
 	box-sizing: border-box;
 	font-size: 3em;
-	transform: rotate(-32deg);
+	transform: rotate(-24deg);
 }
 
 #profile-img {
