@@ -1,21 +1,25 @@
+@import url('https://fontlibrary.org/face/zapus-sans');
+
 :root {
 	--MAX-WIDTH: 1200px;
-	--LINK-COLOR: blue;
-	--HOVER-COLOR: orangered;
-	--BACKGROUND-COLOR: white;
-	--PRIMARY-COLOR: black;
-	--SECONDARY-COLOR: #eceae1;
-	--BORDER-COLOR: #9b9784;
+	--MAX-WIDTH-PLAYLIST: 600px;
+	--LINK-COLOR: orange;
+	--HOVER-COLOR: gold;
+	--BACKGROUND-COLOR: #333;
+	--PRIMARY-COLOR: white;
+	--SECONDARY-COLOR: gray;
+	--BORDER-COLOR: gray;
+	--BUTTON-BG: dimgray;
+	--BUTTON-FG: white;
+	--BORDER-RADIUS: 6px;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--LINK-COLOR: cyan;
-		--HOVER-COLOR: orange;
-		--BACKGROUND-COLOR: #333;
-		--PRIMARY-COLOR: white;
-		--SECONDARY-COLOR: #eceae1;
-		--BORDER-COLOR: #9b9784;
+		--LINK-COLOR: darkorange;
+		--HOVER-COLOR: red;
+		--BACKGROUND-COLOR: black;
+		--PRIMARY-COLOR: whitesmoke;
 	}
 }
 
@@ -23,35 +27,27 @@
 	body {
 		padding: 1.125em !important;
 		flex-flow: column !important;
-		font-size: 1.5em !important;
+		font-size: 1.25em !important;
 	}
 
 	#navigation-links {
 		padding: 0 !important;
 	}
-	#navigation-links li {
-		padding: 0 !important;
-		transform: skew(-8deg) rotate(-12deg);
-	}
 
-	.playlist-page ul {
-		padding-top: 0 !important;
-		transform: none !important;
-	}
-	.playlist-page li {
-		font-size: 2em !important;
-		transform: none !important;
+	.container h2 {
+		padding: 0 !important;
 	}
 }
 
 body {
-	font-family: serif;
-	font-size: 1.5em;
-	font-weight: 400;
+	font-family: 'ZapusSansLight', sans-serif;
+	font-size: 1.25em;
+	font-weight: 300;
 	line-height: 1.25;
 	text-align: left;
 	width: 100%;
 	max-width: var(--MAX-WIDTH);
+	height: 100%;
 	margin: auto;
 	padding: 1.5em;
 	box-sizing: border-box;
@@ -69,18 +65,16 @@ a, h1, h2, h3, h4, h5 {
 	color: var(--PRIMARY-COLOR);
 }
 h1, h2, h3, h4, h5 {
-	/* font-family: 'Simple Medium', serif; */
+	font-family: 'ZapusSansBold', sans-serif;
 	font-weight: 700;
 }
 
 a {
 	color: var(--LINK-COLOR);
-	text-decoration-style: solid;
-	transition: 0.2s;
+	text-decoration: none;
 }
 a:hover {
 	color: var(--HOVER-COLOR);
-	transition: 0.2s;
 }
 
 ul {
@@ -90,7 +84,7 @@ ul {
 hr {
 	width: 100%;
 	border: 0;
-	border-bottom: 1px dashed var(--BORDER-COLOR);
+	border-bottom: 2px solid var(--BORDER-COLOR);
 }
 
 header { 
@@ -100,20 +94,29 @@ header {
 
 #masthead {
 	line-height: 1;
+	margin-top: 1em;
 	margin-bottom: 1em;
 	box-sizing: border-box;
 }
 #masthead h1 {
 	margin: 0;
+	font-size: 2.25em;
+	text-transform: uppercase;
+	color: var(--LINK-COLOR);
 }
 #masthead a {
 	text-decoration: none !important;
 	color: var(--PRIMARY-COLOR) !important;
 }
+#masthead a:hover {
+	text-shadow: none !important;
+}
 
 footer {
 	margin: auto;
+	padding: 2em;
 	font-size: 0.8em;
+	color: var(--SECONDARY-COLOR);
 }
 
 #navigation-links {
@@ -124,19 +127,31 @@ footer {
 	list-style-type: none;
 	display: flex;
 	flex-flow: column;
+	align-content: center;
 	justify-content: center;
-	margin: auto;
-	transform: skew(8deg);
+	margin: 1em;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0;
+	text-align: center;
 }
-#navigation-links li {
+#navigation-links li, .playlist-page li {
 	display: block;
-	margin: 0.5em;
-	margin-top: 0;
-	margin-bottom: 0;
+	min-width: 120px;
+	margin: 0.25em;
 	padding: 0.25em;
-	font-size: 2.5em;
-	transform: skew(-8deg) rotate(-12deg);
-	transition: 0.2s;
+	padding-left: 0.75em;
+	padding-right: 0.75em;
+	box-sizing: border-box;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	color: var(--LINK-COLOR);
+	border: 2px solid var(--LINK-COLOR);
+	border-radius: var(--BORDER-RADIUS);
+}
+#navigation-links li:hover, .playlist-page li:hover {
+	color: var(--HOVER-COLOR);
+	border: 2px solid var(--HOVER-COLOR);
 }
 
 .container {
@@ -147,18 +162,20 @@ footer {
 .container h2 {
 	margin-left: auto;
 	margin-right: auto;
+	font-size: 2.5em;
+	text-transform: uppercase;
 }
 
 .section-list dd {
 	margin: 0;
 	padding: 0;
-	border-bottom: 1px dashed var(--BORDER-COLOR);
+	border-bottom: 2px solid var(--BORDER-COLOR);
 }
 .section-list dd:last-child {
 	border-bottom: none !important;
 }
 .section-list small {
-	font-style: italic;
+	color: var(--SECONDARY-COLOR);
 }
 
 .places-list h3, .places-list h4, .places-list h5 {
@@ -183,34 +200,22 @@ footer {
 	padding: 0.5em;
 	padding-bottom: 0;
 	text-align: center;
-	font-family: sans-serif;
-	font-size: 3em;
+	font-size: 2.25em;
 }
-.playlist-page h3:nth-of-type(odd) {
-	color: limegreen;
-	text-shadow: 4px 4px 0px darkgreen;
-}
-.playlist-page h3:nth-of-type(even) {
-	color: red;
-	text-shadow: 4px 4px 0px darkred;
+.playlist-page hr {
+	margin-top: 2.5em;
 }
 .playlist-page ul {
 	list-style-type: none;
+	max-width: var(--MAX-WIDTH-PLAYLIST);
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
+	margin: auto;
+	padding: 0;
 	padding-top: 3em;
 	text-align: center;
 	box-sizing: border-box;
-	transform: rotate(12deg);
-}
-.playlist-page li {
-	margin: 0.125em;
-	margin-right: 1em;
-	padding: 0;
-	box-sizing: border-box;
-	font-size: 3em;
-	transform: rotate(-24deg);
 }
 
 #profile-img {
