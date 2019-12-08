@@ -8,8 +8,17 @@ function setHeader(pageName) {
 		<div id="masthead">
 			<a href="index.html">
 				<h1>Clarence Siew</h1>
-				<sub>Software Engineering student, Melbourne</sub>
+				<p>Software Engineering student, Melbourne</p>
 			</a>
+		</div>
+		<hr />
+		<div id="navigation-links">
+			<ul>
+				<a href="projects.html"><li>Projects</li></a>
+				<a href="playlists.html"><li>Playlists</li></a>
+				<a href="places.html"><li>Places</li></a>
+				<a href="contact.html"><li>Contact</li></a>
+			</ul>
 		</div>
 	`;
 	

@@ -1,12 +1,12 @@
-@import url('https://fontlibrary.org/face/zapus-sans');
+@import url('https://fonts.googleapis.com/css?family=Overpass:300,300i,400,400i,700,700i&display=swap');
 
 :root {
-	--MAX-WIDTH: 1200px;
-	--MAX-WIDTH-PLAYLIST: 600px;
-	--LINK-COLOR: orange;
-	--HOVER-COLOR: gold;
-	--BACKGROUND-COLOR: #333;
-	--PRIMARY-COLOR: white;
+	--MAX-WIDTH: 800px;
+	--MAX-WIDTH-PLAYLIST: 800px;
+	--LINK-COLOR: black;
+	--HOVER-COLOR: brown;
+	--BACKGROUND-COLOR: white;
+	--PRIMARY-COLOR: black;
 	--SECONDARY-COLOR: gray;
 	--BORDER-COLOR: gray;
 	--BUTTON-BG: dimgray;
@@ -16,40 +16,45 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--LINK-COLOR: darkorange;
-		--HOVER-COLOR: red;
-		--BACKGROUND-COLOR: black;
+		--LINK-COLOR: orange;
+		--HOVER-COLOR: orange;
+		--BACKGROUND-COLOR: #333;
 		--PRIMARY-COLOR: whitesmoke;
 	}
 }
 
 @media (max-width: 600px) {
 	body {
+		font-size: 1em !important;
 		padding: 1.125em !important;
 		flex-flow: column !important;
-		font-size: 1.25em !important;
 	}
 
-	#navigation-links {
-		padding: 0 !important;
+	header {
+		margin-bottom: 1.5em !important;
 	}
 
 	.container h2 {
 		padding: 0 !important;
 	}
+
+	#welcome-img {
+		width: 100% !important;
+		height: 100% !important;
+	}
 }
 
 body {
-	font-family: 'ZapusSansLight', sans-serif;
+	font-family: 'Overpass', sans-serif;
 	font-size: 1.25em;
-	font-weight: 300;
-	line-height: 1.25;
+	font-weight: 400;
+	line-height: 1.5;
 	text-align: left;
 	width: 100%;
 	max-width: var(--MAX-WIDTH);
 	height: 100%;
 	margin: auto;
-	padding: 1.5em;
+	padding: 3em;
 	box-sizing: border-box;
 	border: 0;
 	display: flex;
@@ -65,13 +70,12 @@ a, h1, h2, h3, h4, h5 {
 	color: var(--PRIMARY-COLOR);
 }
 h1, h2, h3, h4, h5 {
-	font-family: 'ZapusSansBold', sans-serif;
 	font-weight: 700;
 }
 
 a {
 	color: var(--LINK-COLOR);
-	text-decoration: none;
+	text-decoration: underline;
 }
 a:hover {
 	color: var(--HOVER-COLOR);
@@ -83,39 +87,53 @@ ul {
 
 hr {
 	width: 100%;
+	margin-bottom: 2em;
 	border: 0;
-	border-bottom: 2px solid var(--BORDER-COLOR);
+	border-bottom: 3px solid var(--BORDER-COLOR);
 }
 
 header { 
 	margin: auto;
+	margin-bottom: 3em;
+	padding: 0;
 	text-align: center;
+	background: var(--LINK-COLOR);
+}
+header a {
+	text-decoration: none !important;
+	color: var(--BACKGROUND-COLOR);
+}
+header a:hover {
+	color: var(--BACKGROUND-COLOR);
+}
+header hr {
+	margin: 0;
+	padding: 0;
+	border: 3px solid var(--BACKGROUND-COLOR);
 }
 
 #masthead {
 	line-height: 1;
-	margin-top: 1em;
-	margin-bottom: 1em;
+	margin: 0;
+	padding: 1.5em;
 	box-sizing: border-box;
 }
 #masthead h1 {
 	margin: 0;
-	font-size: 2.25em;
-	text-transform: uppercase;
-	color: var(--LINK-COLOR);
+	font-size: 2em;
+	color: var(--BACKGROUND-COLOR);
 }
-#masthead a {
-	text-decoration: none !important;
-	color: var(--PRIMARY-COLOR) !important;
-}
-#masthead a:hover {
-	text-shadow: none !important;
+#masthead p {
+	margin: 0;
+	padding: 0;
+	padding-top: 0.5em;
+	font-size: 0.8em;
+	color: var(--BACKGROUND-COLOR);
 }
 
 footer {
 	margin: auto;
 	padding: 2em;
-	font-size: 0.8em;
 	color: var(--SECONDARY-COLOR);
 }
 
@@ -126,32 +144,24 @@ footer {
 #navigation-links ul {
 	list-style-type: none;
 	display: flex;
-	flex-flow: column;
+	flex-flow: row wrap;
 	align-content: center;
 	justify-content: center;
-	margin: 1em;
+	margin: 0;
 	margin-left: 0;
 	margin-right: 0;
 	padding: 0;
 	text-align: center;
 }
-#navigation-links li, .playlist-page li {
+#navigation-links li {
 	display: block;
-	min-width: 120px;
-	margin: 0.25em;
-	padding: 0.25em;
-	padding-left: 0.75em;
-	padding-right: 0.75em;
+	margin: 0;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	padding: 0;
 	box-sizing: border-box;
-	font-size: 1.5em;
-	text-transform: uppercase;
-	color: var(--LINK-COLOR);
-	border: 2px solid var(--LINK-COLOR);
-	border-radius: var(--BORDER-RADIUS);
-}
-#navigation-links li:hover, .playlist-page li:hover {
-	color: var(--HOVER-COLOR);
-	border: 2px solid var(--HOVER-COLOR);
+	color: var(--BACKGROUND-COLOR);
+	font-weight: 700;
 }
 
 .container {
@@ -162,14 +172,13 @@ footer {
 .container h2 {
 	margin-left: auto;
 	margin-right: auto;
-	font-size: 2.5em;
-	text-transform: uppercase;
+	font-size: 1.75em;
 }
 
 .section-list dd {
 	margin: 0;
 	padding: 0;
-	border-bottom: 2px solid var(--BORDER-COLOR);
+	border-bottom: 3px solid var(--BORDER-COLOR);
 }
 .section-list dd:last-child {
 	border-bottom: none !important;
@@ -217,10 +226,31 @@ footer {
 	text-align: center;
 	box-sizing: border-box;
 }
+.playlist-page li {
+	display: block;
+	min-width: 120px;
+	margin: 0.5em;
+	padding: 0;
+	box-sizing: border-box;
+	color: var(--LINK-COLOR);
+	font-size: 1.75em;
+	font-weight: 700;
+}
+.playlist-page li:hover {
+	color: var(--HOVER-COLOR);
+}
 
 #profile-img {
 	margin: auto;
 	border-radius: 100%;
 	width: 128px;
 	height: 128px;
+}
+
+#welcome-img {
+	margin: auto;
+	width: 410px;
+	height: 410px;
+	box-sizing: border-box;
+	border: 3px solid var(--BORDER-COLOR);
 }
