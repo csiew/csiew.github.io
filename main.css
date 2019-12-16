@@ -1,23 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Ibarra+Real+Nova:400,400i,700,700i|Kulim+Park:400,400i,700,700i&display=swap');
-
 :root {
-	--MAX-WIDTH: 800px;
-	--MAX-WIDTH-PLAYLIST: 800px;
-	--LINK-COLOR: black;
-	--HOVER-COLOR: gray;
-	--BACKGROUND-COLOR: lightgray;
+	--MAX-WIDTH: 600px;
+	--LINK-COLOR: blue;
+	--BACKGROUND-COLOR: white;
 	--PRIMARY-COLOR: black;
 	--SECONDARY-COLOR: gray;
 	--BORDER-COLOR: gray;
-	--BUTTON-BG: dimgray;
-	--BUTTON-FG: white;
+	--BUTTON-BG: white;
+	--BUTTON-FG: black;
 	--BORDER-RADIUS: 6px;
 }
 
 @media (max-width: 600px) {
 	body {
-		font-size: 1em !important;
-		padding: 1.125em !important;
+		padding: 1.25em !important;
 		flex-flow: column !important;
 	}
 
@@ -37,33 +32,22 @@
 		text-align: center !important;
 	}
 	#navigation-links li {
-		margin-left: 0.75em !important;
-		margin-right: 0.75em !important;
-	}
-
-	.container {
-		margin: 0 !important;
-	}
-	.container h2 {
-		padding: 0 !important;
-	}
-
-	#welcome-img {
-		width: 100% !important;
-		height: 100% !important;
+		margin-left: 0.5em !important;
+		margin-right: 0.5em !important;
 	}
 }
 
 body {
-	font-family: 'Ibarra Real Nova', serif;
-	font-size: 1.325em;
+	font-family: serif;
+	font-size: 16px;
 	font-weight: 400;
-	line-height: 1.5;
+	line-height: 1.25;
 	text-align: left;
+	max-width: var(--MAX-WIDTH);
 	width: 100%;
 	height: 100%;
 	margin: auto;
-	padding: 1em;
+	padding: 2em;
 	box-sizing: border-box;
 	border: 0;
 	display: flex;
@@ -78,16 +62,10 @@ body {
 a, h1, h2, h3, h4, h5 {
 	color: var(--PRIMARY-COLOR);
 }
-h1, h2, h3, h4, h5 {
-	font-family: 'Kulim Park', sans-serif;
-}
 
 a {
 	color: var(--LINK-COLOR);
 	text-decoration: underline;
-}
-a:hover {
-	color: var(--HOVER-COLOR);
 }
 
 ul {
@@ -97,7 +75,7 @@ ul {
 hr {
 	width: 100%;
 	border: 0;
-	border-bottom: 3px solid var(--BORDER-COLOR);
+	border-bottom: 2px solid var(--BORDER-COLOR);
 }
 
 header { 
@@ -112,9 +90,6 @@ header {
 }
 header a {
 	text-decoration: none !important;
-	color: var(--PRIMARY-COLOR);
-}
-header a:hover {
 	color: var(--PRIMARY-COLOR);
 }
 
@@ -166,39 +141,38 @@ header a:hover {
 	margin-left: 1em;
 	padding: 0;
 	box-sizing: border-box;
-	color: var(--PRIMARY-COLOR);
+	color: var(--LINK-COLOR);
+	text-decoration: underline;
 }
 
 footer {
 	width: 100%;
 	margin: 0;
-	margin-top: 3em;
+	margin-top: 1em;
 	padding: 0;
-	text-align: center;
-	color: var(--SECONDARY-COLOR);
-	font-size: 0.8em;
+	font-style: italic;
 }
 
 .container {
-	max-width: var(--MAX-WIDTH) !important;
 	width: 100%;
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
-	margin: 2em;
+	margin: auto;
+	padding: 0;
 	box-sizing: border-box;
 }
 .container h2 {
 	margin: 0;
-	font-size: 1.5em;
-	font-variant: small-caps;
-	letter-spacing: 0.125em;
+}
+.container hr {
+	margin-bottom: 1em;
 }
 
 .section-list dd {
 	margin: 0;
 	padding: 0;
-	border-bottom: 3px solid var(--BORDER-COLOR);
+	border-bottom: 2px solid var(--BORDER-COLOR);
 }
 .section-list dd:last-child {
 	border-bottom: none !important;
@@ -226,9 +200,7 @@ footer {
 
 .playlist-page h3 {
 	margin: 0;
-	padding: 0.5em;
-	padding-bottom: 0;
-	text-align: center;
+	padding: 0;
 	font-size: 2.25em;
 }
 .playlist-page hr {
@@ -236,41 +208,52 @@ footer {
 }
 .playlist-page ul {
 	list-style-type: none;
-	max-width: var(--MAX-WIDTH-PLAYLIST);
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: center;
-	margin: auto;
+	justify-content: flex-start;
+	margin: 0;
 	padding: 0;
 	padding-top: 3em;
-	text-align: center;
+	text-align: left;
 	box-sizing: border-box;
+}
+.playlist-page a {
+	text-decoration: none !important;
 }
 .playlist-page li {
 	display: block;
 	min-width: 120px;
-	margin: 0.5em;
-	padding: 0;
+	margin: 0.25em;
+	padding: 0.25em;
 	box-sizing: border-box;
-	color: var(--LINK-COLOR);
+	background: var(--BUTTON-BG);
+	color: var(--BUTTON-FG);
+	border: 1px solid black;
+	box-shadow: 4px 4px 0px gray;
+	text-align: center;
 	font-size: 1.75em;
 	font-weight: 700;
 }
-.playlist-page li:hover {
-	color: var(--HOVER-COLOR);
+.playlist-page li:active {
+	background: var(--BUTTON-FG);
+	color: var(--BUTTON-BG);
 }
 
 #profile-img {
 	margin: auto;
-	border-radius: 100%;
+	/* border-radius: 100%; */
 	width: 128px;
 	height: 128px;
+	box-sizing: border-box;
+	border: 1px solid black;
+	box-shadow: 4px 4px 0px gray;
 }
 
 #welcome-img {
-	margin: auto;
-	width: 410px;
-	height: 410px;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 1em;
 	box-sizing: border-box;
-	border: 3px solid var(--BORDER-COLOR);
+	border: 1px solid black;
+	box-shadow: 4px 4px 0px gray;
 }
