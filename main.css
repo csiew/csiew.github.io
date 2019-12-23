@@ -1,28 +1,33 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700|Miriam+Libre:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Manjari:400,700&display=swap');
 
 :root {
+	--CONTENT-FONT-FAMILY: sans-serif;
+	--HEADER-FONT-FAMILY: sans-serif;
 	--MAX-WIDTH: 960px;
 	--MAX-WIDTH-PLAYLIST: 600px;
-	--LINK-COLOR: firebrick;
-	--LINK-HOVER-COLOR: chocolate;
-	--BACKGROUND-COLOR: floralwhite;
+	--LINK-COLOR: blue;
+	--LINK-HOVER-COLOR: indigo;
+	--BACKGROUND-COLOR: gainsboro;
 	--BACKGROUND-SECONDARY-COLOR: white;
 	--PRIMARY-COLOR: black;
-	--SECONDARY-COLOR: dimgray;
-	--HR-BORDER: 5px solid antiquewhite;
-	--BUTTON-BG: firebrick;
-	--BUTTON-BG-HOVER: chocolate;
-	--BUTTON-FG: white;
-	--BUTTON-FG-HOVER: white;
+	--SECONDARY-COLOR: gray;
+	--HR-BORDER: 3px solid var(--LINK-COLOR);
+	--BUTTON-BG: var(--LINK-COLOR);
+	--BUTTON-BG-HOVER: var(--LINK-HOVER-COLOR);
+	--BUTTON-FG: var(--BACKGROUND-COLOR);
+	--BUTTON-FG-HOVER: var(--BACKGROUND-COLOR);
 	--BUTTON-BORDER: none;
-	--SHADOW: 0px 4px 8px rgba(0,0,0,0.25);
-	--BORDER-RADIUS: 5px;
+	--SECTION-BORDER: none;
+	--SHADOW: none;
+	--BORDER-RADIUS: 8px;
+	--BUTTON-BORDER-RADIUS: 8px;
 }
 
 @media (max-width: 600px) {
 	body {
 		padding: 1.25em !important;
 		flex-flow: column !important;
+		font-size: 16px !important;
 	}
 
 	header {
@@ -42,12 +47,16 @@
 	}
 	#navigation-links li {
 		font-size: 0.8em !important;
-		margin-left: 0.5em !important;
-		margin-right: 0.5em !important;
+		margin-left: 0.25em !important;
+		margin-right: 0.25em !important;
 		padding: 0.25em !important;
+		padding-left: 0.75em !important;
+		padding-right: 0.75em !important;
 		background: var(--BUTTON-BG) !important;
 		color: var(--BUTTON-FG) !important;
-		border-radius: var(--BORDER-RADIUS) !important;
+		border: var(--BUTTON-BORDER) !important;
+		border-radius: var(--BUTTON-BORDER-RADIUS) !important;
+		box-shadow: var(--SHADOW);
 	}
 	#navigation-links li:hover {
 		background: var(--BUTTON-BG-HOVER) !important;
@@ -60,8 +69,8 @@
 }
 
 body {
-	font-family: Inconsolata, monospace;
-	font-size: 16px;
+	font-family: var(--CONTENT-FONT-FAMILY);
+	font-size: 20px;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
@@ -81,12 +90,10 @@ body {
 	color: var(--PRIMARY-COLOR);
 }
 
-a, h1, h2, h3, h4, h5 {
-	color: var(--LINK-COLOR);
-}
 h1, h2, h3, h4, h5 {
-	font-family: 'Miriam Libre', sans-serif;
-	/* font-weight: 900; */
+	color: var(--LINK-COLOR);
+	font-family: var(--HEADER-FONT-FAMILY);
+	font-weight: bold;
 }
 
 a {
@@ -210,6 +217,7 @@ footer {
 	padding: 1em;
 	box-sizing: border-box;
 	background: var(--BACKGROUND-SECONDARY-COLOR);
+	border: var(--SECTION-BORDER);
 	border-radius: var(--BORDER-RADIUS);
 	box-shadow: var(--SHADOW);
 }
@@ -271,9 +279,10 @@ footer {
 	background: var(--BUTTON-BG);
 	color: var(--BUTTON-FG);
 	border: var(--BUTTON-BORDER);
-	border-radius: var(--BORDER-RADIUS);
+	border-radius: var(--BUTTON-BORDER-RADIUS);
 	text-align: center;
 	font-size: 125%;
+	box-shadow: var(--SHADOW);
 }
 .playlist-page li:hover {
 	background: var(--BUTTON-BG-HOVER);
@@ -287,7 +296,7 @@ footer {
 	width: 128px;
 	height: 128px;
 	box-sizing: border-box;
-	border: 5px solid white;
+	border: 8px solid white;
 	border-radius: var(--BORDER-RADIUS);
 	box-shadow: var(--SHADOW);
 }
@@ -298,8 +307,15 @@ footer {
 	margin: auto;
 	margin-bottom: 1em;
 	box-sizing: border-box;
-	border: 5px solid white;
+	border: 8px solid white;
 	border-radius: var(--BORDER-RADIUS);
 	box-shadow: var(--SHADOW);
 	filter: grayscale(1);
+}
+
+#upcoming-img {
+	width: 32px;
+	margin: auto;
+	margin-top: 1em;
+	/* filter: invert(1); */
 }
