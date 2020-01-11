@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Cardo:400,400i,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Gelasio:400,400i,700,700i&display=swap');
 
 :root {
-	--CONTENT-FONT-FAMILY: 'Cardo', serif;
-	--HEADER-FONT-FAMILY: 'Cardo', serif;
-	--MAX-WIDTH: 920px;
-	--LINK-COLOR: brown;
-	--LINK-HOVER-COLOR: red;
-	--BACKGROUND-COLOR: #e9ece4;
+	--CONTENT-FONT-FAMILY: 'Lucida Grande', 'Lucida Sans', Verdana, Helvetica, Arial, sans-serif;
+	--HEADER-FONT-FAMILY: var(--CONTENT-FONT-FAMILY);
+	--MAX-WIDTH: 1080px;
+	--MAX-WIDTH-PLAYLISTS: 720px;
+	--LINK-COLOR: darkolivegreen;
+	--LINK-HOVER-COLOR: olive;
+	--BACKGROUND-COLOR: #f1f1f1;
 	--BACKGROUND-SECONDARY-COLOR: white;
 	--PRIMARY-COLOR: black;
 	--SECONDARY-COLOR: black;
-	--BORDER-COLOR: #b9bcb4;
+	--BORDER-COLOR: #e5e5e5;
 	--HR-BORDER: 3px solid var(--BORDER-COLOR);
 	--BUTTON-BG: var(--LINK-COLOR);
 	--BUTTON-BG-HOVER: var(--LINK-HOVER-COLOR);
@@ -68,9 +69,9 @@
 
 body {
 	font-family: var(--CONTENT-FONT-FAMILY);
-	font-size: 20px;
+	font-size: 14px;
 	font-weight: 400;
-	line-height: 1.5;
+	line-height: 1.75;
 	text-align: left;
 	/* max-width: var(--MAX-WIDTH); */
 	width: 100%;
@@ -189,7 +190,7 @@ footer {
 	margin-top: 1em;
 	padding: 0;
 	color: var(--SECONDARY-COLOR);
-	font-style: italic;
+	text-align: center;
 }
 
 .container {
@@ -207,8 +208,7 @@ footer {
 	margin-bottom: 1em;
 	text-align: center;
 	font-size: 225%;
-	font-weight: 400;
-	font-style: italic;
+	font-weight: bold;
 }
 .container hr {
 	margin-bottom: 1em;
@@ -262,7 +262,7 @@ footer {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	max-width: var(--MAX-WIDTH);
+	max-width: var(--MAX-WIDTH-PLAYLISTS);
 	margin: auto;
 	padding: 0;
 	padding-top: 1.5em;

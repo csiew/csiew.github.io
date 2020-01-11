@@ -31,7 +31,7 @@ function isCorresponding(navName, pageName) {
 }
 
 function setFooter() {
-	let copyright = "<hr /><p>&copy; 2019 Clarence Siew</p>";
+	let copyright = "<hr /><p>&copy; 2020 Clarence Siew</p>";
 	
 	document.querySelector('footer').innerHTML = copyright;
 }
