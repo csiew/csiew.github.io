@@ -18,7 +18,6 @@ function setHeader(pageName) {
 				<a href="contact.html"><li>Contact</li></a>
 			</ul>
 		</div>
-		<hr />
 	`;
 	
 	document.querySelector('header').innerHTML = title;
@@ -31,7 +30,7 @@ function isCorresponding(navName, pageName) {
 }
 
 function setFooter() {
-	let copyright = "<hr /><p>&copy; 2020 Clarence Siew</p>";
+	let copyright = "<p>&copy; 2020 Clarence Siew</p>";
 	
 	document.querySelector('footer').innerHTML = copyright;
 }
