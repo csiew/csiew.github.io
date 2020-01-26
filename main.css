@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Eczar:400,700|Karma:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Eczar:300i,400,700|Karma:400,700&display=swap');
 
 :root {
 	--CONTENT-FONT-FAMILY: 'Karma', serif;
@@ -159,7 +159,7 @@ header a {
 #masthead h1 {
 	margin: 0;
 	margin-top: 0.5em;
-	font-size: 2em;
+	font-size: 2.5em;
 	color: var(--PRIMARY-COLOR);
 }
 
@@ -227,6 +227,7 @@ footer {
 	margin: 0.5em;
 	text-align: center;
 	font-size: 225%;
+	font-weight: 300;
 }
 .container hr {
 	margin-bottom: 1em;
