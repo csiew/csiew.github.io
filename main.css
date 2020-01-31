@@ -1,32 +1,35 @@
-@import url('https://fonts.googleapis.com/css?family=Eczar:300i,400,700|Karma:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i&display=swap');
 
 :root {
-	--CONTENT-FONT-FAMILY: 'Karma', serif;
-	--HEADER-FONT-FAMILY: 'Eczar', serif;
-	--MAX-WIDTH: 960px;
+	--CONTENT-FONT-FAMILY: 'Quattrocento Sans', sans-serif;
+	--HEADER-FONT-FAMILY: 'Quattrocento Sans', sans-serif;
+	--MAX-WIDTH: 840px;
 	--MAX-WIDTH-PLAYLISTS: 720px;
-	--LINK-COLOR: sienna;
-	--LINK-HOVER-COLOR: firebrick;
-	--BACKGROUND-COLOR: wheat;
-	--BACKGROUND-SECONDARY-COLOR: white;
-	--BACKGROUND-NAVBAR-COLOR: white;
-	--PRIMARY-COLOR: black;
-	--SECONDARY-COLOR: #9f9f9f;
-	--BORDER-COLOR: #9f9f9f;
+	--LINK-COLOR: mediumaquamarine;
+	--LINK-HOVER-COLOR: aquamarine;
+	--BACKGROUND-COLOR: #555555;
+	--BACKGROUND-SECONDARY-COLOR: #333333;
+	--BACKGROUND-SECTION-COLOR: darkslategray;
+	--BACKGROUND-NAVBAR-COLOR: #333333;
+	--BACKGROUND-NAVBAR-MOBILE-COLOR: darkslategray;
+	--PRIMARY-COLOR: #dddddd;
+	--SECONDARY-COLOR: lightgray;
+	--HEADER-COLOR: var(--LINK-COLOR);
+	--BORDER-COLOR: #777777;
 	--HR-BORDER: 2px solid var(--BORDER-COLOR);
-	--BUTTON-BG: var(--LINK-COLOR);
-	--BUTTON-BG-HOVER: var(--LINK-HOVER-COLOR);
+	--BUTTON-BG: darkslategray;
+	--BUTTON-BG-HOVER: darkcyan;
 	--BUTTON-FG: white;
 	--BUTTON-FG-HOVER: white;
-	--BUTTON-BORDER: none;
-	--SECTION-BORDER: none;
+	--BUTTON-BORDER: 1px solid darkturquoise;
+	--SECTION-BORDER: 1px solid darkturquoise;
 	--IMAGE-BORDER: none;
-	--SHADOW: none;
+	--SHADOW: 0px 4px 8px rgba(0,0,0,0.125);
 	--BORDER-RADIUS: 8px;
 	--BUTTON-BORDER-RADIUS: 8px;
 }
 
-@media (max-width: 780px) {
+@media (max-width: 768px) {
 	body {
 		padding: 0 !important;
 		flex-flow: column !important;
@@ -34,7 +37,7 @@
 	}
 
 	header, footer {
-		background: var(--BACKGROUND-COLOR) !important;
+		background: var(--BACKGROUND-NAVBAR-MOBILE-COLOR) !important;
 	}
 	header {
 		flex-flow: column !important;
@@ -68,7 +71,7 @@
 
 	.container {
 		margin: 0 !important;
-		padding: 1.5em !important;
+		padding: 2em !important;
 		border-radius: 0 !important;
 	}
 	.container h2 {
@@ -80,7 +83,7 @@ body {
 	font-family: var(--CONTENT-FONT-FAMILY);
 	font-size: 20px;
 	font-weight: 400;
-	line-height: 1.325;
+	line-height: 1.5;
 	text-align: left;
 	/* max-width: var(--MAX-WIDTH); */
 	width: 100%;
@@ -103,7 +106,6 @@ body {
 
 h1, h2, h3, h4, h5 {
 	font-family: var(--HEADER-FONT-FAMILY);
-	font-weight: bold;
 }
 h3 { font-size: 26px; }
 h4 { font-size: 22px; }
@@ -140,6 +142,7 @@ header {
 	text-align: center;
 	background: var(--BACKGROUND-NAVBAR-COLOR);
 	border: none;
+	box-shadow: var(--SHADOW);
 }
 header a {
 	text-decoration: none !important;
@@ -207,6 +210,7 @@ footer {
 	text-align: center;
 	background: var(--BACKGROUND-NAVBAR-COLOR);
 	border: none;
+	box-shadow: var(--SHADOW);
 }
 
 .container {
@@ -220,14 +224,14 @@ footer {
 	padding-bottom: 3em;
 	box-sizing: border-box;
 	background: var(--BACKGROUND-SECONDARY-COLOR);
-	border: var(--SECTION-BORDER);
 	border-radius: var(--BORDER-RADIUS);
+	box-shadow: var(--SHADOW);
 }
 .container h2 {
 	margin: 0.5em;
 	text-align: center;
-	font-size: 225%;
-	font-weight: 300;
+	font-size: 212.5%;
+	color: var(--HEADER-COLOR);
 }
 .container hr {
 	margin-bottom: 1em;
@@ -236,15 +240,18 @@ footer {
 .section-list dd {
 	margin: 0;
 	margin-bottom: 2em;
-	padding: none;
-	padding-bottom: 1em;
+	padding: 1em;
 	box-sizing: border-box;
-	border: none;
-	border-bottom: var(--HR-BORDER);
+	background: var(--BACKGROUND-SECTION-COLOR);
+	border: var(--SECTION-BORDER);
+	border-radius: var(--BORDER-RADIUS);
+	box-shadow: var(--SHADOW);
 }
 .section-list dd:last-child {
 	margin-bottom: 0;
-	border-bottom: none;
+}
+.section-list dd h3 {
+	line-height: 1;
 }
 .section-list small {
 	color: var(--SECONDARY-COLOR);
