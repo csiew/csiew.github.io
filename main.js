@@ -30,7 +30,12 @@ function isCorresponding(navName, pageName) {
 }
 
 function setFooter() {
-	let copyright = "<p>&copy; 2020 Clarence Siew</p>";
+	let copyright = `
+		<p>
+			&copy; 2020 Clarence Siew
+			<br/>
+			<small><sub>Est significatione altius semper</sub></small>
+		</p>`;
 	
 	document.querySelector('footer').innerHTML = copyright;
 }
