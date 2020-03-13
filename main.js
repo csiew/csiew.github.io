@@ -30,12 +30,14 @@ function isCorresponding(navName, pageName) {
 }
 
 function setFooter() {
-	let copyright = `
-		<p>
+	let footerContent = `
+		<div>
 			&copy; 2020 Clarence Siew
-			<br/>
-			<small><sub>Est significatione altius semper</sub></small>
-		</p>`;
+		</div>
+		<div>
+			Hosted on GitHub via GitHub Pages
+		</div>
+		`;
 	
-	document.querySelector('footer').innerHTML = copyright;
+	document.querySelector('footer').innerHTML = footerContent;
 }
