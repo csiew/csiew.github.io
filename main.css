@@ -34,6 +34,32 @@
 	--TRANSITION: 0.25s;
 }
 
+@media (prefers-color-scheme: dark) {
+	:root {
+		--LINK-COLOR: goldenrod;
+		--LINK-HOVER-COLOR: gold;
+		--BACKGROUND-COLOR: #333333;
+		--BACKGROUND-SECONDARY-COLOR: #555555;
+		--BACKGROUND-CONTAINER-COLOR: none;
+		--BACKGROUND-SECTION-COLOR: #3e3e3e;
+		--BACKGROUND-NAVBAR-COLOR: #555555;
+		--BACKGROUND-NAVBAR-SECONDARY-COLOR: #555555;
+		--PRIMARY-COLOR: #dddddd;
+		--SECONDARY-COLOR: #bbbbbb;
+		--HEADER-COLOR: #aaaaaa;
+		--BORDER-COLOR: #cccccc;
+		--BUTTON-BG: darkcyan;
+		--BUTTON-BG-HOVER: darkslategray;
+		--BUTTON-FG: white;
+		--BUTTON-FG-HOVER: white;
+		--SHADOW: 0px 4px 8px rgba(0,0,0,0.125);
+		--BORDER-RADIUS: 9px;
+		--BUTTON-BORDER-RADIUS: 9px;
+		--IMAGE-BORDER-RADIUS: 100%;
+		--TRANSITION: 0.25s;
+	}
+}
+
 @media (max-width: 768px) {
 	body {
 		flex-flow: column !important;
