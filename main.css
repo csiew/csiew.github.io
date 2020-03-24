@@ -19,7 +19,7 @@
 	--BORDER-COLOR: #cccccc;
 	--HR-BORDER: 2px solid var(--BORDER-COLOR);
 	--BUTTON-BG: darkcyan;
-	--BUTTON-BG-HOVER: darkslateblue;
+	--BUTTON-BG-HOVER: darkslategray;
 	--BUTTON-FG: white;
 	--BUTTON-FG-HOVER: white;
 	--BUTTON-BORDER: none;
@@ -222,9 +222,11 @@ header {
 	box-sizing: border-box;
 	color: var(--LINK-COLOR);
 	text-decoration: none;
+	transition: var(--TRANSITION);
 }
 #navigation-links li:hover {
 	color: var(--LINK-HOVER-COLOR);
+	transition: var(--TRANSITION);
 }
 
 footer {
