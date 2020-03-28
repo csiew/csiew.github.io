@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 :root {
-	--CONTENT-FONT-FAMILY: 'Helvetica', 'Helvetica Neue', Arial, sans-serif;
-	--HEADER-FONT-FAMILY: 'Spartan', 'Helvetica', 'Helvetica Neue', Arial, sans-serif;
+	--CONTENT-FONT-FAMILY: 'Public Sans', 'Helvetica', 'Helvetica Neue', Arial, sans-serif;
+	--HEADER-FONT-FAMILY: 'Public Sans', 'Helvetica', 'Helvetica Neue', Arial, sans-serif;
 	--MAX-WIDTH: 840px;
 	--MAX-WIDTH-PLAYLISTS: 720px;
-	--LINK-COLOR: firebrick;
-	--LINK-HOVER-COLOR: orangered;
+	--LINK-COLOR: #726654;
+	--LINK-HOVER-COLOR: firebrick;
 	--BACKGROUND-COLOR: #fff3e4;
 	--BACKGROUND-SECONDARY-COLOR: whitesmoke;
 	--BACKGROUND-CONTAINER-COLOR: none;
 	--BACKGROUND-SECTION-COLOR: #efe3d2;
 	--BACKGROUND-NAVBAR-COLOR: white;
-	--BACKGROUND-NAVBAR-SECONDARY-COLOR: whitesmoke;
+	--BACKGROUND-NAVBAR-SECONDARY-COLOR: #eeeeee;
 	--PRIMARY-COLOR: #333333;
 	--SECONDARY-COLOR: #555555;
 	--HEADER-COLOR: #726654;
@@ -116,15 +116,16 @@
 	}
 
 	.section-shortcuts {
-		filter: none !important;
-		opacity: 1.0 !important;
+		display: none !important;
+		position: fixed !important;
+		visibility: hidden !important;
 	}
 }
 
 body {
 	font-family: var(--CONTENT-FONT-FAMILY);
 	font-size: 1.25em;
-	font-weight: 400;
+	font-weight: 300;
 	line-height: 1.5;
 	text-align: left;
 	text-rendering: optimizeSpeed;
@@ -216,7 +217,6 @@ header {
 }
 #masthead h1 {
 	margin: 0;
-	padding-top: 0.125em;
 	font-size: 2em;
 	color: var(--PRIMARY-COLOR);
 }
@@ -327,9 +327,6 @@ footer {
 	line-height: 1;
 	color: var(--HEADER-COLOR);
 }
-.section-list dd h3 a {
-	color: var(--HEADER-COLOR);
-}
 .section-list small {
 	color: var(--SECONDARY-COLOR);
 }
@@ -342,20 +339,17 @@ footer {
 	align-content: center;
 	justify-content: center;
 	margin: 0;
-	padding: 0.25em;
-	padding-left: 1.5em;
-	padding-right: 1.5em;
+	padding: 0.125em;
+	padding-left: 1em;
+	padding-right: 1em;
 	box-sizing: border-box;
-	background: var(--BACKGROUND-NAVBAR-SECONDARY-COLOR);
+	background: var(--BACKGROUND-NAVBAR-COLOR);
 	box-shadow: var(--SHADOW);
-	opacity: 0.75;
 	transition: var(--TRANSITION);
-	filter: saturate(0);
 }
 .section-shortcuts:hover {
-	opacity: 1.0;
+	background: var(--BACKGROUND-NAVBAR-SECONDARY-COLOR);
 	transition: var(--TRANSITION);
-	filter: none;
 }
 .section-shortcuts ul {
 	list-style: none;
@@ -372,22 +366,25 @@ footer {
 .section-shortcuts li {
 	display: block;
 	min-width: 96px;
-	margin: 0.25em;
+	margin: 0;
+	margin-left: 0.125em;
+	margin-right: 0.125em;
 	padding: 0.25em;
-	padding-left: 0.5em;
-	padding-right: 0.5em;
+	padding-left: 0.125em;
+	padding-right: 0.125em;
 	box-sizing: border-box;
-	background: var(--BUTTON-BG);
-	color: var(--BUTTON-FG);
+	background: none;
+	color: var(--PRIMARY-COLOR);
 	border: var(--BUTTON-BORDER);
 	border-radius: var(--BUTTON-BORDER-RADIUS);
 	text-align: center;
-	font-size: 80%;
+	font-size: 75%;
 	transition: var(--TRANSITION);
 }
 .section-shortcuts li:hover {
-	background: var(--BUTTON-BG-HOVER);
-	color: var(--BUTTON-FG-HOVER);
+	background: var(--BACKGROUND-NAVBAR-COLOR);
+	/* color: var(--BUTTON-FG-HOVER); */
+	box-shadow: var(--SHADOW);
 	transition: var(--TRANSITION);
 }
 
