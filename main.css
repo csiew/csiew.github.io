@@ -182,6 +182,7 @@ header {
 	width: 100%;
 	position: sticky !important;
 	top: 0;
+	box-shadow: var(--SHADOW);
 }
 
 #navigation-bar { 
@@ -197,7 +198,6 @@ header {
 	padding-top: 1em;
 	padding-bottom: 1em;
 	box-sizing: border-box;
-	box-shadow: var(--SHADOW);
 	background: var(--BACKGROUND-NAVBAR-COLOR);
 }
 #navigation-bar a {
@@ -252,6 +252,62 @@ header {
 }
 #navigation-links li:hover {
 	color: var(--LINK-HOVER-COLOR);
+	transition: var(--TRANSITION);
+}
+
+.section-shortcuts {
+	z-index: 1 !important;
+	top: 0;
+	display: flex;
+	flex-flow: row wrap;
+	align-content: center;
+	justify-content: center;
+	margin: 0;
+	padding: 0.125em;
+	padding-left: 1em;
+	padding-right: 1em;
+	box-sizing: border-box;
+	background: var(--BACKGROUND-NAVBAR-COLOR);
+	transition: var(--TRANSITION);
+}
+.section-shortcuts:hover {
+	background: var(--BACKGROUND-NAVBAR-SECONDARY-COLOR);
+	transition: var(--TRANSITION);
+}
+.section-shortcuts ul {
+	list-style: none;
+	display: flex;
+	flex-flow: row wrap;
+	align-content: center;
+	justify-content: center;
+	margin: 0 !important;
+	padding: 0;
+}
+.section-shortcuts a {
+	text-decoration: none;
+}
+.section-shortcuts li {
+	display: block;
+	min-width: 96px;
+	margin: 0;
+	margin-left: 0.125em;
+	margin-right: 0.125em;
+	padding: 0.25em;
+	padding-left: 0.125em;
+	padding-right: 0.125em;
+	box-sizing: border-box;
+	background: none;
+	color: var(--PRIMARY-COLOR);
+	border: var(--BUTTON-BORDER);
+	border-radius: var(--BUTTON-BORDER-RADIUS);
+	text-align: center;
+	font-size: 75%;
+	transition: var(--TRANSITION);
+}
+.section-shortcuts li:hover {
+	background: var(--BACKGROUND-NAVBAR-COLOR);
+	/* color: var(--BUTTON-FG-HOVER); */
+	box-shadow: var(--SHADOW);
 	transition: var(--TRANSITION);
 }
 
@@ -329,63 +385,6 @@ footer {
 }
 .section-list small {
 	color: var(--SECONDARY-COLOR);
-}
-
-.section-shortcuts {
-	z-index: 1 !important;
-	top: 0;
-	display: flex;
-	flex-flow: row wrap;
-	align-content: center;
-	justify-content: center;
-	margin: 0;
-	padding: 0.125em;
-	padding-left: 1em;
-	padding-right: 1em;
-	box-sizing: border-box;
-	background: var(--BACKGROUND-NAVBAR-COLOR);
-	box-shadow: var(--SHADOW);
-	transition: var(--TRANSITION);
-}
-.section-shortcuts:hover {
-	background: var(--BACKGROUND-NAVBAR-SECONDARY-COLOR);
-	transition: var(--TRANSITION);
-}
-.section-shortcuts ul {
-	list-style: none;
-	display: flex;
-	flex-flow: row wrap;
-	align-content: center;
-	justify-content: center;
-	margin: 0 !important;
-	padding: 0;
-}
-.section-shortcuts a {
-	text-decoration: none;
-}
-.section-shortcuts li {
-	display: block;
-	min-width: 96px;
-	margin: 0;
-	margin-left: 0.125em;
-	margin-right: 0.125em;
-	padding: 0.25em;
-	padding-left: 0.125em;
-	padding-right: 0.125em;
-	box-sizing: border-box;
-	background: none;
-	color: var(--PRIMARY-COLOR);
-	border: var(--BUTTON-BORDER);
-	border-radius: var(--BUTTON-BORDER-RADIUS);
-	text-align: center;
-	font-size: 75%;
-	transition: var(--TRANSITION);
-}
-.section-shortcuts li:hover {
-	background: var(--BACKGROUND-NAVBAR-COLOR);
-	/* color: var(--BUTTON-FG-HOVER); */
-	box-shadow: var(--SHADOW);
-	transition: var(--TRANSITION);
 }
 
 .places-list dd {
