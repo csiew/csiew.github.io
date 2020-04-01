@@ -1,30 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
 
 :root {
-	--CONTENT-FONT-FAMILY: 'Public Sans', 'Helvetica', 'Helvetica Neue', Arial, sans-serif;
-	--HEADER-FONT-FAMILY: 'Public Sans', 'Helvetica', 'Helvetica Neue', Arial, sans-serif;
+	--CONTENT-FONT-FAMILY: 'Inter', 'Helvetica', 'Helvetica Neue', Arial, sans-serif;
+	--HEADER-FONT-FAMILY: 'Inter', 'Helvetica', 'Helvetica Neue', Arial, sans-serif;
 	--MAX-WIDTH: 840px;
 	--MAX-WIDTH-PLAYLISTS: 720px;
-	--LINK-COLOR: #726654;
-	--LINK-HOVER-COLOR: firebrick;
-	--BACKGROUND-COLOR: #fff3e4;
+	--LINK-COLOR: firebrick;
+	--LINK-HOVER-COLOR: red;
+	--BACKGROUND-COLOR: white;
 	--BACKGROUND-SECONDARY-COLOR: whitesmoke;
 	--BACKGROUND-CONTAINER-COLOR: none;
-	--BACKGROUND-SECTION-COLOR: #efe3d2;
-	--BACKGROUND-NAVBAR-COLOR: white;
-	--BACKGROUND-NAVBAR-SECONDARY-COLOR: #eeeeee;
+	--BACKGROUND-SECTION-COLOR: #eeeeee;
+	--BACKGROUND-NAVBAR-COLOR: whitesmoke;
+	--BACKGROUND-NAVBAR-SECONDARY-COLOR: gainsboro;
 	--PRIMARY-COLOR: #333333;
 	--SECONDARY-COLOR: #555555;
-	--HEADER-COLOR: #726654;
+	--HEADER-COLOR: black;
 	--BORDER-COLOR: #cccccc;
 	--HR-BORDER: 2px solid var(--BORDER-COLOR);
-	--BUTTON-BG: darkcyan;
-	--BUTTON-BG-HOVER: darkslategray;
+	--BUTTON-BG: firebrick;
+	--BUTTON-BG-HOVER: red;
 	--BUTTON-FG: white;
 	--BUTTON-FG-HOVER: white;
 	--BUTTON-BORDER: none;
 	--SECTION-BORDER: none;
-	--COMPONENT-BORDER: none;
+	--COMPONENT-BORDER: 1px solid var(--BORDER-COLOR);
 	--DIVIDER-BORDER: 1px solid var(--BORDER-COLOR);
 	--IMAGE-BORDER: none;
 	--SHADOW: 0px 4px 8px rgba(0,0,0,0.0625);
@@ -48,8 +48,8 @@
 		--SECONDARY-COLOR: #bbbbbb;
 		--HEADER-COLOR: #aaaaaa;
 		--BORDER-COLOR: #cccccc;
-		--BUTTON-BG: darkcyan;
-		--BUTTON-BG-HOVER: darkslategray;
+		--BUTTON-BG: darkslategray;
+		--BUTTON-BG-HOVER: darkcyan;
 		--BUTTON-FG: white;
 		--BUTTON-FG-HOVER: white;
 		--SHADOW: 0px 4px 8px rgba(0,0,0,0.125);
@@ -124,9 +124,10 @@
 
 body {
 	font-family: var(--CONTENT-FONT-FAMILY);
-	font-size: 1.25em;
-	font-weight: 300;
+	font-size: 1.125em;
+	font-weight: 400;
 	line-height: 1.5;
+	letter-spacing: -0.5px;
 	text-align: left;
 	text-rendering: optimizeSpeed;
 	
@@ -183,6 +184,7 @@ header {
 	position: sticky !important;
 	top: 0;
 	box-shadow: var(--SHADOW);
+	border-bottom: var(--COMPONENT-BORDER);
 }
 
 #navigation-bar { 
@@ -218,6 +220,8 @@ header {
 #masthead h1 {
 	margin: 0;
 	font-size: 2em;
+	font-weight: 800;
+	letter-spacing: -1px;
 	color: var(--PRIMARY-COLOR);
 }
 
@@ -263,7 +267,7 @@ header {
 	align-content: center;
 	justify-content: center;
 	margin: 0;
-	padding: 0.125em;
+	padding: 0.25em;
 	padding-left: 1em;
 	padding-right: 1em;
 	box-sizing: border-box;
@@ -301,7 +305,7 @@ header {
 	border: var(--BUTTON-BORDER);
 	border-radius: var(--BUTTON-BORDER-RADIUS);
 	text-align: center;
-	font-size: 75%;
+	font-size: 80%;
 	transition: var(--TRANSITION);
 }
 .section-shortcuts li:hover {
@@ -327,6 +331,7 @@ footer {
 	padding-bottom: 1.5em;
 	box-sizing: border-box;
 	text-align: center;
+	font-size: 80%;
 	/* background: var(--BACKGROUND-NAVBAR-COLOR); */
 	color: var(--SECONDARY-COLOR);
 	border-top: var(--DIVIDER-BORDER);
@@ -346,18 +351,20 @@ footer {
 	/* padding-bottom: 3em; */
 	box-sizing: border-box;
 	background: var(--BACKGROUND-CONTAINER-COLOR);
-	border: var(--SECTION-BORDER);
+	/* border: var(--SECTION-BORDER); */
 	border-radius: var(--BORDER-RADIUS);
 	/* box-shadow: var(--SHADOW); */
 }
 .container h2 {
 	margin: auto;
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
 	box-sizing: border-box;
 	text-align: center;
-	font-size: 275%;
+	/* font-size: 275%; */
+	font-size: 12vmin;
 	font-weight: 800;
+	letter-spacing: -2px;
 	color: var(--HEADER-COLOR);
 }
 .container hr {
@@ -381,6 +388,8 @@ footer {
 }
 .section-list dd h3 {
 	line-height: 1;
+	font-weight: 900;
+	letter-spacing: -1px;
 	color: var(--HEADER-COLOR);
 }
 .section-list small {
