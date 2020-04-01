@@ -7,12 +7,12 @@
 	--MAX-WIDTH-PLAYLISTS: 720px;
 	--LINK-COLOR: firebrick;
 	--LINK-HOVER-COLOR: red;
-	--BACKGROUND-COLOR: white;
+	--BACKGROUND-COLOR: rgba(224,229,235);
 	--BACKGROUND-SECONDARY-COLOR: whitesmoke;
 	--BACKGROUND-CONTAINER-COLOR: none;
-	--BACKGROUND-SECTION-COLOR: #eeeeee;
-	--BACKGROUND-NAVBAR-COLOR: whitesmoke;
-	--BACKGROUND-NAVBAR-SECONDARY-COLOR: gainsboro;
+	--BACKGROUND-SECTION-COLOR: white;
+	--BACKGROUND-NAVBAR-COLOR: white;
+	--BACKGROUND-NAVBAR-SECONDARY-COLOR: rgb(221, 226, 233);
 	--PRIMARY-COLOR: #333333;
 	--SECONDARY-COLOR: #555555;
 	--HEADER-COLOR: black;
@@ -28,36 +28,11 @@
 	--DIVIDER-BORDER: 1px solid var(--BORDER-COLOR);
 	--IMAGE-BORDER: none;
 	--SHADOW: 0px 4px 8px rgba(0,0,0,0.0625);
+	--SECTION-SHADOW: 0px 0px 32px rgb(95,98,102,0.25);
 	--BORDER-RADIUS: 9px;
 	--BUTTON-BORDER-RADIUS: 9px;
 	--IMAGE-BORDER-RADIUS: 100%;
 	--TRANSITION: 0.25s;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--LINK-COLOR: goldenrod;
-		--LINK-HOVER-COLOR: gold;
-		--BACKGROUND-COLOR: #333333;
-		--BACKGROUND-SECONDARY-COLOR: #555555;
-		--BACKGROUND-CONTAINER-COLOR: none;
-		--BACKGROUND-SECTION-COLOR: #3e3e3e;
-		--BACKGROUND-NAVBAR-COLOR: #555555;
-		--BACKGROUND-NAVBAR-SECONDARY-COLOR: #555555;
-		--PRIMARY-COLOR: #dddddd;
-		--SECONDARY-COLOR: #bbbbbb;
-		--HEADER-COLOR: #aaaaaa;
-		--BORDER-COLOR: #cccccc;
-		--BUTTON-BG: darkslategray;
-		--BUTTON-BG-HOVER: darkcyan;
-		--BUTTON-FG: white;
-		--BUTTON-FG-HOVER: white;
-		--SHADOW: 0px 4px 8px rgba(0,0,0,0.125);
-		--BORDER-RADIUS: 9px;
-		--BUTTON-BORDER-RADIUS: 9px;
-		--IMAGE-BORDER-RADIUS: 100%;
-		--TRANSITION: 0.25s;
-	}
 }
 
 @media (max-width: 768px) {
@@ -161,7 +136,7 @@ h5 { font-size: 20px; }
 
 a {
 	color: var(--LINK-COLOR);
-	text-decoration: underline;
+	text-decoration: none;
 	transition: var(--TRANSITION);
 }
 a:hover {
@@ -183,8 +158,8 @@ header {
 	width: 100%;
 	position: sticky !important;
 	top: 0;
-	box-shadow: var(--SHADOW);
-	border-bottom: var(--COMPONENT-BORDER);
+	box-shadow: var(--SECTION-SHADOW);
+	/* border-bottom: var(--COMPONENT-BORDER); */
 }
 
 #navigation-bar { 
@@ -309,6 +284,7 @@ header {
 	transition: var(--TRANSITION);
 }
 .section-shortcuts li:hover {
+	font-weight: 800;
 	background: var(--BACKGROUND-NAVBAR-COLOR);
 	/* color: var(--BUTTON-FG-HOVER); */
 	box-shadow: var(--SHADOW);
@@ -381,7 +357,7 @@ footer {
 	background: var(--BACKGROUND-SECTION-COLOR);
 	border: var(--SECTION-BORDER);
 	border-radius: var(--BORDER-RADIUS);
-	/* box-shadow: var(--SHADOW); */
+	box-shadow: var(--SECTION-SHADOW);
 }
 .section-list dd:last-child {
 	margin-bottom: 0;
