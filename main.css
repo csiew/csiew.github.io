@@ -1,34 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@400;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
-	--CONTENT-FONT-FAMILY: 'Inter', 'Helvetica', 'Helvetica Neue', Arial, sans-serif;
-	--HEADER-FONT-FAMILY: 'Inter', 'Helvetica', 'Helvetica Neue', Arial, sans-serif;
+	--CONTENT-FONT-FAMILY: 'Space Mono', 'Helvetica', 'Helvetica Neue', Arial, sans-serif;
+	--HEADER-FONT-FAMILY: 'Hepta Slab', 'Helvetica', 'Helvetica Neue', Arial, sans-serif;
 	--MAX-WIDTH: 840px;
 	--MAX-WIDTH-PLAYLISTS: 720px;
-	--LINK-COLOR: firebrick;
-	--LINK-HOVER-COLOR: red;
-	--BACKGROUND-COLOR: rgba(224,229,235);
+	--LINK-COLOR: darkcyan;
+	--LINK-HOVER-COLOR: lightseagreen;
+	--BACKGROUND-COLOR: gainsboro;
 	--BACKGROUND-SECONDARY-COLOR: whitesmoke;
 	--BACKGROUND-CONTAINER-COLOR: none;
 	--BACKGROUND-SECTION-COLOR: white;
 	--BACKGROUND-NAVBAR-COLOR: white;
-	--BACKGROUND-NAVBAR-SECONDARY-COLOR: rgb(221, 226, 233);
+	--BACKGROUND-NAVBAR-SECONDARY-COLOR: mediumaquamarine;
 	--PRIMARY-COLOR: #333333;
 	--SECONDARY-COLOR: #555555;
 	--HEADER-COLOR: black;
 	--BORDER-COLOR: #cccccc;
 	--HR-BORDER: 2px solid var(--BORDER-COLOR);
-	--BUTTON-BG: firebrick;
-	--BUTTON-BG-HOVER: red;
+	--BUTTON-BG: var(--LINK-COLOR);
+	--BUTTON-BG-HOVER: var(--LINK-HOVER-COLOR);
 	--BUTTON-FG: white;
 	--BUTTON-FG-HOVER: white;
 	--BUTTON-BORDER: none;
 	--SECTION-BORDER: none;
 	--COMPONENT-BORDER: 1px solid var(--BORDER-COLOR);
 	--DIVIDER-BORDER: 1px solid var(--BORDER-COLOR);
+	--HEADER-BORDER: 3px solid var(--LINK-HOVER-COLOR);
 	--IMAGE-BORDER: none;
-	--SHADOW: 0px 4px 8px rgba(0,0,0,0.0625);
-	--SECTION-SHADOW: 0px 0px 32px rgb(95,98,102,0.25);
+	--SHADOW: none;
+	--SECTION-SHADOW: none;
 	--BORDER-RADIUS: 9px;
 	--BUTTON-BORDER-RADIUS: 9px;
 	--IMAGE-BORDER-RADIUS: 100%;
@@ -159,7 +160,7 @@ header {
 	position: sticky !important;
 	top: 0;
 	box-shadow: var(--SECTION-SHADOW);
-	/* border-bottom: var(--COMPONENT-BORDER); */
+	border-bottom: var(--HEADER-BORDER);
 }
 
 #navigation-bar { 
@@ -364,7 +365,7 @@ footer {
 }
 .section-list dd h3 {
 	line-height: 1;
-	font-weight: 900;
+	font-weight: 700;
 	letter-spacing: -1px;
 	color: var(--HEADER-COLOR);
 }
