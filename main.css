@@ -481,3 +481,10 @@ footer {
 	box-sizing: border-box;
 	border-radius: var(--BORDER-RADIUS);
 }
+
+.warning {
+	color: red !important;
+}
+.warning:hover {
+	text-decoration: underline;
+}
