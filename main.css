@@ -72,7 +72,7 @@
 		text-align: center !important;
 	}
 	#navigation-links li {
-		font-size: 1em !important;
+		font-size: 0.9em !important;
 		margin-left: 0.25em !important;
 		margin-right: 0.25em !important;
 		padding-left: 0.35em !important;
@@ -339,7 +339,7 @@ footer {
 	box-sizing: border-box;
 	text-align: center;
 	/* font-size: 275%; */
-	font-size: 12vmin;
+	font-size: 11vmin;
 	font-weight: 800;
 	letter-spacing: -2px;
 	color: var(--HEADER-COLOR);
@@ -473,4 +473,11 @@ footer {
 #upcoming-img:hover {
 	transform: rotate(360deg);
 	transition: 2.0s;
+}
+
+.highlight {
+	background: lightyellow;
+	padding: 1em;
+	box-sizing: border-box;
+	border-radius: var(--BORDER-RADIUS);
 }
