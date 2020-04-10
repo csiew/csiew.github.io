@@ -1,29 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;1,400;1,700&family=Source+Serif+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
-	--CONTENT-FONT-FAMILY: 'Source Serif Pro', 'Times New Roman', 'Times', serif;
-	--HEADER-FONT-FAMILY: 'Archivo', 'Helvetica', 'Arial', sans-serif;
+	--CONTENT-FONT-FAMILY: 'Merriweather', 'Times New Roman', 'Times', serif;
+	--HEADER-FONT-FAMILY: 'Merriweather', 'Times New Roman', 'Times', serif;
 	--MAX-WIDTH: 840px;
 	--MAX-WIDTH-PLAYLISTS: 720px;
-	--LINK-COLOR: lightseagreen;
+	--LINK-COLOR: darkcyan;
 	--LINK-HOVER-COLOR: teal;
 	--BACKGROUND-COLOR: whitesmoke;
 	--BACKGROUND-SECONDARY-COLOR: none;
 	--BACKGROUND-CONTAINER-COLOR: none;
 	--BACKGROUND-SECTION-COLOR: white;
-	--BACKGROUND-NAVBAR-COLOR: darkslategray;
-	--BACKGROUND-NAVBAR-SECONDARY-COLOR: gainsboro;
-	--BACKGROUND-HIGHLIGHT: firebrick;
+	--BACKGROUND-NAVBAR-COLOR: darkcyan;
+	--BACKGROUND-NAVBAR-SECONDARY-COLOR: lightseagreen;
+	--BACKGROUND-HIGHLIGHT: tomato;
 	--PRIMARY-COLOR: #333333;
 	--SECONDARY-COLOR: #777777;
 	--HEADER-COLOR: #333333;
 	--NAVBAR-COLOR: white;
-	--NAVBAR-HOVER-COLOR: mediumaquamarine;
+	--NAVBAR-HOVER-COLOR: mediumspringgreen;
 	--BORDER-COLOR: #cccccc;
 	--HIGHLIGHT-COLOR: white;
 	--HR-BORDER: 2px solid var(--BORDER-COLOR);
-	--BUTTON-BG: darkslategray;
-	--BUTTON-BG-HOVER: darkcyan;
+	--BUTTON-BG: darkcyan;
+	--BUTTON-BG-HOVER: teal;
 	--BUTTON-BG-ACTIVE: teal;
 	--BUTTON-FG: white;
 	--BUTTON-FG-HOVER: white;
@@ -34,12 +34,12 @@
 	--IMAGE-BORDER: none;
 	--DIVIDER-BORDER: 1px solid var(--BORDER-COLOR);
 	--SHADOW: none;
-	--SECTION-SHADOW: none;
+	--SECTION-SHADOW: 0px 4px 8px rgba(0,0,0,0.125);
 	--BORDER-RADIUS: 8px;
 	--BUTTON-BORDER-RADIUS: 8px;
 	--IMAGE-BORDER-RADIUS: 8px;
-	--TRANSITION: 0.125s;
-	--TRANSITION-OUT: 0.5s;
+	--TRANSITION: 0.25s;
+	--TRANSITION-OUT: 0.75s;
 }
 
 @media (max-width: 768px) {
@@ -106,8 +106,8 @@
 
 body {
 	font-family: var(--CONTENT-FONT-FAMILY);
-	font-size: 1.25em;
-	font-weight: 400;
+	font-size: 1.125em;
+	font-weight: 300;
 	line-height: 1.625;
 	text-align: left;
 	text-rendering: optimizeSpeed;
@@ -202,7 +202,7 @@ header {
 	margin: 0;
 	padding: 0;
 	font-size: 1.75em;
-	/* font-weight: 900; */
+	font-weight: 900;
 	color: var(--NAVBAR-COLOR);
 }
 
@@ -215,7 +215,7 @@ header {
 	padding: 0;
 	box-sizing: border-box;
 	font-family: var(--HEADER-FONT-FAMILY);
-	/* font-weight: 700; */
+	font-weight: 700;
 }
 #navigation-links ul {
 	list-style-type: none;
@@ -296,6 +296,7 @@ header {
 .section-shortcuts li:active {
 	background: var(--BUTTON-BG-ACTIVE);
 	transition: var(--TRANSITION);
+	box-shadow: var(--SECTION-SHADOW) inset;
 }
 
 footer {
@@ -346,6 +347,7 @@ footer {
 	box-sizing: border-box;
 	text-align: center;
 	font-size: 11vmin;
+	font-weight: 300;
 	color: var(--HEADER-COLOR);
 }
 .container hr {
@@ -442,9 +444,11 @@ footer {
 	background: var(--BUTTON-BG-HOVER);
 	color: var(--BUTTON-FG-HOVER);
 	transition: var(--TRANSITION);
+	box-shadow: var(--SECTION-SHADOW);
 }
 .playlist-page li:active {
 	background: var(--BUTTON-BG-ACTIVE);
+	box-shadow: var(--SECTION-SHADOW) inset;
 }
 
 #profile-img {
@@ -493,7 +497,7 @@ footer {
 }
 
 .warning {
-	color: red !important;
+	color: var(--BACKGROUND-HIGHLIGHT) !important;
 }
 .warning:hover {
 	text-decoration: underline;
