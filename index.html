@@ -4,34 +4,29 @@
 	<meta charset='UTF-8'>
 	<meta name='viewport' content='width=device-width initial-scale=1'>
 	<link id="pagestyle" href="main.css" rel="stylesheet" type="text/css" />
-	<link rel="shortcut icon" href="profile.jpg">
+	<link rel="shortcut icon" href="images/profile.jpg">
 	<script type="application/javascript" src="main.js"></script>
 	<title>Clarence Siew</title>
 </head>
 
-<body onload="initialise('index')">
-	<header></header>
-
+<body onload="initialise()">
 	<div class="container">
-
-		<h2>Hello</h2>
-		<dl class="section-list">
-			<dd>
-				<h3>About me</h3>
-				<p>I'm Clarence. Born and raised in Penang, Malaysia. I studied software engineering at Monash University in Melbourne, Australia.</p>
-			</dd>
-			<dd>
-				<h3>The things I do</h3>
-				<p>Software engineering is both a passion and my intended career. I'm a full-stack developer (both back end API services and front end web applications, as well as mobile applications). You could sprinkle in some scripts (Bash and Python) if they count.</p>
-			</dd>
-			<dd>
-				<h3>This website</h3>
-				<p>The website you're looking at is hosted as a repository in both GitHub and GitLab. Both provide a service to host these repositories as websites. If you're a frequent visitor, you may find that the style and content on this page may change wildly in a very short period of time. That's because I love experimenting with CSS styling and am constantly looking at what else I could put on this website.</p>
-			</dd>
-		</dl>
+		<p>
+			<b>Clarence Siew</b> is a software engineer based in <a onmouseout="changeSideshowBack()" onmouseup="changeSideshowBack()" onmouseover="changeSideshow('melbourne')" onmousedown="changeSideshow('melbourne')">Melbourne, Australia</a>. He develops full-stack web applications and mobile applications. He originates from <a onmouseout="changeSideshowBack()" onmouseup="changeSideshowBack()" onmouseover="changeSideshow('penang')" onmousedown="changeSideshow('penang')">George Town, Malaysia</a>.
+		</p>
+		<p>
+			<a href="projects.html">See select projects</a>
+		</p>
+		<p>
+			He can be contacted via <a href='mailto:clarence.siew@gmail.com'>email</a> and <a href='https://www.linkedin.com/in/clarencesiew'>LinkedIn</a>. You can have a gander at his projects on <a href='https://github.com/csiew'>GitHub</a>. You can also message him at or have a look at some photos he (very infrequently) posts on <a href='https://www.instagram.com/clarence_siew/'>Instagram</a>.
+		</p>
+		<p>
+			He also has <a href="places.html">some recommendations on places to visit</a> in George Town and Melbourne. <a href="playlists.html">Every season of every year</a>, he compiles a Spotify playlist.
+		</p>
 	</div>
-	
-	<footer></footer>
+	<div class="container-sideshow">
+		<div class="sideshow"></div>
+	</div>
 </body>
 
 </html>

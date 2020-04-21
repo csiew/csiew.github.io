@@ -9,22 +9,11 @@
 	<title>Places - Clarence Siew</title>
 </head>
 
-<body onload="initialise('places')">
-	<header>
-		<div class="section-shortcuts">
-			<ul>
-				<a href="#penang"><li>Penang</li></a>
-				<a href="#melbourne"><li>Melbourne</li></a>
-			</ul>
-		</div>
-	</header>
-	
-	<div class="container places-list">
-
-		<h2 class="warning">#StayAtHome</h2>
-		<p class="highlight">
-			Please stay at home to flatten the curve. You can always visit these places after the COVID-19 pandemic is over and governments declare it's safe to venture out of our homes.
-		</p>
+<body onload="initialise()">
+	<div class="container">
+		<header></header>
+		<hr />
+		<h2>Places</h2>
 		<p>
 			Places to visit and to eat at. This list is still a work in progress. If I ever do get to live abroad in other places in the future, I'd be more than happy to expand this list to include that city/town/region.
 		</p>
@@ -32,7 +21,7 @@
 			For friends, family, classmates, acquintances, etc. who ask me what places they should visit when visiting Penang or Melbourne.
 		</p>
 
-		<dl class="section-list">
+		<dl>
 
 			<a name="penang"></a>
 			<dd>
@@ -76,7 +65,7 @@
 					<li><a href="https://www.google.com.my/maps/place/The+Alley,+5+Stewart+Lane/@5.4161906,100.3346476,16.26z/data=!4m8!1m2!11m1!3e4!3m4!1s0x0:0xc3f61bcab81cfde4!8m2!3d5.4184847!4d100.3384486?hl=en">The Alley</a> (Churros and pretty good Italian/Western coffee)</li>
 				</ul>
 			</dd>
-
+			
 			<a name="melbourne"></a>
 			<dd>
 				<h3><a href="https://www.google.com.my/maps/place/Melbourne+VIC,+Australia/@-37.9701541,144.4926925,9z/data=!3m1!4b1!4m5!3m4!1s0x6ad646b5d2ba4df7:0x4045675218ccd90!8m2!3d-37.8136276!4d144.9630576?hl=en">Melbourne, Australia</a></h3>
@@ -159,7 +148,13 @@
 		</dl>
 	
 	</div>
-	
-	<footer></footer>
+	<div class="container-sideshow">
+		<div class="section-shortcuts">
+			<ul>
+				<a href="#penang"><li>Penang</li></a>
+				<a href="#melbourne"><li>Melbourne</li></a>
+			</ul>
+		</div>
+	</div>
 </body>
 </html>

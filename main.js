@@ -1,29 +1,13 @@
-function initialise(pageName) {
-	this.setHeader(pageName);
-	this.setFooter();
+const collapsableSections = ['projects-list', 'places-list'];
+
+function initialise() {
+	this.setHeader();
+	document.getElementById('slideout-box-display').style.display = "none";
+	document.getElementById('slideout-box-display').style.visibility = "hidden";
 }
 
-function setHeader(pageName) {
-	let navbar = `
-		<div id="navigation-bar">
-			<div id="masthead">
-				<a href="index.html">
-					<h1>Clarence Siew</h1>
-				</a>
-			</div>
-			<div id="navigation-links">
-				<ul>
-					<a href="projects.html"><li>Projects</li></a>
-					<a href="playlists.html"><li>Playlists</li></a>
-					<a href="places.html"><li>Places</li></a>
-					<a href="contact.html"><li>Contact</li></a>
-				</ul>
-			</div>
-		</div>
-	`;
-	
-	let existing = document.querySelector('header').innerHTML;
-	document.querySelector('header').innerHTML = navbar + existing;
+function setHeader() {
+	document.querySelector('header').innerHTML = "<a href='index.html'>Back to homepage</a>";
 }
 
 function isCorresponding(navName, pageName) {
@@ -43,4 +27,25 @@ function setFooter() {
 		`;
 	
 	document.querySelector('footer').innerHTML = footerContent;
+}
+
+function changeSideshow(slideName) {
+	if (slideName == 'melbourne') {
+		document.getElementsByClassName('sideshow')[0].style.backgroundImage = "url(images/melbourne.jpg)";
+	} else if (slideName == 'penang') {
+		document.getElementsByClassName('sideshow')[0].style.backgroundImage = "url(images/penang.jpg)";
+	}
+}
+
+function changeSideshowBack() {
+	document.getElementsByClassName('sideshow')[0].style.backgroundImage = "url(images/keyboard.jpg)";
+}
+
+function slideoutToggle(divId) {
+	var content = document.getElementById(divId).innerHTML;
+	document.getElementById('slideout-box-display').innerHTML = content;
+	if (document.getElementById('slideout-box-display').style.display == "none") {
+		document.getElementById('slideout-box-display').style.display = "block";
+		document.getElementById('slideout-box-display').style.visibility = "visible";
+	}
 }

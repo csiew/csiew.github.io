@@ -9,33 +9,16 @@
 	<title>Playlists - Clarence Siew</title>
 </head>
 
-<body onload="initialise('playlists')">
-	<header>
-		<div class="section-shortcuts">
-			<ul>
-				<a href="#2015"><li>2015</li></a>
-				<a href="#2016"><li>2016</li></a>
-				<a href="#2017"><li>2017</li></a>
-				<a href="#2018"><li>2018</li></a>
-				<a href="#2019"><li>2019</li></a>
-				<a href="#2020"><li>2020</li></a>
-			</ul>
-		</div>
-	</header>
-	
-	<div class="container playlist-page">
-
+<body onload="initialise()">
+	<div class="container">
+		<header></header>
+		<hr />
 		<h2>Playlists</h2>
 		<p>
 			A collection of Spotify and Deezer playlists created by the month. I started this project in mid-2015 as a single zeitgeist playlist, but in March 2016 I decided to make monthly playlists to see how my taste in music changes on a monthly basis (it doesn't really change that much, apparently). In 2019, I started doing seasonal playlists (based on the southern hemisphere) instead of monthly playlists.
 		</p>
 
-		<!--
-		<h3>2021</h3>
-		<img id="upcoming-img" src="hourglass.png" />
-		-->
-
-		<dl class="section-list">
+		<dl>
 
 			<a name="2020"></a>
 			<dd>
@@ -140,9 +123,18 @@
 					<a href="https://open.spotify.com/playlist/1164KNVST9j740CYnO4Sq5"><li>Zeitgeist</li></a>
 				</ul>
 			</dd>
-
 	</div>
-	
-	<footer></footer>
+	<div class="container-sideshow">
+		<div class="section-shortcuts">
+			<ul>
+				<a href="#2020"><li>2020</li></a>
+				<a href="#2019"><li>2019</li></a>
+				<a href="#2018"><li>2018</li></a>
+				<a href="#2017"><li>2017</li></a>
+				<a href="#2016"><li>2016</li></a>
+				<a href="#2015"><li>2015</li></a>
+			</ul>
+		</div>
+	</div>
 </body>
 </html>
