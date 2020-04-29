@@ -30,11 +30,19 @@ function setFooter() {
 }
 
 function changeSideshow(slideName) {
+	var imgUrl = "url(images/keyboard.jpg)";
 	if (slideName == 'melbourne') {
-		document.getElementsByClassName('sideshow')[0].style.backgroundImage = "url(images/melbourne.jpg)";
+		imgUrl = "url(images/melbourne.jpg)";
 	} else if (slideName == 'penang') {
-		document.getElementsByClassName('sideshow')[0].style.backgroundImage = "url(images/penang.jpg)";
+		imgUrl = "url(images/penang.jpg)";
+	} else if (slideName == 'playlists') {
+		imgUrl = "url(images/records.jpg)";
+	} else if (slideName == 'projects') {
+		imgUrl = "url(images/ipad.jpg)";
+	} else if (slideName == 'places') {
+		imgUrl = "url(images/cafe.jpg)";
 	}
+	document.getElementsByClassName('sideshow')[0].style.backgroundImage = imgUrl;
 }
 
 function changeSideshowBack() {

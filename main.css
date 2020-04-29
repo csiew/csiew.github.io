@@ -1,26 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
 :root {
-	--CONTENT-FONT-FAMILY: 'IBM Plex Serif', serif;
-	--HEADER-FONT-FAMILY: 'IBM Plex Serif', serif;
+	--CONTENT-FONT-FAMILY: 'Helvetica Neue', Helvetica, Arial, 'Nimbus Sans L', 'FreeSans', sans-serif;
+	--HEADER-FONT-FAMILY: 'Helvetica Neue', Helvetica, Arial, 'Nimbus Sans L', 'FreeSans', sans-serif;
 	--MAX-WIDTH: 920px;
 	--SECONDARY-MAX-WIDTH: 480px;
-	--LINK-COLOR: #777777;
+	--PRIMARY-COLOR: black;
+	--SECONDARY-COLOR: dimgray;
+	--LINK-COLOR: royalblue;
 	--BACKGROUND-COLOR: whitesmoke;
-	--SECONDARY-BACKGROUND-COLOR: gainsboro;
+	--SECONDARY-BACKGROUND-COLOR: lightgray;
 	--NAVBAR-BACKGROUND-COLOR: none;
 	--NAVBAR-SHORTCUTS-BACKGROUND-COLOR: none;
 	--SECTION-BACKGROUND-COLOR: var(--PRIMARY-COLOR);
-	--PRIMARY-COLOR: #333333;
-	--SECONDARY-COLOR: #999999;
-	--NAVBAR-COLOR: white;
+	--NAVBAR-COLOR: var(--PRIMARY-COLOR);
 	--BORDER-RADIUS: 8px;
-	--SHADOW: 0px 4px 8px rgba(0,0,0,0.125);
+	--SHADOW: 2px 2px 0px rgba(0,0,0,0.125);
 }
 
 html, body {
 	font-family: var(--CONTENT-FONT-FAMILY);
-	font-size: 28px;
+	font-size: 24px;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
@@ -47,9 +45,11 @@ h1, h2, h3, h4, h5 {
 
 a {
 	color: var(--LINK-COLOR);
-	text-decoration: none;
-	border-bottom: 1px dotted var(--LINK-COLOR);
+	text-decoration: underline;
 	width: auto;
+}
+a:hover {
+	text-shadow: var(--SHADOW);
 }
 
 ul {
