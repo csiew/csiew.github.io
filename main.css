@@ -1,15 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
 :root {
-	--CONTENT-FONT-FAMILY: 'Helvetica Neue', Helvetica, Arial, 'Nimbus Sans L', 'FreeSans', sans-serif;
-	--HEADER-FONT-FAMILY: 'Helvetica Neue', Helvetica, Arial, 'Nimbus Sans L', 'FreeSans', sans-serif;
+	--CONTENT-FONT-FAMILY: Manrope, 'Helvetica Neue', Helvetica, Arial, 'Nimbus Sans L', 'FreeSans', sans-serif;
+	--HEADER-FONT-FAMILY: Manrope, 'Helvetica Neue', Helvetica, Arial, 'Nimbus Sans L', 'FreeSans', sans-serif;
 	--MAX-WIDTH: 920px;
 	--MIN-WIDTH: 480px;
 	--SECONDARY-MAX-WIDTH: 480px;
 	--SIDESHOW-MAX-HEIGHT: 500px;
-	--PRIMARY-COLOR: black;
-	--SECONDARY-COLOR: dimgray;
-	--LINK-COLOR: royalblue;
-	--BACKGROUND-COLOR: whitesmoke;
-	--SECONDARY-BACKGROUND-COLOR: lightgray;
+	--MIN-BUTTON-WIDTH: 120px;
+	--PRIMARY-COLOR: lightgray;
+	--SECONDARY-COLOR: lightgray;
+	--LINK-COLOR: mediumaquamarine;
+	--LINK-SHADOW: 0px 0px 8px var(--LINK-COLOR);
+	--BACKGROUND-COLOR: #222222;
+	--SECONDARY-BACKGROUND-COLOR: #555555;
 	--NAVBAR-BACKGROUND-COLOR: none;
 	--NAVBAR-SHORTCUTS-BACKGROUND-COLOR: none;
 	--SECTION-BACKGROUND-COLOR: var(--PRIMARY-COLOR);
@@ -20,7 +24,7 @@
 
 html, body {
 	font-family: var(--CONTENT-FONT-FAMILY);
-	font-size: 24px;
+	font-size: 28px;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
@@ -47,11 +51,13 @@ h1, h2, h3, h4, h5 {
 
 a {
 	color: var(--LINK-COLOR);
-	text-decoration: underline;
+	text-decoration: none;
 	width: auto;
+	transition: 1s;
 }
 a:hover {
-	text-shadow: var(--SHADOW);
+	text-shadow: var(--LINK-SHADOW);
+	transition: 0.2s;
 }
 
 ul {
@@ -106,7 +112,7 @@ hr {
 	background-size: cover;
 	background-position: right;
 	background-repeat: no-repeat;
-	filter: grayscale(1) contrast(0.5);
+	filter: grayscale(1) contrast(0.75) brightness(0.5);
 }
 
 .section-shortcuts {
@@ -148,6 +154,35 @@ dd:last-child {
 }
 dd h3 {
 	line-height: 1;
+}
+
+.container-playlist ul {
+	list-style: none;
+	display: flex;
+	flex-flow: row wrap;
+}
+.container-playlist ul a {
+	margin-right: 16px !important;
+	margin-bottom: 16px !important;
+}
+.container-playlist li {
+	min-width: var(--MIN-BUTTON-WIDTH);
+	margin: 0;
+	padding: 16px;
+	box-sizing: border-box;
+	text-align: center;
+	background: var(--LINK-COLOR);
+	color: var(--BACKGROUND-COLOR);
+	border-radius: var(--BORDER-RADIUS);
+	transition: 1s;
+}
+.container-playlist li:last-child {
+	margin-right: 0 !important;
+	margin-bottom: 0 !important;
+}
+.container-playlist li:hover {
+	box-shadow: var(--LINK-SHADOW);
+	transition: 0.2s;
 }
 
 #profile-img {
