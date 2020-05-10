@@ -7,7 +7,7 @@ function initialise() {
 }
 
 function setHeader() {
-	document.querySelector('header').innerHTML = "<a href='index.html'>Back to homepage</a>";
+	document.querySelector('header').innerHTML = "<h1><a href='index.html'>Clarence Siew</a></h1>";
 }
 
 function isCorresponding(navName, pageName) {

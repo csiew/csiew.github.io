@@ -1,24 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+@import url(https://fontlibrary.org/face/standard);
 
 :root {
-	--CONTENT-FONT-FAMILY: Manrope, 'Helvetica Neue', Helvetica, Arial, 'Nimbus Sans L', 'FreeSans', sans-serif;
-	--HEADER-FONT-FAMILY: Manrope, 'Helvetica Neue', Helvetica, Arial, 'Nimbus Sans L', 'FreeSans', sans-serif;
-	--MAX-WIDTH: 920px;
+	--CONTENT-FONT-FAMILY: Standard, Helvetica, Arial, sans-serif;
+	--HEADER-FONT-FAMILY: Standard, Helvetica, Arial, sans-serif;
+	--MAX-WIDTH: 800px;
 	--MIN-WIDTH: 480px;
 	--SECONDARY-MAX-WIDTH: 480px;
 	--SIDESHOW-MAX-HEIGHT: 500px;
-	--MIN-BUTTON-WIDTH: 120px;
-	--PRIMARY-COLOR: lightgray;
-	--SECONDARY-COLOR: lightgray;
-	--LINK-COLOR: mediumaquamarine;
-	--LINK-SHADOW: 0px 0px 8px var(--LINK-COLOR);
-	--BACKGROUND-COLOR: #222222;
-	--SECONDARY-BACKGROUND-COLOR: #555555;
+	--MIN-BUTTON-WIDTH: 96px;
+	--PRIMARY-COLOR: #c0c0c0;
+	--SECONDARY-COLOR: gray;
+	--LINK-COLOR: skyblue;
+	--BUTTON-COLOR: var(--LINK-COLOR);
+	--BACKGROUND-COLOR: black;
+	--SECONDARY-BACKGROUND-COLOR: dimgray;
+	--BUTTON-BACKGROUND-COLOR: var(--BACKGROUND-COLOR);
 	--NAVBAR-BACKGROUND-COLOR: none;
 	--NAVBAR-SHORTCUTS-BACKGROUND-COLOR: none;
 	--SECTION-BACKGROUND-COLOR: var(--PRIMARY-COLOR);
 	--NAVBAR-COLOR: var(--PRIMARY-COLOR);
-	--BORDER-RADIUS: 8px;
+	--BORDER-COLOR: var(--LINK-COLOR);
+	--BUTTON-BORDER: 3px solid var(--BORDER-COLOR);
+	--BORDER-RADIUS: 32px;
 	--SHADOW: 2px 2px 0px rgba(0,0,0,0.125);
 }
 
@@ -51,13 +54,7 @@ h1, h2, h3, h4, h5 {
 
 a {
 	color: var(--LINK-COLOR);
-	text-decoration: none;
-	width: auto;
-	transition: 1s;
-}
-a:hover {
-	text-shadow: var(--LINK-SHADOW);
-	transition: 0.2s;
+	text-decoration: underline;
 }
 
 ul {
@@ -78,9 +75,15 @@ p {
 
 hr {
 	width: 100%;
-	margin-top: 32px;
+	margin-top: 16px;
+	margin-bottom: 16px;
 	border: 0;
 	border-bottom: 5px solid var(--PRIMARY-COLOR);
+}
+
+header a {
+	color: var(--PRIMARY-COLOR);
+	text-decoration: none;
 }
 
 .container {
@@ -112,7 +115,7 @@ hr {
 	background-size: cover;
 	background-position: right;
 	background-repeat: no-repeat;
-	filter: grayscale(1) contrast(0.75) brightness(0.5);
+	filter: grayscale(1) brightness(0.5);
 }
 
 .section-shortcuts {
@@ -143,8 +146,11 @@ dl {
 }
 dd {
 	margin: 0;
-	margin-bottom: 32px;
+	margin-top: 16px;
+	margin-bottom: 16px;
 	padding: 0;
+	padding-top: 16px;
+	padding-bottom: 16px;
 	box-sizing: border-box;
 	border-bottom: 3px solid var(--SECONDARY-COLOR);
 }
@@ -164,25 +170,25 @@ dd h3 {
 .container-playlist ul a {
 	margin-right: 16px !important;
 	margin-bottom: 16px !important;
+	text-decoration: none;
 }
 .container-playlist li {
 	min-width: var(--MIN-BUTTON-WIDTH);
 	margin: 0;
-	padding: 16px;
+	padding: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
 	box-sizing: border-box;
 	text-align: center;
-	background: var(--LINK-COLOR);
-	color: var(--BACKGROUND-COLOR);
+	background: var(--BUTTON-BACKGROUND-COLOR);
+	color: var(--BUTTON-COLOR);
+	border: var(--BUTTON-BORDER);
 	border-radius: var(--BORDER-RADIUS);
-	transition: 1s;
+	font-weight: bold;
 }
 .container-playlist li:last-child {
 	margin-right: 0 !important;
 	margin-bottom: 0 !important;
-}
-.container-playlist li:hover {
-	box-shadow: var(--LINK-SHADOW);
-	transition: 0.2s;
 }
 
 #profile-img {
