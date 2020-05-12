@@ -7,7 +7,16 @@ function initialise() {
 }
 
 function setHeader() {
-	document.querySelector('header').innerHTML = "<h1><a href='index.html'>Clarence Siew</a></h1>";
+	const currentContent = document.querySelector('header').innerHTML;
+	document.querySelector('header').innerHTML = `
+		<h1><a href='index.html'>Clarence Siew</a></h1>
+		<ul>
+			<a href='projects.html'><li>Projects</li></a>
+			<a href='places.html'><li>Places</li></a>
+			<a href='playlists.html'><li>Playlists</li></a>
+		</ul>
+		`
+		+ currentContent;
 }
 
 function isCorresponding(navName, pageName) {
