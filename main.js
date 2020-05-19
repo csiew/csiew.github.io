@@ -2,8 +2,6 @@ const collapsableSections = ['projects-list', 'places-list'];
 
 function initialise() {
 	this.setHeader();
-	document.getElementById('slideout-box-display').style.display = "none";
-	document.getElementById('slideout-box-display').style.visibility = "hidden";
 }
 
 function setHeader() {
