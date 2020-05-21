@@ -1,4 +1,5 @@
 const collapsableSections = ['projects-list', 'places-list'];
+var overlayWindowOpenSectionId;
 
 function initialise() {
 	this.setHeader();
@@ -17,50 +18,26 @@ function setHeader() {
 		+ currentContent;
 }
 
-function isCorresponding(navName, pageName) {
-	if (navName === pageName) {
-		return "class='nav-active'";
-	}
+function overlayWindowOpen(divId) {
+	document.body.style.overflow = 'hidden';
+	document.getElementById('overlayWindowContainer').style.visibility = 'visible';
+	document.getElementById('overlayWindowContainer').style.display = 'flex';
+	document.getElementById('overlayWindowContentContainer').style.visibility = 'visible';
+	document.getElementById('overlayWindowContentContainer').style.display = 'flex';
+	document.getElementById('overlayWindow-' + divId).style.visibility = 'visible';
+	document.getElementById('overlayWindow-' + divId).style.display = 'flex';
+	overlayWindowOpenSectionId = divId;
 }
 
-function setFooter() {
-	let footerContent = `
-		<div>
-			&copy; 2020 Clarence Siew
-		</div>
-		<div>
-			Hosted on GitHub via GitHub Pages
-		</div>
-		`;
-	
-	document.querySelector('footer').innerHTML = footerContent;
-}
-
-function changeSideshow(slideName) {
-	var imgUrl = "url(images/keyboard.jpg)";
-	if (slideName == 'melbourne') {
-		imgUrl = "url(images/melbourne.jpg)";
-	} else if (slideName == 'penang') {
-		imgUrl = "url(images/penang.jpg)";
-	} else if (slideName == 'playlists') {
-		imgUrl = "url(images/records.jpg)";
-	} else if (slideName == 'projects') {
-		imgUrl = "url(images/ipad.jpg)";
-	} else if (slideName == 'places') {
-		imgUrl = "url(images/cafe.jpg)";
-	}
-	document.getElementsByClassName('sideshow')[0].style.backgroundImage = imgUrl;
-}
-
-function changeSideshowBack() {
-	document.getElementsByClassName('sideshow')[0].style.backgroundImage = "url(images/keyboard.jpg)";
-}
-
-function slideoutToggle(divId) {
-	var content = document.getElementById(divId).innerHTML;
-	document.getElementById('slideout-box-display').innerHTML = content;
-	if (document.getElementById('slideout-box-display').style.display == "none") {
-		document.getElementById('slideout-box-display').style.display = "block";
-		document.getElementById('slideout-box-display').style.visibility = "visible";
+function overlayWindowClose() {
+	document.body.style.overflow = 'auto';
+	document.getElementById('overlayWindowContainer').style.visibility = 'hidden';
+	document.getElementById('overlayWindowContainer').style.display = 'none';
+	document.getElementById('overlayWindowContentContainer').style.visibility = 'hidden';
+	document.getElementById('overlayWindowContentContainer').style.display = 'none';
+	if (overlayWindowOpenSectionId) {
+		document.getElementById('overlayWindow-' + overlayWindowOpenSectionId).style.visibility = 'hidden';
+		document.getElementById('overlayWindow-' + overlayWindowOpenSectionId).style.display = 'none';
+		overlayWindowOpenSectionId = null;
 	}
 }
