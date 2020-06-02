@@ -161,3 +161,11 @@
     font-weight: 400;
     font-style: normal;
 }
+
+/* VIRTUE */
+@font-face {
+    font-family: 'Virtue';
+    src: url(fonts/virtue/virtue.ttf);
+    font-weight: 400;
+    font-style: normal;
+}

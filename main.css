@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 
 :root {
-	--HEADER-FONT-FAMILY: 'Charcoal', Helvetica, Arial, sans-serif;
-	--CONTENT-FONT-FAMILY: 'Charcoal', Helvetica, Arial, sans-serif;
+	--HEADER-FONT-FAMILY: 'Virtue', Helvetica, Arial, sans-serif;
+	--CONTENT-FONT-FAMILY: 'Virtue', Helvetica, Arial, sans-serif;
 
 	--MAX-WIDTH: 560px;
 	--SECTION-MAX-WIDTH: 340px;
@@ -22,7 +22,7 @@
 	--HEADER-FG-COLOR: var(--LINK-COLOR);
 	--HEADER-BG-COLOR: white;
 	--HEADER-BORDER: 1px solid black;
-	--HEADER-SHADOW: 0px 2px 0px black;
+	--HEADER-SHADOW: none;
 
 	--SECTION-FG-COLOR: black;
 	--SECTION-BG-COLOR: white;
@@ -57,7 +57,7 @@ html, body {
 	color: var(--PRIMARY-COLOR);
 	border: 0;
 	font-family: var(--CONTENT-FONT-FAMILY);
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
@@ -76,6 +76,12 @@ h1, h2, h3, h4, h5 {
 	font-family: var(--HEADER-FONT-FAMILY);
 	font-weight: bold;
 }
+
+h1 { font-size: 22px; }
+h2 { font-size: 20px; }
+h3 { font-size: 18px; }
+h4 { font-size: 16px; }
+h5 { font-size: 14px; }
 
 a {
 	color: var(--LINK-COLOR);
@@ -143,7 +149,7 @@ dd h3, dd h4 {
 }
 /* Track */
 ::-webkit-scrollbar-track {
-	background: lightgray;
+	background: darkgray;
 	border: none;
 	border-left: 1px solid black;
 }
@@ -386,7 +392,7 @@ header h1, header h1 a {
 	width: 100%;
 	height: 100%;
 	box-sizing: border-box;
-	background: rgba(0,0,0,0.75);
+	background: rgba(128, 128, 128, 0.75);
 }
 .overlayWindowClose {
 	align-self: flex-start;
@@ -397,7 +403,7 @@ header h1, header h1 a {
 	top: 0;
 	right: 0;
 	margin: 0;
-	margin-bottom: 8px;
+	margin-bottom: 2px;
 	padding: 0;
 	color: black;
 	background: var(--SECTION-BG-COLOR);
@@ -416,12 +422,12 @@ header h1, header h1 a {
 	visibility: hidden;
 	display: none;
 	flex-flow: column;
-	max-width: 640px;
+	max-width: 480px;
 	max-height: 480px;
 	min-height: 360px;
 	width: 100%;
 	margin: auto;
-	padding: 8px;
+	padding: 2px;
 	box-sizing: border-box;
 	background: var(--SECTION-BG-COLOR);
 	border-width: var(--SECTION-BORDER-WIDTH);
@@ -438,7 +444,7 @@ header h1, header h1 a {
 	width: 100%;
 	height: 100%;
 	margin: 0;
-	padding: 32px;
+	padding: 16px;
 	box-sizing: border-box;
 	background: white;
 	border: 1px solid black;
@@ -454,8 +460,8 @@ header h1, header h1 a {
 
 @media only screen and (max-width: 600px) {
 	html, body {
-		font-size: 16px;
-		background: white;
+		font-size: 12px;
+		background: whitesmoke;
 	}
 
 	dd {
@@ -476,6 +482,7 @@ header h1, header h1 a {
 	.container {
 		margin-top: 16px;
 		margin-bottom: 48px;
+		background: whitesmoke;
 		border: none;
 		box-shadow: none;
 	}
@@ -498,6 +505,7 @@ header h1, header h1 a {
 	.overlayWindowContentContainer {
 		max-width: 100%;
 		max-height: 100%;
+		height: 100%;
 		border: none;
 	}
 	.overlayWindowContent {
