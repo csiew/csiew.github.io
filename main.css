@@ -1,39 +1,46 @@
-:root {
-	--HEADER-FONT-FAMILY: 'Proxima Sans', Helvetica, Arial, sans-serif;
-	--CONTENT-FONT-FAMILY: 'Proxima Sans', Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 
-	--MAX-WIDTH: 800px;
+:root {
+	--HEADER-FONT-FAMILY: 'Charcoal', Helvetica, Arial, sans-serif;
+	--CONTENT-FONT-FAMILY: 'Charcoal', Helvetica, Arial, sans-serif;
+
+	--MAX-WIDTH: 560px;
 	--SECTION-MAX-WIDTH: 340px;
 	--SIDEBAR-MIN-WIDTH: 196px;
 
 	--PRIMARY-COLOR: black;
 	--SECONDARY-COLOR: dimgray;
-	--LINK-COLOR: royalblue;
-	--BACKGROUND-COLOR: white;
+	--LINK-COLOR: blue;
+	--BACKGROUND-COLOR: gray;
 	--SECONDARY-BACKGROUND-COLOR: aliceblue;
 	--SHADOW: 2px 2px 0px rgba(0,0,0,0.125);
 
-	--BORDER-RADIUS: 8px;
+	--BORDER-RADIUS: 0px;
 	--BORDER-SECTION: 1px solid var(--LINK-COLOR);
 	--BORDER-HR: 1px solid var(--LINK-COLOR);
 
 	--HEADER-FG-COLOR: var(--LINK-COLOR);
-	--HEADER-BG-COLOR: rgba(255,255,255,0.9);
-	--HEADER-BORDER: 1px solid #e3e3e3;
-	--HEADER-SHADOW: none;
+	--HEADER-BG-COLOR: white;
+	--HEADER-BORDER: 1px solid black;
+	--HEADER-SHADOW: 0px 2px 0px black;
 
 	--SECTION-FG-COLOR: black;
-	--SECTION-BG-COLOR: aliceblue;
-	--SECTION-BG-COLOR-HOVER: mistyrose;
-	--SECTION-BG-COLOR-ACTIVE: salmon;
-	--SECTION-BORDER: 1px solid var(--LINK-COLOR);
-	--SECTION-BORDER-HOVER: 1px solid firebrick;
+	--SECTION-BG-COLOR: white;
+	--SECTION-BORDER-WIDTH: 1px;
+	--SECTION-BORDER-STYLE: solid;
+	--SECTION-BORDER-COLOR: black;
+	--SECTION-BORDER-COLOR-ACTIVE: var(--LINK-COLOR);
+	--SECTION-SHADOW: 2px 2px 0px black;
+
+	--SECTION-CONTENT-BG-COLOR: white;
+	--SECTION-CONTENT-BORDER-COLOR: black;
 
 	--BUTTON-CLOSE-FG-COLOR: white;
-	--BUTTON-CLOSE-BG-COLOR: red;
-	--BUTTON-CLOSE-BG-COLOR-HOVER: firebrick;
-	--BUTTON-CLOSE-BG-COLOR-ACTIVE: darkred;
+	--BUTTON-CLOSE-BG-COLOR: linear-gradient(to bottom, salmon, firebrick);
+	--BUTTON-CLOSE-BG-COLOR-HOVER: linear-gradient(to bottom, darksalmon, firebrick);
+	--BUTTON-CLOSE-BG-COLOR-ACTIVE: linear-gradient(to bottom, darkred, firebrick);
 	--BUTTON-CLOSE-BORDER: 1px solid firebrick;
+	--BUTTON-BORDER-RADIUS: 5px;
 }
 
 html, body {
@@ -50,27 +57,29 @@ html, body {
 	color: var(--PRIMARY-COLOR);
 	border: 0;
 	font-family: var(--CONTENT-FONT-FAMILY);
-	font-size: 22px;
+	font-size: 14px;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
+	text-rendering: optimizeSpeed;
 }
 body {
 	overflow: auto;
 }
 
 h1, h2, h3, h4, h5 {
-	font-family: var(--HEADER-FONT-FAMILY);
-	font-weight: bold;
 	line-height: 1;
 	margin: 0;
 	margin-top: 16px;
 	margin-bottom: 24px;
+	text-shadow: 2px 2px 0px rgba(0,0,0,0.125);
+	font-family: var(--HEADER-FONT-FAMILY);
+	font-weight: bold;
 }
 
 a {
 	color: var(--LINK-COLOR);
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 ul {
@@ -111,8 +120,10 @@ dd {
 	padding-bottom: 20px;
 	box-sizing: border-box;
 	color: var(--SECTION-FG-COLOR);
-	background: var(--SECTION-BG-COLOR);
-	border: var(--SECTION-BORDER);
+	background: var(--SECTION-CONTENT-BG-COLOR);
+	border-width: var(--SECTION-BORDER-WIDTH);
+	border-style: var(--SECTION-BORDER-STYLE);
+	border-color: var(--SECTION-CONTENT-BORDER-COLOR);
 	border-radius: var(--BORDER-RADIUS);
 }
 dd:last-child {
@@ -126,6 +137,27 @@ dd h3, dd h4 {
 	line-height: 1;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 18px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+	background: lightgray;
+	border: none;
+	border-left: 1px solid black;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: white;
+	border: 1px solid black;
+	border-right: none;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:active {
+	background: black;
+}
+
 header {
 	position: sticky !important;
 	display: flex;
@@ -133,7 +165,7 @@ header {
 	align-content: center;
 	justify-content: space-between;
 	width: 100%;
-	margin: 0;
+	margin: auto;
 	top: 0;
 	padding: 24px;
 	padding-top: 16px;
@@ -151,7 +183,6 @@ header ul {
 	justify-content: center;
 	list-style: none;
 	margin: 0;
-	margin-top: 8px;
 	padding: 0;
 	box-sizing: border-box;
 }
@@ -167,8 +198,10 @@ header ul a:last-child {
 }
 header h1, header h1 a {
 	margin: 0;
+	margin-top: 4px;
 	padding: 0;
 	color: var(--PRIMARY-COLOR);
+	text-decoration: none;
 }
 
 .container {
@@ -181,6 +214,13 @@ header h1, header h1 a {
 	margin-top: 32px;
 	margin-bottom: 64px;
 	box-sizing: border-box;
+	color: var(--SECTION-FG-COLOR);
+	background: var(--SECTION-BG-COLOR);
+	border-width: var(--SECTION-BORDER-WIDTH);
+	border-style: var(--SECTION-BORDER-STYLE);
+	border-color: var(--SECTION-BORDER-COLOR);
+	border-radius: var(--BORDER-RADIUS);
+	box-shadow: var(--SECTION-SHADOW);
 }
 .container-header {
 	display: flex;
@@ -196,7 +236,6 @@ header h1, header h1 a {
 	margin: auto;
 	padding: 0;
 	text-align: center;
-	font-weight: 300;
 	font-size: 250%;
 }
 .container-content {
@@ -252,6 +291,8 @@ header h1, header h1 a {
 	align-content: flex-start;
 	justify-content: center;
 	margin: auto;
+	padding: 0;
+	box-sizing: border-box;
 }
 .projects-list dl a {
 	text-decoration: none;
@@ -262,28 +303,29 @@ header h1, header h1 a {
 	align-items: flex-start;
 	align-content: flex-start;
 	justify-content: center;
-	/* max-width: var(--SECTION-MAX-WIDTH); */
-	/* min-height: 200px; */
 	width: 100%;
 	height: 100%;
-	margin: 8px;
+	margin: 0;
+	margin-top: 8px;
+	margin-bottom: 8px;
 	padding: 24px;
 	padding-top: 16px;
 	padding-bottom: 16px;
+	box-sizing: border-box;
+	color: black;
+	background: white;
+	border: 1px solid black;
+	border-radius: var(--BUTTON-BORDER-RADIUS);
+	box-shadow: var(--SECTION-SHADOW);
 	text-overflow: ellipsis;
 	cursor: pointer;
-	transition: 0.2s;
 }
-.projects-list dd h3 {
-	color: var(--LINK-COLOR);
-}
-.projects-list dd:hover {
-	background: var(--SECTION-BG-COLOR-HOVER);
-	border: var(--SECTION-BORDER-HOVER);
-	transition: 0.2s;
+.projects-list dd h4 {
+	color: var(--LINK-COLOR) !important;
 }
 .projects-list dd:active {
-	background: var(--SECTION-BG-COLOR-ACTIVE);
+	color: white;
+	background: black;
 }
 
 .playlists-list dl {
@@ -307,15 +349,28 @@ header h1, header h1 a {
 	list-style: none;
 	display: flex;
 	flex-flow: row wrap;
+	justify-content: center;
 }
 .playlists-list dd li {
 	margin: 4px;
 	padding: 8px;
 	padding-left: 16px;
 	padding-right: 16px;
-	color: var(--BACKGROUND-COLOR);
-	background: var(--LINK-COLOR);
-	border-radius: var(--BORDER-RADIUS);
+	min-width: 96px;
+	color: black;
+	background: white;
+	border: 1px solid black;
+	border-radius: var(--BUTTON-BORDER-RADIUS);
+	box-shadow: var(--SECTION-SHADOW);
+	text-align: center;
+}
+.playlists-list dd li:active {
+	color: white;
+	background: black;
+}
+.playlists-list dd a {
+	font-weight: bold;
+	text-decoration: none;
 }
 
 .overlayWindowContainer {
@@ -324,44 +379,58 @@ header h1, header h1 a {
 	visibility: hidden;
 	display: none;
 	flex-flow: column;
+	align-self: center;
+	justify-self: center;
 	align-content: flex-start;
 	justify-content: center;
 	width: 100%;
 	height: 100%;
 	box-sizing: border-box;
-	background: rgba(255,255,255,0.95);
+	background: rgba(0,0,0,0.75);
 }
 .overlayWindowClose {
-	align-self: flex-end;
-	justify-self: flex-end;
+	align-self: flex-start;
+	justify-self: flex-start;
 	align-content: center;
 	justify-content: center;
-	min-width: 48px;
+	min-width: 16px;
 	top: 0;
 	right: 0;
-	margin: 16px;
-	padding: 8px;
-	padding-top: 12px;
-	padding-left: 16px;
-	padding-right: 16px;
-	color: var(--BUTTON-CLOSE-FG-COLOR);
-	background: var(--BUTTON-CLOSE-BG-COLOR);
-	border: var(--BUTTON-CLOSE-BORDER);
-	border-radius: 64px;
-	transition: 0.2s;
+	margin: 0;
+	margin-bottom: 8px;
+	padding: 0;
+	color: black;
+	background: var(--SECTION-BG-COLOR);
+	border-width: var(--SECTION-BORDER-WIDTH);
+	border-style: var(--SECTION-BORDER-STYLE);
+	border-color: var(--SECTION-BORDER-COLOR);
 	text-decoration: none;
 	text-align: center;
-	font-size: 16px;
-}
-.overlayWindowClose:hover {
-	background: var(--BUTTON-CLOSE-BG-COLOR-HOVER);
-	transition: 0.2s;
+	font-size: 12px;
 }
 .overlayWindowClose:active {
-	background: var(--BUTTON-CLOSE-BG-COLOR-ACTIVE);
-	transition: 0.2s;
+	color: white;
+	background: black;
 }
 .overlayWindowContentContainer {
+	visibility: hidden;
+	display: none;
+	flex-flow: column;
+	max-width: 640px;
+	max-height: 480px;
+	min-height: 360px;
+	width: 100%;
+	margin: auto;
+	padding: 8px;
+	box-sizing: border-box;
+	background: var(--SECTION-BG-COLOR);
+	border-width: var(--SECTION-BORDER-WIDTH);
+	border-style: var(--SECTION-BORDER-STYLE);
+	border-color: var(--SECTION-BORDER-COLOR);
+	border-radius: var(--BORDER-RADIUS);
+	box-shadow: var(--SECTION-SHADOW);
+}
+.overlayWindowContent {
 	visibility: hidden;
 	display: none;
 	flex-flow: column;
@@ -369,17 +438,10 @@ header h1, header h1 a {
 	width: 100%;
 	height: 100%;
 	margin: 0;
-	box-sizing: border-box;
-}
-.overlayWindowContent {
-	visibility: hidden;
-	display: none;
-	flex-flow: column;
-	max-width: var(--MAX-WIDTH);
-	width: 100%;
-	margin: auto;
 	padding: 32px;
 	box-sizing: border-box;
+	background: white;
+	border: 1px solid black;
 }
 .overlayWindowContent h2, .overlayWindowContent p {
 	margin: 0;
@@ -392,7 +454,8 @@ header h1, header h1 a {
 
 @media only screen and (max-width: 600px) {
 	html, body {
-		font-size: 18px;
+		font-size: 16px;
+		background: white;
 	}
 
 	dd {
@@ -400,17 +463,27 @@ header h1, header h1 a {
 	}
 
 	header {
+		flex-flow: column;
+		align-items: center;
 		justify-content: center;
 		padding-top: 24px;
 		padding-bottom: 24px;
+	}
+	header ul {
+		margin-top: 8px;
 	}
 
 	.container {
 		margin-top: 16px;
 		margin-bottom: 48px;
+		border: none;
+		box-shadow: none;
 	}
 	.container-content {
 		flex-flow: row wrap;
+	}
+	.container-content-main {
+		padding: 20px;
 	}
 	.container-content-sidebar {
 		display: none;
@@ -420,5 +493,17 @@ header h1, header h1 a {
 	.playlists-list dd {
 		min-height: none !important;
 		height: auto !important;
+	}
+
+	.overlayWindowContentContainer {
+		max-width: 100%;
+		max-height: 100%;
+		border: none;
+	}
+	.overlayWindowContent {
+		height: 100%;
+	}
+	.overlayWindowClose {
+		padding: 8px;
 	}
 }
