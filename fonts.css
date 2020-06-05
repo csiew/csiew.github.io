@@ -80,19 +80,19 @@
 @font-face {
     font-family: Junction;
     src: url(fonts/junction/Junction-regular-webfont.woff);
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: Junction;
     src: url(fonts/junction/Junction-bold-webfont.woff);
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
 }
 @font-face {
     font-family: Junction;
     src: url(fonts/junction/Junction-light-webfont.woff);
-    font-weight: lighter;
+    font-weight: 300;
     font-style: normal;
 }
 

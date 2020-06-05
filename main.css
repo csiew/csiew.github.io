@@ -1,25 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,800;1,300;1,400;1,700&display=swap');
 
 :root {
-	--HEADER-FONT-FAMILY: 'Virtue', Helvetica, Arial, sans-serif;
-	--CONTENT-FONT-FAMILY: 'Virtue', Helvetica, Arial, sans-serif;
+	--HEADER-FONT-FAMILY: 'Besley', 'Times New Roman', Times, serif;
+	--CONTENT-FONT-FAMILY: 'Junction', 'Times New Roman', Times, serif;
 
-	--MAX-WIDTH: 560px;
+	--MAX-WIDTH: 800px;
 	--SECTION-MAX-WIDTH: 340px;
 	--SIDEBAR-MIN-WIDTH: 196px;
 
 	--PRIMARY-COLOR: black;
 	--SECONDARY-COLOR: dimgray;
-	--LINK-COLOR: blue;
-	--BACKGROUND-COLOR: gray;
+	--LINK-COLOR: black;
+	--BACKGROUND-COLOR: lightgray;
 	--SECONDARY-BACKGROUND-COLOR: aliceblue;
-	--SHADOW: 2px 2px 0px rgba(0,0,0,0.125);
+	--SHADOW: 0px 4px 8px rgba(0,0,0,0.125);
 
-	--BORDER-RADIUS: 0px;
+	--BORDER-RADIUS: 5px;
 	--BORDER-SECTION: 1px solid var(--LINK-COLOR);
 	--BORDER-HR: 1px solid var(--LINK-COLOR);
 
-	--HEADER-FG-COLOR: var(--LINK-COLOR);
+	--HEADER-FG-COLOR: black;
 	--HEADER-BG-COLOR: white;
 	--HEADER-BORDER: 1px solid black;
 	--HEADER-SHADOW: none;
@@ -32,15 +32,26 @@
 	--SECTION-BORDER-COLOR-ACTIVE: var(--LINK-COLOR);
 	--SECTION-SHADOW: 2px 2px 0px black;
 
-	--SECTION-CONTENT-BG-COLOR: white;
+	--SECTION-CONTENT-BG-COLOR: whitesmoke;
 	--SECTION-CONTENT-BORDER-COLOR: black;
 
-	--BUTTON-CLOSE-FG-COLOR: white;
+	--OVERLAY-FG-COLOR: black;
+	--OVERLAY-BG-COLOR: white;
+	--OVERLAY-BORDER: 1px solid black;
+	--OVERLAY-BORDER-RADIUS: 5px;
+	--OVERLAY-SHADOW: 2px 2px 0px black;
+
+	--BUTTON-CLOSE-FG-COLOR: black;
 	--BUTTON-CLOSE-BG-COLOR: linear-gradient(to bottom, salmon, firebrick);
 	--BUTTON-CLOSE-BG-COLOR-HOVER: linear-gradient(to bottom, darksalmon, firebrick);
 	--BUTTON-CLOSE-BG-COLOR-ACTIVE: linear-gradient(to bottom, darkred, firebrick);
 	--BUTTON-CLOSE-BORDER: 1px solid firebrick;
+	--BUTTON-FG-COLOR: black;
+	--BUTTON-BG-COLOR: khaki;
+	--BUTTON-BG-COLOR-ACTIVE: darkkhaki;
+	--BUTTON-BORDER: 1px solid black;
 	--BUTTON-BORDER-RADIUS: 5px;
+	--BUTTON-SHADOW: 2px 2px 0px black;
 }
 
 html, body {
@@ -57,11 +68,11 @@ html, body {
 	color: var(--PRIMARY-COLOR);
 	border: 0;
 	font-family: var(--CONTENT-FONT-FAMILY);
-	font-size: 12px;
+	font-size: 20px;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
-	text-rendering: optimizeSpeed;
+	text-rendering: optimizeLegibility;
 }
 body {
 	overflow: auto;
@@ -72,12 +83,11 @@ h1, h2, h3, h4, h5 {
 	margin: 0;
 	margin-top: 16px;
 	margin-bottom: 24px;
-	text-shadow: 2px 2px 0px rgba(0,0,0,0.125);
 	font-family: var(--HEADER-FONT-FAMILY);
 	font-weight: bold;
 }
 
-h1 { font-size: 22px; }
+h1 { font-size: 24px; }
 h2 { font-size: 20px; }
 h3 { font-size: 18px; }
 h4 { font-size: 16px; }
@@ -158,6 +168,8 @@ dd h3, dd h4 {
 	background: white;
 	border: 1px solid black;
 	border-right: none;
+	border-top-right-radius: var(--BUTTON-BORDER-RADIUS);
+	border-bottom-right-radius: var(--BUTTON-BORDER-RADIUS);
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:active {
@@ -206,7 +218,7 @@ header h1, header h1 a {
 	margin: 0;
 	margin-top: 4px;
 	padding: 0;
-	color: var(--PRIMARY-COLOR);
+	font-size: 36px;
 	text-decoration: none;
 }
 
@@ -318,20 +330,16 @@ header h1, header h1 a {
 	padding-top: 16px;
 	padding-bottom: 16px;
 	box-sizing: border-box;
-	color: black;
-	background: white;
-	border: 1px solid black;
+	color: var(--BUTTON-FG-COLOR);
+	background: var(--BUTTON-BG-COLOR);
+	border: var(--BUTTON-BORDER);
 	border-radius: var(--BUTTON-BORDER-RADIUS);
-	box-shadow: var(--SECTION-SHADOW);
+	box-shadow: var(--BUTTON-SHADOW);
 	text-overflow: ellipsis;
 	cursor: pointer;
 }
-.projects-list dd h4 {
-	color: var(--LINK-COLOR) !important;
-}
 .projects-list dd:active {
-	color: white;
-	background: black;
+	background: var(--BUTTON-BG-COLOR-ACTIVE);
 }
 
 .playlists-list dl {
@@ -363,19 +371,17 @@ header h1, header h1 a {
 	padding-left: 16px;
 	padding-right: 16px;
 	min-width: 96px;
-	color: black;
-	background: white;
-	border: 1px solid black;
+	color: var(--BUTTON-FG-COLOR);
+	background: var(--BUTTON-BG-COLOR);
+	border: var(--BUTTON-BORDER);
 	border-radius: var(--BUTTON-BORDER-RADIUS);
-	box-shadow: var(--SECTION-SHADOW);
+	box-shadow: var(--BUTTON-SHADOW);
 	text-align: center;
 }
 .playlists-list dd li:active {
-	color: white;
-	background: black;
+	background: var(--BUTTON-BG-COLOR-ACTIVE);
 }
 .playlists-list dd a {
-	font-weight: bold;
 	text-decoration: none;
 }
 
@@ -392,7 +398,7 @@ header h1, header h1 a {
 	width: 100%;
 	height: 100%;
 	box-sizing: border-box;
-	background: rgba(128, 128, 128, 0.75);
+	background: rgba(0, 0, 0, 0.75);
 }
 .overlayWindowClose {
 	align-self: flex-start;
@@ -404,19 +410,19 @@ header h1, header h1 a {
 	right: 0;
 	margin: 0;
 	margin-bottom: 2px;
-	padding: 0;
-	color: black;
-	background: var(--SECTION-BG-COLOR);
-	border-width: var(--SECTION-BORDER-WIDTH);
-	border-style: var(--SECTION-BORDER-STYLE);
-	border-color: var(--SECTION-BORDER-COLOR);
+	padding: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	color: var(--BUTTON-FG-COLOR);
+	background: var(--BUTTON-BG-COLOR);
+	border: var(--BUTTON-BORDER);
+	border-radius: var(--BUTTON-BORDER-RADIUS);
 	text-decoration: none;
 	text-align: center;
 	font-size: 12px;
 }
 .overlayWindowClose:active {
-	color: white;
-	background: black;
+	background: var(--BUTTON-BG-COLOR-ACTIVE);
 }
 .overlayWindowContentContainer {
 	visibility: hidden;
@@ -429,12 +435,11 @@ header h1, header h1 a {
 	margin: auto;
 	padding: 2px;
 	box-sizing: border-box;
-	background: var(--SECTION-BG-COLOR);
-	border-width: var(--SECTION-BORDER-WIDTH);
-	border-style: var(--SECTION-BORDER-STYLE);
-	border-color: var(--SECTION-BORDER-COLOR);
-	border-radius: var(--BORDER-RADIUS);
-	box-shadow: var(--SECTION-SHADOW);
+	color: var(--OVERLAY-FG-COLOR);
+	background: var(--OVERLAY-BG-COLOR);
+	border: var(--OVERLAY-BORDER);
+	border-radius: var(--OVERLAY-BORDER-RADIUS);
+	box-shadow: var(--OVERLAY-SHADOW);
 }
 .overlayWindowContent {
 	visibility: hidden;
@@ -446,8 +451,10 @@ header h1, header h1 a {
 	margin: 0;
 	padding: 16px;
 	box-sizing: border-box;
-	background: white;
-	border: 1px solid black;
+	color: var(--OVERLAY-FG-COLOR);
+	background: var(--OVERLAY-BG-COLOR);
+	border: var(--OVERLAY-BORDER);
+	border-radius: var(--OVERLAY-BORDER-RADIUS);
 }
 .overlayWindowContent h2, .overlayWindowContent p {
 	margin: 0;
@@ -458,10 +465,10 @@ header h1, header h1 a {
 	color: var(--SECONDARY-COLOR);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 960px) {
 	html, body {
-		font-size: 12px;
-		background: whitesmoke;
+		font-size: 16px;
+		background: white;
 	}
 
 	dd {
@@ -482,7 +489,6 @@ header h1, header h1 a {
 	.container {
 		margin-top: 16px;
 		margin-bottom: 48px;
-		background: whitesmoke;
 		border: none;
 		box-shadow: none;
 	}
@@ -501,17 +507,22 @@ header h1, header h1 a {
 		min-height: none !important;
 		height: auto !important;
 	}
-
+}
+@media only screen and (max-width: 480px) {
 	.overlayWindowContentContainer {
 		max-width: 100%;
 		max-height: 100%;
 		height: 100%;
 		border: none;
+		border-radius: 0;
 	}
 	.overlayWindowContent {
 		height: 100%;
 	}
 	.overlayWindowClose {
-		padding: 8px;
+		width: 100%;
+		padding: 16px;
+		box-sizing: border-box;
+		font-size: 16px;
 	}
 }
