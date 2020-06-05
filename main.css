@@ -229,6 +229,7 @@ header h1, header h1 a {
 	margin: auto;
 	margin-top: 32px;
 	margin-bottom: 64px;
+	padding: 32px;
 	box-sizing: border-box;
 	color: var(--SECTION-FG-COLOR);
 	background: var(--SECTION-BG-COLOR);
@@ -487,6 +488,7 @@ header h1, header h1 a {
 	.container {
 		margin-top: 16px;
 		margin-bottom: 48px;
+		padding: 0;
 		border: none;
 		box-shadow: none;
 	}
