@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,800;1,300;1,400;1,700&display=swap');
-
 :root {
 	--HEADER-FONT-FAMILY: 'Besley', 'Times New Roman', Times, serif;
-	--CONTENT-FONT-FAMILY: 'Junction', 'Times New Roman', Times, serif;
+	--CONTENT-FONT-FAMILY: 'Junction', Helvetica, Arial, sans-serif;
 
 	--MAX-WIDTH: 800px;
 	--SECTION-MAX-WIDTH: 340px;
