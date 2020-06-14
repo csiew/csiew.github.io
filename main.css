@@ -66,7 +66,7 @@ html, body {
 	color: var(--PRIMARY-COLOR);
 	border: 0;
 	font-family: var(--CONTENT-FONT-FAMILY);
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
@@ -216,7 +216,7 @@ header h1, header h1 a {
 	margin: 0;
 	margin-top: 4px;
 	padding: 0;
-	font-size: 36px;
+	font-size: 28px;
 	text-decoration: none;
 }
 
@@ -254,6 +254,8 @@ header h1, header h1 a {
 	padding: 0;
 	text-align: center;
 	font-size: 250%;
+	font-weight: normal;
+	font-style: italic;
 }
 .container-content {
 	display: flex;
@@ -475,6 +477,7 @@ header h1, header h1 a {
 	}
 
 	header {
+		position: static !important;
 		flex-flow: column;
 		align-items: center;
 		justify-content: center;
