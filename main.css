@@ -1,6 +1,6 @@
 :root {
-	--HEADER-FONT-FAMILY: 'Besley', 'Times New Roman', Times, serif;
-	--CONTENT-FONT-FAMILY: 'Junction', Helvetica, Arial, sans-serif;
+	--HEADER-FONT-FAMILY: 'Noah', Helvetica, Arial, sans-serif;
+	--CONTENT-FONT-FAMILY: 'Noah', Helvetica, Arial, sans-serif;
 
 	--MAX-WIDTH: 800px;
 	--SECTION-MAX-WIDTH: 340px;
@@ -8,9 +8,10 @@
 
 	--PRIMARY-COLOR: black;
 	--SECONDARY-COLOR: dimgray;
-	--LINK-COLOR: black;
+	--LINK-COLOR: steelblue;
+	--LINK-COLOR-ACTIVE: dodgerblue;
 	--BACKGROUND-COLOR: lightgray;
-	--SECONDARY-BACKGROUND-COLOR: aliceblue;
+	--SECONDARY-BACKGROUND-COLOR: whitesmoke;
 	--SHADOW: 0px 4px 8px rgba(0,0,0,0.125);
 
 	--BORDER-RADIUS: 5px;
@@ -19,37 +20,37 @@
 
 	--HEADER-FG-COLOR: black;
 	--HEADER-BG-COLOR: white;
-	--HEADER-BORDER: 1px solid black;
-	--HEADER-SHADOW: none;
+	--HEADER-BORDER: none;
+	--HEADER-SHADOW: 0px 2px 4px rgba(0,0,0,0.25);
 
 	--SECTION-FG-COLOR: black;
 	--SECTION-BG-COLOR: white;
-	--SECTION-BORDER-WIDTH: 1px;
+	--SECTION-BORDER-WIDTH: 0px;
 	--SECTION-BORDER-STYLE: solid;
-	--SECTION-BORDER-COLOR: black;
-	--SECTION-BORDER-COLOR-ACTIVE: var(--LINK-COLOR);
-	--SECTION-SHADOW: 2px 2px 0px black;
+	--SECTION-BORDER-COLOR: none;
+	--SECTION-BORDER-COLOR-ACTIVE: none;
+	--SECTION-SHADOW: 0px 2px 4px rgba(0,0,0,0.75);
 
-	--SECTION-CONTENT-BG-COLOR: whitesmoke;
+	--SECTION-CONTENT-BG-COLOR: aliceblue;
 	--SECTION-CONTENT-BORDER-COLOR: black;
 
 	--OVERLAY-FG-COLOR: black;
 	--OVERLAY-BG-COLOR: white;
-	--OVERLAY-BORDER: 1px solid black;
+	--OVERLAY-BORDER: none;
 	--OVERLAY-BORDER-RADIUS: 5px;
-	--OVERLAY-SHADOW: 2px 2px 0px black;
+	--OVERLAY-SHADOW: 0px 2px 4px rgba(0,0,0,0.75);
 
 	--BUTTON-CLOSE-FG-COLOR: black;
 	--BUTTON-CLOSE-BG-COLOR: linear-gradient(to bottom, salmon, firebrick);
 	--BUTTON-CLOSE-BG-COLOR-HOVER: linear-gradient(to bottom, darksalmon, firebrick);
 	--BUTTON-CLOSE-BG-COLOR-ACTIVE: linear-gradient(to bottom, darkred, firebrick);
 	--BUTTON-CLOSE-BORDER: 1px solid firebrick;
-	--BUTTON-FG-COLOR: black;
-	--BUTTON-BG-COLOR: khaki;
-	--BUTTON-BG-COLOR-ACTIVE: darkkhaki;
-	--BUTTON-BORDER: 1px solid black;
+	--BUTTON-FG-COLOR: white;
+	--BUTTON-BG-COLOR: var(--LINK-COLOR);
+	--BUTTON-BG-COLOR-ACTIVE: var(--LINK-COLOR-ACTIVE);
+	--BUTTON-BORDER: none;
 	--BUTTON-BORDER-RADIUS: 5px;
-	--BUTTON-SHADOW: 2px 2px 0px black;
+	--BUTTON-SHADOW: none;
 }
 
 html, body {
@@ -66,7 +67,7 @@ html, body {
 	color: var(--PRIMARY-COLOR);
 	border: 0;
 	font-family: var(--CONTENT-FONT-FAMILY);
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
@@ -85,15 +86,19 @@ h1, h2, h3, h4, h5 {
 	font-weight: bold;
 }
 
-h1 { font-size: 24px; }
-h2 { font-size: 20px; }
-h3 { font-size: 18px; }
-h4 { font-size: 16px; }
-h5 { font-size: 14px; }
+h1 { font-size: 36px; }
+h2 { font-size: 32px; }
+h3 { font-size: 28px; }
+h4 { font-size: 24px; }
+h5 { font-size: 22px; }
 
 a {
 	color: var(--LINK-COLOR);
 	text-decoration: underline;
+	font-weight: bold;
+}
+a:active {
+	color: var(--LINK-COLOR-ACTIVE);
 }
 
 ul {
@@ -157,21 +162,21 @@ dd h3, dd h4 {
 }
 /* Track */
 ::-webkit-scrollbar-track {
-	background: darkgray;
+	background: linear-gradient(to right, lightgray, whitesmoke);
 	border: none;
-	border-left: 1px solid black;
+	border-radius: var(--BUTTON-BORDER-RADIUS);
+	box-shadow: 0px 2px 4px rgba(0,0,0,0.75) inset;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: white;
-	border: 1px solid black;
-	border-right: none;
-	border-top-right-radius: var(--BUTTON-BORDER-RADIUS);
-	border-bottom-right-radius: var(--BUTTON-BORDER-RADIUS);
+	background: linear-gradient(to right, lightgray, slategray);
+	border: 1px solid darkslategray;
+	border-radius: var(--BUTTON-BORDER-RADIUS);
+	box-shadow: 0px 2px 2px rgba(0,0,0,0.75);
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:active {
-	background: black;
+	background: linear-gradient(to right, slategray, darkgray);
 }
 
 header {
@@ -202,21 +207,17 @@ header ul {
 	padding: 0;
 	box-sizing: border-box;
 }
-header a {
-	color: var(--HEADER-FG-COLOR);
-}
 header ul a {
 	margin-right: 16px;
-	color: var(--HEADER-FG-COLOR);
 }
 header ul a:last-child {
 	margin-right: 0 !important;
 }
 header h1, header h1 a {
 	margin: 0;
-	margin-top: 4px;
 	padding: 0;
-	font-size: 28px;
+	color: var(--PRIMARY-COLOR);
+	font-size: 36px;
 	text-decoration: none;
 }
 
@@ -254,8 +255,7 @@ header h1, header h1 a {
 	padding: 0;
 	text-align: center;
 	font-size: 250%;
-	font-weight: normal;
-	font-style: italic;
+	font-weight: bold;
 }
 .container-content {
 	display: flex;
