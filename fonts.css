@@ -23,3 +23,89 @@
     font-weight: bold;
     font-style: italic;
 }
+
+/* FANTASQUE SANS MONO */
+@font-face {
+    font-family: 'Fantasque Sans Mono';
+    src: url(fonts/fantasque/fantasquesansmono-regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Fantasque Sans Mono';
+    src: url(fonts/fantasque/fantasquesansmono-italic.otf);
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Fantasque Sans Mono';
+    src: url(fonts/fantasque/fantasquesansmono-bold.otf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Fantasque Sans Mono';
+    src: url(fonts/fantasque/fantasquesansmono-bolditalic.otf);
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* JETBRAINS MONO */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url(fonts/jetbrains-mono/JetBrainsMono-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url(fonts/jetbrains-mono/JetBrainsMono-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url(fonts/jetbrains-mono/JetBrainsMono-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url(fonts/jetbrains-mono/JetBrainsMono-Bold-Italic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* SAX MONO */
+@font-face {
+    font-family: 'saxMono';
+    src: url(fonts/saxmono/saxmono.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* iA WRITER DUOSPACE */
+@font-face {
+    font-family: 'iA Writer Duospace';
+    src: url(fonts/ia-writer-duospace/iAWriterDuospace-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'iA Writer Duospace';
+    src: url(fonts/ia-writer-duospace/iAWriterDuospace-RegularItalic.otf);
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'iA Writer Duospace';
+    src: url(fonts/ia-writer-duospace/iAWriterDuospace-Bold.otf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'iA Writer Duospace';
+    src: url(fonts/ia-writer-duospace/iAWriterDuospace-BoldItalic.otf);
+    font-weight: bold;
+    font-style: italic;
+}

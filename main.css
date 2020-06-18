@@ -1,56 +1,58 @@
 :root {
-	--HEADER-FONT-FAMILY: 'Noah', Helvetica, Arial, sans-serif;
-	--CONTENT-FONT-FAMILY: 'Noah', Helvetica, Arial, sans-serif;
+	--HEADER-FONT-FAMILY: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	--CONTENT-FONT-FAMILY: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-	--MAX-WIDTH: 800px;
+	--MAX-WIDTH: 960px;
 	--SECTION-MAX-WIDTH: 340px;
 	--SIDEBAR-MIN-WIDTH: 196px;
 
 	--PRIMARY-COLOR: black;
-	--SECONDARY-COLOR: dimgray;
-	--LINK-COLOR: steelblue;
-	--LINK-COLOR-ACTIVE: dodgerblue;
-	--BACKGROUND-COLOR: lightgray;
-	--SECONDARY-BACKGROUND-COLOR: whitesmoke;
+	--SECONDARY-COLOR: gray;
+	--LINK-COLOR: royalblue;
+	--LINK-COLOR-ACTIVE: steelblue;
+	--BACKGROUND-COLOR: whitesmoke;
+	--SECONDARY-BACKGROUND-COLOR: none;
 	--SHADOW: 0px 4px 8px rgba(0,0,0,0.125);
 
-	--BORDER-RADIUS: 5px;
+	--BORDER-RADIUS: 8px;
 	--BORDER-SECTION: 1px solid var(--LINK-COLOR);
 	--BORDER-HR: 1px solid var(--LINK-COLOR);
 
-	--HEADER-FG-COLOR: black;
+	--HEADER-FG-COLOR: var(--PRIMARY-COLOR);
 	--HEADER-BG-COLOR: white;
-	--HEADER-BORDER: none;
+	--HEADER-BORDER: 1px solid lightgray;
 	--HEADER-SHADOW: 0px 2px 4px rgba(0,0,0,0.25);
 
-	--SECTION-FG-COLOR: black;
+	--SECTION-FG-COLOR: var(--PRIMARY-COLOR);
 	--SECTION-BG-COLOR: white;
-	--SECTION-BORDER-WIDTH: 0px;
+	--SECTION-BORDER-WIDTH: 1px;
 	--SECTION-BORDER-STYLE: solid;
-	--SECTION-BORDER-COLOR: none;
+	--SECTION-BORDER-COLOR: lightgray;
 	--SECTION-BORDER-COLOR-ACTIVE: none;
-	--SECTION-SHADOW: 0px 2px 4px rgba(0,0,0,0.75);
+	--SECTION-SHADOW: 0px 2px 4px rgba(0,0,0,0.25);
 
-	--SECTION-CONTENT-BG-COLOR: aliceblue;
-	--SECTION-CONTENT-BORDER-COLOR: black;
+	--SECTION-CONTENT-BG-COLOR: none;
+	--SECTION-CONTENT-BORDER-COLOR: lightgray;
 
-	--OVERLAY-FG-COLOR: black;
-	--OVERLAY-BG-COLOR: white;
-	--OVERLAY-BORDER: none;
-	--OVERLAY-BORDER-RADIUS: 5px;
-	--OVERLAY-SHADOW: 0px 2px 4px rgba(0,0,0,0.75);
+	--OVERLAY-FG-COLOR: var(--PRIMARY-COLOR);
+	--OVERLAY-BG-COLOR: var(--BACKGROUND-COLOR);
+	--OVERLAY-BORDER: 1px solid lightgray;
+	--OVERLAY-BORDER-RADIUS: 8px;
+	--OVERLAY-SHADOW: 0px 2px 4px rgba(0,0,0,0.25);
 
 	--BUTTON-CLOSE-FG-COLOR: black;
 	--BUTTON-CLOSE-BG-COLOR: linear-gradient(to bottom, salmon, firebrick);
 	--BUTTON-CLOSE-BG-COLOR-HOVER: linear-gradient(to bottom, darksalmon, firebrick);
 	--BUTTON-CLOSE-BG-COLOR-ACTIVE: linear-gradient(to bottom, darkred, firebrick);
 	--BUTTON-CLOSE-BORDER: 1px solid firebrick;
-	--BUTTON-FG-COLOR: white;
-	--BUTTON-BG-COLOR: var(--LINK-COLOR);
-	--BUTTON-BG-COLOR-ACTIVE: var(--LINK-COLOR-ACTIVE);
-	--BUTTON-BORDER: none;
-	--BUTTON-BORDER-RADIUS: 5px;
-	--BUTTON-SHADOW: none;
+	--BUTTON-FG-COLOR: var(--PRIMARY-COLOR);
+	--BUTTON-FG-COLOR-ACTIVE: var(--LINK-COLOR);
+	--BUTTON-BG-COLOR: linear-gradient(to bottom, whitesmoke, lightgray);
+	--BUTTON-BG-COLOR-ACTIVE: linear-gradient(to bottom, azure, aliceblue);
+	--BUTTON-BORDER: 1px solid darkgray;
+	--BUTTON-BORDER-ACTIVE: 1px solid var(--LINK-COLOR);
+	--BUTTON-BORDER-RADIUS: 8px;
+	--BUTTON-SHADOW: 0px 2px 4px rgba(0,0,0,0.25);
 }
 
 html, body {
@@ -67,7 +69,7 @@ html, body {
 	color: var(--PRIMARY-COLOR);
 	border: 0;
 	font-family: var(--CONTENT-FONT-FAMILY);
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
@@ -95,7 +97,6 @@ h5 { font-size: 22px; }
 a {
 	color: var(--LINK-COLOR);
 	text-decoration: underline;
-	font-weight: bold;
 }
 a:active {
 	color: var(--LINK-COLOR-ACTIVE);
@@ -158,29 +159,29 @@ dd h3, dd h4 {
 
 /* width */
 ::-webkit-scrollbar {
-    width: 18px;
+	width: 18px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
-	background: linear-gradient(to right, lightgray, whitesmoke);
+	background: lightgray;
 	border: none;
 	border-radius: var(--BUTTON-BORDER-RADIUS);
-	box-shadow: 0px 2px 4px rgba(0,0,0,0.75) inset;
+	box-shadow: var(--BUTTON-SHADOW) inset;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
 	background: linear-gradient(to right, lightgray, slategray);
 	border: 1px solid darkslategray;
 	border-radius: var(--BUTTON-BORDER-RADIUS);
-	box-shadow: 0px 2px 2px rgba(0,0,0,0.75);
+	box-shadow: var(--BUTTON-SHADOW);
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:active {
-	background: linear-gradient(to right, slategray, darkgray);
+	background: linear-gradient(to right, darkgray, slategray);
 }
 
 header {
-	position: sticky !important;
+	position: static !important;
 	display: flex;
 	flex-flow: row wrap;
 	align-content: center;
@@ -340,7 +341,9 @@ header h1, header h1 a {
 	cursor: pointer;
 }
 .projects-list dd:active {
+	color: var(--BUTTON-FG-COLOR-ACTIVE);
 	background: var(--BUTTON-BG-COLOR-ACTIVE);
+	border: var(--BUTTON-BORDER-ACTIVE);
 }
 
 .playlists-list dl {
@@ -380,7 +383,9 @@ header h1, header h1 a {
 	text-align: center;
 }
 .playlists-list dd li:active {
+	color: var(--BUTTON-FG-COLOR-ACTIVE);
 	background: var(--BUTTON-BG-COLOR-ACTIVE);
+	border: var(--BUTTON-BORDER-ACTIVE);
 }
 .playlists-list dd a {
 	text-decoration: none;
@@ -402,8 +407,8 @@ header h1, header h1 a {
 	background: rgba(0, 0, 0, 0.75);
 }
 .overlayWindowClose {
-	align-self: flex-start;
-	justify-self: flex-start;
+	align-self: flex-end;
+	justify-self: flex-end;
 	align-content: center;
 	justify-content: center;
 	min-width: 16px;
