@@ -487,6 +487,7 @@ header h1, header h1 a {
 		justify-content: center;
 		padding-top: 24px;
 		padding-bottom: 24px;
+		box-shadow: none;
 	}
 	header ul {
 		margin-top: 8px;
