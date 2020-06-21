@@ -14,7 +14,7 @@
 	--SECONDARY-BACKGROUND-COLOR: none;
 	--SHADOW: 0px 4px 8px rgba(0,0,0,0.125);
 
-	--BORDER-RADIUS: 8px;
+	--BORDER-RADIUS: 5px;
 	--BORDER-SECTION: 1px solid var(--LINK-COLOR);
 	--BORDER-HR: 1px solid var(--LINK-COLOR);
 
@@ -31,13 +31,13 @@
 	--SECTION-BORDER-COLOR-ACTIVE: none;
 	--SECTION-SHADOW: 0px 2px 4px rgba(0,0,0,0.25);
 
-	--SECTION-CONTENT-BG-COLOR: none;
+	--SECTION-CONTENT-BG-COLOR: aliceblue;
 	--SECTION-CONTENT-BORDER-COLOR: lightgray;
 
 	--OVERLAY-FG-COLOR: var(--PRIMARY-COLOR);
-	--OVERLAY-BG-COLOR: var(--BACKGROUND-COLOR);
+	--OVERLAY-BG-COLOR: white;
 	--OVERLAY-BORDER: 1px solid lightgray;
-	--OVERLAY-BORDER-RADIUS: 8px;
+	--OVERLAY-BORDER-RADIUS: 5px;
 	--OVERLAY-SHADOW: 0px 2px 4px rgba(0,0,0,0.25);
 
 	--BUTTON-CLOSE-FG-COLOR: black;
@@ -51,8 +51,8 @@
 	--BUTTON-BG-COLOR-ACTIVE: linear-gradient(to bottom, azure, aliceblue);
 	--BUTTON-BORDER: 1px solid darkgray;
 	--BUTTON-BORDER-ACTIVE: 1px solid var(--LINK-COLOR);
-	--BUTTON-BORDER-RADIUS: 8px;
-	--BUTTON-SHADOW: 0px 2px 4px rgba(0,0,0,0.25);
+	--BUTTON-BORDER-RADIUS: 5px;
+	--BUTTON-SHADOW: none;
 }
 
 html, body {
@@ -163,9 +163,11 @@ dd h3, dd h4 {
 }
 /* Track */
 ::-webkit-scrollbar-track {
-	background: lightgray;
+	background: linear-gradient(to right, lightgray, whitesmoke);
 	border: none;
-	border-radius: var(--BUTTON-BORDER-RADIUS);
+	border-left: 1px solid darkgray;
+	border-top-right-radius: var(--BUTTON-BORDER-RADIUS);
+	border-bottom-right-radius: var(--BUTTON-BORDER-RADIUS);
 	box-shadow: var(--BUTTON-SHADOW) inset;
 }
 /* Handle */
@@ -177,7 +179,7 @@ dd h3, dd h4 {
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:active {
-	background: linear-gradient(to right, darkgray, slategray);
+	background: linear-gradient(to right, darkgray, dimgray);
 }
 
 header {
@@ -359,9 +361,6 @@ header h1, header h1 a {
 	height: auto;
 	margin: 8px;
 	box-sizing: border-box;
-}
-.playlists-list dd h3 {
-	color: var(--LINK-COLOR);
 }
 .playlists-list dd ul {
 	list-style: none;
