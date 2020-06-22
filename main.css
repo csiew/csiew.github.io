@@ -10,7 +10,7 @@
 	--SECONDARY-COLOR: gray;
 	--LINK-COLOR: royalblue;
 	--LINK-COLOR-ACTIVE: steelblue;
-	--BACKGROUND-COLOR: whitesmoke;
+	--BACKGROUND-COLOR: linear-gradient(to bottom left, darkgray, aliceblue, beige, dimgray);
 	--SECONDARY-BACKGROUND-COLOR: none;
 	--SHADOW: 0px 4px 8px rgba(0,0,0,0.125);
 
@@ -31,14 +31,19 @@
 	--SECTION-BORDER-COLOR-ACTIVE: none;
 	--SECTION-SHADOW: 0px 2px 4px rgba(0,0,0,0.25);
 
-	--SECTION-CONTENT-BG-COLOR: aliceblue;
+	--SECTION-CONTENT-BG-COLOR: whitesmoke;
 	--SECTION-CONTENT-BORDER-COLOR: lightgray;
+	--SECTION-CONTENT-SHADOW: 0px 2px 4px rgba(0,0,0,0.25) inset;
 
 	--OVERLAY-FG-COLOR: var(--PRIMARY-COLOR);
-	--OVERLAY-BG-COLOR: white;
-	--OVERLAY-BORDER: 1px solid lightgray;
+	--OVERLAY-BG-COLOR: lightgray;
+	--OVERLAY-CONTENT-FG-COLOR: var(--PRIMARY-COLOR);
+	--OVERLAY-CONTENT-BG-COLOR: white;
+	--OVERLAY-HEADER-BG-COLOR: linear-gradient(to bottom, whitesmoke, lightgray);
+	--OVERLAY-BORDER: none;
 	--OVERLAY-BORDER-RADIUS: 5px;
 	--OVERLAY-SHADOW: 0px 2px 4px rgba(0,0,0,0.25);
+	--OVERLAY-CONTENT-SHADOW: 0px 2px 2px rgba(0,0,0,0.5) inset;
 
 	--BUTTON-CLOSE-FG-COLOR: black;
 	--BUTTON-CLOSE-BG-COLOR: linear-gradient(to bottom, salmon, firebrick);
@@ -46,13 +51,16 @@
 	--BUTTON-CLOSE-BG-COLOR-ACTIVE: linear-gradient(to bottom, darkred, firebrick);
 	--BUTTON-CLOSE-BORDER: 1px solid firebrick;
 	--BUTTON-FG-COLOR: var(--PRIMARY-COLOR);
-	--BUTTON-FG-COLOR-ACTIVE: var(--LINK-COLOR);
+	--BUTTON-FG-COLOR-HOVER: var(--PRIMARY-COLOR);
+	--BUTTON-FG-COLOR-ACTIVE: var(--PRIMARY-COLOR);
 	--BUTTON-BG-COLOR: linear-gradient(to bottom, whitesmoke, lightgray);
-	--BUTTON-BG-COLOR-ACTIVE: linear-gradient(to bottom, azure, aliceblue);
+	--BUTTON-BG-COLOR-HOVER: linear-gradient(to bottom, azure, lavender);
+	--BUTTON-BG-COLOR-ACTIVE: linear-gradient(to bottom, lightgray, darkgray);
 	--BUTTON-BORDER: 1px solid darkgray;
-	--BUTTON-BORDER-ACTIVE: 1px solid var(--LINK-COLOR);
+	--BUTTON-BORDER-HOVER: 1px solid steelblue;
+	--BUTTON-BORDER-ACTIVE: 1px solid gray;
 	--BUTTON-BORDER-RADIUS: 5px;
-	--BUTTON-SHADOW: none;
+	--BUTTON-SHADOW: 0px 2px 2px rgba(0,0,0,0.5);
 }
 
 html, body {
@@ -66,6 +74,8 @@ html, body {
 	padding: 0;
 	box-sizing: border-box;
 	background: var(--BACKGROUND-COLOR);
+	background-size: cover;
+	background-attachment: fixed;
 	color: var(--PRIMARY-COLOR);
 	border: 0;
 	font-family: var(--CONTENT-FONT-FAMILY);
@@ -145,6 +155,7 @@ dd {
 	border-style: var(--SECTION-BORDER-STYLE);
 	border-color: var(--SECTION-CONTENT-BORDER-COLOR);
 	border-radius: var(--BORDER-RADIUS);
+	box-shadow: var(--SECTION-CONTENT-SHADOW);
 }
 dd:last-child {
 	margin-bottom: 0 !important;
@@ -183,7 +194,7 @@ dd h3, dd h4 {
 }
 
 header {
-	position: static !important;
+	position: sticky !important;
 	display: flex;
 	flex-flow: row wrap;
 	align-content: center;
@@ -211,7 +222,11 @@ header ul {
 	box-sizing: border-box;
 }
 header ul a {
-	margin-right: 16px;
+	margin-right: 8px;
+	padding: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-decoration: none;
 }
 header ul a:last-child {
 	margin-right: 0 !important;
@@ -334,18 +349,8 @@ header h1, header h1 a {
 	padding-top: 16px;
 	padding-bottom: 16px;
 	box-sizing: border-box;
-	color: var(--BUTTON-FG-COLOR);
-	background: var(--BUTTON-BG-COLOR);
-	border: var(--BUTTON-BORDER);
-	border-radius: var(--BUTTON-BORDER-RADIUS);
-	box-shadow: var(--BUTTON-SHADOW);
 	text-overflow: ellipsis;
 	cursor: pointer;
-}
-.projects-list dd:active {
-	color: var(--BUTTON-FG-COLOR-ACTIVE);
-	background: var(--BUTTON-BG-COLOR-ACTIVE);
-	border: var(--BUTTON-BORDER-ACTIVE);
 }
 
 .playlists-list dl {
@@ -368,25 +373,35 @@ header h1, header h1 a {
 	flex-flow: row wrap;
 	justify-content: center;
 }
-.playlists-list dd li {
+.playlists-list dd a {
 	margin: 4px;
 	padding: 8px;
 	padding-left: 16px;
 	padding-right: 16px;
 	min-width: 96px;
+	text-decoration: none;
+	text-align: center;
+}
+
+.button {
 	color: var(--BUTTON-FG-COLOR);
 	background: var(--BUTTON-BG-COLOR);
 	border: var(--BUTTON-BORDER);
 	border-radius: var(--BUTTON-BORDER-RADIUS);
 	box-shadow: var(--BUTTON-SHADOW);
-	text-align: center;
 }
-.playlists-list dd li:active {
+.button:hover {
+	color: var(--BUTTON-FG-COLOR-HOVER);
+	background: var(--BUTTON-BG-COLOR-HOVER);
+	border: var(--BUTTON-BORDER-HOVER);
+}
+.button:active {
 	color: var(--BUTTON-FG-COLOR-ACTIVE);
 	background: var(--BUTTON-BG-COLOR-ACTIVE);
 	border: var(--BUTTON-BORDER-ACTIVE);
+	box-shadow: var(--BUTTON-SHADOW) inset;
 }
-.playlists-list dd a {
+.button a {
 	text-decoration: none;
 }
 
@@ -405,40 +420,56 @@ header h1, header h1 a {
 	box-sizing: border-box;
 	background: rgba(0, 0, 0, 0.75);
 }
+.overlayWindowHeader {
+	display: flex;
+	flex-flow: row;
+	align-content: center;
+	justify-content: space-between;
+	width: 100%;
+	margin: 0;
+	padding: 4px;
+	box-sizing: border-box;
+	background: var(--OVERLAY-HEADER-BG-COLOR);
+	border-top-left-radius: var(--OVERLAY-BORDER-RADIUS);
+	border-top-right-radius: var(--OVERLAY-BORDER-RADIUS);
+}
+.overlayWindowHeaderTitle {
+	align-content: center;
+	margin: auto;
+	padding: 4px;
+	color: var(--SECONDARY-COLOR);
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: normal;
+}
 .overlayWindowClose {
-	align-self: flex-end;
-	justify-self: flex-end;
+	align-self: center;
 	align-content: center;
 	justify-content: center;
 	min-width: 16px;
-	top: 0;
-	right: 0;
 	margin: 0;
-	margin-bottom: 2px;
+	margin-bottom: 4px;
 	padding: 4px;
 	padding-left: 8px;
 	padding-right: 8px;
-	color: var(--BUTTON-FG-COLOR);
-	background: var(--BUTTON-BG-COLOR);
-	border: var(--BUTTON-BORDER);
-	border-radius: var(--BUTTON-BORDER-RADIUS);
 	text-decoration: none;
 	text-align: center;
 	font-size: 12px;
 }
 .overlayWindowClose:active {
+	color: var(--BUTTON-FG-COLOR-ACTIVE);
 	background: var(--BUTTON-BG-COLOR-ACTIVE);
 }
 .overlayWindowContentContainer {
-	visibility: hidden;
-	display: none;
+	display: flex;
 	flex-flow: column;
 	max-width: 480px;
 	max-height: 480px;
 	min-height: 360px;
 	width: 100%;
 	margin: auto;
-	padding: 2px;
+	padding: 0;
 	box-sizing: border-box;
 	color: var(--OVERLAY-FG-COLOR);
 	background: var(--OVERLAY-BG-COLOR);
@@ -456,10 +487,11 @@ header h1, header h1 a {
 	margin: 0;
 	padding: 16px;
 	box-sizing: border-box;
-	color: var(--OVERLAY-FG-COLOR);
-	background: var(--OVERLAY-BG-COLOR);
+	color: var(--OVERLAY-CONTENT-FG-COLOR);
+	background: var(--OVERLAY-CONTENT-BG-COLOR);
 	border: var(--OVERLAY-BORDER);
 	border-radius: var(--OVERLAY-BORDER-RADIUS);
+	box-shadow: var(--OVERLAY-CONTENT-SHADOW);
 }
 .overlayWindowContent h2, .overlayWindowContent p {
 	margin: 0;
@@ -490,7 +522,7 @@ header h1, header h1 a {
 		box-shadow: none;
 	}
 	header ul {
-		margin-top: 8px;
+		margin-top: 16px;
 	}
 
 	.container {

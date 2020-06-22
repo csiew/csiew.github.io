@@ -28,53 +28,53 @@
 					</p>
 					<h3>2019-Present</h3>
 					<dl>
-						<dd onclick="javascript:overlayWindowOpen('hoddle')">
+						<dd class="button" onclick="javascript:overlayWindowOpen('hoddle')">
 							<h4>Hoddle</h4>
 							<p>Window manager as a web frontend library</p>
 						</dd>
-						<dd onclick="javascript:overlayWindowOpen('fyp')">
+						<dd class="button" onclick="javascript:overlayWindowOpen('fyp')">
 							<h4>Final Year Project</h4>
 							<p>University project that involved building an evacuation tracker system for institutions.</p>
 						</dd>
 					</dl>
 					<h3>2017-2019</h3>
 					<dl>
-						<dd onclick="javascript:overlayWindowOpen('md2magic')">
+						<dd class="button" onclick="javascript:overlayWindowOpen('md2magic')">
 							<h4>md2magic</h4>
 							<p>Turn markdown files into websites.</p>
 						</dd>
-						<dd onclick="javascript:overlayWindowOpen('hallway')">
+						<dd class="button" onclick="javascript:overlayWindowOpen('hallway')">
 							<h4>Hallway</h4>
 							<p>Rudimentary text adventure game engine.</p>
 						</dd>
-						<dd onclick="javascript:overlayWindowOpen('transitsafe')">
+						<dd class="button" onclick="javascript:overlayWindowOpen('transitsafe')">
 							<h4>TransitSafe</h4>
 							<p>A service for posting public transport related incident reports.</p>
 						</dd>
-						<dd onclick="javascript:overlayWindowOpen('soundface')">
+						<dd class="button" onclick="javascript:overlayWindowOpen('soundface')">
 							<h4>SoundFace</h4>
 							<p>A neat little app that uses facial expressions to recommend music.</p>
 						</dd>
-						<dd onclick="javascript:overlayWindowOpen('webitor')">
+						<dd class="button" onclick="javascript:overlayWindowOpen('webitor')">
 							<h4>Webitor</h4>
 							<p>An early experiment with local storage on browsers for use with simple text editing.</p>
 						</dd>
-						<dd onclick="javascript:overlayWindowOpen('hearye')">
+						<dd class="button" onclick="javascript:overlayWindowOpen('hearye')">
 							<h4>Hear Ye</h4>
 							<p>Why not have the latest news headlines be read to you?</p>
 						</dd>
-						<dd onclick="javascript:overlayWindowOpen('antorca-linux')">
+						<dd class="button" onclick="javascript:overlayWindowOpen('antorca-linux')">
 							<h4>Antorca Linux</h4>
 							<p>A Linux distribution that strove to provide the <i>best performing</i> out-of-the-box experience.</p>
 						</dd>
 					</dl>
 					<h3>2008-2017</h3>
 					<dl>
-						<dd onclick="javascript:overlayWindowOpen('illume-os')">
+						<dd class="button" onclick="javascript:overlayWindowOpen('illume-os')">
 							<h4>illume OS</h4>
 							<p>A Linux distribution that strove to provide the <i>lightest</i> out-of-the-box experience.</p>
 						</dd>
-						<dd onclick="javascript:overlayWindowOpen('forward')">
+						<dd class="button" onclick="javascript:overlayWindowOpen('forward')">
 							<h4>Forward</h4>
 							<p>Early experimentations with software development.</p>
 						</dd>
@@ -85,7 +85,10 @@
 	</div>
 	<div id="overlayWindowContainer" class="overlayWindowContainer">
 		<div id="overlayWindowContentContainer" class="overlayWindowContentContainer">
-			<a class="overlayWindowClose" href="javascript:overlayWindowClose()">CLOSE</a>
+			<div id="overlayWindowHeader" class="overlayWindowHeader">
+				<div id="overlayWindowHeaderTitle" class="overlayWindowHeaderTitle">Project Details</div>
+				<a class="overlayWindowClose button" href="javascript:overlayWindowClose()">CLOSE</a>
+			</div>
 			<div id="overlayWindow-hoddle" class="overlayWindowContent">
 				<h2><a href='https://github.com/csiew/Hoddle'>Hoddle</a> <small>2020</small></h2>
 				<p>
