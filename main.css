@@ -450,12 +450,12 @@ header h1, header h1 a {
 	min-width: 16px;
 	margin: 0;
 	margin-bottom: 4px;
-	padding: 4px;
+	padding: 0px;
 	padding-left: 8px;
 	padding-right: 8px;
 	text-decoration: none;
 	text-align: center;
-	font-size: 12px;
+	font-size: 20px;
 }
 .overlayWindowClose:active {
 	color: var(--BUTTON-FG-COLOR-ACTIVE);
@@ -560,8 +560,9 @@ header h1, header h1 a {
 		height: 100%;
 	}
 	.overlayWindowClose {
-		width: 100%;
 		padding: 16px;
+		padding-top: 4px;
+		padding-bottom: 4px;
 		box-sizing: border-box;
 		font-size: 16px;
 	}
