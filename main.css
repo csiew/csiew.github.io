@@ -487,6 +487,8 @@ header h1, header h1 a {
 	height: 100%;
 	box-sizing: border-box;
 	background: rgba(0, 0, 0, 0.75);
+	border-top-left-radius: var(--OVERLAY-BORDER-RADIUS);
+	border-top-right-radius: var(--OVERLAY-BORDER-RADIUS);
 }
 .overlayWindowHeader {
 	display: flex;
@@ -542,6 +544,8 @@ header h1, header h1 a {
 	color: var(--OVERLAY-FG-COLOR);
 	background: var(--OVERLAY-BG-COLOR);
 	border: var(--OVERLAY-BORDER);
+	border-top-left-radius: var(--OVERLAY-BORDER-RADIUS);
+	border-top-right-radius: var(--OVERLAY-BORDER-RADIUS);
 	box-shadow: var(--OVERLAY-SHADOW);
 }
 .overlayWindowContent {
