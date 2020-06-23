@@ -45,11 +45,6 @@
 	--OVERLAY-SHADOW: 0px 2px 4px rgba(0,0,0,0.25);
 	--OVERLAY-CONTENT-SHADOW: 0px 2px 2px rgba(0,0,0,0.5) inset;
 
-	--BUTTON-CLOSE-FG-COLOR: black;
-	--BUTTON-CLOSE-BG-COLOR: linear-gradient(to bottom, salmon, firebrick);
-	--BUTTON-CLOSE-BG-COLOR-HOVER: linear-gradient(to bottom, darksalmon, firebrick);
-	--BUTTON-CLOSE-BG-COLOR-ACTIVE: linear-gradient(to bottom, darkred, firebrick);
-	--BUTTON-CLOSE-BORDER: 1px solid firebrick;
 	--BUTTON-FG-COLOR: var(--PRIMARY-COLOR);
 	--BUTTON-FG-COLOR-HOVER: var(--PRIMARY-COLOR);
 	--BUTTON-FG-COLOR-ACTIVE: var(--PRIMARY-COLOR);
@@ -61,6 +56,60 @@
 	--BUTTON-BORDER-ACTIVE: 1px solid gray;
 	--BUTTON-BORDER-RADIUS: 5px;
 	--BUTTON-SHADOW: 0px 2px 2px rgba(0,0,0,0.5);
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--PRIMARY-COLOR: whitesmoke;
+		--SECONDARY-COLOR: lightgray;
+		--LINK-COLOR: deepskyblue;
+		--LINK-COLOR-ACTIVE: skyblue;
+		--BACKGROUND-COLOR: linear-gradient(to bottom left, black, #333333, black);
+		--SECONDARY-BACKGROUND-COLOR: none;
+		--SHADOW: 0px 4px 8px rgba(0,0,0,0.125);
+	
+		--BORDER-RADIUS: 5px;
+		--BORDER-SECTION: 1px solid var(--LINK-COLOR);
+		--BORDER-HR: 1px solid var(--LINK-COLOR);
+	
+		--HEADER-FG-COLOR: var(--PRIMARY-COLOR);
+		--HEADER-BG-COLOR: #434343;
+		--HEADER-BORDER: 1px solid black;
+		--HEADER-SHADOW: 0px 2px 4px rgba(0,0,0,0.25);
+	
+		--SECTION-FG-COLOR: var(--PRIMARY-COLOR);
+		--SECTION-BG-COLOR: #434343;
+		--SECTION-BORDER-WIDTH: 1px;
+		--SECTION-BORDER-STYLE: solid;
+		--SECTION-BORDER-COLOR: black;
+		--SECTION-BORDER-COLOR-ACTIVE: none;
+		--SECTION-SHADOW: 0px 2px 4px rgba(0,0,0,0.25);
+	
+		--SECTION-CONTENT-BG-COLOR: #333333;
+		--SECTION-CONTENT-BORDER-COLOR: black;
+		--SECTION-CONTENT-SHADOW: 0px 2px 4px rgba(0,0,0,0.25) inset;
+	
+		--OVERLAY-FG-COLOR: var(--PRIMARY-COLOR);
+		--OVERLAY-BG-COLOR: #333333;
+		--OVERLAY-CONTENT-FG-COLOR: var(--PRIMARY-COLOR);
+		--OVERLAY-CONTENT-BG-COLOR: #333333;
+		--OVERLAY-HEADER-BG-COLOR: linear-gradient(to bottom, #555555, #333333);
+		--OVERLAY-BORDER: none;
+		--OVERLAY-BORDER-RADIUS: 5px;
+		--OVERLAY-SHADOW: 0px 2px 4px rgba(0,0,0,0.25);
+		--OVERLAY-CONTENT-SHADOW: 0px 2px 2px rgba(0,0,0,0.5) inset;
+	
+		--BUTTON-FG-COLOR: var(--PRIMARY-COLOR);
+		--BUTTON-FG-COLOR-HOVER: var(--PRIMARY-COLOR);
+		--BUTTON-FG-COLOR-ACTIVE: var(--PRIMARY-COLOR);
+		--BUTTON-BG-COLOR: linear-gradient(to bottom, #555555, #333333);
+		--BUTTON-BG-COLOR-HOVER: linear-gradient(to bottom, slategray, darkslategray);
+		--BUTTON-BG-COLOR-ACTIVE: linear-gradient(to bottom, #333333, black);
+		--BUTTON-BORDER: 1px solid black;
+		--BUTTON-BORDER-HOVER: 1px solid black;
+		--BUTTON-BORDER-ACTIVE: 1px solid black;
+		--BUTTON-BORDER-RADIUS: 5px;
+		--BUTTON-SHADOW: 0px 2px 2px rgba(0,0,0,0.5);
+	}
 }
 
 html, body {
@@ -177,8 +226,6 @@ dd h3, dd h4 {
 	background: linear-gradient(to right, lightgray, whitesmoke);
 	border: none;
 	border-left: 1px solid darkgray;
-	border-top-right-radius: var(--BUTTON-BORDER-RADIUS);
-	border-bottom-right-radius: var(--BUTTON-BORDER-RADIUS);
 	box-shadow: var(--BUTTON-SHADOW) inset;
 }
 /* Handle */
@@ -191,6 +238,27 @@ dd h3, dd h4 {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:active {
 	background: linear-gradient(to right, darkgray, dimgray);
+}
+
+@media (prefers-color-scheme: dark) {
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: linear-gradient(to right, #333333, #555555);
+		border: none;
+		border-left: 1px solid black;
+		box-shadow: var(--BUTTON-SHADOW) inset;
+	}
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: linear-gradient(to right, slategray, darkslategray);
+		border: 1px solid black;
+		border-radius: var(--BUTTON-BORDER-RADIUS);
+		box-shadow: var(--BUTTON-SHADOW);
+	}
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:active {
+		background: linear-gradient(to right, #555555, darkslategray);
+	}
 }
 
 header {
@@ -474,7 +542,6 @@ header h1, header h1 a {
 	color: var(--OVERLAY-FG-COLOR);
 	background: var(--OVERLAY-BG-COLOR);
 	border: var(--OVERLAY-BORDER);
-	border-radius: var(--OVERLAY-BORDER-RADIUS);
 	box-shadow: var(--OVERLAY-SHADOW);
 }
 .overlayWindowContent {
@@ -490,7 +557,6 @@ header h1, header h1 a {
 	color: var(--OVERLAY-CONTENT-FG-COLOR);
 	background: var(--OVERLAY-CONTENT-BG-COLOR);
 	border: var(--OVERLAY-BORDER);
-	border-radius: var(--OVERLAY-BORDER-RADIUS);
 	box-shadow: var(--OVERLAY-CONTENT-SHADOW);
 }
 .overlayWindowContent h2, .overlayWindowContent p {
