@@ -3,6 +3,7 @@ var overlayWindowOpenSectionId;
 
 function initialise() {
 	this.setHeader();
+	this.setFooter();
 }
 
 function setHeader() {
@@ -16,6 +17,17 @@ function setHeader() {
 		</ul>
 		`
 		+ currentContent;
+}
+
+function setFooter() {
+	document.querySelector('footer').innerHTML = `
+		<p>
+			<a class="button button-type" href="#top">Back to top</a>
+		</p>
+		<p>
+			<small>&copy; 2020 Clarence Siew</small>
+		</p>
+		`
 }
 
 function overlayWindowOpen(divId) {
