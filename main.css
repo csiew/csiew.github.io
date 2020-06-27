@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 :root {
-	--HEADER-FONT-FAMILY: Overpass, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	--CONTENT-FONT-FAMILY: Overpass, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	--HEADER-FONT-FAMILY: 'Open Sans', Helvetica, Arial, sans-serif;
+	--CONTENT-FONT-FAMILY: 'Open Sans', Helvetica, Arial, sans-serif;
 
 	--MAX-WIDTH: 960px;
 	--SECTION-MAX-WIDTH: 340px;
@@ -12,7 +12,7 @@
 	--SECONDARY-COLOR: gray;
 	--LINK-COLOR: royalblue;
 	--LINK-COLOR-ACTIVE: steelblue;
-	--BACKGROUND-COLOR: linear-gradient(to bottom left, darkgray, aliceblue, beige, dimgray);
+	--BACKGROUND-COLOR: lightgray;
 	--SECONDARY-BACKGROUND-COLOR: none;
 	--SHADOW: 0px 4px 8px rgba(0,0,0,0.125);
 
@@ -58,6 +58,17 @@
 	--BUTTON-BORDER-ACTIVE: 1px solid gray;
 	--BUTTON-BORDER-RADIUS: 5px;
 	--BUTTON-SHADOW: 0px 2px 2px rgba(0,0,0,0.5);
+	--BUTTON-TEXT-SHADOW: 0px 2px 2px rgba(0,0,0,0.125);
+
+	--BUTTON-FEATURE-FG-COLOR: white;
+	--BUTTON-FEATURE-FG-COLOR-HOVER: white;
+	--BUTTON-FEATURE-FG-COLOR-ACTIVE: white;
+	--BUTTON-FEATURE-BG-COLOR: linear-gradient(to bottom, cornflowerblue, royalblue);
+	--BUTTON-FEATURE-BG-COLOR-HOVER: linear-gradient(to bottom, lightsteelblue, royalblue);
+	--BUTTON-FEATURE-BG-COLOR-ACTIVE: linear-gradient(to bottom, dodgerblue, royalblue);
+	--BUTTON-FEATURE-BORDER: 1px solid royalblue;
+	--BUTTON-FEATURE-BORDER-HOVER: 1px solid royalblue;
+	--BUTTON-FEATURE-BORDER-ACTIVE: 1px solid darkblue;
 }
 @media (prefers-color-scheme: dark) {
 	:root {
@@ -65,7 +76,7 @@
 		--SECONDARY-COLOR: lightgray;
 		--LINK-COLOR: deepskyblue;
 		--LINK-COLOR-ACTIVE: skyblue;
-		--BACKGROUND-COLOR: linear-gradient(to bottom left, black, #333333, black);
+		--BACKGROUND-COLOR: #333333;
 		--SECONDARY-BACKGROUND-COLOR: none;
 		--SHADOW: 0px 4px 8px rgba(0,0,0,0.25);
 	
@@ -111,6 +122,7 @@
 		--BUTTON-BORDER-ACTIVE: 1px solid black;
 		--BUTTON-BORDER-RADIUS: 5px;
 		--BUTTON-SHADOW: 0px 2px 2px rgba(0,0,0,0.5);
+		--BUTTON-TEXT-SHADOW: 0px 2px 2px rgba(0,0,0,0.25);
 	}
 }
 
@@ -130,7 +142,7 @@ html, body {
 	color: var(--PRIMARY-COLOR);
 	border: 0;
 	font-family: var(--CONTENT-FONT-FAMILY);
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
@@ -188,6 +200,41 @@ hr {
 	border-bottom: var(--BORDER-HR);
 }
 
+.vstack {
+	display: flex;
+	flex-flow: column;
+	box-sizing: border-box;
+}
+.hstack {
+	display: flex;
+	flex-flow: row wrap;
+	box-sizing: border-box;
+	width: 100%;
+}
+.justify-between { justify-content: space-between; }
+.justify-start {
+	justify-content: flex-start;
+	text-align: left;
+}
+.justify-center {
+	justify-content: center;
+	text-align: center;
+}
+.justify-end {
+	justify-content: flex-end;
+	text-align: right;
+}
+.align-between { align-self: space-between; }
+.align-start { align-self: flex-start; }
+.align-center { align-self: center; }
+.align-end { align-self: flex-end; }
+.width-limit-256 { max-width: 256px; }
+.width-limit-512 { max-width: 512px; }
+
+.img-circular {
+	border-radius: 100%;
+}
+
 dl {
 	margin: 0;
 	padding: 0;
@@ -221,7 +268,7 @@ dd h3, dd h4 {
 
 /* width */
 ::-webkit-scrollbar {
-	width: 18px;
+	width: 16px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
@@ -317,7 +364,6 @@ footer {
 	max-width: var(--MAX-WIDTH);
 	width: 100%;
 	margin: auto;
-	margin-bottom: 32px;
 	padding: 16px;
 	box-sizing: border-box;
 	color: var(--SECTION-FG-COLOR);
@@ -325,7 +371,9 @@ footer {
 	border-width: var(--SECTION-BORDER-WIDTH);
 	border-style: var(--SECTION-BORDER-STYLE);
 	border-color: var(--SECTION-BORDER-COLOR);
-	border-radius: var(--BORDER-RADIUS);
+	border-bottom: none;
+	border-top-left-radius: var(--BORDER-RADIUS);
+	border-top-right-radius: var(--BORDER-RADIUS);
 	box-shadow: var(--SECTION-SHADOW);
 }
 footer p {
@@ -375,8 +423,8 @@ footer p small {
 	margin: auto;
 	padding: 0;
 	text-align: center;
-	font-size: 250%;
-	font-weight: bold;
+	font-size: 360%;
+	font-weight: 300;
 }
 .container-content {
 	display: flex;
@@ -497,13 +545,29 @@ footer p small {
 	color: var(--BUTTON-FG-COLOR-HOVER);
 	background: var(--BUTTON-BG-COLOR-HOVER);
 	border: var(--BUTTON-BORDER-HOVER);
-	box-shadow: var(--BUTTON-SHADOW);
+	text-shadow: var(--BUTTON-TEXT-SHADOW);
 }
 .button:active {
 	color: var(--BUTTON-FG-COLOR-ACTIVE);
 	background: var(--BUTTON-BG-COLOR-ACTIVE);
 	border: var(--BUTTON-BORDER-ACTIVE);
 	box-shadow: var(--BUTTON-SHADOW) inset;
+}
+.button-feature {
+	color: var(--BUTTON-FEATURE-FG-COLOR);
+	background: var(--BUTTON-FEATURE-BG-COLOR);
+	border: var(--BUTTON-FEATURE-BORDER);
+	text-shadow: var(--BUTTON-TEXT-SHADOW);
+}
+.button-feature:hover {
+	color: var(--BUTTON-FEATURE-FG-COLOR-HOVER);
+	background: var(--BUTTON-FEATURE-BG-COLOR-HOVER);
+	border: var(--BUTTON-FEATURE-BORDER-HOVER);
+}
+.button-feature:active {
+	color: var(--BUTTON-FEATURE-FG-COLOR-ACTIVE);
+	background: var(--BUTTON-FEATURE-BG-COLOR-ACTIVE);
+	border: var(--BUTTON-FEATURE-BORDER-ACTIVE);
 }
 .button a {
 	text-decoration: none;
@@ -513,6 +577,9 @@ footer p small {
 	padding: 8px;
 	padding-left: 16px;
 	padding-right: 16px;
+}
+.button-p {
+	margin-top: 16px;
 }
 
 .overlayWindowContainer {
