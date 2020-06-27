@@ -64,7 +64,7 @@
 	--BUTTON-FEATURE-FG-COLOR-HOVER: white;
 	--BUTTON-FEATURE-FG-COLOR-ACTIVE: white;
 	--BUTTON-FEATURE-BG-COLOR: linear-gradient(to bottom, cornflowerblue, royalblue);
-	--BUTTON-FEATURE-BG-COLOR-HOVER: linear-gradient(to bottom, lightsteelblue, royalblue);
+	--BUTTON-FEATURE-BG-COLOR-HOVER: linear-gradient(to bottom, lightsteelblue, cornflowerblue, royalblue);
 	--BUTTON-FEATURE-BG-COLOR-ACTIVE: linear-gradient(to bottom, dodgerblue, royalblue);
 	--BUTTON-FEATURE-BORDER: 1px solid royalblue;
 	--BUTTON-FEATURE-BORDER-HOVER: 1px solid royalblue;
