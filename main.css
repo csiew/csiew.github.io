@@ -596,6 +596,33 @@ footer p small {
 	margin-top: 16px;
 }
 
+.button-list {
+	list-style: none;
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0;
+	margin-bottom: 24px;
+	padding: 0;
+	padding-top: 16px;
+}
+.button-list li {
+	display: inline;
+	margin: 0;
+	margin-right: 8px;
+	padding: 0;
+}
+.button-list li:last-child {
+	margin-right: 0;
+}
+@media only screen and (max-width: 960px) {
+	.button-list li {
+		margin-bottom: 24px;
+	}
+	.button-list li:last-child {
+		margin-bottom: 0;
+	}
+}
+
 .overlayWindowContainer {
 	position: fixed;
 	z-index: 100;
@@ -711,6 +738,8 @@ footer p small {
 
 	dd {
 		padding: 16px;
+		padding-left: 24px;
+		padding-right: 24px;
 	}
 
 	header {
@@ -752,6 +781,9 @@ footer p small {
 	.playlists-list dd {
 		min-height: none !important;
 		height: auto !important;
+	}
+	.playlists-list dd a {
+		min-width: 82px;
 	}
 }
 @media only screen and (max-width: 480px) {
