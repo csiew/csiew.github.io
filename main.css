@@ -518,6 +518,30 @@ footer p small {
 	cursor: pointer;
 }
 
+.projects-techstack {
+	list-style: none;
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0;
+	margin-bottom: 16px;
+	padding: 0;
+}
+.projects-techstack li {
+	display: inline-block;
+	margin: 0;
+	margin-right: 4px;
+	padding: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	color: white;
+	background: green;
+	border-radius: var(--BUTTON-BORDER-RADIUS);
+	font-size: 80%;
+}
+.projects-techstack li:last-child {
+	margin-right: 0;
+}
+
 .playlists-list dl {
 	display: flex;
 	flex-flow: row wrap;
