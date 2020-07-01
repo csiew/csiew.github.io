@@ -26,26 +26,11 @@
 					<p>
 						Click on a project to learn more about it.
 					</p>
-					<h3>2019-Present</h3>
+					<h3>Apps</h3>
 					<dl>
-						<dd class="button" onclick="javascript:overlayWindowOpen('hoddle')">
-							<h4>Hoddle</h4>
-							<p>Window manager as a web frontend library</p>
-						</dd>
-						<dd class="button" onclick="javascript:overlayWindowOpen('fyp')">
-							<h4>Final Year Project</h4>
-							<p>University project that involved building an evacuation tracker system for institutions.</p>
-						</dd>
-					</dl>
-					<h3>2017-2019</h3>
-					<dl>
-						<dd class="button" onclick="javascript:overlayWindowOpen('md2magic')">
-							<h4>md2magic</h4>
-							<p>Turn markdown files into websites.</p>
-						</dd>
-						<dd class="button" onclick="javascript:overlayWindowOpen('hallway')">
-							<h4>Hallway</h4>
-							<p>Rudimentary text adventure game engine.</p>
+						<dd class="button" onclick="javascript:overlayWindowOpen('recipebook')">
+							<h4>Recipe Book</h4>
+							<p>A recipe scrapbook app written in Swift with the SwiftUI framework for iOS.</p>
 						</dd>
 						<dd class="button" onclick="javascript:overlayWindowOpen('transitsafe')">
 							<h4>TransitSafe</h4>
@@ -55,24 +40,42 @@
 							<h4>SoundFace</h4>
 							<p>A neat little app that uses facial expressions to recommend music.</p>
 						</dd>
-						<dd class="button" onclick="javascript:overlayWindowOpen('webitor')">
-							<h4>Webitor</h4>
-							<p>An early experiment with local storage on browsers for use with simple text editing.</p>
+					</dl>
+					<h3>Web</h3>
+					<dl>
+						<dd class="button">
+							<h4>Lemonade</h4>
+							<p>TBA (makes use of Node/Express for the backend service, and uses Node/EJS for a custom frontend)</p>
 						</dd>
-						<dd class="button" onclick="javascript:overlayWindowOpen('hearye')">
-							<h4>Hear Ye</h4>
-							<p>Why not have the latest news headlines be read to you?</p>
+						<dd class="button" onclick="javascript:overlayWindowOpen('hoddle')">
+							<h4>Hoddle</h4>
+							<p>Window manager as a web frontend library</p>
+						</dd>
+						<dd class="button" onclick="javascript:overlayWindowOpen('md2magic')">
+							<h4>md2magic</h4>
+							<p>Rudimentary static site generator written in Python.</p>
+						</dd>
+					</dl>
+					<h3>Linux</h3>
+					<dl>
+						<dd class="button" onclick="javascript:overlayWindowOpen('x11-wms')">
+							<h4>BiscuitWM and TSPWM</h4>
+							<p>Both window managers are based on TinyWM (BiscuitWM is based on the Python version while TSPWM is a C++ port of the original C version). I'm doing these window manager projects as a way of refreshing my Python skills, learning C++, and understanding how the X11 libraries work in Linux.</p>
 						</dd>
 						<dd class="button" onclick="javascript:overlayWindowOpen('antorca-linux')">
 							<h4>Antorca Linux</h4>
 							<p>A Linux distribution that strove to provide the <i>best performing</i> out-of-the-box experience.</p>
 						</dd>
-					</dl>
-					<h3>2008-2017</h3>
-					<dl>
 						<dd class="button" onclick="javascript:overlayWindowOpen('illume-os')">
 							<h4>illume OS</h4>
 							<p>A Linux distribution that strove to provide the <i>lightest</i> out-of-the-box experience.</p>
+						</dd>
+					</dl>
+					<h3>Misc</h3>
+					<dl>
+						<dd class="button" onclick="javascript:overlayWindowOpen('fyp')">
+							<h4>Final Year Project</h4>
+							<p>University project that involved building an evacuation tracker system for institutions.</p>
 						</dd>
 						<dd class="button" onclick="javascript:overlayWindowOpen('forward')">
 							<h4>Forward</h4>
@@ -89,6 +92,21 @@
 			<div id="overlayWindowHeader" class="overlayWindowHeader">
 				<a class="overlayWindowClose button" href="javascript:overlayWindowClose()">&times;</a>
 				<div id="overlayWindowHeaderTitle" class="overlayWindowHeaderTitle">Project Details</div>
+			</div>
+			<div id="overlayWindow-recipebook" class="overlayWindowContent">
+				<h2><a href='https://github.com/csiew/RecipeBook'>Recipe Book</a> <small>2020</small></h2>
+				<p>
+					An iOS app that lets you create and keep recipes. It has some nifty features like recipe duration estimation (based on durations mentioned in recipe directions) and dark/light theme toggling. It's written in Swift and uses the SwiftUI framework.
+				</p>
+			</div>
+			<div id="overlayWindow-x11-wms" class="overlayWindowContent">
+				<h2><a href='https://github.com/csiew/BiscuitWM'>BiscuitWM</a> and <a href='https://github.com/csiew/TSPWM'>TSPWM</a> <small>2020</small></h2>
+				<p>
+					Both window managers are based on <a href="https://github.com/mackstann/tinywm">TinyWM</a> (BiscuitWM is based on the Python version while TSPWM is a C++ port of the original C version). I'm doing these window manager projects as a way of refreshing my Python skills, learning C++, and understanding how the X11 libraries work in Linux.
+				</p>
+				<p>
+					I'm hoping to get either one of these working well enough and reaching a point of usability good enough to use it on my Raspberry Pi.
+				</p>
 			</div>
 			<div id="overlayWindow-hoddle" class="overlayWindowContent">
 				<h2><a href='https://github.com/csiew/Hoddle'>Hoddle</a> <small>2020</small></h2>
@@ -109,8 +127,10 @@
 				</p>
 			</div>
 			<div id="overlayWindow-md2magic" class="overlayWindowContent">
-				<h2><a href='https://github.com/csiew/md2magic'>md2magic</a> <small>2018</small></h2>
-				<p>Generate websites from markup files.</p>
+				<h2><a href='https://github.com/csiew/md2magic'>md2magic</a> <small>2018, 2020</small></h2>
+				<p>
+					md2magic allows you to generate a site from markdown files. Its ideal use case is for blogs. The current version is extremely rudimentary and lacks proper organisation (by date) for posts. A rewrite of md2magic seeks to resolve this along with some other missing features.
+				</p>
 			</div>
 			<div id="overlayWindow-hallway" class="overlayWindowContent">
 				<h2><a href='https://github.com/csiew/Hallway'>Hallway</a> <small>2018</small></h2>
