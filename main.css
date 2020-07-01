@@ -523,13 +523,14 @@ footer p small {
 	display: flex;
 	flex-flow: row wrap;
 	margin: 0;
-	margin-bottom: 16px;
+	margin-bottom: 12px;
 	padding: 0;
 }
 .projects-techstack li {
 	display: inline-block;
 	margin: 0;
 	margin-right: 4px;
+	margin-bottom: 4px;
 	padding: 4px;
 	padding-left: 8px;
 	padding-right: 8px;
