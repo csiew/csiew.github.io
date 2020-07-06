@@ -11,6 +11,7 @@ function setHeader() {
 	document.querySelector('header').innerHTML = `
 		<h1><a href='index.html'>Clarence Siew</a></h1>
 		<ul>
+			<a class='button' href='https://csiew.github.io/blog'><li>Blog</li></a>
 			<a class='button' href='projects.html'><li>Projects</li></a>
 			<a class='button' href='places.html'><li>Places</li></a>
 			<a class='button' href='playlists.html'><li>Playlists</li></a>
