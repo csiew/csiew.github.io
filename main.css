@@ -664,7 +664,7 @@ footer p small {
 	justify-content: space-between;
 	width: 100%;
 	margin: 0;
-	padding: 4px;
+	padding: 8px !important;
 	box-sizing: border-box;
 	background: var(--OVERLAY-HEADER-BG-COLOR);
 	border-bottom: var(--HEADER-BORDER);
@@ -675,19 +675,9 @@ footer p small {
 .overlayWindowHeaderGroup {
 	margin: 0;
 	padding: 0;
-	padding-top: 8px;
-	padding-bottom: 8px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 	box-sizing: border-box;
-}
-.overlayWindowHeaderTitle {
-	align-content: center;
-	margin: auto;
-	padding: 4px;
-	color: var(--OVERLAY-HEADER-FG-COLOR);
-	text-align: center;
-	text-transform: uppercase;
-	font-size: 12px;
-	font-weight: normal;
 }
 .overlayWindowContentContainer {
 	display: flex;
@@ -742,13 +732,14 @@ footer p small {
 	justify-content: center;
 	min-width: 16px;
 	margin: 0;
-	padding: 8px;
+	padding: 8px !important;
 	padding-left: 14px;
 	padding-right: 14px;
 	box-sizing: border-box;
 	text-decoration: none;
 	text-align: center;
 }
+
 .overlayWindowClose {
 	color: var(--BUTTON-CLOSE-FG-COLOR);
 	background: var(--BUTTON-CLOSE-BG-COLOR);
@@ -763,6 +754,7 @@ footer p small {
 	color: var(--BUTTON-CLOSE-FG-COLOR-ACTIVE);
 	background: var(--BUTTON-CLOSE-BG-COLOR-ACTIVE);
 }
+
 .overlayWindowLinkButton {
 	color: var(--BUTTON-OVERLAY-LINK-FG-COLOR);
 	background: var(--BUTTON-OVERLAY-LINK-BG-COLOR);
@@ -780,6 +772,7 @@ footer p small {
 	color: var(--BUTTON-OVERLAY-LINK-FG-COLOR-ACTIVE);
 	background: var(--BUTTON-OVERLAY-LINK-BG-COLOR-ACTIVE);
 }
+
 .disabledButton, .disabledButton:hover, .disabledButton:active {
 	color: var(--BUTTON-DISABLED-FG-COLOR);
 	background: var(--BUTTON-DISABLED-BG-COLOR);
