@@ -34,15 +34,15 @@
 	--SECTION-BORDER-COLOR-ACTIVE: none;
 	--SECTION-SHADOW: 0px 2px 0px rgba(0,0,0,0.25);
 
-	--SECTION-CONTENT-BG-COLOR: whitesmoke;
+	--SECTION-CONTENT-BG-COLOR: white;
 	--SECTION-CONTENT-BORDER-COLOR: lightgray;
 	--SECTION-CONTENT-SHADOW: none;
 
 	--BUTTON-FG-COLOR: var(--PRIMARY-COLOR);
 	--BUTTON-FG-COLOR-HOVER: var(--PRIMARY-COLOR);
 	--BUTTON-FG-COLOR-ACTIVE: var(--PRIMARY-COLOR);
-	--BUTTON-BG-COLOR: white;
-	--BUTTON-BG-COLOR-HOVER: whitesmoke;
+	--BUTTON-BG-COLOR: whitesmoke;
+	--BUTTON-BG-COLOR-HOVER: gainsboro;
 	--BUTTON-BG-COLOR-ACTIVE: darkgray;
 	--BUTTON-BORDER: 1px solid darkgray;
 	--BUTTON-BORDER-HOVER: 1px solid darkgray;
@@ -726,15 +726,14 @@ footer p small {
 	color: var(--SECONDARY-COLOR);
 }
 
-.overlayWindowHeaderButton {
+.overlayWindowHeader .button {
 	align-self: center;
 	align-content: center;
 	justify-content: center;
-	min-width: 16px;
 	margin: 0;
 	padding: 8px !important;
-	padding-left: 14px;
-	padding-right: 14px;
+	padding-left: 14px !important;
+	padding-right: 14px !important;
 	box-sizing: border-box;
 	text-decoration: none;
 	text-align: center;

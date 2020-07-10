@@ -1,7 +1,7 @@
 const collapsableSections = ['projects-list', 'places-list'];
-const overlayWindowLinkButtonClasses = "overlayWindowHeaderButton overlayWindowLinkButton button";
-const overlayWindowCloseButtonClasses = "overlayWindowHeaderButton overlayWindowClose button";
-const overlayWindowHeaderButtonDisabledClasses = "overlayWindowHeaderButton disabledButton button";
+const overlayWindowLinkButtonClasses = "overlayWindowLinkButton button";
+const overlayWindowCloseButtonClasses = "overlayWindowClose button";
+const overlayWindowHeaderButtonDisabledClasses = "disabledButton button";
 var overlayWindowOpenSectionId;
 
 function initialise() {
