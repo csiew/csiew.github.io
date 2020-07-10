@@ -47,7 +47,11 @@ function setElementDisplay(id, displayType) {
 }
 
 function setElementHref(id, url='#') {
-	document.getElementById(id).href = url;
+	if (url !== '#') {
+		document.getElementById(id).href = url;
+	} else {
+		document.getElementById(id).removeAttribute("href");
+	}
 }
 
 function setElementClass(id, classString) {
