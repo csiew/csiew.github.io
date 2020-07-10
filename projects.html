@@ -170,11 +170,13 @@
 	<div id="overlayWindowContainer" class="overlayWindowContainer">
 		<div id="overlayWindowContentContainer" class="overlayWindowContentContainer">
 			<div id="overlayWindowHeader" class="overlayWindowHeader">
-				<div>
-					<a id="projectWebsiteLinkButton" class="overlayWindowLinkButton button" href="javascript:openLink(projectWebsiteUrl)">Visit website</a>
-					<a id="projectRepoLinkButton" class="overlayWindowLinkButton button" href="javascript:openLink(projectRepoUrl)">Repository</a>
+				<div class="overlayWindowHeaderGroup">
+					<a id="projectWebsiteLinkButton" class="overlayWindowHeaderButton overlayWindowLinkButton button" href="javascript:openLink(projectWebsiteUrl)">Visit website</a>
+					<a id="projectRepoLinkButton" class="overlayWindowHeaderButton overlayWindowLinkButton button" href="javascript:openLink(projectRepoUrl)">Repository</a>
 				</div>
-				<a class="overlayWindowClose button" href="javascript:overlayWindowClose()">&times; Close</a>
+				<div class="overlayWindowHeaderGroup">
+					<a class="overlayWindowHeaderButton overlayWindowClose button" href="javascript:overlayWindowClose()">&times; Close</a>
+				</div>
 			</div>
 			<div id="overlayWindow-recipebook" class="overlayWindowContent">
 				<h2><a href='https://github.com/csiew/RecipeBook'>Recipe Book</a> <small>2020</small></h2>

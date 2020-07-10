@@ -1,4 +1,7 @@
 const collapsableSections = ['projects-list', 'places-list'];
+const overlayWindowLinkButtonClasses = "overlayWindowHeaderButton overlayWindowLinkButton button";
+const overlayWindowCloseButtonClasses = "overlayWindowHeaderButton overlayWindowClose button";
+const overlayWindowHeaderButtonDisabledClasses = "overlayWindowHeaderButton disabledButton button";
 var overlayWindowOpenSectionId;
 
 function initialise() {
@@ -43,11 +46,15 @@ function setElementDisplay(id, displayType) {
 	document.getElementById(id).style.display = displayType;
 }
 
-function setElementHref(id, url) {
+function setElementHref(id, url='#') {
 	document.getElementById(id).href = url;
 }
 
-function overlayWindowOpen(divId, websiteUrl=null, repoUrl=null) {
+function setElementClass(id, classString) {
+	document.getElementById(id).className = classString;
+}
+
+function overlayWindowOpen(divId, websiteUrl='#', repoUrl='#') {
 	document.body.style.overflow = 'hidden';
 	setElementVisibility('overlayWindowContainer', true);
 	setElementVisibility('overlayWindow-' + divId, true);
@@ -55,23 +62,22 @@ function overlayWindowOpen(divId, websiteUrl=null, repoUrl=null) {
 	setElementDisplay('overlayWindow-' + divId, 'flex');
 	overlayWindowOpenSectionId = divId;
 
-	if (websiteUrl == null) {
-		setElementVisibility('projectWebsiteLinkButton', false);
-		setElementDisplay('projectWebsiteLinkButton', 'none');
+	var websiteButtonClass, repoButtonClass;
+	if (websiteUrl === '#') {
+		websiteButtonClass = overlayWindowHeaderButtonDisabledClasses;
 	} else {
-		setElementVisibility('projectWebsiteLinkButton', true);
-		setElementDisplay('projectWebsiteLinkButton', 'inline-block');
-		setElementHref('projectWebsiteLinkButton', websiteUrl);
+		websiteButtonClass = overlayWindowLinkButtonClasses;
 	}
+	setElementClass('projectWebsiteLinkButton', websiteButtonClass);
+	setElementHref('projectWebsiteLinkButton', websiteUrl);
 
-	if (repoUrl == null) {
-		setElementVisibility('projectRepoLinkButton', false);
-		setElementDisplay('projectRepoLinkButton', 'none');
+	if (repoUrl === '#') {
+		repoButtonClass = overlayWindowHeaderButtonDisabledClasses;
 	} else {
-		setElementVisibility('projectRepoLinkButton', true);
-		setElementDisplay('projectRepoLinkButton', 'inline-block');
-		setElementHref('projectRepoLinkButton', repoUrl);
+		repoButtonClass = overlayWindowLinkButtonClasses;
 	}
+	setElementClass('projectRepoLinkButton', repoButtonClass);
+	setElementHref('projectRepoLinkButton', repoUrl);
 }
 
 function overlayWindowClose() {

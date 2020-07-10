@@ -77,6 +77,10 @@
 	--BUTTON-OVERLAY-LINK-BG-COLOR-ACTIVE: darkgreen;
 	--BUTTON-OVERLAY-LINK-BORDER: 1px solid darkgreen;
 
+	--BUTTON-DISABLED-FG-COLOR: dimgray;
+	--BUTTON-DISABLED-BG-COLOR: darkgray;
+	--BUTTON-DISABLED-BORDER: 1px solid gray;
+
 	--OVERLAY-CONTAINER-BG-COLOR: rgba(0,0,0,0.75);
 	--OVERLAY-FG-COLOR: var(--PRIMARY-COLOR);
 	--OVERLAY-BG-COLOR: var(--BACKGROUND-COLOR);
@@ -668,6 +672,13 @@ footer p small {
 	border-top-right-radius: var(--OVERLAY-BORDER-RADIUS);
 	box-shadow: var(--OVERLAY-HEADER-SHADOW);
 }
+.overlayWindowHeaderGroup {
+	margin: 0;
+	padding: 0;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	box-sizing: border-box;
+}
 .overlayWindowHeaderTitle {
 	align-content: center;
 	margin: auto;
@@ -725,20 +736,23 @@ footer p small {
 	color: var(--SECONDARY-COLOR);
 }
 
-.overlayWindowClose {
+.overlayWindowHeaderButton {
 	align-self: center;
 	align-content: center;
 	justify-content: center;
 	min-width: 16px;
 	margin: 0;
-	padding: 4px;
+	padding: 8px;
 	padding-left: 14px;
 	padding-right: 14px;
+	box-sizing: border-box;
+	text-decoration: none;
+	text-align: center;
+}
+.overlayWindowClose {
 	color: var(--BUTTON-CLOSE-FG-COLOR);
 	background: var(--BUTTON-CLOSE-BG-COLOR);
 	border: var(--BUTTON-CLOSE-BORDER);
-	text-decoration: none;
-	text-align: center;
 }
 .overlayWindowClose:hover {
 	color: var(--BUTTON-CLOSE-FG-COLOR-HOVER);
@@ -750,20 +764,9 @@ footer p small {
 	background: var(--BUTTON-CLOSE-BG-COLOR-ACTIVE);
 }
 .overlayWindowLinkButton {
-	align-self: center;
-	align-content: center;
-	justify-content: center;
-	min-width: 16px;
-	margin: 0;
-	margin-right: 2px;
-	padding: 4px;
-	padding-left: 14px;
-	padding-right: 14px;
 	color: var(--BUTTON-OVERLAY-LINK-FG-COLOR);
 	background: var(--BUTTON-OVERLAY-LINK-BG-COLOR);
 	border: var(--BUTTON-OVERLAY-LINK-BORDER);
-	text-decoration: none;
-	text-align: center;
 }
 .overlayWindowLinkButton:last-child {
 	margin-right: 0;
@@ -776,6 +779,12 @@ footer p small {
 .overlayWindowLinkButton:active {
 	color: var(--BUTTON-OVERLAY-LINK-FG-COLOR-ACTIVE);
 	background: var(--BUTTON-OVERLAY-LINK-BG-COLOR-ACTIVE);
+}
+.disabledButton, .disabledButton:hover, .disabledButton:active {
+	color: var(--BUTTON-DISABLED-FG-COLOR);
+	background: var(--BUTTON-DISABLED-BG-COLOR);
+	border: var(--BUTTON-DISABLED-BORDER);
+	box-shadow: none;
 }
 
 @media only screen and (max-width: 960px) {
