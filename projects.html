@@ -28,7 +28,11 @@
 					</p>
 					<h3>Apps</h3>
 					<dl>
-						<dd class="button" onclick="javascript:overlayWindowOpen('recipebook')">
+						<dd class="button" onclick="javascript:overlayWindowOpen(
+							divId='recipebook',
+							websiteUrl=null,
+							repoUrl='https://github.com/csiew/RecipeBook'
+						)">
 							<h4>Recipe Book</h4>
 							<ul class="projects-techstack">
 								<li>Swift</li>
@@ -45,7 +49,10 @@
 							</ul>
 							<p>A service for posting public transport related incident reports.</p>
 						</dd>
-						<dd class="button" onclick="javascript:overlayWindowOpen('soundface')">
+						<dd class="button" onclick="javascript:overlayWindowOpen(
+							divId='soundface',
+							websiteUrl='https://devpost.com/software/sound-face'
+						)">
 							<h4>SoundFace</h4>
 							<ul class="projects-techstack">
 								<li>Node</li>
@@ -68,14 +75,22 @@
 							</ul>
 							<p>TBA (makes use of Node/Express for the backend service, and uses Node/Express/EJS for a custom frontend)</p>
 						</dd>
-						<dd class="button" onclick="javascript:overlayWindowOpen('hoddle')">
+						<dd class="button" onclick="javascript:overlayWindowOpen(
+							divId='hoddle',
+							websiteUrl='https://csiew.github.io/Hoddle',
+							repoUrl='https://github.com/csiew/Hoddle'
+						)">
 							<h4>Hoddle</h4>
 							<ul class="projects-techstack">
 								<li>JavaScript</li>
 							</ul>
 							<p>Window manager as a web frontend library</p>
 						</dd>
-						<dd class="button" onclick="javascript:overlayWindowOpen('md2magic')">
+						<dd class="button" onclick="javascript:overlayWindowOpen(
+							divId='md2magic',
+							websiteUrl=null,
+							repoUrl='https://github.com/csiew/md2magic'
+						)">
 							<h4>md2magic</h4>
 							<ul class="projects-techstack">
 								<li>Python</li>
@@ -85,7 +100,11 @@
 					</dl>
 					<h3>Linux</h3>
 					<dl>
-						<dd class="button" onclick="javascript:overlayWindowOpen('x11-wms')">
+						<dd class="button" onclick="javascript:overlayWindowOpen(
+								divId='x11-wms',
+								websiteUrl='https://csiew.github.io/BiscuitWM',
+								repoUrl='https://github.com/csiew/BiscuitWM'
+							)">
 							<h4>BiscuitWM and TSPWM</h4>
 							<ul class="projects-techstack">
 								<li>Python</li>
@@ -95,7 +114,11 @@
 							</ul>
 							<p>Both window managers are based on TinyWM (BiscuitWM is based on the Python version while TSPWM is a C++ port of the original C version). I'm doing these window manager projects as a way of refreshing my Python skills, learning C++, and understanding how the X11 libraries work in Linux.</p>
 						</dd>
-						<dd class="button" onclick="javascript:overlayWindowOpen('antorca-linux')">
+						<dd class="button" onclick="javascript:overlayWindowOpen(
+							divId='antorca-linux',
+							websiteUrl='https://antorca.github.io/linux',
+							repoUrl='https://github.com/antorca'
+						)">
 							<h4>Antorca Linux</h4>
 							<ul class="projects-techstack">
 								<li>Python</li>
@@ -104,7 +127,10 @@
 							</ul>
 							<p>A Linux distribution that strove to provide the <i>best performing</i> out-of-the-box experience.</p>
 						</dd>
-						<dd class="button" onclick="javascript:overlayWindowOpen('illume-os')">
+						<dd class="button" onclick="javascript:overlayWindowOpen(
+							divId='illume-os',
+							websiteUrl='https://illume-os.firebaseapp.com/'
+						)">
 							<h4>illume OS</h4>
 							<ul class="projects-techstack">
 								<li>Python</li>
@@ -142,11 +168,14 @@
 	</div>
 	<footer></footer>
 	<div id="overlayWindowContainer" class="overlayWindowContainer">
-		<div id="overlayWindowHeader" class="overlayWindowHeader">
-			<div id="overlayWindowHeaderTitle" class="overlayWindowHeaderTitle">Project Details</div>
-			<a class="overlayWindowClose button" href="javascript:overlayWindowClose()">&times; Close</a>
-		</div>
 		<div id="overlayWindowContentContainer" class="overlayWindowContentContainer">
+			<div id="overlayWindowHeader" class="overlayWindowHeader">
+				<div>
+					<a id="projectWebsiteLinkButton" class="overlayWindowLinkButton button" href="javascript:openLink(projectWebsiteUrl)">Visit website</a>
+					<a id="projectRepoLinkButton" class="overlayWindowLinkButton button" href="javascript:openLink(projectRepoUrl)">Repository</a>
+				</div>
+				<a class="overlayWindowClose button" href="javascript:overlayWindowClose()">&times; Close</a>
+			</div>
 			<div id="overlayWindow-recipebook" class="overlayWindowContent">
 				<h2><a href='https://github.com/csiew/RecipeBook'>Recipe Book</a> <small>2020</small></h2>
 				<p>

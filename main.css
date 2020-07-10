@@ -69,15 +69,24 @@
 	--BUTTON-CLOSE-BG-COLOR-ACTIVE: darkred;
 	--BUTTON-CLOSE-BORDER: 1px solid maroon;
 
+	--BUTTON-OVERLAY-LINK-FG-COLOR: white;
+	--BUTTON-OVERLAY-LINK-FG-COLOR-HOVER: white;
+	--BUTTON-OVERLAY-LINK-FG-COLOR-ACTIVE: white;
+	--BUTTON-OVERLAY-LINK-BG-COLOR: seagreen;
+	--BUTTON-OVERLAY-LINK-BG-COLOR-HOVER: mediumseagreen;
+	--BUTTON-OVERLAY-LINK-BG-COLOR-ACTIVE: darkgreen;
+	--BUTTON-OVERLAY-LINK-BORDER: 1px solid darkgreen;
+
+	--OVERLAY-CONTAINER-BG-COLOR: rgba(0,0,0,0.75);
 	--OVERLAY-FG-COLOR: var(--PRIMARY-COLOR);
 	--OVERLAY-BG-COLOR: var(--BACKGROUND-COLOR);
 	--OVERLAY-CONTENT-FG-COLOR: var(--PRIMARY-COLOR);
-	--OVERLAY-CONTENT-BG-COLOR: var(--SECTION-CONTENT-BG-COLOR);
+	--OVERLAY-CONTENT-BG-COLOR: white;
 	--OVERLAY-HEADER-FG-COLOR: var(--PRIMARY-COLOR);
 	--OVERLAY-HEADER-BG-COLOR: var(--HEADER-BG-COLOR);
 	--OVERLAY-HEADER-SHADOW: var(--HEADER-SHADOW);
 	--OVERLAY-BORDER: none;
-	--OVERLAY-BORDER-RADIUS: 0;
+	--OVERLAY-BORDER-RADIUS: var(--BORDER-RADIUS);
 	--OVERLAY-SHADOW: none;
 	--OVERLAY-CONTENT-SHADOW: 0px 2px 4px rgba(0,0,0,0.25);
 }
@@ -637,13 +646,11 @@ footer p small {
 	display: none;
 	flex-flow: column;
 	align-self: center;
-	justify-content: flex-start;
+	justify-content: center;
 	width: 100%;
 	height: 100%;
 	box-sizing: border-box;
-	background: var(--BACKGROUND-COLOR);
-	border-top-left-radius: var(--OVERLAY-BORDER-RADIUS);
-	border-top-right-radius: var(--OVERLAY-BORDER-RADIUS);
+	background: var(--OVERLAY-CONTAINER-BG-COLOR);
 }
 .overlayWindowHeader {
 	z-index: 2;
@@ -671,6 +678,53 @@ footer p small {
 	font-size: 12px;
 	font-weight: normal;
 }
+.overlayWindowContentContainer {
+	display: flex;
+	flex-flow: column;
+	align-self: flex-start;
+	justify-self: flex-start;
+	max-width: 640px;
+	max-height: 480px;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	margin: auto;
+	padding: 0;
+	box-sizing: border-box;
+	color: var(--OVERLAY-FG-COLOR);
+	background: var(--OVERLAY-BG-COLOR);
+	border: var(--OVERLAY-BORDER);
+	border-top-left-radius: var(--OVERLAY-BORDER-RADIUS);
+	border-top-right-radius: var(--OVERLAY-BORDER-RADIUS);
+	box-shadow: var(--OVERLAY-SHADOW);
+}
+.overlayWindowContent {
+	visibility: hidden;
+	display: none;
+	flex-flow: column;
+	overflow-y: scroll;
+	width: 100%;
+	min-height: 100%;
+	margin: 0;
+	padding: 32px;
+	box-sizing: border-box;
+	color: var(--OVERLAY-CONTENT-FG-COLOR);
+	background: var(--OVERLAY-CONTENT-BG-COLOR);
+	border: var(--OVERLAY-BORDER);
+	box-shadow: var(--OVERLAY-CONTENT-SHADOW);
+}
+.overlayWindowContent p:last-child {
+	padding-bottom: 64px;
+}
+.overlayWindowContent h2, .overlayWindowContent p {
+	margin: 0;
+	margin-top: 8px !important;
+	margin-bottom: 16px !important;
+}
+.overlayWindowContent small {
+	color: var(--SECONDARY-COLOR);
+}
+
 .overlayWindowClose {
 	align-self: center;
 	align-content: center;
@@ -695,50 +749,33 @@ footer p small {
 	color: var(--BUTTON-CLOSE-FG-COLOR-ACTIVE);
 	background: var(--BUTTON-CLOSE-BG-COLOR-ACTIVE);
 }
-.overlayWindowContentContainer {
-	display: flex;
-	flex-flow: column;
-	align-self: stretch;
-	justify-self: stretch;
-	overflow-y: scroll;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	margin: auto;
-	margin-top: 0;
-	margin-bottom: 0;
-	padding: 0;
-	box-sizing: border-box;
-	color: var(--OVERLAY-FG-COLOR);
-	background: var(--OVERLAY-BG-COLOR);
-	border: var(--OVERLAY-BORDER);
-	border-top-left-radius: var(--OVERLAY-BORDER-RADIUS);
-	border-top-right-radius: var(--OVERLAY-BORDER-RADIUS);
-	box-shadow: var(--OVERLAY-SHADOW);
-}
-.overlayWindowContent {
-	visibility: hidden;
-	display: none;
-	flex-flow: column;
-	max-width: 600px;
-	width: 100%;
-	margin: auto;
-	margin-top: 48px;
-	margin-bottom: 48px;
-	padding: 32px;
-	box-sizing: border-box;
-	color: var(--OVERLAY-CONTENT-FG-COLOR);
-	background: var(--OVERLAY-CONTENT-BG-COLOR);
-	border: var(--OVERLAY-BORDER);
-	box-shadow: var(--OVERLAY-CONTENT-SHADOW);
-}
-.overlayWindowContent h2, .overlayWindowContent p {
+.overlayWindowLinkButton {
+	align-self: center;
+	align-content: center;
+	justify-content: center;
+	min-width: 16px;
 	margin: 0;
-	margin-top: 8px !important;
-	margin-bottom: 16px !important;
+	margin-right: 2px;
+	padding: 4px;
+	padding-left: 14px;
+	padding-right: 14px;
+	color: var(--BUTTON-OVERLAY-LINK-FG-COLOR);
+	background: var(--BUTTON-OVERLAY-LINK-BG-COLOR);
+	border: var(--BUTTON-OVERLAY-LINK-BORDER);
+	text-decoration: none;
+	text-align: center;
 }
-.overlayWindowContent small {
-	color: var(--SECONDARY-COLOR);
+.overlayWindowLinkButton:last-child {
+	margin-right: 0;
+}
+.overlayWindowLinkButton:hover {
+	color: var(--BUTTON-OVERLAY-LINK-FG-COLOR-HOVER);
+	background: var(--BUTTON-OVERLAY-LINK-BG-COLOR-HOVER);
+	border: var(--BUTTON-OVERLAY-LINK-BORDER);
+}
+.overlayWindowLinkButton:active {
+	color: var(--BUTTON-OVERLAY-LINK-FG-COLOR-ACTIVE);
+	background: var(--BUTTON-OVERLAY-LINK-BG-COLOR-ACTIVE);
 }
 
 @media only screen and (max-width: 960px) {

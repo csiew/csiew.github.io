@@ -31,22 +31,64 @@ function setFooter() {
 		`
 }
 
-function overlayWindowOpen(divId) {
+function setElementVisibility(id, isVisible=true) {
+	var state = 'visible';
+	if (isVisible == false) {
+		state = 'hidden';
+	}
+	document.getElementById(id).style.visibility = state;
+}
+
+function setElementDisplay(id, displayType) {
+	document.getElementById(id).style.display = displayType;
+}
+
+function setElementHref(id, url) {
+	document.getElementById(id).href = url;
+}
+
+function overlayWindowOpen(divId, websiteUrl=null, repoUrl=null) {
 	document.body.style.overflow = 'hidden';
-	document.getElementById('overlayWindowContainer').style.visibility = 'visible';
-	document.getElementById('overlayWindowContainer').style.display = 'flex';
-	document.getElementById('overlayWindow-' + divId).style.visibility = 'visible';
-	document.getElementById('overlayWindow-' + divId).style.display = 'flex';
+	setElementVisibility('overlayWindowContainer', true);
+	setElementVisibility('overlayWindow-' + divId, true);
+	setElementDisplay('overlayWindowContainer', 'flex');
+	setElementDisplay('overlayWindow-' + divId, 'flex');
 	overlayWindowOpenSectionId = divId;
+
+	if (websiteUrl == null) {
+		setElementVisibility('projectWebsiteLinkButton', false);
+		setElementDisplay('projectWebsiteLinkButton', 'none');
+	} else {
+		setElementVisibility('projectWebsiteLinkButton', true);
+		setElementDisplay('projectWebsiteLinkButton', 'inline-block');
+		setElementHref('projectWebsiteLinkButton', websiteUrl);
+	}
+
+	if (repoUrl == null) {
+		setElementVisibility('projectRepoLinkButton', false);
+		setElementDisplay('projectRepoLinkButton', 'none');
+	} else {
+		setElementVisibility('projectRepoLinkButton', true);
+		setElementDisplay('projectRepoLinkButton', 'inline-block');
+		setElementHref('projectRepoLinkButton', repoUrl);
+	}
 }
 
 function overlayWindowClose() {
 	document.body.style.overflow = 'auto';
-	document.getElementById('overlayWindowContainer').style.visibility = 'hidden';
-	document.getElementById('overlayWindowContainer').style.display = 'none';
+	setElementVisibility('overlayWindowContainer', false);
+	setElementDisplay('overlayWindowContainer', 'none');
 	if (overlayWindowOpenSectionId) {
-		document.getElementById('overlayWindow-' + overlayWindowOpenSectionId).style.visibility = 'hidden';
-		document.getElementById('overlayWindow-' + overlayWindowOpenSectionId).style.display = 'none';
+		setElementVisibility('overlayWindow-' + overlayWindowOpenSectionId, false);
+		setElementDisplay('overlayWindow-' + overlayWindowOpenSectionId, 'none');
 		overlayWindowOpenSectionId = null;
+	}
+	setElementHref('projectWebsiteLinkButton', '#');
+	setElementHref('projectRepoLinkButton', '#');
+}
+
+function openLink(url=null) {
+	if (url != null) {
+		window.location.href = url;
 	}
 }
