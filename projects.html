@@ -65,6 +65,18 @@
 					</dl>
 					<h3>Web</h3>
 					<dl>
+						<dd class="button" onclick="javascript:overlayWindowOpen(
+							divId='podzol-web'
+						)">
+							<h4>Podzol</h4>
+							<ul class="projects-techstack">
+								<li>Node</li>
+								<li>Express</li>
+								<li>EJS</li>
+								<li>PostgreSQL</li>
+							</ul>
+							<p>Podzol is the web version of my original Podzol CLI program. The Podzol Web Player is streaming-first, and allows you to easily browse your podcast library with a minimalist interface.</p>
+						</dd>
 						<dd class="button disabledButton">
 							<h4>Lemonade</h4>
 							<ul class="projects-techstack">
@@ -100,6 +112,17 @@
 					</dl>
 					<h3>Linux</h3>
 					<dl>
+						<dd class="button" onclick="javascript:overlayWindowOpen(
+								divId='podzol-cli',
+								websiteUrl=null,
+								repoUrl='https://github.com/csiew/Podzol'
+							)">
+							<h4>Podzol CLI</h4>
+							<ul class="projects-techstack">
+								<li>Python</li>
+							</ul>
+							<p>Podzol CLI is a command line podcast client that helps you keep track of your favourite podcast feeds and to stream them directly from the terminal.</p>
+						</dd>
 						<dd class="button" onclick="javascript:overlayWindowOpen(
 								divId='x11-wms',
 								websiteUrl='https://csiew.github.io/BiscuitWM',
@@ -177,6 +200,24 @@
 				<div class="overlayWindowHeaderGroup">
 					<a class="overlayWindowClose button" href="javascript:overlayWindowClose()">Close</a>
 				</div>
+			</div>
+			<div id="overlayWindow-podzol-web" class="overlayWindowContent">
+				<h2>Podzol <small>2020</small></h2>
+				<p>
+					The Podzol Web Player is a minimalist web-based podcast client. It gives users a clean, minimalist interface that prioritises ease of navigation and simple library management.
+				</p>
+				<p>
+					This project was created just shortly after the Podzol CLI program's creation and does not share any technical similarities other than that they are both streaming-first services.
+				</p>
+				<p>
+					Podzol will be launching not too far in the near future.
+				</p>
+			</div>
+			<div id="overlayWindow-podzol-cli" class="overlayWindowContent">
+				<h2><a href='https://github.com/csiew/Podzol'>Podzol CLI</a> <small>2020</small></h2>
+				<p>
+					Podzol CLI is a command line podcast client that helps you keep track of your favourite podcast feeds and to stream them directly from the terminal. It is largely written in Python and uses JSON files to store and keep track of feeds. It uses the PyGame library to handle streaming via the terminal.
+				</p>
 			</div>
 			<div id="overlayWindow-recipebook" class="overlayWindowContent">
 				<h2><a href='https://github.com/csiew/RecipeBook'>Recipe Book</a> <small>2020</small></h2>
