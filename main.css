@@ -182,7 +182,7 @@ footer {
 	display: grid;
 	gap: 16px;
 	grid-template-columns: repeat(auto-fill, 33vw);
-	grid-auto-rows: 360px;
+	grid-auto-rows: 420px;
 }
 .big-list-grid-column {
 	grid-template-columns: auto;
