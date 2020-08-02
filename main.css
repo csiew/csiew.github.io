@@ -109,12 +109,8 @@ dt:first-child { margin-top: 0; }
 .button-group .button:last-child {
 	margin-right: 0;
 }
-header .button-group .button,
-.button-group-small .button {
+header .button-group .button {
 	margin-bottom: 0;
-}
-.button-group-small {
-	flex-flow: row;
 }
 
 header {
@@ -351,13 +347,13 @@ footer {
 		grid-auto-rows: auto;
 	}
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 500px) {
 	.container {
 		padding: 0;
 	}
 	.big-list-grid {
 		gap: 32px;
-		grid-template-columns: repeat(1, 280px);
+		grid-template-columns: repeat(1, auto);
 	}
 	.button-group, .button-group-small {
 		flex-flow: column;
