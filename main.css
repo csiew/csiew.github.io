@@ -286,6 +286,7 @@ footer {
 	margin: 0;
 	padding: 16px;
 	overflow: auto;
+	font-size: 90%;
 }
 .big-list-item-body .button-group {
 	margin-top: 8px;
