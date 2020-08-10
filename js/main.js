@@ -4,13 +4,22 @@ function appInit() {
 
 function toggleElement(elementId) {
     let element = document.getElementById(elementId);
+
+    const showElement = () => {
+        element.style.visibility = 'visible';
+        element.style.display = 'inline-flex';
+    };
+
+    const hideElement = () => {
+        element.style.visibility = 'hidden';
+        element.style.display = 'none';
+    }
+
     if (element != null) {
         if (element.style.visibility == 'hidden') {
-            element.style.visibility = 'visible';
-            element.style.display = 'flex';
+            $('#' + elementId).fadeIn(200, showElement);
         } else {
-            element.style.visibility = 'hidden';
-            element.style.display = 'none';
+            $('#' + elementId).fadeOut(300, hideElement);
         }
     }
 }
