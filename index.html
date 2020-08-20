@@ -6,7 +6,9 @@
 		<meta content="Clarence Siew" name="title">
 		<meta content="Clarence Siew is a software engineer based in Melbourne, Australia. He graduated from Monash University with a Bachelor of Software Engineering in 2020. He specializes in full stack development, but also does some mobile app development." name="description">
 		<meta content="clarence, siew, clarence siew, antorca, linux, illume os, transitsafe, hoddle, monash, monash uni, monash university" name="keywords">
-        <link href="style/main.css" rel="stylesheet" type="text/css">
+		<link href="style/base.css" rel="stylesheet" type="text/css">
+        <link href="style/components.css" rel="stylesheet" type="text/css">
+        <link href="style/themes/default.css" rel="stylesheet" type="text/css">
         <link href="style/fonts/fonts.css" rel="stylesheet" type="text/css">
         <script type="application/javascript" src="js/jquery.min.js"></script>
         <script type="application/javascript" src="js/main.js"></script>
@@ -14,31 +16,30 @@
         <link rel="shortcut icon" href="images/profile.jpg">
 		<title>Clarence Siew</title>
 	</head>
-	<body onload="appInit()">
+	<body>
 		<header>
-			<span class="header-name" onclick="togglePage('page-home')">
-				<img src="images/profile.jpg" height="48px">
+			<a class="header-logo" href="index.html">
+				<img src="images/profile.jpg" height="48px" class="border-radius-100pct">
 				<h1>Clarence Siew</h1>
-			</span>
-			<div class="button-group button-group-header">
-				<a class="button" onclick="togglePage('page-home')">Home</a>
-				<a class="button" onclick="togglePage('page-playlists')">Playlists</a>
+			</a>
+			<div class="header-links">
+				<a class="button" href="index.html">Home</a>
 				<a class="button" href="https://csiew.github.io/blog" target="_blank">Blog</a>
 			</div>
 		</header>
-		<div class="container">
+		<div class="container vstack vstack-height-full">
 
-			<div id="page-home" class="page-section page-section-visible">
-				<h1>Hi there</h1>
-				<div class="section">
-					<div class="big-list big-list-grid">
-						<div class="big-list-item">
-							<div class="big-list-item-header">
-								<span class="big-list-item-title">
-									The Person
-								</span>
+			<div class="width-full width-max-1280 padding-xl">
+				<div class="section margin-xl-bottom">
+					<div class="section-header font-scale-l">
+						<h2>Hi there</h2>
+					</div>
+					<div class="section-body padding-l grid grid-col-auto-fit-480 grid-gap-l">
+						<div class="grid-item card">
+							<div class="card-header padding-l">
+								<h3>The Person</h3>
 							</div>
-							<div class="big-list-item-body">
+							<div class="card-body padding-l">
 								<p>
 									I'm Clarence, and I'm a <b>software engineer</b>. I'm based in Melbourne, Australia. I was born and raised in Penang, Malaysia.
 								</p>
@@ -49,20 +50,18 @@
 									The current version of my site was published on 31 July 2020. See the <a href="archive/index.html" target="_blank">previous version</a> of this site for any missing content.
 								</p>
 							</div>
-							<div class="big-list-item-footer">
-								<div class="button-group button-group-small button-group-width-full button-group-justify-end">
+							<div class="card-footer padding-l">
+								<div class="button-hgroup width-full justify-end">
 									<a class="button" href="mailto:clarence.siew@gmail.com" target="_blank">Email</a>
 									<a class="button" href="https://instagram.com/clarence_siew" target="_blank">Instagram</a>
 								</div>
 							</div>
 						</div>
-						<div class="big-list-item">
-							<div class="big-list-item-header">
-								<span class="big-list-item-title">
-									The Developer
-								</span>
+						<div class="grid-item card">
+							<div class="card-header padding-l">
+								<h3>The Developer</h3>
 							</div>
-							<div class="big-list-item-body">
+							<div class="card-body padding-l">
 								<p>
 									I am both a full-stack web developer and mobile app developer.
 								</p>
@@ -73,8 +72,8 @@
 									With mobile development, I've had experience developing iOS apps in Swift with both UIKit and SwiftUI.
 								</p>
 							</div>
-							<div class="big-list-item-footer">
-								<div class="button-group button-group-small button-group-width-full button-group-justify-end">
+							<div class="card-footer padding-l">
+								<div class="button-hgroup width-full justify-end">
 									<a class="button" href="https://github.com/csiew" target="_blank">GitHub</a>
 									<a class="button" href="https://www.linkedin.com/in/clarencesiew/" target="_blank">LinkedIn</a>
 								</div>
@@ -82,19 +81,17 @@
 						</div>
 					</div>
 				</div>
-				<h2 onclick="toggleElement('section-recent-projects')">Recent projects</h2>
-				<div id="section-recent-projects" class="section section-rollable">
-					<div class="big-list big-list-grid">
-						<div class="big-list-item">
-							<div class="big-list-item-header">
-								<span class="big-list-item-title">
-									Antorca Cast
-								</span>
-								<span class="big-list-item-caption">
-									Podcast app
-								</span>
+				<div class="section margin-xl-bottom">
+					<div class="section-header font-scale-l">
+						<h2>Recent projects</h2>
+					</div>
+					<div class="section-body padding-l grid grid-col-auto-fit-480 grid-gap-l">
+						<div class="grid-item card">
+							<div class="card-header padding-l hstack hstack-space-between">
+								<h3>Cast</h3>
+								<small>Podcast app</small>
 							</div>
-							<div class="big-list-item-body">
+							<div class="card-body padding-l">
 								<small>2020-Present</small>
 								<p>
 									A podcast web app that allows you to manage your podcast subscriptions and bookmarks with an intuitive, well-organised interface.
@@ -107,16 +104,12 @@
 								</p>
 							</div>
 						</div>
-						<div class="big-list-item">
-							<div class="big-list-item-header">
-								<span class="big-list-item-title">
-									Antorca Cardo
-								</span>
-								<span class="big-list-item-caption">
-									Client-side web frontend library
-								</span>
+						<div class="grid-item card">
+							<div class="card-header padding-l hstack hstack-space-between">
+								<h3>Cardo</h3>
+								<small>Client-side web frontend library</small>
 							</div>
-							<div class="big-list-item-body">
+							<div class="card-body padding-l">
 								<small>2020-Present</small>
 								<p>
 									A client-side web frontend library (more so a collection of functions to enable single-page web apps). The previous version of my site and my 'Hoddle' Javascript window manager contain the foundational work for this library.
@@ -126,42 +119,36 @@
 								</p>
 							</div>
 						</div>
-						<div class="big-list-item">
-							<div class="big-list-item-header">
-								<span class="big-list-item-title">
-									Recipe Book
-								</span>
-								<span class="big-list-item-caption">
-									Scrapbook for recipes
-								</span>
+						<div class="grid-item card">
+							<div class="card-header padding-l hstack hstack-space-between">
+								<h3>Recipe Book</h3>
+								<small>Scrapbook for recipes</small>
 							</div>
-							<div class="big-list-item-body">
+							<div class="card-body padding-l">
 								<small>2020-Present</small>
 								<p>
 									A recipe scrapbook app for iOS. Its design is extremely minimalistic and revolves around the user's recipes and only their recipes. It's written in Swift and uses the SwiftUI framework. It's also open source.
 								</p>
 							</div>
-							<div class="big-list-item-footer">
-								<div class="button-group button-group-small button-group-width-full button-group-justify-end">
+							<div class="card-footer padding-l">
+								<div class="button-hgroup width-full justify-end">
 									<a class="button" href="https://github.com/csiew/recipebook" target="_blank">GitHub</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<h2 onclick="toggleElement('section-past-projects')">Past projects</h2>
-				<div id="section-past-projects" class="section section-rollable">
-					<div class="big-list big-list-grid">
-						<div class="big-list-item">
-							<div class="big-list-item-header">
-								<span class="big-list-item-title">
-									Podzol CLI
-								</span>
-								<span class="big-list-item-caption">
-									Podcast app (for terminals)
-								</span>
+				<div class="section">
+					<div class="section-header font-scale-l">
+						<h2>Past projects</h2>
+					</div>
+					<div class="section-body padding-l grid grid-col-auto-fit-480 grid-gap-l">
+						<div class="grid-item card">
+							<div class="card-header padding-l hstack hstack-space-between">
+								<h3>Podzol CLI</h3>
+								<small>Podcast app (for terminals)</small>
 							</div>
-							<div class="big-list-item-body">
+							<div class="card-body padding-l">
 								<small>2020</small>
 								<p>
 									A podcast web app that lives in your terminal. It stores indexes of your podcast subscriptions and episode data in JSON files.
@@ -173,130 +160,106 @@
 									Limitations with pygame and cross-platform compatibiltiy (Linux and macOS) led me to start working on a web-based podcast client (which was initially codenamed Podzol).
 								</p>
 							</div>
-							<div class="big-list-item-footer">
-								<div class="button-group button-group-small button-group-width-full button-group-justify-end">
+							<div class="card-footer padding-l">
+								<div class="button-hgroup width-full justify-end">
 									<a class="button" href="https://github.com/csiew/podzol" target="_blank">GitHub</a>
 								</div>
 							</div>
 						</div>
-						<div class="big-list-item">
-							<div class="big-list-item-header">
-								<span class="big-list-item-title">
-									BiscuitWM
-								</span>
-								<span class="big-list-item-caption">
-									X11 window manager
-								</span>
+						<div class="grid-item card">
+							<div class="card-header padding-l hstack hstack-space-between">
+								<h3>BiscuitWM</h3>
+								<small>X11 window manager</small>
 							</div>
-							<div class="big-list-item-body">
+							<div class="card-body padding-l">
 								<small>2020</small>
 								<p>
 									A minimalist X11 window manager for Linux/Unix systems written in Python. Largely an experimental effort.
 								</p>
 							</div>
-							<div class="big-list-item-footer">
-								<div class="button-group button-group-small button-group-width-full button-group-justify-end">
+							<div class="card-footer padding-l">
+								<div class="button-hgroup width-full justify-end">
 									<a class="button" href="https://csiew.github.io/BiscuitWM" target="_blank">Website</a>
 									<a class="button" href="https://github.com/csiew/BiscuitWM" target="_blank">GitHub</a>
 								</div>
 							</div>
 						</div>
-						<div class="big-list-item">
-							<div class="big-list-item-header">
-								<span class="big-list-item-title">
-									Hoddle
-								</span>
-								<span class="big-list-item-caption">
-									Web-based window manager
-								</span>
+						<div class="grid-item card">
+							<div class="card-header padding-l hstack hstack-space-between">
+								<h3>Hoddle</h3>
+								<small>Web-based window manager</small>
 							</div>
-							<div class="big-list-item-body">
+							<div class="card-body padding-l">
 								<small>2020</small>
 								<p>
 									An experimental client-side JavaScript frontend library to turn a web page into a desktop-like environment. It allows for moveable and resizeable windows.
 								</p>
 							</div>
-							<div class="big-list-item-footer">
-								<div class="button-group button-group-small button-group-width-full button-group-justify-end">
+							<div class="card-footer padding-l">
+								<div class="button-hgroup width-full justify-end">
 									<a class="button" href="https://github.com/csiew/Hoddle" target="_blank">GitHub</a>
 								</div>
 							</div>
 						</div>
-						<div class="big-list-item">
-							<div class="big-list-item-header">
-								<span class="big-list-item-title">
-									md2magic
-								</span>
-								<span class="big-list-item-caption">
-									Static site generator
-								</span>
+						<div class="grid-item card">
+							<div class="card-header padding-l hstack hstack-space-between">
+								<h3>md2magic</h3>
+								<small>Static site generator</small>
 							</div>
-							<div class="big-list-item-body">
+							<div class="card-body padding-l">
 								<small>2018-2020</small>
 								<p>
 									A static site generator written in Python. Ideal for blogs. Work on a rewrite had been on-and-off until 2020.
 								</p>
 							</div>
-							<div class="big-list-item-footer">
-								<div class="button-group button-group-small button-group-width-full button-group-justify-end">
+							<div class="card-footer padding-l">
+								<div class="button-hgroup width-full justify-end">
 									<a class="button" href="https://github.com/csiew/md2magic" target="_blank">GitHub</a>
 								</div>
 							</div>
 						</div>
-						<div class="big-list-item">
-							<div class="big-list-item-header">
-								<span class="big-list-item-title">
-									TransitSafe
-								</span>
-								<span class="big-list-item-caption">
-									Public transport incident reporter
-								</span>
+						<div class="grid-item card">
+							<div class="card-header padding-l hstack hstack-space-between">
+								<h3>TransitSafe</h3>
+								<small>Public transport incident reporter</small>
 							</div>
-							<div class="big-list-item-body">
+							<div class="card-body padding-l">
 								<small>2017-2019</small>
 								<p>
 									An app and service that lets commuters report incidents (crime, hygiene, medical emergencies, etc) on public transport. It used the Public Transport Victoria APIs to get data on public transport services and station metadata.
 								</p>
 							</div>
 						</div>
-						<div class="big-list-item">
-							<div class="big-list-item-header">
-								<span class="big-list-item-title">
-									Antorca Linux
-								</span>
-								<span class="big-list-item-caption">
-									Linux distribution
-								</span>
+						<div class="grid-item card">
+							<div class="card-header padding-l hstack hstack-space-between">
+								<h3>Antorca Linux</h3>
+								<small>Linux distribution</small>
 							</div>
-							<div class="big-list-item-body">
+							<div class="card-body padding-l">
 								<small>2017-2019</small>
 								<p>
 									A Debian-based Linux distribution designed for a simple out of the box experience. Ideal for Windows users transitioning to Linux. It used the Xfce desktop environment.
 								</p>
 							</div>
-							<div class="big-list-item-footer">
-								<div class="button-group button-group-small button-group-width-full button-group-justify-end">
+							<div class="card-footer padding-l">
+								<div class="button-hgroup width-full justify-end">
 									<a class="button" href="https://antorca.github.io/linux/" target="_blank">Website</a>
 								</div>
 							</div>
 						</div>
-						<div class="big-list-item">
-							<div class="big-list-item-header">
-								<span class="big-list-item-title">
-									illume OS
-								</span>
-								<span class="big-list-item-caption">
-									Lightweight Linux distribution
-								</span>
+						<div class="grid-item card">
+							<div class="card-header padding-l hstack hstack-space-between">
+								<h3>illume OS</h3>
+								<small>Lightweight Linux distribution</small>
 							</div>
-							<div class="big-list-item-body">
+							<div class="card-body padding-l">
 								<small>2011-2017</small>
 								<p>
 									A lightweight Debian-based Linux distribution designed for old hardware (e.g. 32-bit x86 PCs). It used IceWM as its window manager in version 1.x, before transitioning to the LXDE desktop environment from version 2.x onwards.
 								</p>
 							</div>
-							<div class="big-list-item-footer">
-								<div class="button-group button-group-small button-group-width-full button-group-justify-end">
+							<div class="card-footer padding-l">
+								<div class="button-hgroup width-full justify-end">
 									<a class="button" href="https://illume-os.firebaseapp.com/" target="_blank">Website</a>
 								</div>
 							</div>
@@ -305,31 +268,10 @@
 				</div>
 			</div>
 
-
-			<div id="page-playlists" class="page-section page-section-hidden">
-				<h1>Playlists</h1>
-				<div class="section">
-					<div id="playlistArea" class="big-list big-list-grid">
-						<div class="big-list-item">
-							<div class="big-list-item-header">
-								<span class="big-list-item-title">
-									About
-								</span>
-							</div>
-							<div class="big-list-item-body">
-								<p>
-									I started this project in mid-2015 as a single zeitgeist playlist, but in March 2016 it became monthly playlists. In 2019, I started doing seasonal playlists (based on the southern hemisphere) instead.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
+			<footer class="text-color-secondary padding-xl">
+				&copy; 2020 Clarence Siew
+			</footer>
 
 		</div>
-		<footer>
-			&copy; Clarence Siew
-		</footer>
 	</body>
 </html>
