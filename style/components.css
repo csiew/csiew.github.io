@@ -1,6 +1,6 @@
 :root {
     --BODY-FONT-SIZE: 1rem;
-    --BODY-FONT-FAMILY: Helvetica, Arial, sans-serif;
+    --BODY-FONT-FAMILY: 'Roboto', Helvetica, Arial, sans-serif;
     --HEADER-FONT-FAMILY: var(--BODY-FONT-FAMILY);
 }
 
