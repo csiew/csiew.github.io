@@ -1,6 +1,6 @@
 :root {
     --BODY-FONT-SIZE: 1rem;
-    --BODY-FONT-FAMILY: 'Roboto', Helvetica, Arial, sans-serif;
+    --BODY-FONT-FAMILY: 'Public Sans', Helvetica, Arial, sans-serif;
     --HEADER-FONT-FAMILY: var(--BODY-FONT-FAMILY);
 }
 
@@ -41,12 +41,6 @@ h1, h2, h3, h4, h5 {
     padding-top: 2px;
     padding-bottom: 4px;
     font-family: var(--HEADER-FONT-FAMILY);
-}
-h1, h2 {
-    font-weight: 900;
-}
-h3, h4, h5 {
-    font-weight: 700;
 }
 
 p {
@@ -726,7 +720,7 @@ header a {
     padding: 0;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
-    color: var(--PRIMARY-COLOR);
+    color: var(--HEADER-FG-COLOR);
     line-height: 1;
 }
 .header-links {
@@ -797,7 +791,6 @@ header a {
 }
 .section-header-l h2 {
     font-size: 5vmax;
-    font-weight: 900;
     letter-spacing: -2px;
     opacity: 25%;
 }
@@ -1185,7 +1178,7 @@ header a {
 }
 .dashboard-statistic-item-value {
     font-size: 3vmax;
-    font-weight: 900;
+    font-weight: bold;
 }
 .dashboard-statistic-item-label {
     font-size: 80%;
