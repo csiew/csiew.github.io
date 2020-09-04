@@ -1,5 +1,5 @@
 :root {
-    --BACKGROUND-COLOR: linear-gradient(to bottom, aliceblue, whitesmoke, white, white, white);
+    --BACKGROUND-COLOR: whitesmoke;
     --BACKGROUND-COLOR-SECONDARY: none;
     --BACKGROUND-COLOR-TERTIARY: none;
     --PRIMARY-COLOR: #333333;
@@ -28,15 +28,15 @@
     --BUTTON-FG-COLOR-SELECTED: dodgerblue;
     --BUTTON-FG-COLOR-DISABLED: dimgray;
     --BUTTON-FG-COLOR-DESTRUCTIVE: mistyrose;
-    --BUTTON-BG-COLOR: linear-gradient(to bottom, white, whitesmoke, gainsboro);
-    --BUTTON-BG-COLOR-HOVER: linear-gradient(to bottom, white, aliceblue, powderblue);
-    --BUTTON-BG-COLOR-ACTIVE: linear-gradient(to bottom, lightgray, gainsboro, aliceblue);
+    --BUTTON-BG-COLOR: white;
+    --BUTTON-BG-COLOR-HOVER: aliceblue;
+    --BUTTON-BG-COLOR-ACTIVE: gainsboro;
     --BUTTON-BG-COLOR-SELECTED: whitesmoke;
     --BUTTON-BG-COLOR-DESTRUCTIVE: firebrick;
     --BUTTON-BORDER-RADIUS: var(--ELEMENT-BORDER-RADIUS);
     --BUTTON-BORDER-WIDTH: 1px;
     --BUTTON-BORDER-STYLE: solid;
-    --BUTTON-BORDER-COLOR: darkgray;
+    --BUTTON-BORDER-COLOR: lightgray;
     --BUTTON-BORDER-COLOR-HOVER: dodgerblue;
     --BUTTON-BORDER-COLOR-ACTIVE: dodgerblue;
     --BUTTON-BORDER-COLOR-FOCUS: dodgerblue;
@@ -69,7 +69,7 @@
     --CARD-FG-COLOR: var(--PRIMARY-COLOR);
     --CARD-BG-COLOR: white;
     --CARD-HEADER-FG-COLOR: var(--CARD-FG-COLOR);
-    --CARD-HEADER-BG-COLOR: linear-gradient(to bottom, white, whitesmoke, gainsboro);
+    --CARD-HEADER-BG-COLOR: var(--CARD-BG-COLOR);
     --CARD-BODY-FG-COLOR: var(--CARD-FG-COLOR);
     --CARD-BODY-BG-COLOR: var(--CARD-BG-COLOR);
     --CARD-BORDER-COLOR: var(--MODAL-WINDOW-BORDER-COLOR);
@@ -96,7 +96,7 @@
     --TOOLBAR-BG-COLOR: white;
     --TOOLBAR-BORDER-WIDTH: 1px;
     --TOOLBAR-BORDER-STYLE: solid;
-    --TOOLBAR-BORDER-COLOR: darkgray;
+    --TOOLBAR-BORDER-COLOR: lightgray;
     --TOOLBAR-TOP-SHADOW: none;
     --TOOLBAR-BOTTOM-SHADOW: none;
     --TOOLBAR-BUTTON-FG-COLOR: var(--PRIMARY-COLOR);
@@ -125,11 +125,11 @@
     --MODAL-WINDOW-BG-COLOR: white;
     --MODAL-WINDOW-BORDER-WIDTH: 1px;
     --MODAL-WINDOW-BORDER-STYLE: solid;
-    --MODAL-WINDOW-BORDER-COLOR: darkgray;
+    --MODAL-WINDOW-BORDER-COLOR: lightgray;
     --MODAL-WINDOW-BODY-FG-COLOR: var(--SECTION-BODY-FG-COLOR);
     --MODAL-WINDOW-BODY-BG-COLOR: var(--BACKGROUND-COLOR-SECONDARY);
     --MODAL-WINDOW-BODY-BORDER-RADIUS: 0px;
-    --MODAL-WINDOW-BODY-BORDER-COLOR: darkgray;
+    --MODAL-WINDOW-BODY-BORDER-COLOR: lightgray;
     --MODAL-WINDOW-SHADOW: 0px 1px 2px rgba(0,0,0,0.125);
 
     --TAB-GROUP-HEADER-BG-COLOR: var(--SECTION-BODY-BG-COLOR);
@@ -139,7 +139,7 @@
     --TAB-GROUP-HEADER-ITEM-BG-COLOR-ACTIVE: var(--TAB-GROUP-HEADER-ITEM-BG-COLOR-SELECTED);
     --TAB-GROUP-HEADER-ITEM-BG-COLOR-SELECTED: var(--TAB-GROUP-BODY-BG-COLOR);
     --TAB-GROUP-HEADER-BORDER-WIDTH: 1px;
-    --TAB-GROUP-HEADER-BORDER-COLOR: darkgray;
+    --TAB-GROUP-HEADER-BORDER-COLOR: lightgray;
     --TAB-GROUP-HEADER-BORDER-RADIUS: var(--ELEMENT-BORDER-RADIUS);
     --TAB-GROUP-HEADER-TEXT-SHADOW: var(--BUTTON-TEXT-SHADOW);
     --TAB-GROUP-HEADER-SHADOW: none;
@@ -157,7 +157,7 @@
     --NOTIFICATION-BORDER-RADIUS: var(--ELEMENT-BORDER-RADIUS);
     --NOTIFICATION-BORDER-WIDTH: 1px;
     --NOTIFICATION-BORDER-STYLE: solid;
-    --NOTIFICATION-BORDER-COLOR: darkgray;
+    --NOTIFICATION-BORDER-COLOR: lightgray;
     --NOTIFICATION-TEXT-SHADOW: none;
     --NOTIFICATION-SHADOW: var(--MODAL-WINDOW-SHADOW);
 
