@@ -185,3 +185,39 @@
     font-weight: 900;
     src: url('public_sans/PublicSans-BlackItalic.ttf');
 }
+
+
+/* Benne */
+@font-face {
+    font-family: 'Benne';
+    font-style: normal;
+    font-weight: 400;
+    src: url('benne/Benne-Text.woff2') format('woff2'), url('benne/Benne-Text.woff') format('woff');
+}
+
+
+/* Palladio */
+@font-face {
+    font-family: 'Palladio';
+    font-style: normal;
+    font-weight: 400;
+    src: url('palladio/P052-Roman.otf');
+}
+@font-face {
+    font-family: 'Palladio';
+    font-style: italic;
+    font-weight: 400;
+    src: url('palladio/P052-Italic.otf');
+}
+@font-face {
+    font-family: 'Palladio';
+    font-style: normal;
+    font-weight: 700;
+    src: url('palladio/P052-Bold.otf');
+}
+@font-face {
+    font-family: 'Palladio';
+    font-style: italic;
+    font-weight: 700;
+    src: url('palladio/P052-BoldItalic.otf');
+}

@@ -1,6 +1,6 @@
 :root {
-    --BODY-FONT-SIZE: 1rem;
-    --BODY-FONT-FAMILY: 'Public Sans', Roboto, Helvetica, Arial, sans-serif;
+    --BODY-FONT-SIZE: 1.0825rem;
+    --BODY-FONT-FAMILY: Palladio, Palatino, 'Palatino Linotype', 'Times New Roman', Times, serif;
     --HEADER-FONT-FAMILY: var(--BODY-FONT-FAMILY);
 }
 
@@ -585,6 +585,9 @@ textarea {
 }
 .card-image img,
 .card-image iframe {
+    border-width: var(--MODAL-WINDOW-BORDER-WIDTH);
+    border-style: var(--MODAL-WINDOW-BORDER-STYLE);
+    border-color: var(--CARD-BORDER-COLOR);
     border-radius: var(--ELEMENT-BORDER-RADIUS);
     box-shadow: var(--MODAL-WINDOW-SHADOW);
 }
@@ -601,8 +604,8 @@ textarea {
     margin-bottom: 0;
     bottom: 0 !important;
     padding: 0;
-    color: var(--CARD-HEADER-FG-COLOR);
-    background: var(--CARD-HEADER-BG-COLOR);
+    color: var(--CARD-FG-COLOR);
+    background: var(--CARD-BG-COLOR);
     border-width: var(--MODAL-WINDOW-BORDER-WIDTH) 0 0 0;
     border-style: var(--MODAL-WINDOW-BORDER-STYLE);
     border-color: var(--CARD-BORDER-COLOR);
@@ -799,6 +802,7 @@ header a {
 .section-header h3 {
     margin: 0;
     padding: 0;
+    font-style: italic;
 }
 .section-header-l h2 {
     font-size: 5vmax;
