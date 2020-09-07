@@ -583,12 +583,17 @@ textarea {
     border-bottom-left-radius: var(--MODAL-WINDOW-BORDER-RADIUS);
     border-bottom-right-radius: var(--MODAL-WINDOW-BORDER-RADIUS);
 }
-.card-image img {
+.card-image img,
+.card-image iframe {
     border-radius: var(--ELEMENT-BORDER-RADIUS);
     box-shadow: var(--MODAL-WINDOW-SHADOW);
 }
 .card-image-width-full img {
     width: 100%;
+}
+.card-image-width-full iframe {
+    width: 100%;
+    height: 360px;
 }
 .card-footer {
     width: 100%;
