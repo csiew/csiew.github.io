@@ -1,6 +1,6 @@
 :root {
     --BODY-FONT-SIZE: 1rem;
-    --BODY-FONT-FAMILY: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --BODY-FONT-FAMILY: 'Public Sans', Roboto, Helvetica, Arial, sans-serif;
     --HEADER-FONT-FAMILY: var(--BODY-FONT-FAMILY);
 }
 
@@ -582,6 +582,13 @@ textarea {
     background: var(--CARD-BODY-BG-COLOR);
     border-bottom-left-radius: var(--MODAL-WINDOW-BORDER-RADIUS);
     border-bottom-right-radius: var(--MODAL-WINDOW-BORDER-RADIUS);
+}
+.card-image img {
+    border-radius: var(--ELEMENT-BORDER-RADIUS);
+    box-shadow: var(--MODAL-WINDOW-SHADOW);
+}
+.card-image-width-full img {
+    width: 100%;
 }
 .card-footer {
     width: 100%;
