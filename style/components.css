@@ -1106,6 +1106,11 @@ header a {
     display: inline-flex;
     flex-flow: column;
 }
+.feature-welcome h1,
+.feature-welcome h2,
+.feature-welcome h3 {
+    letter-spacing: -0.0625rem;
+}
 
 .dashboard {
     display: inline-block;
