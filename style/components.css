@@ -1561,6 +1561,17 @@ header a {
         font-size: 90%;
     }
 
+    .feature-welcome h1 {
+        font-size: 3.5rem;
+    }
+    .feature-welcome h2 {
+        font-size: 1.5rem;
+    }
+    .feature-welcome .grid .button {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
     .modal-window {
         max-width: 100%;
         width: 100%;
