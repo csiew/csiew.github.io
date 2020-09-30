@@ -15,6 +15,10 @@
         filter: invert(1) !important;
         -webkit-filter: invert(1) !important;
     }
+    .notification-top {
+        filter: invert(1) !important;
+        -webkit-filter: invert(1) !important;
+    }
 }
 
 html, body {
@@ -1493,6 +1497,20 @@ header a {
     text-align: right;
 }
 
+.notification-top {
+    z-index: 10;
+    position: sticky !important;
+    margin: auto;
+    margin-top: 0 !important;
+    top: 0;
+    color: black;
+    background: gold;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.125);
+}
+.notification-top a {
+    color: black !important;
+    font-weight: bold;
+}
 
 @media only screen and (max-width: 960px) {
     .toolbar-item {
