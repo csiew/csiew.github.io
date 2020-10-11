@@ -1498,7 +1498,7 @@ header a {
 }
 
 .notification-top {
-    z-index: 10;
+    z-index: 30;
     position: sticky !important;
     margin: auto;
     margin-top: 0 !important;
