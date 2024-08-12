@@ -34,3 +34,5 @@ function togglePage(pageId) {
         }
     }
 }
+
+window.location.replace("https://clarencesiew.com/");
